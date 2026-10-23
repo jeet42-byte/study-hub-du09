@@ -7,7 +7,10 @@ HUB.views.forecast = function (root) {
   function draw() {
     const events = U.allEvents().map((e) => ({ e, d: U.eventDate(e) }));
     const dated = events.filter((x) => x.d).sort((a, b) => a.d - b.d);
-    const upcoming = dated.filter((x) => U.daysUntil(x.d) >= 0);
+    // Routine exams get their own table below, so keep them out of the countdown cards.
+    const upcoming = dated.filter((x) => U.daysUntil(x.d) >= 0 && !x.e.routine);
+    const routine = U.routine();
+    const nextExam = routine.find((x) => U.daysUntil(x.d) >= 0);
     const tba = events.filter((x) => !x.d);
     const classes = [...HUB.classes, ...U.get('personalClasses', []).map((c) => ({ ...c, personal: true }))].sort(
       (a, b) => DAYS.indexOf(a.day) - DAYS.indexOf(b.day) || a.start.localeCompare(b.start)
@@ -31,6 +34,40 @@ HUB.views.forecast = function (root) {
         <p>Days left before exams, important dates, notices and your class routine. Dates marked TBA can be set for yourself until they are officially announced.</p>
       </div>
 
+      ${
+        routine.length
+          ? `<div class="card">
+              <div class="row" style="align-items:flex-start;gap:24px">
+                <div class="countdown" style="min-width:150px">
+                  <div class="stat-label">${nextExam ? 'Next final exam' : 'Finals'}</div>
+                  <div class="big">${nextExam ? U.daysUntil(nextExam.d) : '✓'}</div>
+                  <div>${nextExam ? (U.daysUntil(nextExam.d) === 1 ? 'day left' : 'days left') : 'all done'}</div>
+                </div>
+                <div style="flex:1;min-width:220px">
+                  <h2 style="margin-bottom:4px">Final exam routine</h2>
+                  <p class="muted" style="margin:0">${U.fmtDay(routine[0].d)} – ${U.fmtDay(routine[routine.length - 1].d)} · ${U.esc(routine[0].e.time || '')} · ${U.esc(routine[0].e.room || '')}</p>
+                  ${nextExam ? `<p style="margin:6px 0 0">Next: <b>${U.esc(nextExam.e.title)}</b></p>` : ''}
+                </div>
+              </div>
+              <div class="table-wrap" style="margin-top:12px"><table>
+                <tr><th>Date</th><th>Course</th><th>Time &amp; room</th><th>Days left</th><th>Prep gap</th></tr>
+                ${routine
+                  .map(({ e, d }, i) => {
+                    const n = U.daysUntil(d);
+                    const gap = i ? U.daysUntil(d) - U.daysUntil(routine[i - 1].d) : null;
+                    return `<tr class="${n < 0 ? 'past' : ''}" style="${n < 0 ? 'opacity:.55' : ''}">
+                      <td><b>${U.fmtDay(d)}</b></td>
+                      <td>${e.link ? `<a href="${U.esc(e.link)}">${U.esc(e.title)}</a>` : U.esc(e.title)}</td>
+                      <td><small>${U.esc(e.time || '')}<br>${U.esc(e.room || '')}</small></td>
+                      <td><b>${n < 0 ? 'Done' : n === 0 ? 'Today' : n}</b></td>
+                      <td>${gap === null ? '—' : `${gap} day${gap === 1 ? '' : 's'} after previous`}</td></tr>`;
+                  })
+                  .join('')}
+              </table></div>
+            </div>`
+          : ''
+      }
+
       <div class="grid">
         ${upcoming.map(countdown).join('')}
         ${tba
@@ -52,7 +89,7 @@ HUB.views.forecast = function (root) {
       <h2 class="section-title">Notices</h2>
       ${
         HUB.notices.length
-          ? HUB.notices
+          ? U.notices()
               .map(
                 (n) => `
             <div class="card">

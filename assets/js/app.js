@@ -65,7 +65,17 @@
       })
       .join('');
 
-    const notice = HUB.notices[0];
+    const notice = U.notices()[0];
+    const routine = U.routine();
+    const nextExam = routine.find((x) => U.daysUntil(x.d) >= 0);
+    const finalsCard = nextExam
+      ? `<a class="card tile countdown" href="#/forecast">
+           <div class="stat-label">Finals countdown</div>
+           <div class="big">${U.daysUntil(nextExam.d)}</div>
+           <div>day${U.daysUntil(nextExam.d) === 1 ? '' : 's'} to the next final</div>
+           <p style="margin:8px 0 0"><b>${U.esc(nextExam.e.title)}</b><br><small>${U.fmtDate(nextExam.d)} · ${routine.filter((x) => U.daysUntil(x.d) >= 0).length} of ${routine.length} exams left</small></p>
+         </a>`
+      : '';
 
     root.innerHTML = `
       <div class="page-head">
@@ -88,6 +98,7 @@
                  <p style="margin:8px 0 0">${tba.length ? `<b>${U.esc(tba[0].title)}</b><br><small>${U.esc(tba[0].tentative || 'Date not announced')}</small>` : 'No upcoming dates'}</p>
                </a>`
         }
+        ${finalsCard}
         ${quizCards}
       </div>
 

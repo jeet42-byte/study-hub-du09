@@ -26,6 +26,24 @@
             .join('')}
         </table></div>`);
     }
+    if (a.solution) {
+      parts.push(`<h3>Worked solution</h3>
+        ${a.solution.map((x) => `<div class="def"><b>${U.esc(x.h)}</b><br>${U.esc(x.body)}</div>`).join('')}`);
+    }
+    if (a.followups) {
+      parts.push(`<h3>Practice: likely follow-up questions</h3>
+        <p class="muted">Not on the worksheet — typical extensions an examiner can ask from the same data.</p>
+        ${a.followups
+          .map(
+            (f, i) => `<details class="def"><summary><b>${i + 1}. ${U.esc(f.q)}</b> <small class="muted">(show answer)</small></summary><p style="margin:6px 0 0">${U.esc(f.a)}</p></details>`
+          )
+          .join('')}`);
+    }
+    if (a.calculator) {
+      parts.push(`<h3>Descriptive statistics calculator</h3>
+        <p class="muted">Paste any numbers (commas or spaces) to check your working — mode, median, mean, range, quartiles and outliers.</p>
+        <div data-calc="${U.esc(a.id)}"></div>`);
+    }
     if (a.definitions) {
       parts.push(`<h3>Key definitions</h3>
         ${a.definitions.map((d) => `<div class="def"><b>${U.esc(d.term)}</b> — ${U.esc(d.def)} <small class="muted">(${U.esc(d.cite)})</small></div>`).join('')}`);
@@ -90,6 +108,74 @@
         </summary>
         ${parts.join('')}
       </details>`;
+  }
+
+  // ── Descriptive statistics calculator ──────────────────────
+  const fmt = (n) => String(U.round(n, 2));
+  const ord = (n) => n + ([, 'st', 'nd', 'rd'][(n % 100 >> 3) ^ 1 && n % 10] || 'th');
+
+  function median(sorted) {
+    const n = sorted.length;
+    return n % 2 ? sorted[(n - 1) / 2] : (sorted[n / 2 - 1] + sorted[n / 2]) / 2;
+  }
+
+  function describe(values) {
+    const x = values.slice().sort((a, b) => a - b);
+    const n = x.length;
+    const sum = x.reduce((a, b) => a + b, 0);
+    const mean = sum / n;
+    const counts = new Map();
+    x.forEach((v) => counts.set(v, (counts.get(v) || 0) + 1));
+    const top = Math.max(...counts.values());
+    const modes = top > 1 ? [...counts].filter(([, c]) => c === top).map(([v]) => v) : [];
+    // Quartiles by the median-of-halves method (the one taught with hand calculation).
+    const half = Math.floor(n / 2);
+    const q1 = n > 1 ? median(x.slice(0, half)) : x[0];
+    const q3 = n > 1 ? median(x.slice(n - half)) : x[0];
+    const iqr = q3 - q1;
+    const lo = q1 - 1.5 * iqr;
+    const hi = q3 + 1.5 * iqr;
+    const outliers = x.filter((v) => v < lo || v > hi);
+    const rest = x.filter((v) => v >= lo && v <= hi);
+    const sd = n > 1 ? Math.sqrt(x.reduce((a, v) => a + (v - mean) ** 2, 0) / (n - 1)) : 0;
+    return { x, n, sum, mean, modes, top, med: median(x), q1, q3, iqr, lo, hi, outliers, rest, sd };
+  }
+
+  function calculator(el, cfg) {
+    el.innerHTML = `
+      <label>${U.esc(cfg.label || 'Data')}</label>
+      <textarea data-calc-in aria-label="Data" style="min-height:60px">${U.esc(cfg.data.join(', '))}</textarea>
+      <div data-calc-out style="margin-top:10px"></div>`;
+    const input = el.querySelector('[data-calc-in]');
+    const out = el.querySelector('[data-calc-out]');
+    const run = () => {
+      const values = (input.value.match(/-?\d+(\.\d+)?/g) || []).map(Number);
+      if (values.length < 2) {
+        out.innerHTML = '<p class="empty">Enter at least two numbers.</p>';
+        return;
+      }
+      const r = describe(values);
+      const midNote =
+        r.n % 2
+          ? `the ${ord((r.n + 1) / 2)} value`
+          : `average of the ${ord(r.n / 2)} and ${ord(r.n / 2 + 1)} values (${fmt(r.x[r.n / 2 - 1])} and ${fmt(r.x[r.n / 2])})`;
+      const rr = r.outliers.length ? describe(r.rest) : null;
+      out.innerHTML = `
+        <div class="table-wrap"><table>
+          <tr><td><b>Ordered (n = ${r.n})</b></td><td>${r.x.map(fmt).join(', ')}</td></tr>
+          <tr><td><b>Mode</b></td><td>${r.modes.length ? `${r.modes.map(fmt).join(', ')} (appears ${r.top} times)` : 'No mode — every value appears once'}</td></tr>
+          <tr><td><b>Median</b></td><td>${fmt(r.med)} — ${midNote}</td></tr>
+          <tr><td><b>Mean</b></td><td>${fmt(r.mean)} — sum ${fmt(r.sum)} ÷ ${r.n}</td></tr>
+          <tr><td><b>Range</b></td><td>${fmt(r.x[r.n - 1] - r.x[0])} (${fmt(r.x[r.n - 1])} − ${fmt(r.x[0])})</td></tr>
+          <tr><td><b>Quartiles</b></td><td>Q1 = ${fmt(r.q1)}, Q3 = ${fmt(r.q3)}, IQR = ${fmt(r.iqr)}</td></tr>
+          <tr><td><b>Outlier fences</b></td><td>below ${fmt(r.lo)} or above ${fmt(r.hi)} (1.5 × IQR rule)</td></tr>
+          <tr><td><b>Outliers</b></td><td>${r.outliers.length ? r.outliers.map(fmt).join(', ') : 'None'}</td></tr>
+          ${rr ? `<tr><td><b>Without outliers</b></td><td>mean ${fmt(rr.mean)}, median ${fmt(rr.med)} (n = ${rr.n})</td></tr>` : ''}
+          <tr><td><b>Standard deviation</b></td><td>${fmt(r.sd)} (sample)</td></tr>
+        </table></div>`;
+    };
+    input.addEventListener('input', run);
+    run();
   }
 
   // ── APA 7 helper ───────────────────────────────────────────
@@ -209,6 +295,10 @@
         U.copy(U.stripTags(r.apa), b);
       })
     );
+    root.querySelectorAll('[data-calc]').forEach((el) => {
+      const a = HUB.assignments.find((x) => x.id === el.dataset.calc);
+      calculator(el, a.calculator);
+    });
     citer(root.querySelector('#citer'));
   };
 })();

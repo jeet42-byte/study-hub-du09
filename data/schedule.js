@@ -17,9 +17,11 @@ HUB.add(
     id: 'rm-final',
     course: 'research-methods',
     type: 'Final exam',
-    title: 'Research Methodology — Final exam',
-    date: null,
-    tentative: 'Date not announced yet',
+    routine: true,
+    title: 'Research Methodology (MCCJ 521)',
+    date: '2026-12-04T15:00',
+    time: '3:00–6:00 pm',
+    room: 'Room 704, 6th floor, FSS, DU',
     note: 'Final is marked out of 50 — use the Grade planner to see what you need.',
     link: '#/grades',
   }
@@ -57,13 +59,65 @@ HUB.add(
     id: 'oc-final',
     course: 'organized-crime',
     type: 'Final exam',
-    title: 'Organized Crime and Corruption — End-term (50 marks)',
-    date: null,
-    tentative: 'Date not announced yet',
-    note: 'Answer 5 of 7–8 questions, 10 marks each (2–3 parts). Start with the Tier 1 questions.',
+    routine: true,
+    title: 'Organized Crime and Corruption (MCCJ 527)',
+    date: '2026-12-12T15:00',
+    time: '3:00–6:00 pm',
+    room: 'Room 704, 6th floor, FSS, DU',
+    note: '50 marks: answer 5 of 7–8 questions, 10 marks each (2–3 parts). Start with the Tier 1 questions.',
     link: '#/exams/oc-final',
   }
 );
+
+// 2nd-semester final exam routine — notice of 18 October 2026, Department of Criminology, DU.
+HUB.add(
+  'events',
+  {
+    id: 'cyber-final',
+    course: 'cyber-crime',
+    type: 'Final exam',
+    routine: true,
+    title: 'Cyber Crime and Security (MCCJ 525)',
+    date: '2026-12-05T15:00',
+    time: '3:00–6:00 pm',
+    room: 'Room 704, 6th floor, FSS, DU',
+  },
+  {
+    id: 'forensic-final',
+    course: 'forensic-science',
+    type: 'Final exam',
+    routine: true,
+    title: 'Forensic Science (MCCJ 526)',
+    date: '2026-12-11T15:00',
+    time: '3:00–6:00 pm',
+    room: 'Room 704, 6th floor, FSS, DU',
+  },
+  {
+    id: 'comprehensive-final',
+    course: 'comprehensive',
+    type: 'Final exam',
+    routine: true,
+    title: 'Comprehensive and Viva Voce (MCCJ 530)',
+    date: '2026-12-18T15:00',
+    time: '3:00–6:00 pm',
+    room: 'Room 704, 6th floor, FSS, DU',
+  },
+  {
+    id: 'viva',
+    course: 'comprehensive',
+    type: 'Viva',
+    title: 'Oral examination (viva)',
+    date: '2026-12-19',
+    note: 'The notice text gives 19 December for the oral exam, while the routine table lists "Comprehensive and Viva Voce" on 18 December — confirm with the department.',
+  }
+);
+
+HUB.add('notices', {
+  course: 'comprehensive',
+  date: '2026-10-18',
+  title: '2nd semester final exam routine published',
+  body: 'Professional Masters in Criminology and Criminal Justice, session 2025–26: 2nd semester finals start on 4 December 2026 (3:00–6:00 pm, Room 704, 6th floor, FSS, DU) and the oral exam is on 19 December 2026. Complete the exam form fill-up on time. — Md. Rezaul Karim Shohag, Chairperson, Professional Masters Final Exam Committee 2026.',
+});
 
 HUB.add('notices', {
   course: 'organized-crime',

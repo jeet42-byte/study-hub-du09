@@ -306,3 +306,51 @@ HUB.add('assignments', {
     { apa: 'Abadinsky, H. (Year). <i>Organized crime</i> (ed.). Cengage Learning.', intext: '(Abadinsky, Year)', note: 'Fill in the year and edition from the copy you use.' },
   ],
 });
+
+HUB.add('assignments', {
+  id: 'rm-response-times',
+  course: 'research-methods',
+  title: 'Class exercise — Analyzing precinct response times',
+  kind: 'Class exercise (descriptive statistics)',
+  due: null,
+  overview:
+    'The Metropolis Police Department is reviewing response times. The log has 12 emergency calls handled by Precinct 4 on a Friday night shift; call #12 was badly delayed by a multicar accident blocking the main highway. Data (minutes from dispatch to arrival): 7, 12, 5, 9, 14, 5, 8, 11, 5, 10, 13, 45.',
+  instructions: [
+    'Task 1 — Organize the data from lowest to highest.',
+    'Task 2 — Find the mode (most frequent response time).',
+    'Task 3 — Find the median; with 12 values, average the 6th and 7th.',
+    'Task 4 — Find the mean: add all 12 values and divide by 12.',
+    'Task 5 — Criminological analysis & policy: (1) identify the outlier and the real-world police operational challenges that could cause such a delay.',
+  ],
+  solution: [
+    { h: 'Task 1 · Ordered data', body: '5, 5, 5, 7, 8, 9, 10, 11, 12, 13, 14, 45' },
+    { h: 'Task 2 · Mode = 5 minutes', body: '5 appears three times; every other value appears once.' },
+    { h: 'Task 3 · Median = 9.5 minutes', body: 'n = 12 is even, so the median is the average of the 6th and 7th values: (9 + 10) ÷ 2 = 9.5.' },
+    { h: 'Task 4 · Mean = 12 minutes', body: 'Sum = 7 + 12 + 5 + 9 + 14 + 5 + 8 + 11 + 5 + 10 + 13 + 45 = 144; 144 ÷ 12 = 12.' },
+    { h: 'Task 5.1 · The outlier is 45 minutes (call #12)', body: 'It is more than three times the next-highest value (14). Formally, with Tukey\'s rule: Q1 = 6, Q3 = 12.5, IQR = 6.5, upper fence = 12.5 + 1.5 × 6.5 = 22.25 — 45 lies far above it, so it is an outlier. Operational challenges that can cause such a delay: road blockages and accidents (as here); heavy traffic congestion (a daily reality in Dhaka); too few patrol units on a busy Friday night, with officers tied up on other calls; large patrol beats and long distances; dispatch or radio-communication delays; vague or wrong addresses; poor roads or bad weather; vehicle breakdowns; and waiting for backup before entering a dangerous scene.' },
+  ],
+  followups: [
+    { q: 'How does the outlier affect the mean and the median?', a: 'Without 45, the mean is 99 ÷ 11 = 9.0 and the median is the 6th of 11 values = 9. One extreme value pulls the mean up by 3 minutes but moves the median by only 0.5 — the median is resistant to outliers, the mean is not.' },
+    { q: 'Which figure should the department report as its "typical" response time?', a: 'The median (9.5 minutes): the data are skewed by one exceptional call, so the mean (12) overstates the usual experience. Best practice is to report both, explain the outlier, and never delete it silently — it exposes a real operational weakness.' },
+    { q: 'What is the range, with and without the outlier?', a: '45 − 5 = 40 minutes; without the outlier, 14 − 5 = 9 minutes. The range is the measure of spread most distorted by outliers.' },
+    { q: 'Suppose the target is 10 minutes. What share of calls met it?', a: '7 of 12 calls (5, 5, 5, 7, 8, 9, 10) = 58%. (The 10-minute target is a hypothetical for practice.)' },
+    { q: 'What policy changes would reduce delays like call #12?', a: 'Real-time traffic and GPS routing with planned alternate routes; more units on peak shifts such as Friday nights; positioning patrols near hot spots (routine activity theory — more capable guardians); coordination with traffic police; and reviewing exceptional delays separately so they inform planning rather than distort the averages.' },
+  ],
+  calculator: { label: 'Response times (minutes)', data: [7, 12, 5, 9, 14, 5, 8, 11, 5, 10, 13, 45] },
+  definitions: [
+    { term: 'Mode', def: 'The most frequent value; a data set can have none, one or several modes.', cite: 'Descriptive statistics' },
+    { term: 'Median', def: 'The middle value of the ordered data; for an even n, the average of the two middle values. Resistant to outliers.', cite: 'Descriptive statistics' },
+    { term: 'Mean', def: 'The sum of all values divided by n; sensitive to outliers.', cite: 'Descriptive statistics' },
+    { term: 'Range', def: 'Highest value minus lowest value.', cite: 'Descriptive statistics' },
+    { term: 'Outlier (Tukey\'s rule)', def: 'A value below Q1 − 1.5 × IQR or above Q3 + 1.5 × IQR, where IQR = Q3 − Q1.', cite: 'Tukey (1977)' },
+  ],
+  tips: [
+    'Always order the data first — the median and quartiles depend on it.',
+    'Show your working: list the 6th and 7th values, write out the sum.',
+    'When the mean and median differ a lot, say why (skew or outliers) and which one you would report.',
+    'Link numbers to criminology: response time affects victim safety, arrests and public trust in the police.',
+  ],
+  references: [
+    { apa: 'Tukey, J. W. (1977). <i>Exploratory data analysis</i>. Addison-Wesley.', intext: '(Tukey, 1977)' },
+  ],
+});

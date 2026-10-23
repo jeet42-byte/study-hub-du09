@@ -59,6 +59,9 @@ const U = {
     }
     return s;
   },
+  fmtDay(d) {
+    return d.toLocaleDateString(undefined, { weekday: 'short', day: 'numeric', month: 'short', year: 'numeric' });
+  },
   relDays(n) {
     if (n === 0) return 'Today';
     if (n === 1) return 'Tomorrow';
@@ -88,6 +91,20 @@ const U = {
   allEvents() {
     const personal = U.get('personalEvents', []).map((e) => ({ ...e, personal: true }));
     return [...HUB.events, ...personal];
+  },
+
+  // Final-exam routine: events flagged `routine`, in date order.
+  routine() {
+    return HUB.events
+      .filter((e) => e.routine)
+      .map((e) => ({ e, d: U.eventDate(e) }))
+      .filter((x) => x.d)
+      .sort((a, b) => a.d - b.d);
+  },
+  // Dated notices first (newest on top), then undated ones in file order.
+  notices() {
+    const dated = HUB.notices.filter((n) => n.date).sort((a, b) => b.date.localeCompare(a.date));
+    return [...dated, ...HUB.notices.filter((n) => !n.date)];
   },
 
   copy(text, btn) {
