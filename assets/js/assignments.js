@@ -6,6 +6,7 @@
     const parts = [];
 
     if (a.pending) parts.push(`<p class="note">${U.esc(a.pending)}</p>`);
+    if (a.note) parts.push(`<p class="note">${U.esc(a.note)}</p>`);
     if (a.instructions) {
       parts.push(`<h3>Instructions</h3>${list(a.instructions.map(U.esc))}`);
     }
@@ -44,9 +45,22 @@
         <p class="muted">Paste any numbers (commas or spaces) to check your working — mode, median, mean, range, quartiles and outliers.</p>
         <div data-calc="${U.esc(a.id)}"></div>`);
     }
+    if (a.tables) {
+      a.tables.forEach((t) =>
+        parts.push(`<h3>${U.esc(t.title)}</h3>
+          ${t.intro ? `<p class="muted">${U.esc(t.intro)}</p>` : ''}
+          <div class="table-wrap"><table>
+            <tr>${t.head.map((h) => `<th>${U.esc(h)}</th>`).join('')}</tr>
+            ${t.rows.map((r) => `<tr>${r.map((c, i) => `<td>${i ? U.esc(c) : `<b>${U.esc(c)}</b>`}</td>`).join('')}</tr>`).join('')}
+          </table></div>`)
+      );
+    }
+    if (a.checklist) {
+      parts.push(`<h3>${U.esc(a.checklist.title)}</h3>${list(a.checklist.items.map(U.esc))}`);
+    }
     if (a.definitions) {
       parts.push(`<h3>Key definitions</h3>
-        ${a.definitions.map((d) => `<div class="def"><b>${U.esc(d.term)}</b> — ${U.esc(d.def)} <small class="muted">(${U.esc(d.cite)})</small></div>`).join('')}`);
+        ${a.definitions.map((d) => `<div class="def"><b>${U.esc(d.term)}</b> — ${U.esc(d.def)}${d.cite ? ` <small class="muted">(${U.esc(d.cite)})</small>` : ''}</div>`).join('')}`);
     }
     if (a.theories) {
       parts.push(`<h3>Relevant theories &amp; approaches</h3>

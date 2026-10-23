@@ -135,8 +135,10 @@ HUB.add(
     id: 'cyber-assignment',
     course: 'cyber-crime',
     type: 'Assignment',
-    title: 'Cyber Crime and Security — assignment',
-    date: '2026-10-25',
+    title: 'Cyber Crime assignment — security features of online platforms',
+    date: '2026-10-25T23:59',
+    note: 'Individual, 10 marks. PDF named Roll-Name, uploaded to the drive folder "MCCJ 525 - Cybercrime Assignments".',
+    link: '#/assignments/cyber-crime',
   },
   {
     id: 'forensic-deadline',
