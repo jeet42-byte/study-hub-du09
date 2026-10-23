@@ -93,6 +93,27 @@ const U = {
     return [...HUB.events, ...personal];
   },
 
+  // Progress for a quiz card: MCQs answered, or exam questions marked studied.
+  quizProgress(q) {
+    const kind = q.essays[0] && q.essays[0].parts ? 'exam questions' : 'short essays';
+    if (q.mcq.length) {
+      const ans = U.get(`quiz:${q.id}:mcq`, {});
+      const done = Object.keys(ans).length;
+      const right = Object.entries(ans).filter(([i, a]) => q.mcq[i] && q.mcq[i].a === a).length;
+      return {
+        share: done / q.mcq.length,
+        summary: `${q.mcq.length} MCQs · ${q.essays.length} ${kind}`,
+        status: done ? `${done}/${q.mcq.length} answered · ${right} correct` : 'Not started',
+      };
+    }
+    const studied = U.get(`quiz:${q.id}:studied`, []).length;
+    return {
+      share: q.essays.length ? studied / q.essays.length : 0,
+      summary: `${q.essays.length} ${kind} with answers`,
+      status: studied ? `${studied}/${q.essays.length} studied` : 'Not started',
+    };
+  },
+
   // Final-exam routine: events flagged `routine`, in date order.
   routine() {
     return HUB.events

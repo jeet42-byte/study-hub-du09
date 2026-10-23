@@ -23,7 +23,7 @@
             'Forms: sexual exploitation, forced labour, forced scamming, forced marriage',
           ],
           model:
-            "UNODC defines human trafficking as \"the recruitment, transportation, transfer, harbouring or receipt of people through force, fraud or deception, with the aim of exploiting them for profit.\" It often begins with an offer a person cannot refuse — a good job or a marriage — but ends in exploitation.\n\nTraffickers use seven means: threats or use of force, coercion, fraud, deception, abuse of a position of vulnerability, giving payments or benefits, and abduction. The most common forms are commercial sexual exploitation, forced labour, forced scamming and forced marriage, including child marriage.",
+            "UNODC definition: \"the recruitment, transportation, transfer, harbouring or receipt of people through force, fraud or deception, with the aim of exploiting them for profit.\" It often begins with an offer a person cannot refuse — a good job or a marriage — but ends in exploitation.\n\nThe seven means traffickers use:\n• Threats or use of force\n• Coercion\n• Fraud\n• Deception\n• Abuse of a position of vulnerability\n• Giving payments or benefits\n• Abduction\n\nMost common forms: commercial sexual exploitation, forced labour, forced scamming and forced marriage (including child marriage).",
         },
         {
           marks: 4,
@@ -48,7 +48,7 @@
             'Example: smuggled migrant forced to work to repay a "travel debt"',
           ],
           model:
-            "Some people start as smuggled migrants and later become trafficking victims. A migrant may agree to pay a smuggler for an irregular crossing, but on arrival find that the 'travel debt' has grown and must be repaid through unpaid or unsafe work, or be threatened into acts they never agreed to. Once in a foreign place without papers, money or language, and afraid of the police, they have no real choice but to obey (Andrees, 2008; Herman, 2006). At that moment consent has been replaced by control and exploitation — smuggling has turned into trafficking. Initial consent therefore does not mean the person is safe.",
+            "Some people start as smuggled migrants and later become trafficking victims.\n\nHow it happens:\n• Debt bondage — the 'travel debt' grows and must be repaid through unpaid work\n• Unsafe work — the migrant is placed in dangerous or abusive jobs\n• Threats — they are forced into acts they never agreed to\n• No way out — abroad without papers, money or language, and afraid of the police, they must obey (Andrees, 2008; Herman, 2006)\n\nAt that point consent has been replaced by control and exploitation — smuggling has become trafficking. Initial consent does not mean the person is safe.",
         },
       ],
     },
@@ -65,7 +65,7 @@
             'Golden Wedge: newest — north Bangladesh to Himachal Pradesh & Uttar Pradesh, incl. Nepal & parts of Bhutan',
           ],
           model:
-            "The Golden Triangle is the region where Myanmar, Laos and Thailand meet — one of the world's oldest and largest drug-producing areas, historically famous for opium and heroin and now for methamphetamine (yaba).\n\nThe Golden Crescent comprises Afghanistan (the main cultivation hub), Pakistan (transit and refining hub) and Iran (the main corridor to Europe).\n\nThe Golden Wedge is the newest route, linking north Bangladesh with the Indian states of Himachal Pradesh and Uttar Pradesh and extending to Nepal and parts of Bhutan. It lies between the Golden Crescent and the Golden Triangle.",
+            "• Golden Triangle — where Myanmar, Laos and Thailand meet; one of the oldest drug-producing regions, once famous for opium and heroin, now for methamphetamine (yaba)\n• Golden Crescent — Afghanistan (cultivation hub), Pakistan (transit and refining hub) and Iran (main corridor to Europe)\n• Golden Wedge — the newest route, linking north Bangladesh with Himachal Pradesh and Uttar Pradesh and extending to Nepal and parts of Bhutan; it lies between the Crescent and the Triangle",
         },
         {
           marks: 4,
@@ -78,7 +78,7 @@
             '105 border points in 18 districts; onward via Dhaka, Chattogram, Sylhet',
           ],
           model:
-            "Bangladesh is not a major producer, but its location between the Golden Triangle and Golden Crescent, with the Golden Wedge to the north, makes it a natural corridor. Its hilly borders with India and Myanmar are hard to patrol, and traffickers use at least 105 border points across 18 districts.\n\nThe Myanmar corridor (Teknaf, Ukhiya, Saint Martin's Island) is the main gateway for yaba and crystal meth: boats cross the Naf River, human carriers ('mules') hide the drugs, and Rohingya refugee networks are exploited. From Cox's Bazar, yaba moves to Dhaka, Chattogram and Sylhet and onwards to India. The Indian corridor (Satkhira, Jashore, Cumilla, Kurigram) carries Phensedyl, heroin and cannabis. International syndicates use Dhaka airport to move cocaine from Africa and South America towards India.",
+            "Bangladesh is not a major producer, but its location between the Golden Triangle and Golden Crescent (with the Golden Wedge to the north) makes it a natural corridor. Its hilly borders with India and Myanmar are hard to patrol, and traffickers use at least 105 border points across 18 districts.\n\nMain routes:\n• Myanmar corridor — Teknaf, Ukhiya, Saint Martin's Island; the main gateway for yaba and crystal meth, by boat across the Naf River, on human carriers ('mules') and through exploited Rohingya networks, then on to Dhaka, Chattogram, Sylhet and India\n• Indian corridor — Satkhira, Jashore, Cumilla, Kurigram; Phensedyl, heroin and cannabis\n• Dhaka airport — international syndicates move cocaine from Africa and South America towards India",
         },
         {
           marks: 3,
@@ -90,7 +90,7 @@
             'UNCTAD: ~USD 481 million lost per year; 5th globally for drug-linked money laundering',
           ],
           model:
-            "The DNC estimates about 8.2 million drug users — nearly 5% of the population — concentrated in Dhaka division; cannabis alone has around 6.1 million users. Yaba, a methamphetamine-and-caffeine tablet from Myanmar, is the most common drug and the largest share of seizures, popular among youth, workers and students.\n\nTrafficking is modernizing: deals move to social media, encrypted apps and digital payments; women and children under 15 are used as couriers; and dense areas such as Geneva Camp hide ringleaders. Economically, UNCTAD estimates Bangladesh loses about USD 481 million a year to drug trafficking, ranking 5th globally for narcotics-linked money laundering. The trade harms public health and productivity and feeds corruption at the borders.",
+            "• Users — about 8.2 million (nearly 5% of the population) according to the DNC, concentrated in Dhaka division; cannabis alone has about 6.1 million users\n• Main drug — yaba (methamphetamine + caffeine) from Myanmar, the largest share of seizures, popular among youth, workers and students\n• New methods — social media, encrypted apps and digital payments; women and children under 15 used as couriers; dense areas such as Geneva Camp hide ringleaders\n• Economic cost — UNCTAD estimates about USD 481 million lost a year; Bangladesh ranks 5th globally for narcotics-linked money laundering\n\nThe trade harms public health and productivity and feeds corruption at the borders.",
         },
       ],
     },
@@ -107,7 +107,7 @@
             'Characteristics: illegal production; intent to deceive; missing/poor security features',
           ],
           model:
-            "Counterfeit currency is fake or imitation money produced without legal government authorization, with the intention of deceiving people and passing it off as genuine legal tender. It is a form of financial fraud and economic crime. Counterfeiting is as old as coinage — plated copies (fourrées) existed in the Lydian civilization — while modern counterfeiters use advanced printing.\n\nKey characteristics: (1) illegal production without authorization from the government or central bank; (2) intent to deceive, imitating the look and feel of genuine notes; and (3) missing security features — threads, watermarks, micro-printing and colour-shifting ink are absent or poorly copied.",
+            "Counterfeit currency is fake or imitation money produced without legal government authorization, with the intention of deceiving people and passing it off as genuine legal tender. It is a form of financial fraud and economic crime, as old as coinage (plated Lydian 'fourrées'), and today uses advanced printing.\n\nKey characteristics:\n1. Illegal production — made without authorization from the government or central bank\n2. Intent to deceive — imitates the look and feel of genuine notes\n3. Missing security features — threads, watermarks, micro-printing and colour-shifting ink are absent or poorly copied",
         },
         {
           marks: 4,
@@ -120,7 +120,7 @@
             'Erodes public trust in cash and financial system',
           ],
           model:
-            "Counterfeit currency harms the economy in six ways. It undermines national economies, weakening financial institutions and livelihoods. It fuels the underground economy by financing organized crime, drug trafficking, money laundering and terrorism. Increased circulation of unauthorized notes can reduce the value of legitimate money, and an artificial increase in the money supply may contribute to inflation. Individuals and traders suffer direct losses because central banks and shops do not reimburse fake notes. Finally, widespread fakes make people hesitant to accept cash, hurting small businesses and eroding confidence in the currency and the financial system.",
+            "Counterfeit currency harms the economy in six ways:\n1. Undermines the economy — weakens financial institutions and livelihoods\n2. Fuels the underground economy — finances organized crime, drug trafficking, money laundering and terrorism\n3. Reduces the value of legitimate money — more unauthorized notes in circulation\n4. Raises prices — an artificial increase in the money supply may cause inflation\n5. Causes direct losses — people and traders who receive fakes are not reimbursed\n6. Erodes public trust — people hesitate to accept cash, hurting small businesses and confidence in the financial system",
         },
         {
           marks: 3,
@@ -133,7 +133,7 @@
             '2025 Jhenaidah: ₹5.04 lakh bought for Tk 60,000; MoU between India and Bangladesh',
           ],
           model:
-            "The India–Bangladesh border is associated with smuggling of Fake Indian Currency Notes (FICN). Notes enter India from the Bangladesh side, particularly through West Bengal, with Malda historically an important transit area; networks then distribute them across India.\n\nCases show the pattern: in 2021, Chattogram police found a network moving rupees allegedly printed in Lahore through Sri Lanka and Chattogram, then overland to India; in 2023, a Dhaka syndicate produced fake rupees to buy narcotics and pay for smuggling; and in 2025, BGB arrested a man near the Jhenaidah border with ₹5.04 lakh in fake notes bought for Tk 60,000. India and Bangladesh have an MoU and joint cooperation to counter production and circulation.",
+            "The India–Bangladesh border is associated with smuggling of Fake Indian Currency Notes (FICN). Notes enter India from the Bangladesh side, mainly through West Bengal, with Malda historically an important transit area; networks then distribute them across India.\n\nNotable cases:\n• 2021, Chattogram — rupees allegedly printed in Lahore moved through Sri Lanka and Chattogram, then overland to India\n• 2023, Dhaka — a syndicate produced fake rupees to buy narcotics and pay for smuggling\n• 2025, Jhenaidah — BGB arrested a man carrying ₹5.04 lakh in fake notes, bought for Tk 60,000\n\nResponse: India and Bangladesh have an MoU and joint cooperation against the production and circulation of counterfeit currency.",
         },
       ],
     },
@@ -150,7 +150,7 @@
             'Motives: value & portability; price/tax differences; high import duties; weak borders; demand for undeclared gold; money laundering',
           ],
           model:
-            "Gold smuggling is the illegal movement of gold across national or international borders to avoid customs duties, taxes and regulations. It is facilitated by criminal networks, intermediaries and corrupt officials and contributes to money laundering, corruption and tax evasion.\n\nPeople smuggle gold because it is highly valuable yet compact and portable; price and tax differences between countries create profit; high import duties make evasion attractive; weak border controls make it easy; buyers want undeclared gold outside formal markets; and gold can be used to move or store the proceeds of crime.",
+            "Gold smuggling is the illegal movement of gold across national or international borders to avoid customs duties, taxes and regulations. It is facilitated by criminal networks, intermediaries and corrupt officials, and feeds money laundering, corruption and tax evasion.\n\nWhy people smuggle gold:\n• High value, easy portability — valuable yet compact\n• Price and tax differences — profit from gaps between countries\n• High import duties — evasion increases the margin\n• Weak border controls — easy to move undetected\n• Demand for undeclared gold — buyers avoid taxes and paperwork\n• Money laundering — gold stores and moves criminal proceeds",
         },
         {
           marks: 3,
@@ -162,7 +162,7 @@
             'Routes: Africa → Dubai; UAE/Singapore → Bangladesh → India; Amazon → North America/Europe',
           ],
           model:
-            "Gold is smuggled (1) by airline passengers who do not declare it; (2) across land borders using unauthorized routes; (3) by ships and boats on sea routes; (4) hidden in luggage, vehicles or commercial cargo; and (5) through informal networks of brokers, couriers and traders outside formal channels.\n\nGlobally, gold flows from producing or conflict areas to transit hubs, refiners and consumer markets: African gold (Sudan, South Sudan, DR Congo) moves via Uganda, Rwanda, Kenya and Egypt to Dubai; gold from the UAE and Singapore enters Bangladesh and crosses into India; and Amazon gold from Venezuela, Brazil and Guyana moves towards North America and Europe.",
+            "Ways gold is smuggled:\n1. Airport passengers — carrying gold without declaring it\n2. Land borders — using unauthorized routes around checkpoints\n3. Sea routes — ships and boats\n4. Concealment — inside luggage, vehicles or commercial cargo\n5. Informal networks — brokers, couriers and traders outside formal channels\n\nMain global routes (producing/conflict areas → transit hubs → refiners → markets):\n• Africa → Dubai — Sudan, South Sudan and DR Congo gold via Uganda, Rwanda, Kenya and Egypt\n• UAE/Singapore → Bangladesh → India\n• Amazon → North America and Europe — gold from Venezuela, Brazil and Guyana",
         },
         {
           marks: 4,
@@ -175,7 +175,7 @@
             'Measures: risk-based screening, profiling, X-ray, intelligence, financial tracing, anti-corruption, border surveillance, intelligence sharing',
           ],
           model:
-            "Bangladesh is mainly a destination and transit country for gold, not a producer. Gold comes chiefly from Dubai and other Gulf hubs and enters through Hazrat Shahjalal International Airport, Dhaka; it then moves along the Jashore–Narail highway to border areas such as Benapole and into India (Middle East → Bangladesh → India). Networks of couriers, financiers, dealers and intermediaries run the trade.\n\nIn the BG-148 case (2 July 2026), 160 gold bars weighing 18.720 kg were found in the cargo hold of a Biman flight from Dubai after DGFI intelligence; AVSEC, Customs and airline security acted and a case was filed at Bimanbandar Police Station. Placement in a cargo hold points to insider help and shows why kingpins are hard to identify.\n\nPrevention: risk-based customs screening; passenger and baggage profiling; X-ray and advanced scanning; intelligence-led investigations; financial tracing of the money behind consignments; anti-corruption checks on airport and customs staff; stronger border surveillance; and intelligence sharing with the UAE and India.",
+            "Bangladesh's position:\n• Role — destination and transit country, not a producer\n• Source — mainly Dubai and other Gulf hubs\n• Entry — Hazrat Shahjalal International Airport, Dhaka\n• Exit — Jashore–Narail highway and Benapole into India (Middle East → Bangladesh → India)\n• Actors — couriers, financiers, dealers and intermediaries\n\nCase — BG-148 (2 July 2026): 160 gold bars (18.720 kg) were found in the cargo hold of a Biman flight from Dubai after DGFI intelligence; AVSEC, Customs and airline security acted and a case was filed at Bimanbandar Police Station. A cargo-hold consignment points to insider help — one reason kingpins are rarely identified.\n\nDetection and prevention:\n• Risk-based customs screening and passenger/baggage profiling\n• X-ray and advanced scanning\n• Intelligence-led investigations\n• Financial tracing of the money behind consignments\n• Anti-corruption checks on airport and customs staff\n• Stronger border surveillance and intelligence sharing with the UAE and India",
         },
       ],
     },
@@ -236,7 +236,7 @@
             'Arms non-state actors: separatists, syndicates, terrorists, cartels, pirates',
           ],
           model:
-            "Arms smuggling, or gunrunning, is the illicit cross-border transfer, acquisition or diversion of firearms, ammunition and explosives. The illicit trade is estimated at USD 1.7–3.5 billion a year and mainly involves small arms and light weapons (SALW), because they are mass-produced, portable and easy to conceal.\n\nIt is unique because, unlike drugs or human smuggling, which are mainly driven by profit, arms are used to exercise power, secure territory and challenge national security. It increases the potential for violence among non-state actors — separatists, criminal syndicates, terrorists, drug cartels and pirates — and hinders states' socio-economic and political development.",
+            "Arms smuggling, or gunrunning, is the illicit cross-border transfer, acquisition or diversion of firearms, ammunition and explosives. The illicit trade is worth an estimated USD 1.7–3.5 billion a year and mainly involves small arms and light weapons (SALW), which are mass-produced, portable and easy to conceal.\n\nWhy it is unique: drugs and human smuggling are driven mainly by profit, but arms are used to exercise power, secure territory and challenge national security. They raise the potential for violence among separatists, criminal syndicates, terrorists, drug cartels and pirates, and hinder states' development.",
         },
         {
           marks: 3,
@@ -250,7 +250,7 @@
             'Weak law enforcement; diversion from legal markets',
           ],
           model:
-            "Seven drivers: (1) high profitability for criminal networks; (2) conflicts and political instability, which create strong demand for weapons; (3) weak, porous borders; (4) corruption, as corrupt officials enable trafficking, diversion and illegal transactions; (5) demand from gangs, cartels and armed groups; (6) weak law enforcement with limited capacity to detect, investigate and prosecute; and (7) diversion from legal markets, where legally manufactured or imported weapons leak into illicit hands.",
+            "Seven drivers of arms smuggling:\n1. High profitability — large profits for criminal networks\n2. Conflict and political instability — create strong demand for weapons\n3. Weak border controls — porous borders ease illegal movement\n4. Corruption — officials enable trafficking, diversion and illegal deals\n5. Demand from criminal groups — gangs, cartels and armed groups\n6. Weak law enforcement — limited capacity to detect, investigate and prosecute\n7. Diversion from legal markets — legal weapons leak into illicit hands",
         },
         {
           marks: 4,
@@ -263,7 +263,7 @@
             'Threats in BD: gang violence, organized crime, terrorism, political violence',
           ],
           model:
-            "Arms smuggling poses three major threats. First, war and armed conflict: smuggled weapons fuel and prolong conflict, strengthen armed groups and undermine state authority, causing violence and displacement — as in the Sahel around gold-mining areas. Second, organized crime: firearms facilitate homicide, robbery, kidnapping, extortion and trafficking and let groups control territory; Mexican cartels rely on illicit guns to protect operations and fight rivals. Third, terrorism: extremists obtain weapons on illegal markets — firearms trafficked through illicit networks were used in the 2015 Paris attacks.\n\nIn Bangladesh, arms reportedly enter through networks connected to Myanmar and India, especially in Chattogram, Cox's Bazar and the south-eastern border, where long land and maritime borders are hard to control. Intermediaries and illicit dealers supply criminal groups, creating risks of gang violence, organized crime, terrorism and political violence.",
+            "Three major threats:\n• War and armed conflict — smuggled weapons prolong conflict, strengthen armed groups and undermine the state, causing violence and displacement (e.g. the Sahel, around gold-mining areas)\n• Organized crime — guns enable homicide, robbery, kidnapping, extortion and territorial control (e.g. Mexican cartels)\n• Terrorism — extremists buy weapons on illicit markets (e.g. trafficked firearms used in the 2015 Paris attacks)\n\nBangladesh: arms reportedly enter through networks linked to Myanmar and India, especially in Chattogram, Cox's Bazar and the south-eastern border, where long land and sea borders are hard to control. Intermediaries supply criminal groups, creating risks of gang violence, organized crime, terrorism and political violence.",
         },
       ],
     },
@@ -280,7 +280,7 @@
             'Drivers: unsafe/irregular migration; poverty & unemployment; disasters & displacement; organized networks',
           ],
           model:
-            "Bangladesh is a source country because its citizens are recruited and trafficked abroad; a transit country because victims are moved through it; and a destination country because exploitation also happens inside it. Trafficking is both cross-border and internal and affects men, women and children in urban, rural and migration settings.\n\nThe main drivers are unsafe and irregular migration pathways; poverty and widespread unemployment; natural disasters and displacement; and organized criminal networks that exploit this vulnerability.",
+            "Bangladesh plays all three roles:\n• Source — its citizens are recruited and trafficked abroad\n• Transit — victims are moved through it\n• Destination — exploitation also happens inside the country\n\nTrafficking is both cross-border and internal, affecting men, women and children in urban, rural and migration settings.\n\nDrivers:\n1. Unsafe and irregular migration pathways\n2. Poverty and widespread unemployment\n3. Natural disasters and displacement\n4. Organized criminal networks exploiting vulnerability",
         },
         {
           marks: 4,
@@ -293,7 +293,7 @@
             'Cambodia scam compounds: 2,408 (Jan–Apr), >15,000 in 2025; $30–36 e-visa; no embassy',
           ],
           model:
-            "Seven international destinations are active by air: Italy, Serbia/Macedonia, Russia, the USA, Canada, Australia and Cambodia/Laos. Traffickers first get tourist, education or employment visas, then move people through a third country to avoid surveillance. For the USA the route is Bangladesh → Brazil → Mexico; for Canada, via a third country such as Nepal; for Russia, via Saudi Arabia. The Italy route is the most complex: to the Middle East via Nepal, India or Sri Lanka, then through Egypt, Tunisia or Libya. By sea, the CID identifies Bangladesh → Malaysia → Indonesia → Australia, and Bangladesh → Myanmar → Thailand → Malaysia.\n\nA new trend is forced scamming in Cambodia: 2,408 Bangladeshis went there between January and April, over 15,000 travelled with BMET clearance in 2025, and some were sold to cyber-scam compounds. A $30–36 e-visa makes travel easy, and Bangladesh has no embassy in Cambodia, so victims struggle to get help.",
+            "Seven international destinations are active by air: Italy, Serbia/Macedonia, Russia, the USA, Canada, Australia and Cambodia/Laos. Traffickers first obtain tourist, education or job visas, then route people through a third country to avoid surveillance.\n\nMain routes:\n• USA — Bangladesh → Brazil → Mexico\n• Canada — via a third country such as Nepal\n• Russia — via Saudi Arabia\n• Italy (most complex) — to the Middle East via Nepal, India or Sri Lanka, then Egypt, Tunisia or Libya\n• Sea routes (CID) — Bangladesh → Malaysia → Indonesia → Australia; Bangladesh → Myanmar → Thailand → Malaysia\n\nNew trend — Cambodia: 2,408 Bangladeshis went between January and April, and 15,000+ travelled with BMET clearance in 2025; some were sold to cyber-scam compounds. A $30–36 e-visa makes travel easy, and Bangladesh has no embassy in Cambodia, so victims struggle to get help.",
         },
         {
           marks: 3,
@@ -305,7 +305,7 @@
             'Weakness: slow investigations; settlements for money; impunity → reoffending',
           ],
           model:
-            "The framework includes the Constitution, the Prevention and Suppression of Human Trafficking Act 2012 and its 2017 Rules, the National Anti-Human Trafficking Authority Rules 2017, and the Manob Pachar Tohobil Act 2017, alongside the UN Convention against Transnational Organized Crime with its trafficking and migrant-smuggling protocols. For organized trafficking the law prescribes death, life imprisonment, or at least seven years plus a fine of at least Tk 5 lakh, and requires charges within 90 and trial within 180 working days.\n\nEnforcement is weak because slow investigations prevent trials finishing on time, and cases are settled in exchange for money. Traffickers therefore evade punishment, become emboldened and reoffend.",
+            "Legal framework:\n• Constitution of Bangladesh\n• Prevention and Suppression of Human Trafficking Act 2012 and its 2017 Rules\n• National Anti-Human Trafficking Authority Rules 2017 and Manob Pachar Tohobil Act 2017\n• UN Convention against Transnational Organized Crime, with the trafficking and migrant-smuggling protocols\n\nPenalty for organized trafficking: death, life imprisonment, or at least 7 years plus a fine of at least Tk 5 lakh. Charges must be framed within 90 and the trial finished within 180 working days.\n\nWhy enforcement is weak:\n• Slow investigations — trials miss the deadlines\n• Money settlements — cases are settled in exchange for money\n• Impunity — traffickers escape punishment, become emboldened and reoffend",
         },
       ],
     },
@@ -324,7 +324,7 @@
             'Documents: passports, IDs, cheques, deeds, certificates; coins: casting, striking, plating, clipping',
           ],
           model:
-            "Counterfeiting takes several forms. Currency counterfeiting produces fake notes or coins to defraud people and systems. Consumer-goods counterfeiting copies designer clothing, watches, handbags and shoes. Electronics counterfeiting misrepresents components such as chips and capacitors through blacktopping (erasing and re-marking chips), e-waste repurposing, relabeling or grade spoofing, and reselling defective parts. Health-and-safety counterfeiting fakes medicines, vaccines, medical devices and sanitizers, often with harmful or inactive ingredients. Document counterfeiting reproduces passports, IDs, cheques, deeds and diplomas from scratch. Coin counterfeiting uses casting, striking, plating, clipping or bi-metallic forgery.",
+            "Common types of counterfeiting:\n• Currency — fake notes or coins to defraud people and systems\n• Consumer goods — designer clothing, watches, handbags, shoes\n• Electronics and parts — blacktopping (re-marking chips), e-waste repurposing, relabeling/grade spoofing, reselling defective parts\n• Health and safety items — fake medicines, vaccines, medical devices and sanitizers with harmful or inactive ingredients\n• Documents — passports, IDs, cheques, deeds and diplomas reproduced from scratch\n• Coins — casting, striking, plating, clipping or bi-metallic forgery",
         },
         {
           marks: 3,
@@ -337,7 +337,7 @@
             'Infringement: similar mark causing confusion',
           ],
           model:
-            "Counterfeit goods illegally use a registered trademark, logo or brand name to pass as the original. Dupes or knockoffs copy a product's design or style without using the protected mark. Pirated goods are unauthorized copies of copyrighted material such as music, films or software.\n\nTrademark counterfeiting places a fake mark that is identical or virtually indistinguishable from a registered trademark on goods — a severe, intentional form of infringement meant to trick buyers. Ordinary infringement occurs when a similar mark causes confusion about a product's source.",
+            "• Counterfeit goods — illegally use a registered trademark, logo or brand name to pass as the original\n• Dupes / knockoffs — copy a product's design or style without the protected mark\n• Pirated goods — unauthorized copies of copyrighted music, films or software\n\nTrademark counterfeiting vs infringement: counterfeiting puts a fake mark that is identical or virtually indistinguishable from a registered trademark on goods — a severe, intentional form of infringement. Ordinary infringement is a similar (not identical) mark that confuses consumers about the source.",
         },
         {
           marks: 3,
@@ -349,7 +349,7 @@
             'Report side effects or lack of effect; verification tools (TraceChainBD QR)',
           ],
           model:
-            "Warning signs include prices far below market value or high-pressure discounts; poor packaging with spelling mistakes, blurry logos or inconsistent fonts; missing serial numbers, batch codes, warranty or customer-support details; and untrusted sellers such as unverified social-media profiles or street vendors. To protect themselves, consumers should buy medicines and safety items only from licensed pharmacies, hospitals or manufacturers; inspect packaging for errors, broken seals and missing batch numbers; report unusual side effects or lack of effect to health authorities; and use verification tools such as QR-based systems like TraceChainBD.",
+            "Warning signs:\n• Unusually low prices or high-pressure discounts\n• Poor packaging — spelling mistakes, blurry logos, inconsistent fonts\n• Missing details — no serial numbers, batch codes, warranty or support contacts\n• Untrusted sellers — unverified social-media profiles, street vendors, unauthorized online stores\n\nHow to protect yourself:\n• Buy medicines and safety items only from licensed pharmacies, hospitals or manufacturers\n• Inspect packaging for errors, broken seals and missing batch numbers\n• Report unusual side effects or lack of effect to health authorities\n• Use verification tools such as QR-based systems (e.g. TraceChainBD)",
         },
       ],
     },
@@ -366,7 +366,7 @@
             'Market expansion — new consumers, synthetic drugs',
           ],
           model:
-            "Drug syndicates pursue three economic objectives. Profit maximization: generating immense revenue by controlling production, trafficking and distribution. Wealth integration: laundering cash through legitimate businesses, real estate and offshore accounts to blend it into the global financial system. Market expansion: building new consumer bases and introducing highly addictive synthetic drugs to create fresh revenue streams.",
+            "Limits of border control (fences, security, targeting routes):\n• Most trafficking for sexual exploitation is over short distances\n• Many victims travel voluntarily at first, so borders don't catch them\n• Strict controls push migrants onto deadly routes — 300+ deaths a year on the US–Mexico border since 2000 (Guerette, 2007)\n\nHarm-reduction strategies:\n• Educational campaigns warning migrants of risks\n• Training and life-saving equipment for border agents\n• Search-and-rescue teams\n• Lateral repatriation — returning migrants to safer border areas\n\nThese saved lives, though the overall death rate did not fall much. Transit countries can also help by checking documents, spotting high-risk people, protecting victims and prosecuting traffickers (Perrin, 2010).",
         },
         {
           marks: 4,
@@ -378,7 +378,7 @@
             'Threat: replace state authority, capture institutions; link to State–Crime Nexus',
           ],
           model:
-            "Syndicates also pursue power. Systemic corruption: they bribe, intimidate or blackmail law enforcement, customs officials, politicians and judges to secure operational impunity. Territorial control: they establish their own governance over areas — 'narco-states' or lawless zones — where they operate without government interference. Community co-optation: they fund local infrastructure, healthcare or social services in poor areas to buy public loyalty, so communities shield their leaders from the authorities.\n\nThese aims threaten the state because they hollow out its institutions from inside and replace its authority on the ground — the state–crime nexus in practice, seen in Myanmar's Wa and Shan areas and Mexico's cartel territories.",
+            "• Swedish model (1999) — prostitution treated as male violence against women; buyers are criminalized to reduce demand. Result: street prostitution fell, but indoor and online sex work grew\n• Dutch model (2000) — brothel ban lifted; voluntary adult prostitution legal under licensing. Result: fewer undocumented workers, but pimps and trafficking continue behind legal façades (Daalder, 2007)\n• Finnish model — buying sex is an offence only if the person is trafficked or exploited. Problem: clients cannot easily know, and most do not report even when suspicious (Farley et al., 2009)\n\nEach model shifts exploitation rather than ending it.",
         },
         {
           marks: 3,
@@ -390,7 +390,7 @@
             'Europe: Albanian mafia, \'Ndrangheta, Russian syndicates — ports, heroin/cocaine, political ties',
           ],
           model:
-            "In Latin America, Mexican cartels — Sinaloa and Jalisco New Generation (CJNG) — dominate the North American trade and are notorious for fentanyl; Colombian cartels (formerly Medellín and Cali) were key to cocaine; the US also designates Tren de Aragua (Venezuela) and MS-13 (from Los Angeles, spread to Central America through deportations). In Asia, Golden Triangle syndicates run by ethnic militias such as the United Wa State Army produce opium and meth, and Triads and Yakuza handle trafficking, laundering and distribution. In Europe, the Albanian mafia, Italy's 'Ndrangheta and Russian syndicates control ports, heroin routes and cocaine markets with deep political and financial ties.",
+            "1. Weak enforcement — authorities target business owners while pimps work outside the legal system; exploitation hides in homes and online; fewer than 10% of US police agencies identified any case in 2000–2006 (Farrell et al., 2010)\n2. Inconsistent definitions — countries apply the UN definition differently on consent, borders and forms of exploitation, 'the never-ending story of a definition' (Di Nicola, 2007); some mix trafficking, smuggling and illegal-immigration data\n3. No evaluation — only 10 of 23 US-funded projects abroad measured performance, none scientifically (GAO, 2007)\n4. Partial data efforts — Siamsect, IOM-Austria's 17 guidelines and ICMPD databases are only first steps\n5. Ideological debate — discussion is emotional, especially on sex work (Weitzer, 2010)",
         },
       ],
     },
@@ -418,7 +418,7 @@
             'Weak borders & corruption: SE Asian river borders, bribes',
           ],
           model:
-            "1. Huge profit — prohibition makes prices skyrocket across borders: cocaine costs about $2,000/kg in South America but up to $200,000/kg in Australia.\n2. Dodging high taxes — high taxes on legal goods create illegal markets: untaxed cigarettes smuggled into Europe earn over $8 million per container with lower jail risk than drugs.\n3. High demand and addiction — addicted buyers pay regardless of cost or law: cheap Myanmar yaba fuels an estimated $60 billion East Asian market.\n4. Weak borders and corruption — low-security borders and big bribes make smuggling routine: hard-to-patrol river borders in Southeast Asia let gangs pass border posts.\nSmugglers and cartels care about money, not human lives.",
+            "1. Huge profit — prohibition makes prices soar across borders: cocaine costs about $2,000/kg in South America but up to $200,000/kg in Australia\n2. Dodging high taxes — untaxed cigarettes smuggled into Europe earn over $8 million per container, with lower jail risk than drugs\n3. High demand and addiction — addicted buyers pay regardless of cost or law: Myanmar yaba fuels a ~$60 billion East Asian market\n4. Weak borders and corruption — low-security borders and big bribes make smuggling routine, e.g. river borders in Southeast Asia\n\nSmugglers and cartels care about money, not human lives.",
         },
         {
           marks: 4,
@@ -431,7 +431,7 @@
             'Supply chain: produced in developing, consumed in developed',
           ],
           model:
-            "In the developing world, many countries are production zones — opium (Afghanistan, Myanmar), cocaine (Colombia, Peru, Bolivia), cannabis and hashish (Morocco, Afghanistan) and methamphetamine (Myanmar, Nigeria) — or trafficking corridors suffering corruption and cartel violence. Lacking healthcare infrastructure and money, they respond punitively with imprisonment, and drug use is stigmatized as a personal moral failing.\n\nIn the developed world, wealthy consumers create high demand and massive profits. These countries lean towards a medicalized public-health approach — residential rehab, harm reduction and opioid substitution therapy — and their markets focus on prescription opioids, synthetic stimulants and cocaine. Overall, drugs are largely produced in the developing world and consumed in the developed world, moved by sea, air, tunnels and the dark web.",
+            "Developing world:\n• Production and transit — opium (Afghanistan, Myanmar), cocaine (Colombia, Peru, Bolivia), cannabis and hashish (Morocco, Afghanistan), methamphetamine (Myanmar, Nigeria)\n• Corruption and cartel violence along trafficking corridors\n• Punitive response — imprisonment, because of weak healthcare and limited funds\n• Stigma — drug use seen as a personal moral failing\n\nDeveloped world:\n• High demand — wealthy consumers create massive profits\n• Medicalized response — residential rehab, harm reduction, opioid substitution therapy\n• Synthetic shift — prescription opioids, synthetic stimulants and cocaine\n\nOverall: drugs are largely produced in the developing world and consumed in the developed world, moved by sea, air, tunnels and the dark web.",
         },
       ],
     },
@@ -449,7 +449,7 @@
             'Transit countries (Perrin, 2010): check documents, spot high-risk, protect, prosecute',
           ],
           model:
-            "Border control — fences, security and targeting routes — has serious limits. Most trafficking for sexual exploitation happens over short distances, and many victims travel voluntarily at first, so borders do not catch them. Strict controls also push migrants onto deadly routes: since 2000, over 300 migrant deaths a year have been recorded on the US–Mexico border (Guerette, 2007). Harm-reduction strategies were therefore introduced: educational campaigns warning migrants, training and life-saving equipment for border agents, search-and-rescue teams, and lateral repatriation to safer border areas. They saved lives, though the overall death rate did not fall significantly. Transit countries can help by checking documents, spotting high-risk people, protecting victims and prosecuting traffickers (Perrin, 2010).",
+            "Economic objectives of drug syndicates:\n1. Profit maximization — immense revenue from controlling production, trafficking and distribution\n2. Wealth integration — laundering cash through legitimate businesses, real estate and offshore accounts\n3. Market expansion — new consumer bases and highly addictive synthetic drugs",
         },
         {
           marks: 4,
@@ -460,7 +460,7 @@
             'Finland: offence only if the person is trafficked/exploited; clients can\'t know; few report (Farley et al., 2009)',
           ],
           model:
-            "Sweden (since 1999) treats prostitution as male violence against women and criminalizes buyers to change norms and reduce demand; street prostitution dropped, but indoor and online sex work grew. The Netherlands lifted its brothel ban in 2000 and legalized voluntary adult prostitution under strict licensing; there are fewer undocumented prostitutes, but many women still work with pimps and trafficking continues behind legal façades (Daalder, 2007). Finland takes a mixed approach, punishing buyers only if the person is trafficked or exploited; the problem is that clients cannot easily know, and although campaigns like 'Appearances Are Deceptive' encourage reporting, most men take no action even when suspicious (Farley et al., 2009). Each model shifts exploitation rather than ending it.",
+            "Political and social objectives:\n1. Systemic corruption — bribing, intimidating or blackmailing police, customs officials, politicians and judges to secure impunity\n2. Territorial control — governing areas as 'narco-states' or lawless zones free of state interference\n3. Community co-optation — funding local infrastructure, healthcare or services to buy loyalty, so communities shield leaders\n\nWhy this threatens the state: syndicates hollow out institutions from inside and replace state authority on the ground — the state–crime nexus in practice, as in Myanmar's Wa and Shan areas and Mexico's cartel territories.",
         },
         {
           marks: 3,
@@ -472,7 +472,7 @@
             'Data initiatives: Siamsect, IOM-Austria (17 guidelines), ICMPD; debate ideological (Weitzer, 2010)',
           ],
           model:
-            "First, enforcement is weak and patchy: authorities target business owners while pimps operate outside the legal system, exploitation hides in homes and online, and fewer than 10% of US police agencies identified any case in 2000–2006 (Farrell et al., 2010). Second, countries apply the UN definition differently on consent, cross-border movement and forms of exploitation — 'the never-ending story of a definition' (Di Nicola, 2007) — and some mix trafficking, smuggling and illegal immigration data. Third, programmes are rarely evaluated: of 23 US-funded projects abroad, only 10 measured performance and none used strong scientific methods (GAO, 2007). Data projects (Siamsect, IOM-Austria's 17 guidelines, ICMPD databases) are only partial steps, and debate remains emotional and ideological (Weitzer, 2010).",
+            "• Mexico — Sinaloa and Jalisco New Generation (CJNG) dominate the North American trade; notorious for fentanyl\n• Colombia — formerly Medellín and Cali cartels, key to cocaine\n• Other US-designated groups — Tren de Aragua (Venezuela); MS-13 (from Los Angeles, spread to Central America via deportations)\n• Asia — Golden Triangle syndicates run by ethnic militias such as the United Wa State Army (opium, meth); Triads and Yakuza (trafficking, laundering, distribution)\n• Europe — Albanian mafia, Italy's 'Ndrangheta and Russian syndicates control ports, heroin routes and cocaine markets, with deep political and financial ties",
         },
       ],
     },
@@ -490,7 +490,7 @@
             'Unauthorized: without authorization — unmarked weapons, diversion, embargo violations; grey areas',
           ],
           model:
-            "The 1999 UN Report on Small Arms separates small arms for personal use (pistols, revolvers, rifles, carbines, submachine guns, assault rifles, light machine guns) from light weapons for collective use (heavy machine guns, grenade launchers, portable anti-aircraft and anti-tank guns, recoilless rifles, mortars under 100 mm); ammunition and explosives belong to both.\n\nAn authorized transfer — import, export, transit or ownership change — has state approval under national and international law. An unauthorized (illicit) transfer lacks legal authorization: unmarked weapons, diversion to illegal end-users or embargo violations. Grey areas exist where state-approved transfers still breach international law.",
+            "• Opium — pain reliever and central nervous system depressant, used for pain, diarrhoea, asthma, fever, insomnia and rheumatism; freely available in the US until 1914; Chinese immigrants popularized smoking it and opium dens became linked with crime\n• Morphine (early 19th century) — far more powerful; the hypodermic syringe (1856) allowed injection; heavy use in the US Civil War left veterans dependent ('army disease')\n• Heroin (~1900) — diacetylmorphine, marketed as a safer, non-addictive alternative to morphine; instead misuse rose, addiction became understood, and regulation began",
         },
         {
           marks: 4,
@@ -502,7 +502,7 @@
             'Smuggling of Arms Act 1934: notified areas, removal of smugglers, arrest without warrant',
           ],
           model:
-            "Internationally, the UN Firearms Protocol (2001) is a legally binding treaty requiring States Parties to criminalize illicit firearms trafficking, establish marking and identification systems, and facilitate tracing and information exchange. The Arms Trade Treaty (2013) regulates international trade in conventional arms and prohibits transfers where there is a substantial risk the weapons will be used for serious human-rights violations.\n\nIn Bangladesh, the Arms Act (1878) prohibits the unauthorized import, export, transport, possession and dealing in arms and ammunition; illegal import or export can bring life imprisonment or at least seven years' rigorous imprisonment. The Smuggling of Arms Act (1934) empowers the government to take preventive action — declaring notified areas and removing identified smugglers — and provides penalties, including arrest without warrant, for violating such orders.",
+            "• Cause — Britain paid for Chinese tea with opium grown in India\n• Ban undermined — China banned opium, but smuggling and corruption defeated the ban\n• First Opium War (1840–42) — triggered when China destroyed British opium in 1839; China lost, paid compensation and Hong Kong became a British colony\n• Second Opium War (1856–60) — weakened China further and widened foreign trading privileges\n\nSignificance: the wars show how the drug trade, international commerce and state power were intertwined, and they increased opium use in Chinese communities in the US.",
         },
         {
           marks: 3,
@@ -516,7 +516,7 @@
             'International cooperation & information sharing',
           ],
           model:
-            "States should criminalize illegal arms trafficking under the Firearms Protocol; strengthen investigations and prosecutions of traffickers; enforce strict licensing and authorization for the import, export and transfer of firearms; improve firearm marking, record-keeping and tracing so diverted guns can be followed; confiscate and safely destroy illicit and seized weapons so they cannot re-enter circulation; and enhance international cooperation and information sharing among law-enforcement agencies. For Bangladesh, stronger surveillance of the Myanmar and Indian borders and the Chattogram–Cox's Bazar coast is also essential.",
+            "From racialized restrictions to regulation:\n• Chinese workers who came for mining and railways were linked to opium smoking, fuelling anti-Chinese sentiment\n• 1880s — US opium-import restrictions targeting Chinese immigrants\n• 1909 — International Opium Commission\n• 1912 — International Opium Convention\n• 1914 — Harrison Act: federal regulation of opiates and cocaine\n\nLessons:\n1. Medical use can grow into mass addiction (as with today's opioids)\n2. Prohibition creates price gaps that make smuggling profitable\n3. States themselves have profited from drugs\n4. Drug control can target minorities rather than harm",
         },
       ],
     },
@@ -533,7 +533,7 @@
             'Heroin (~1900): marketed as safer, non-addictive; misuse → regulation',
           ],
           model:
-            "Opium, a pain reliever and central nervous system depressant, was widely used before modern medicine for pain, diarrhoea, asthma, fever, insomnia and rheumatism. In the US it was freely available, often without prescription, until 1914; Chinese immigrants popularized smoking it in California, and opium dens became linked with crime. Morphine, developed from opium in the early 19th century, was far more powerful; the hypodermic syringe (1856) allowed injection, and use soared in the US Civil War, leaving veterans dependent — 'army disease'. Around 1900, heroin (diacetylmorphine) was marketed as a safer, non-addictive alternative to morphine; instead misuse rose, people began to understand addiction, and governments started to regulate.",
+            "• Scale — roughly 39–40% of products in the domestic market are counterfeit or adulterated\n• Categories — personal care and cosmetics 32%, electrical and electronic goods 13%, clothing and footwear 12%, food and beverages 10%, pharmaceuticals 9%\n• Methods — copied brand names and forged BSTI seals or holograms, made in hidden factories around Dhaka and Chattogram; smuggled Chinese electrical parts relabelled with fake brand logos\n• Cost — about Tk 3,170 crore in lost tax revenue and over Tk 13,680 crore in losses for legitimate brands each year",
         },
         {
           marks: 3,
@@ -545,7 +545,7 @@
             'Second Opium War 1856–60; drugs, commerce and power interconnected',
           ],
           model:
-            "Britain faced a trade imbalance with China because of its demand for Chinese tea, and paid for it with opium grown in India. China banned opium, but widespread smuggling and corruption undermined the ban. In 1839 China confiscated and destroyed British opium, triggering the First Opium War (1840–42); China was defeated, forced to pay compensation, and Hong Kong became a British colony. The Second Opium War (1856–60) weakened China further and expanded foreign trading privileges. The wars show how the drug trade, international commerce and state power became intertwined — and they increased opium availability in Chinese communities in the US.",
+            "• Health — adulterated milk, oil, honey, tea, coffee, bottled water and baby food are consumed by 80–90% of households; the WHO estimates 600 million fall ill and 442,000 die each year from contaminated food; studies link adulterated food to cancer, kidney disease and diabetes\n• Medicines — counterfeit drugs cost about $309 million a year and cause treatment failure, drug resistance or death\n• Safety — fake wires, bulbs and fans fail standards; 38% of last year's fires were electrical short circuits\n• Economy — businesses and the government lose revenue, and the trade funds organized crime and forced labour",
         },
         {
           marks: 3,
@@ -556,7 +556,7 @@
             'Lessons: medical use → addiction; prohibition → profit; states profited; control can target minorities',
           ],
           model:
-            "Chinese workers who came to the US for mining and railways were associated with opium smoking, fuelling anti-Chinese sentiment, and in the 1880s the US restricted opium imports in ways that targeted Chinese immigrants. Control then became formal and international: the International Opium Commission (1909), the International Opium Convention (1912) and the Harrison Act (1914), which introduced federal regulation of opiates and cocaine. The lessons: legitimate medical use can grow into mass addiction (as with today's opioids); prohibition creates price gaps that make smuggling profitable; states themselves have profited from drugs; and drug control can be used against minorities rather than against harm.",
+            "Legal framework:\n• Penal Code 1860 — s.465 forgery (2 years); s.466 court records/public registers (7 years); s.467 valuable securities and wills (life or 10 years); s.475–476 counterfeit authentication marks and devices (up to life / 7 years); s.483 trade or property marks (2 years); s.484 marks used by public servants (3 years)\n• Trademarks Act 2009 — civil and criminal remedies\n• Consumers' Right Protection Act 2009, s.51 — selling fake or expired goods or medicines: up to 1 year, Tk 50,000 fine, or both\n\nEnforcement gaps:\n• DNCRP and BSTI mobile courts and raids are reactive, not systemic\n• Penalties are light compared with profits\n\nSolutions:\n• Intelligence-led action against factories and distributors\n• Tougher penalties for health items\n• Supply-chain traceability, e.g. TraceChainBD (blockchain + IoT QR codes)\n• Consumer education — buy from authorized sources and check packaging",
         },
       ],
     },
@@ -574,7 +574,7 @@
             'Tk 3,170 crore tax lost; Tk 13,680 crore business losses',
           ],
           model:
-            "Counterfeit goods make up roughly 39–40% of products in Bangladesh's domestic market. Personal care and cosmetics account for about 32% of fakes, electrical and electronic goods 13%, clothing and footwear 12%, food and beverages 10% and pharmaceuticals 9%. Many carry copied brand names and forged BSTI seals or holograms and are made in hidden factories around Dhaka and Chattogram; low-quality electrical parts smuggled from China are relabelled with fake brand logos. The trade drains about Tk 3,170 crore in tax revenue and causes over Tk 13,680 crore in losses for legitimate brands each year.",
+            "Small arms vs light weapons (1999 UN Report on Small Arms):\n• Small arms (personal use) — pistols, revolvers, rifles, carbines, submachine guns, assault rifles, light machine guns\n• Light weapons (collective use) — heavy machine guns, grenade launchers, portable anti-aircraft and anti-tank guns, recoilless rifles, mortars under 100 mm\n• Ammunition and explosives — integral to both\n\nAuthorized vs unauthorized transfers:\n• Authorized — import, export, transit or ownership change with state approval under national and international law\n• Unauthorized (illicit) — without legal authorization: unmarked weapons, diversion to illegal users, embargo violations\n• Grey areas — state-approved transfers that still breach international law",
         },
         {
           marks: 3,
@@ -586,7 +586,7 @@
             '38% of fires from short circuits; revenue loss; funds organized crime',
           ],
           model:
-            "Health: the most adulterated items — milk, oil, honey, tea, coffee, bottled water and baby food — are consumed by 80–90% of households. The WHO estimates 600 million people fall ill and 442,000 die each year from contaminated food, and studies link adulterated food in Bangladesh to cancer, kidney disease and diabetes. Counterfeit medicines, costing about $309 million a year, contain wrong or toxic ingredients, causing treatment failure, drug resistance or death. Safety: fake wires, bulbs and fans fail standards — 38% of last year's fires were electrical short circuits. Economy: legitimate businesses and the government lose revenue, and the trade funds organized crime and forced labour.",
+            "International:\n• UN Firearms Protocol (2001) — legally binding; States must criminalize illicit firearms trafficking, set up marking and identification, and support tracing and information exchange\n• Arms Trade Treaty (2013) — regulates the international trade in conventional arms; bans transfers with a substantial risk of serious human-rights violations\n\nNational (Bangladesh):\n• Arms Act (1878) — bans unauthorized import, export, transport, possession and dealing; illegal import/export carries life imprisonment or at least 7 years' rigorous imprisonment\n• Smuggling of Arms Act (1934) — lets the government declare notified areas and remove identified smugglers; penalties include arrest without warrant",
         },
         {
           marks: 4,
@@ -598,7 +598,7 @@
             'Solutions: intelligence-led raids, tougher penalties, TraceChainBD traceability, consumer awareness',
           ],
           model:
-            "The Penal Code 1860 covers forgery and counterfeiting: s.465 general forgery (up to 2 years), s.466 court records/public registers (up to 7 years), s.467 valuable securities and wills (life or up to 10 years), s.475 and s.476 counterfeit authentication marks and devices (up to life/7 years), s.483 trade or property marks (up to 2 years) and s.484 marks used by public servants (up to 3 years). The Trademarks Act 2009 provides civil and criminal remedies, and the Consumers' Right Protection Act 2009, s.51, punishes selling fake or expired goods or medicines with up to one year, a fine of up to Tk 50,000, or both.\n\nEnforcement gaps: DNCRP and BSTI run mobile courts and raids, but enforcement is reactive rather than systemic, and penalties are light relative to profits. Solutions include intelligence-led action against factories and distributors, tougher penalties for health items, supply-chain traceability such as TraceChainBD (blockchain and IoT QR verification), and consumer education to buy from authorized sources and check packaging.",
+            "Measures to combat arms smuggling:\n1. Criminalize illegal arms trafficking under the Firearms Protocol\n2. Strengthen investigations and prosecutions\n3. Enforce strict licensing for import, export and transfer\n4. Improve marking, record-keeping and tracing\n5. Confiscate and safely destroy illicit and seized weapons\n6. Enhance international cooperation and information sharing\n\nFor Bangladesh: tighter surveillance of the Myanmar and Indian borders and the Chattogram–Cox's Bazar coast.",
         },
       ],
     },
@@ -626,7 +626,7 @@
             'Situation: cramped living; someone holds documents; can\'t speak for self; story doesn\'t match; unaware of employer address',
           ],
           model:
-            "Look for clusters of signs. In the person: disorientation about place, date or basic facts; inability to speak freely or always being accompanied; coached, scripted answers; signs of abuse, malnourishment or exhaustion; few possessions — no ID, phone or money; living and working in the same place; fear or submissiveness around a particular person; a minor in commercial sex with an older 'boyfriend' or 'manager'; tattoos or branding that may indicate ownership. In the situation: many people in a cramped space with limited movement; someone else controlling passports or IDs; not being allowed to speak for themselves in medical or legal settings; a story that does not match documents; and not knowing the employer's address or terms of work.",
+            "• Corruption and human trafficking — strong link in research (Bales, 2005; Studnicka, 2010); high-corruption countries see more trafficking; in Brazil 71% of cases involved corrupt officials; in Bangladesh cases are 'settled' for money, so traffickers reoffend; abroad, some venues cooperate or look the other way\n• Corruption and drug trafficking — systemic corruption is an explicit syndicate objective (bribing, intimidating or blackmailing police, customs, politicians and judges); some create narco-states; weak borders plus bribes make smuggling routine; historically, China's opium ban was undermined by smuggling and corruption",
         },
         {
           marks: 4,
@@ -640,7 +640,7 @@
             'Free will blurred — victims believe they chose this life',
           ],
           model:
-            "Victims stay for four reasons. Emotional ties: the trafficker may be a partner, relative or 'boyfriend'. Fear of law enforcement: without papers, victims fear arrest or deportation more than their exploiters. Lack of better options: debt, poverty and having nothing to return to keep them in place. Shame or stigma: especially after sexual exploitation, victims fear rejection by family and community. Traffickers reinforce these with manipulation, debt and control of documents.\n\nAs a result, 'free will' becomes blurred: many victims believe they chose this life, even while they are controlled and abused. Because some initially consented, outsiders — and victims themselves — may not see them as victims, which makes identification and rescue harder.",
+            "• Gold — smuggling is 'facilitated by… corrupt officials'; in the BG-148 case 18.72 kg was placed in an aircraft's cargo hold, hard without insiders, and kingpins stay unidentified; in the Kerala case diplomatic baggage was misused\n• Arms — corruption is a listed driver; officials enable diversion from government stockpiles and illegal transactions; forged end-user certificates exploit the legal trade\n\nResponse: anti-corruption checks, financial tracing and zero tolerance for corruption are central to fighting both.",
         },
       ],
     },
@@ -658,7 +658,7 @@
             'Corruption & political connections facilitate smuggling; weak governance creates illicit markets',
           ],
           model:
-            "The State–Crime Nexus approach (Bayart, Ellis & Hibou, 1999) examines the relationship between state actors and criminal networks. It argues that state officials may sometimes participate in, protect or benefit from illegal activities; that corruption and political connections facilitate smuggling; and that weak governance creates opportunities for illicit markets. In routine-activity terms, corruption turns the 'capable guardian' into a protector of crime.",
+            "Ways arms are acquired:\n1. Diversion from government stockpiles — weak security or corrupt officials\n2. Straw purchasing — an eligible buyer legally buys from a licensed dealer and passes the guns on\n3. Illicit manufacture and conversion — artisanal guns, reactivated weapons\n4. Online markets — social media, marketplaces and the dark web\n5. Theft — from homes, vehicles and dealers\n6. Exploiting the legal trade — forged end-user certificates",
         },
         {
           marks: 4,
@@ -670,7 +670,7 @@
             'History: China\'s opium ban undermined by smuggling & corruption; weak borders + bribes',
           ],
           model:
-            "Human trafficking: studies show a strong link between corruption and trafficking (Bales, 2005; Studnicka, 2010) — countries with high corruption see more cases, and in Brazil 71% of cases involved corrupt officials. In Bangladesh, a strict law exists, but cases are settled for money, so traffickers evade punishment and reoffend; abroad, some venues cooperate with traffickers or look the other way.\n\nDrug trafficking: systemic corruption is an explicit objective of syndicates, which bribe, intimidate or blackmail police, customs officials, politicians and judges to secure impunity, and some create narco-states. Weak borders plus large bribes make smuggling routine. Historically, China's opium ban was undermined by smuggling and corruption before the Opium Wars.",
+            "Transport and concealment:\n• Freight and container ships — large loads\n• Small vessels such as dhows — maritime smuggling with small crews\n• Post and courier — disassembled parts and ammunition\n• Road — hidden in a vehicle's structure or fuel tank\n• Commercial airlines — in checked luggage\n• Professional concealment — custom crates, mixed with heavy goods like timber\n• Ant trafficking — many individuals each carrying a few weapons across a border on foot to avoid detection",
         },
         {
           marks: 3,
@@ -681,7 +681,7 @@
             'Response: anti-corruption, financial tracing, zero tolerance',
           ],
           model:
-            "Gold smuggling is 'facilitated by criminal networks, intermediaries and corrupt officials'. In the BG-148 case, 18.72 kg of gold was placed in an aircraft's cargo hold — difficult without insiders — and investigators admit kingpins are hard to identify; in the Kerala case, diplomatic baggage was misused. In arms smuggling, corruption is listed as a key driver: corrupt officials enable diversion from government stockpiles and illegal transactions, and forged end-user certificates exploit the legal trade. Anti-corruption measures, financial tracing and zero tolerance for corruption are therefore central to any response.",
+            "Seven stages:\n1. Sourcing / acquisition — illicit manufacture, theft, diversion or illegal purchase\n2. Collection and preparation — weapons gathered for movement\n3. Concealment — hidden in legitimate goods or covered by false documents\n4. Transportation — by land, air or sea across jurisdictions\n5. Transit / intermediaries — brokers and middlemen link source and destination\n6. Border crossing — exploiting weak controls or corruption\n7. Distribution / delivery — to criminal or armed groups\n\nRoute patterns:\n• Departures — North America, Europe, Western Asia; destinations — Central and South America, parts of Western Asia\n• Land borders — about two-thirds of cases; sea shipments fewer but ~5× larger\n• Techniques — concealment, misdeclaration, document fraud\n• Most seized — pistols globally; shotguns in Africa and Asia",
         },
       ],
     },
@@ -700,7 +700,7 @@
             'Drugs often stay in region (Tajikistan, Kazakhstan, Kyrgyzstan); ~320,000 users in Central Asia',
           ],
           model:
-            "Afghanistan has long been the world's largest opium producer. Its role grew after the 1970s, when Iran, Pakistan and Turkey banned opium and traffickers turned to Afghan farmers, and insurgent and terrorist groups have used drug profits to fund wars since the Cold War.\n\nRoutes: the Balkan Route (Afghanistan → Pakistan → Iran → Turkey → Eastern → Western Europe, sometimes via Romania or Ukraine); the Northern Route (Central Asia → Russia and the Baltic States); the Southern Route (to Pakistan); air routes from Pakistan to the UK, Africa and North America; and the China–India route. Much of the heroin stays in the region — Tajikistan, Kazakhstan and Kyrgyzstan — where Central Asia has around 320,000 opiate users.",
+            "1. Recruitment — false job promises in hotels, cleaning or entertainment; some agree to sex work but are deceived about conditions (Vocks & Nijboer, 1999)\n2. Transportation — often legal travel with real documents on student, tourist or business visas, which makes victims hard to identify at borders\n3. Exploitation — prostitution, labour or scam compounds; in the Netherlands some clubs were owned by traffickers, some cooperated, and others looked the other way",
         },
         {
           marks: 3,
@@ -712,7 +712,7 @@
             'UN: stockpiles run dry → fentanyl, nitazenes; overdose risk',
           ],
           model:
-            "The Taliban's ban caused a historic 95% drop in poppy cultivation compared with 2022: from 232,000 to 10,200 hectares, with opium production falling from 6,200 to about 296 metric tons. Small-scale farming moved to remote north-eastern areas like Badakhshan, sometimes causing violent clashes with eradication teams. Methamphetamine production boomed because it is profitable, covert, drought-resistant and uses the wild ephedra plant. The UN warns that as Afghan heroin stockpiles run dry, networks are switching to potent synthetic opioids such as fentanyl and nitazenes, raising the risk of overdose crises.",
+            "Signs in the person:\n• Disoriented about place, date or basic facts\n• Cannot speak freely, or someone speaks for them\n• Coached, scripted answers\n• Signs of abuse, malnourishment or exhaustion\n• Few possessions — no ID, phone or money\n• Lives and works in the same place\n• Fearful or submissive around a particular person\n• A minor in commercial sex with an older 'boyfriend' or 'manager'; branding tattoos\n\nSigns in the situation:\n• Many people in a cramped space with limited movement\n• Someone else controls passports or IDs\n• Not allowed to speak for themselves to doctors or officials\n• Story does not match their documents\n• Does not know the employer's address or terms of work",
         },
         {
           marks: 3,
@@ -724,7 +724,7 @@
             'Control: UWSA, Shan State Army, KIA + ethnic Chinese networks',
           ],
           model:
-            "Myanmar's opium trade began under British rule; after World War II, Chinese Kuomintang forces took it over to fund their fight against communists. Poverty and ethnic conflict in Shan, Wa and Kachin States leave the government with little control. After the Taliban ban, Myanmar surpassed Afghanistan as the top opium producer (over 53,000 ha), and Shan State 'super labs' make it the region's main source of meth tablets (yaba) and crystal meth. Since the military coup and civil war, production has grown and Rakhine State has become a transit hub. The trade is controlled by armed insurgent groups — the United Wa State Army, Shan State Army and Kachin Independence Army — and ethnic Chinese networks, which fund and protect themselves with drug profits.",
+            "Why victims stay:\n1. Emotional ties — the trafficker may be a partner, relative or 'boyfriend'\n2. Fear of law enforcement — without papers, they fear arrest or deportation\n3. Lack of better options — debt and poverty leave nothing to return to\n4. Shame or stigma — especially after sexual exploitation\n\nTraffickers reinforce this with manipulation, debt and confiscated documents. As a result 'free will' becomes blurred: many victims believe they chose this life even while controlled and abused, and because some first consented, they may not be recognized as victims.",
         },
       ],
     },
@@ -744,7 +744,7 @@
             'Exploiting legal trade with forged end-user certificates',
           ],
           model:
-            "Arms are acquired through: diversion from government stockpiles via weak security or corrupt officials; straw purchasing, in which an eligible buyer legally buys from a licensed dealer and passes the guns on; illicit manufacturing and conversion, including artisanal guns and reactivated weapons; online markets, social media and the dark web; theft from homes, vehicles and dealers; and exploiting the legal trade with falsified end-user certificates.",
+            "Afghanistan has long been the world's largest opium producer. Its role grew after the 1970s, when Iran, Pakistan and Turkey banned opium and traffickers turned to Afghan farmers; insurgent and terrorist groups have used drug profits since the Cold War.\n\nMain routes:\n• Balkan Route — Afghanistan → Pakistan → Iran → Turkey → Eastern → Western Europe (sometimes via Romania or Ukraine)\n• Northern Route — Central Asia → Russia and the Baltic States\n• Southern Route — to Pakistan\n• Air routes — Pakistan to the UK, Africa and North America\n• China–India route — via Pakistan and Central Asia\n\nMuch heroin stays in the region (Tajikistan, Kazakhstan, Kyrgyzstan); Central Asia has about 320,000 opiate users.",
         },
         {
           marks: 3,
@@ -756,7 +756,7 @@
             'Ant trafficking: many individuals each carrying a few weapons on foot',
           ],
           model:
-            "Large loads go by freight and container ships; smaller boats such as dhows carry maritime consignments; disassembled parts and ammunition are sent by post and courier; weapons are hidden in a vehicle's structure or fuel tank or in checked airline luggage; and professional concealment uses custom crates or mixes arms with heavy legitimate goods like timber. 'Ant trafficking' means many individuals or small groups each carrying a small number of weapons across a border on foot, to avoid detection.",
+            "• Cultivation down ~95% — from 232,000 ha (2022) to 10,200 ha\n• Production down — from 6,200 to about 296 metric tons\n• Displacement — small-scale farming moved to remote Badakhshan, with clashes against eradication teams\n• Meth boom — profitable, covert, drought-resistant, using the wild ephedra plant\n• Synthetic shift — the UN warns that as heroin stockpiles run dry, networks are switching to fentanyl and nitazenes, raising overdose risk",
         },
         {
           marks: 4,
@@ -768,7 +768,7 @@
             'Methods: concealment, misdeclaration, document fraud; most seized: pistols (shotguns in Africa & Asia)',
           ],
           model:
-            "Arms smuggling moves through seven stages: (1) sourcing/acquisition through illicit manufacture, theft, diversion or illegal purchase; (2) collection and preparation; (3) concealment within legitimate goods or with false documents; (4) transportation by land, air or sea across jurisdictions; (5) transit via brokers and intermediaries; (6) illegal border crossing, exploiting weak controls or corruption; and (7) distribution to criminal or armed groups.\n\nMajor departure regions are North America, Europe and Western Asia; destinations are Central and South America and parts of Western Asia. Land borders account for about two-thirds of cases, while sea shipments are fewer but carry about five times more arms. The main techniques are concealment, misdeclaration and document fraud. Pistols are the most seized firearms globally, shotguns in Africa and Asia.",
+            "• History — opium trade began under British rule; after World War II, Chinese Kuomintang forces ran it to fund their fight against communists\n• Conditions — poverty and ethnic conflict in Shan, Wa and Kachin States leave the government little control\n• Scale — Myanmar surpassed Afghanistan as top opium producer (53,000+ ha); 'super labs' in Shan State make it the main source of yaba and crystal meth\n• Recent change — production grew after the military coup and civil war; Rakhine State became a transit hub\n• Who controls it — armed groups (United Wa State Army, Shan State Army, Kachin Independence Army) and ethnic Chinese networks, funded and protected by drug profits",
         },
       ],
     },
@@ -799,7 +799,7 @@
             'Bi-metallic forgery — mismatched/painted rings',
           ],
           model:
-            "Casting pours molten base metal into molds made from real coins, leaving rough edges and soft details. Struck counterfeits press fake blanks between custom-engraved dies, often made with CNC machines from digital scans. Plating and coating cover a cheap core such as copper or lead with a thin layer of gold or silver. Clipping and shaving historically filed precious metal from the edges of real coins. Bi-metallic forgery paints or mismatches the inner and outer rings of two-tone coins.",
+            "• Same background — smugglers often come from the same community as the migrants\n• Ties to both countries — links to home and destination countries (Kleemans & van de Bunt, 2003)\n• Former migrants — some were once smuggled themselves\n• Motive — usually money, but they are not necessarily criminal masterminds",
         },
         {
           marks: 3,
@@ -810,7 +810,7 @@
             'Bangladesh (coins): general up to 7 yrs; BD coins 10 yrs/life; tools 3–10 yrs; import/export up to 10 yrs',
           ],
           model:
-            "Penalties vary widely: Canada up to 14 years; China 3 years to life plus a fine; France up to 30 years and €450,000; Germany up to 15 years; Japan 3 years to life; South Korea 2 years to life; Singapore up to 20 years; the UK up to 10 years; the US up to 20 years; and Zambia life imprisonment. In Bangladesh, under the Penal Code 1860, counterfeiting coins carries up to 7 years and a fine; counterfeiting official Bangladesh coins up to 10 years or life; making or selling counterfeiting tools 3 to 10 years; and importing, exporting or passing known fake coins up to 10 years.",
+            "How networks work:\n• Small and flexible, with people at origin, transit and destination\n• With forged documents, migrants can travel more easily (e.g. by air)\n• Without documents, journeys are longer and riskier, with more transfers and stops\n• Often a chain of loosely connected groups handles the route (Zhang, 2007; Neske & Doomernik, 2006)\n\nIs it controlled by organized crime? The debate centres on Chinese migration. Soudijn (2006), studying 88 Dutch court cases, found about 25% of smugglers were non-Chinese, and groups took contracts from various sources and worked with foreign partners. They are not tight hierarchies but form stable alliances with consistent members when business runs smoothly — closer to a network model than a mafia.",
         },
       ],
     },
@@ -827,7 +827,7 @@
             'Chain migration: networks of family and friends; push and pull factors',
           ],
           model:
-            "Public debate often frames smuggling and trafficking as evil criminals versus powerless victims, an image shaped by tragedies such as the Dover lorry deaths (2000) and the Golden Venture shipwreck (1993). Reality is more complex: smuggling often involves consent between migrants and smugglers, who may be family or friends rather than masterminds. Migration is often supported by networks of family and friends who share information, contacts and planning — 'chain migration' — driven by push and pull factors.",
+            "1. Polymer banknotes — more resistant than paper; Australia issued a polymer $10 note in 1988 and the first complete polymer series in 1996, followed by New Zealand and others\n2. Advanced security features — 3D security ribbons, special printing, complex designs and colours, distinctive portraits, polymer substrates; upgrade them regularly\n3. Reserve banknote series — kept ready in case the current series is compromised, as Switzerland historically did\n4. Cooperation and awareness — e.g. the India–Bangladesh MoU, and teaching the public to check security features",
         },
         {
           marks: 3,
@@ -839,7 +839,7 @@
             'Motivated by money, but not always masterminds',
           ],
           model:
-            "Smugglers often come from the same background as the migrants they move. Studies in the Netherlands show they frequently have ties to both home and destination countries (Kleemans & van de Bunt, 2003), and some were once smuggled migrants themselves. They use their experience and connections to help others — usually for money — but are not necessarily criminal masterminds.",
+            "• Casting (molded) — molten base metal poured into molds made from real coins; rough edges, soft details\n• Struck counterfeits — fake blanks pressed between dies, often CNC-made from digital scans\n• Plating and coating — a cheap core (copper, lead) covered with a thin gold or silver layer\n• Clipping and shaving — filing precious metal off real coins (historical)\n• Bi-metallic forgery — painted or mismatched inner and outer rings on two-tone coins",
         },
         {
           marks: 4,
@@ -851,7 +851,7 @@
             'Soudijn (2006): 88 Dutch cases, ~25% non-Chinese; contracts from many sources; stable alliances, not tight control',
           ],
           model:
-            "Smuggling networks are usually small and flexible, with people at each stage — origin, transit and destination. With forged documents, migrants can travel more easily, for example by air; without documents the journey is longer and riskier, with more transfers, stops and coordination, often handled by a chain of loosely connected groups (Zhang, 2007; Neske & Doomernik, 2006).\n\nWhether organized crime controls smuggling is debated, especially for Chinese migration. Soudijn (2006), studying 88 Dutch court cases, found that not all smugglers were Chinese — about 25% were of other ethnicities — and that groups took contracts from various sources and worked with foreign partners. They are not tightly controlled hierarchies, but they form stable alliances with consistent members when business runs smoothly — closer to a network model than a mafia.",
+            "Selected countries:\n• United States — up to 20 years; United Kingdom — up to 10 years\n• China — 3 years to life + fine; Japan — 3 years to life; South Korea — 2 years to life\n• France — up to 30 years + €450,000; Germany — up to 15 years; Canada — up to 14 years\n• Singapore — up to 20 years; Zambia — life imprisonment\n\nBangladesh (Penal Code 1860, coins):\n• Counterfeiting coins — up to 7 years + fine\n• Official Bangladesh coins — up to 10 years or life + fine\n• Making or selling counterfeiting tools — 3 to 10 years\n• Importing, exporting or passing known fakes — up to 10 years",
         },
       ],
     },

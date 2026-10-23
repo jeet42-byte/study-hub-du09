@@ -28,15 +28,14 @@
           <div class="grid">
             ${quizzes
               .map((q) => {
-                const ans = U.get(`quiz:${q.id}:mcq`, {});
-                const done = Object.keys(ans).length;
+                const pr = U.quizProgress(q);
                 return `
                   <a class="card tile" href="#/exams/${q.id}">
                     <span class="chip">${U.esc(q.format)}</span>
                     <h3 style="margin-top:8px">${U.esc(q.title)}</h3>
                     <p class="muted">${U.esc(q.scope)}</p>
-                    <div class="progress"><div style="width:${(done / q.mcq.length) * 100}%"></div></div>
-                    <small>${q.mcq.length} MCQs · ${q.essays.length} ${q.essays[0] && q.essays[0].parts ? 'exam questions' : 'short essays'} · ${done} answered</small>
+                    <div class="progress"><div style="width:${pr.share * 100}%"></div></div>
+                    <small>${U.esc(pr.summary)} · ${U.esc(pr.status)}</small>
                   </a>`;
               })
               .join('')}
@@ -56,11 +55,12 @@
   function renderQuiz(root, quiz, tab) {
     const course = HUB.course(quiz.course);
     const composite = isComposite(quiz);
+    if (tab === 'mcq' && !quiz.mcq.length) tab = composite ? 'plan' : 'essay';
     const tabs = composite
       ? [
           ['plan', 'Exam plan'],
-          ['essay', `Exam questions (${quiz.essays.length})`],
-          ['mcq', `Concept check MCQs (${quiz.mcq.length})`],
+          ['essay', `Questions & answers (${quiz.essays.length})`],
+          ...(quiz.mcq.length ? [['mcq', `Concept check MCQs (${quiz.mcq.length})`]] : []),
           ['probability', 'Probability analysis'],
         ]
       : [
@@ -406,14 +406,40 @@
   // Never round a near-certainty up to 100%: the model is an estimate.
   const pct = (x) => (x >= 0.995 ? '>99%' : `${Math.round(x * 100)}%`);
 
+  // Model answers are plain text. Blank lines separate blocks; inside a block, "• " lines
+  // form a bullet list and "1. " lines a numbered list, optionally after one intro line.
+  // A short label before " — " in a list item is shown in bold.
+  function richText(text) {
+    const item = (l) => {
+      const m = l.match(/^(.{2,48}?) — (.*)$/);
+      return m ? `<li><b>${U.esc(m[1])}</b> — ${U.esc(m[2])}</li>` : `<li>${U.esc(l)}</li>`;
+    };
+    const asList = (lines) => {
+      if (lines.every((l) => l.startsWith('• '))) return `<ul>${lines.map((l) => item(l.slice(2))).join('')}</ul>`;
+      if (lines.every((l) => /^\d+\.\s/.test(l))) return `<ol>${lines.map((l) => item(l.replace(/^\d+\.\s/, ''))).join('')}</ol>`;
+      return null;
+    };
+    return String(text)
+      .split(/\n\s*\n/)
+      .map((block) => {
+        const lines = block.split('\n').map((l) => l.trim()).filter(Boolean);
+        const whole = asList(lines);
+        if (whole) return whole;
+        const rest = lines.length > 1 ? asList(lines.slice(1)) : null;
+        if (rest) return `<p>${U.esc(lines[0])}</p>${rest}`;
+        return `<p>${lines.map(U.esc).join('<br>')}</p>`;
+      })
+      .join('');
+  }
+
   function renderExamQuestions(body, quiz) {
     const topics = topicMap(quiz);
     const studied = new Set(U.get(studiedKey(quiz), []));
     const groups = [...new Set(quiz.topics.map((t) => t.group))];
+    let selfTest = U.get(`quiz:${quiz.id}:selftest`, false);
 
     body.innerHTML = `
-      <p class="muted">Each question follows the exam pattern: 10 marks split into 2–3 parts. Read them in rank order — Tier 1 first. Write your own answer to each part, tick the key points you covered, then compare with the model answer.</p>
-      <div class="row" style="margin-bottom:12px">
+      <div class="row" style="margin-bottom:14px">
         <select id="x-tier" aria-label="Tier">
           <option value="">All tiers</option>
           ${TIERS.map((t, i) => `<option value="${i}">${t.label}</option>`).join('')}
@@ -423,6 +449,8 @@
           ${groups.map((g) => `<option>${U.esc(g)}</option>`).join('')}
         </select>
         <label class="row" style="gap:6px"><input type="checkbox" id="x-hide"> Hide studied</label>
+        <span class="spacer"></span>
+        <button class="btn small" id="x-self"></button>
       </div>
       ${ranked(quiz)
         .map(({ e, i }) => {
@@ -430,94 +458,78 @@
           const tier = tierOf(e.rank);
           const best = Math.max(...e.covers.map((c) => topics[c].score));
           return `
-            <div class="card" data-x="${i}" data-tier="${TIERS.indexOf(tier)}" data-group="${U.esc(t.group)}">
+            <article class="card exam-q" data-x="${i}" data-tier="${TIERS.indexOf(tier)}" data-group="${U.esc(t.group)}">
               <div class="row">
-                <span class="q-num" style="font-size:1.15rem">#${e.rank}</span>
+                <span class="q-num" style="font-size:1.1rem">Question ${e.rank}</span>
                 <span class="chip p-${tier.key}">${tier.label}</span>
                 <span class="chip">${U.esc(t.group)}</span>
                 ${U.probChip(best)}
-                <span class="chip">${e.marks} marks</span>
                 <span class="spacer"></span>
                 <label class="row" style="gap:6px"><input type="checkbox" data-studied ${studied.has(i) ? 'checked' : ''}> Studied</label>
               </div>
-              <h3 style="margin:10px 0 2px">${U.esc(e.q)}</h3>
-              <small class="muted">Prepares you for: ${e.covers.map((c) => U.esc(topics[c].name)).join(' · ')}</small>
+              <h3 style="margin:10px 0 10px">${U.esc(e.q)} <span class="muted" style="font-weight:400">(${e.marks} marks)</span></h3>
+
+              <div class="paper">
+                ${e.parts
+                  .map(
+                    (p, j) => `<div class="paper-row"><b>(${LABELS[j]})</b><span>${U.esc(p.q)}</span><span class="muted">${p.marks}</span></div>`
+                  )
+                  .join('')}
+              </div>
+
               ${e.parts
-                .map((p, j) => {
-                  const k = `quiz:${quiz.id}:x:${i}:${j}`;
-                  const ticks = U.get(k + ':ticks', []);
-                  return `
-                  <div class="part" data-part="${j}" style="margin-top:14px;padding-top:12px;border-top:1px solid var(--border)">
-                    <div class="q-text" style="margin-top:0">(${LABELS[j]}) ${U.esc(p.q)} <span class="muted">[${p.marks}]</span></div>
-                    <textarea placeholder="Your answer to (${LABELS[j]})…" data-draft style="min-height:90px">${U.esc(U.get(k + ':draft', ''))}</textarea>
-                    <div class="row" style="margin-top:6px">
-                      <small class="muted" data-wc></small>
-                      <span class="spacer"></span>
-                      <button class="btn small" data-toggle="points">Key points</button>
-                      <button class="btn small" data-toggle="model">Model answer</button>
+                .map(
+                  (p, j) => `
+                <section class="answer" data-part="${j}">
+                  <div class="row answer-head">
+                    <h4>Answer (${LABELS[j]}) <span class="muted" style="font-weight:400">· ${p.marks} marks</span></h4>
+                    <span class="spacer"></span>
+                    <button class="btn small" data-reveal>Show answer</button>
+                  </div>
+                  <div class="answer-body">
+                    <div class="keypoints">
+                      <div class="stat-label">Key points to include</div>
+                      <ul>${p.points.map((pt) => `<li>${U.esc(pt)}</li>`).join('')}</ul>
                     </div>
-                    <div data-panel="points" hidden>
-                      <h4 style="margin-top:12px">Key points <small class="muted" data-covered></small></h4>
-                      <ul class="points">
-                        ${p.points
-                          .map(
-                            (pt, n) =>
-                              `<li><input type="checkbox" id="x-${i}-${j}-${n}" data-tick="${n}" ${ticks.includes(n) ? 'checked' : ''}><label for="x-${i}-${j}-${n}" style="color:var(--text);font-size:0.95rem">${U.esc(pt)}</label></li>`
-                          )
-                          .join('')}
-                      </ul>
-                    </div>
-                    <div data-panel="model" hidden>
-                      <h4 style="margin-top:12px">Model answer</h4>
-                      <div class="model">${U.esc(p.model)}</div>
-                    </div>
-                  </div>`;
-                })
+                    <div class="answer-text">${richText(p.model)}</div>
+                  </div>
+                </section>`
+                )
                 .join('')}
-            </div>`;
+              <small class="muted">Also prepares you for: ${e.covers.map((c) => U.esc(topics[c].name)).join(' · ')}</small>
+            </article>`;
         })
         .join('')}`;
 
-    body.querySelectorAll('[data-x]').forEach((card) => {
-      const i = +card.dataset.x;
-      card.querySelector('[data-studied]').addEventListener('change', (ev) => {
-        ev.target.checked ? studied.add(i) : studied.delete(i);
+    const selfBtn = body.querySelector('#x-self');
+    function applySelfTest() {
+      selfBtn.textContent = selfTest ? 'Show all answers' : 'Self-test: hide answers';
+      body.querySelectorAll('.answer').forEach((a) => {
+        a.classList.toggle('collapsed', selfTest);
+        a.querySelector('[data-reveal]').hidden = !selfTest;
+        a.querySelector('[data-reveal]').textContent = 'Show answer';
+      });
+    }
+    selfBtn.addEventListener('click', () => {
+      selfTest = !selfTest;
+      U.set(`quiz:${quiz.id}:selftest`, selfTest);
+      applySelfTest();
+    });
+    body.querySelectorAll('[data-reveal]').forEach((b) =>
+      b.addEventListener('click', () => {
+        const a = b.closest('.answer');
+        const open = a.classList.toggle('collapsed');
+        b.textContent = open ? 'Show answer' : 'Hide answer';
+      })
+    );
+    body.querySelectorAll('[data-studied]').forEach((c) =>
+      c.addEventListener('change', () => {
+        const i = +c.closest('[data-x]').dataset.x;
+        c.checked ? studied.add(i) : studied.delete(i);
         U.set(studiedKey(quiz), [...studied]);
         filter();
-      });
-      card.querySelectorAll('[data-part]').forEach((part) => {
-        const j = +part.dataset.part;
-        const k = `quiz:${quiz.id}:x:${i}:${j}`;
-        const ta = part.querySelector('[data-draft]');
-        const wc = part.querySelector('[data-wc]');
-        const covered = part.querySelector('[data-covered]');
-        const total = quiz.essays[i].parts[j].points.length;
-        const words = () => {
-          const n = ta.value.trim() ? ta.value.trim().split(/\s+/).length : 0;
-          wc.textContent = `${n} word${n === 1 ? '' : 's'}`;
-        };
-        const tally = () => {
-          const ticks = [...part.querySelectorAll('[data-tick]:checked')].map((c) => +c.dataset.tick);
-          covered.textContent = `(${ticks.length}/${total})`;
-          return ticks;
-        };
-        words();
-        tally();
-        let timer;
-        ta.addEventListener('input', () => {
-          words();
-          clearTimeout(timer);
-          timer = setTimeout(() => U.set(k + ':draft', ta.value), 300);
-        });
-        part.querySelectorAll('[data-tick]').forEach((c) => c.addEventListener('change', () => U.set(k + ':ticks', tally())));
-        part.querySelectorAll('[data-toggle]').forEach((b) =>
-          b.addEventListener('click', () => {
-            const panel = part.querySelector(`[data-panel="${b.dataset.toggle}"]`);
-            panel.hidden = !panel.hidden;
-          })
-        );
-      });
-    });
+      })
+    );
 
     function filter() {
       const tier = body.querySelector('#x-tier').value;
@@ -531,6 +543,7 @@
       });
     }
     body.querySelectorAll('#x-tier, #x-group, #x-hide').forEach((el) => el.addEventListener('change', filter));
+    applySelfTest();
   }
 
   function renderPlan(body, quiz) {
@@ -563,7 +576,7 @@
             .join('')}
           <tr><td><b>Your studied (${studied.size})</b></td><td>${pct(mine.c)}</td><td>${pct(mine.q)}</td>${of.map((m) => `<td><b>${pct(mine.atLeast(m, k))}</b></td>`).join('')}</tr>
         </table></div>
-        <p class="muted" style="margin-top:10px"><small>Tick "Studied" on the Exam questions tab and your own row updates.</small></p>
+        <p class="muted" style="margin-top:10px"><small>Tick "Studied" on the Questions &amp; answers tab and your own row updates.</small></p>
       </div>
 
       ${TIERS.map((tier, ti) => {
@@ -663,13 +676,13 @@
       <div class="card">
         <h2>Topic ranking</h2>
         <div class="table-wrap"><table>
-          <tr><th>#</th><th>Topic</th>${grouped ? '<th>Lecture</th>' : ''}<th>S</th><th>D</th><th>E</th><th>F</th><th>Score</th><th>MCQ</th><th>Essay</th><th>Why</th></tr>
+          <tr><th>#</th><th>Topic</th>${grouped ? '<th>Lecture</th>' : ''}<th>S</th><th>D</th><th>E</th><th>F</th><th>Score</th>${quiz.mcq.length ? '<th>MCQ</th>' : ''}<th>${isComposite(quiz) ? 'Questions' : 'Essay'}</th><th>Why</th></tr>
           ${rows
             .map(
               (t, n) => `<tr>
                 <td>${n + 1}</td><td><b>${U.esc(t.name)}</b></td>${grouped ? `<td><small>${U.esc(t.group || '')}</small></td>` : ''}
                 <td>${t.S}</td><td>${t.D}</td><td>${t.E}</td><td>${t.F}</td>
-                <td>${U.probChip(t.score)}</td><td>${t.nM}</td><td>${t.nE}</td>
+                <td>${U.probChip(t.score)}</td>${quiz.mcq.length ? `<td>${t.nM}</td>` : ''}<td>${t.nE}</td>
                 <td><small>${U.esc(t.why)}</small></td></tr>`
             )
             .join('')}
