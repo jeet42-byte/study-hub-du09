@@ -368,7 +368,8 @@
   const TIERS = [
     { max: 10, key: 'vh', label: 'Tier 1 · Must read' },
     { max: 15, key: 'h', label: 'Tier 2 · Safety' },
-    { max: Infinity, key: 'm', label: 'Tier 3 · Complete' },
+    { max: 20, key: 'm', label: 'Tier 3 · Complete' },
+    { max: Infinity, key: 'l', label: 'Extra · Optional revision' },
   ];
   const tierOf = (rank) => TIERS.find((t) => rank <= t.max);
   const LABELS = 'abcdef';
@@ -615,7 +616,7 @@
     const upTo = (n) => list.filter(({ e }) => e.rank <= n).map(({ e }) => e);
     const mine = coverage(quiz, list.filter(({ i }) => studied.has(i)).map(({ e }) => e));
     const groups = [...new Set(quiz.topics.map((t) => t.group))];
-    const cutoffs = [10, 12, 15, list.length];
+    const cutoffs = [...new Set([10, 12, 15, 20, list.length])].filter((n) => n <= list.length);
 
     body.innerHTML = `
       <div class="card">
@@ -643,7 +644,7 @@
         if (!rows.length) return '';
         return `
           <div class="card">
-            <h2><span class="chip p-${tier.key}" style="font-size:0.85rem">${tier.label}</span> ${ti === 0 ? 'Read these first' : ti === 1 ? 'Add these to be safe' : 'For full coverage'}</h2>
+            <h2><span class="chip p-${tier.key}" style="font-size:0.85rem">${tier.label}</span> ${['Read these first', 'Add these to be safe', 'For full coverage', 'Optional — only if time allows'][ti]}</h2>
             <div class="table-wrap"><table>
               <tr><th>#</th><th>Question</th><th>Lecture</th><th>Parts</th><th></th></tr>
               ${rows

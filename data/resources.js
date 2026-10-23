@@ -42,3 +42,21 @@ HUB.add(
     file: '',
   }
 );
+
+HUB.add(
+  'resources',
+  {
+    course: 'cyber-crime',
+    type: 'Notes',
+    title: 'End-term notes in plain language — Digital forensics & cybercrime',
+    desc: 'The final-term digital forensics deck explained simply: evidence, chain of custody, crime-scene handling, imaging and hashing, analysis, mobile, cloud, IoT, email and social media forensics — with tables, examples and exam traps. Includes a short mid-term recap.',
+    file: 'resources/cyber-crime/cyber-final-notes.html',
+  },
+  {
+    course: 'cyber-crime',
+    type: 'Slides',
+    title: 'Lecture decks: mid-term slides and Digital Forensics & Cyber Crime Investigation',
+    desc: 'Instructor slides — share through the class drive and add a link here with permission.',
+    file: '',
+  }
+);

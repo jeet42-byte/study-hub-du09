@@ -80,6 +80,9 @@ HUB.add(
     date: '2026-12-05T15:00',
     time: '3:00–6:00 pm',
     room: 'Room 704, 6th floor, FSS, DU',
+
+    note: 'Scenario-based. Start with Tier 1 of the Cyber Crime question bank (digital forensics).',
+    link: '#/exams/cyber-final',
   },
   {
     id: 'forensic-final',
