@@ -406,13 +406,62 @@
   // Never round a near-certainty up to 100%: the model is an estimate.
   const pct = (x) => (x >= 0.995 ? '>99%' : `${Math.round(x * 100)}%`);
 
-  // Model answers are plain text. Blank lines separate blocks; inside a block, "• " lines
-  // form a bullet list and "1. " lines a numbered list, optionally after one intro line.
-  // A short label before " — " in a list item is shown in bold.
+  // Model answers are plain text with a small block syntax (blank lines separate blocks):
+  //   "### Heading"                      sub-heading
+  //   "• item" / "1. item" lines         bullet / numbered list (optionally after one intro line)
+  //   "| a | b |" lines                  table, first row is the header
+  //   "[chart] Title" + "Label | 12 | shown text" lines   horizontal bar chart (one series)
+  //   "[flow] Caption" + "A → B → C"     step diagram
+  // "**bold**" works inline, and a short label before " — " in a list item is bolded.
+  function inline(text) {
+    return U.esc(text).replace(/\*\*(.+?)\*\*/g, '<b>$1</b>');
+  }
+
+  function chart(lines) {
+    const title = lines[0].replace(/^\[chart\]\s*/, '');
+    const rows = lines.slice(1).map((l) => {
+      const [label, value, shown] = l.split('|').map((x) => x.trim());
+      return { label, value: parseFloat(value), shown: shown || value };
+    });
+    const max = Math.max(...rows.map((r) => r.value));
+    return `<figure class="mini-chart" role="img" aria-label="${U.esc(title)}: ${rows.map((r) => `${r.label} ${r.shown}`).join('; ')}">
+      <figcaption>${inline(title)}</figcaption>
+      ${rows
+        .map(
+          (r) => `<div class="bar-row" title="${U.esc(r.label)}: ${U.esc(r.shown)}">
+            <span class="bar-label">${inline(r.label)}</span>
+            <span class="bar-track"><span class="bar-fill" style="width:${Math.max((r.value / max) * 100, 0.8)}%"></span></span>
+            <span class="bar-value">${U.esc(r.shown)}</span>
+          </div>`
+        )
+        .join('')}
+    </figure>`;
+  }
+
+  function flow(lines) {
+    const caption = lines[0].replace(/^\[flow\]\s*/, '');
+    const steps = lines.slice(1).join(' → ').split('→').map((x) => x.trim()).filter(Boolean);
+    return `<figure class="flow">
+      ${caption ? `<figcaption>${inline(caption)}</figcaption>` : ''}
+      <div class="flow-steps">${steps.map((st) => `<span class="flow-step">${inline(st)}</span>`).join('<span class="flow-arrow" aria-hidden="true">→</span>')}</div>
+    </figure>`;
+  }
+
+  function table(lines) {
+    const rows = lines
+      .filter((l) => !/^\|[\s:|-]+\|$/.test(l))
+      .map((l) => l.replace(/^\||\|$/g, '').split('|').map((c) => c.trim()));
+    const [head, ...body] = rows;
+    return `<div class="table-wrap"><table class="ans-table">
+      <tr>${head.map((h) => `<th>${inline(h)}</th>`).join('')}</tr>
+      ${body.map((r) => `<tr>${r.map((c) => `<td>${inline(c)}</td>`).join('')}</tr>`).join('')}
+    </table></div>`;
+  }
+
   function richText(text) {
     const item = (l) => {
       const m = l.match(/^(.{2,48}?) — (.*)$/);
-      return m ? `<li><b>${U.esc(m[1])}</b> — ${U.esc(m[2])}</li>` : `<li>${U.esc(l)}</li>`;
+      return m && !m[1].includes('**') ? `<li><b>${U.esc(m[1])}</b> — ${inline(m[2])}</li>` : `<li>${inline(l)}</li>`;
     };
     const asList = (lines) => {
       if (lines.every((l) => l.startsWith('• '))) return `<ul>${lines.map((l) => item(l.slice(2))).join('')}</ul>`;
@@ -422,12 +471,21 @@
     return String(text)
       .split(/\n\s*\n/)
       .map((block) => {
-        const lines = block.split('\n').map((l) => l.trim()).filter(Boolean);
+        let lines = block.split('\n').map((l) => l.trim()).filter(Boolean);
+        let head = '';
+        if (lines[0] && lines[0].startsWith('### ')) {
+          head = `<h5>${inline(lines[0].slice(4))}</h5>`;
+          lines = lines.slice(1);
+        }
+        if (!lines.length) return head;
+        if (lines[0].startsWith('[chart]')) return head + chart(lines);
+        if (lines[0].startsWith('[flow]')) return head + flow(lines);
+        if (lines.every((l) => l.startsWith('|'))) return head + table(lines);
         const whole = asList(lines);
-        if (whole) return whole;
+        if (whole) return head + whole;
         const rest = lines.length > 1 ? asList(lines.slice(1)) : null;
-        if (rest) return `<p>${U.esc(lines[0])}</p>${rest}`;
-        return `<p>${lines.map(U.esc).join('<br>')}</p>`;
+        if (rest) return `${head}<p>${inline(lines[0])}</p>${rest}`;
+        return `${head}<p>${lines.map(inline).join('<br>')}</p>`;
       })
       .join('');
   }

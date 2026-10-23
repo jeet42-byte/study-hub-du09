@@ -7,6 +7,7 @@
   --border: #dfe3ec;
   --accent: #2f6fde;
   --accent-soft: #e6eefc;
+  --chart: #2f6fde;
   --good: #1a8a4a;
   --good-soft: #e3f5ea;
   --bad: #c9352b;
@@ -28,6 +29,7 @@
     --border: #2c3243;
     --accent: #6c9cff;
     --accent-soft: #1d2a48;
+  --chart: #5b8cf0;
     --good: #4cc47e;
     --good-soft: #15301f;
     --bad: #ff7a70;
@@ -48,6 +50,7 @@
   --border: #2c3243;
   --accent: #6c9cff;
   --accent-soft: #1d2a48;
+  --chart: #5b8cf0;
   --good: #4cc47e;
   --good-soft: #15301f;
   --bad: #ff7a70;
@@ -320,6 +323,21 @@ th { color: var(--muted); font-weight: 600; font-size: 0.82rem; text-transform: 
 .answer-text p + ul, .answer-text p + ol { margin-top: -2px; }
 .answer-text ul, .answer-text ol { margin: 0 0 10px; padding-left: 1.3em; }
 .answer-text li { margin: 3px 0; }
+.answer-text h5 { font-size: 0.95rem; margin: 14px 0 6px; color: var(--text); }
+.ans-table { margin: 4px 0 12px; font-size: 0.88rem; }
+.ans-table th { text-transform: none; letter-spacing: 0; font-size: 0.82rem; background: var(--surface-2); color: var(--text); }
+.mini-chart, .flow { margin: 6px 0 14px; padding: 12px 14px; border: 1px solid var(--border); border-radius: 10px; }
+.mini-chart figcaption, .flow figcaption { font-size: 0.82rem; color: var(--muted); margin-bottom: 8px; font-weight: 600; }
+.bar-row { display: grid; grid-template-columns: minmax(90px, 34%) 1fr auto; gap: 10px; align-items: center; padding: 3px 0; font-size: 0.86rem; }
+.bar-row:hover .bar-fill { opacity: 0.8; }
+.bar-label { color: var(--text); }
+.bar-track { height: 12px; background: var(--surface-2); border-radius: 4px; overflow: hidden; }
+.bar-fill { display: block; height: 100%; background: var(--chart); border-radius: 0 4px 4px 0; }
+.bar-value { color: var(--text); font-variant-numeric: tabular-nums; font-weight: 600; min-width: 3.5em; text-align: right; }
+.flow-steps { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; }
+.flow-step { background: var(--accent-soft); color: var(--text); border-radius: 8px; padding: 5px 10px; font-size: 0.86rem; font-weight: 600; }
+.flow-arrow { color: var(--muted); font-weight: 700; }
+@media (max-width: 560px) { .bar-row { grid-template-columns: 1fr auto; } .bar-row .bar-track { grid-column: 1 / -1; grid-row: 2; } }
 
 /* ── Forecast ───────────────────────────────────────────── */
 .countdown { text-align: center; }
