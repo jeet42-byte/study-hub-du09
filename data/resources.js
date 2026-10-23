@@ -55,15 +55,15 @@ HUB.add(
   {
     course: 'cyber-crime',
     type: 'Slides',
-    title: 'Cyber Crime and Security — lecture slides (Drive file 1)',
-    desc: 'Course slides on Google Drive (mid-term deck or the Digital Forensics & Cyber Crime Investigation deck). Opens in Google Drive.',
-    url: 'https://drive.google.com/file/d/1vBbIIX1uN4hF8pqDyqVwd_LgJ_31sSFU/view?usp=drive_link',
+    title: 'Cyber Crime and Security — slides till mid-term',
+    desc: 'Mid-term deck: cybercrime typology, attacks, phishing, CIA, cyber defence, crime-as-a-service. Opens in Google Drive.',
+    url: 'https://drive.google.com/file/d/1U6g876_j6yjUNK4eNXVBKvFJ5SFWtp3K/view?usp=drive_link',
   },
   {
     course: 'cyber-crime',
     type: 'Slides',
-    title: 'Cyber Crime and Security — lecture slides (Drive file 2)',
-    desc: 'Course slides on Google Drive (mid-term deck or the Digital Forensics & Cyber Crime Investigation deck). Opens in Google Drive.',
-    url: 'https://drive.google.com/file/d/1BXqGpmaZytcwZFv9FQ5sZDhXU3SCTYqf/view?usp=drive_link',
+    title: 'Digital Forensics & Cyber Crime Investigation (final-term deck)',
+    desc: 'Final-term deck: digital evidence, crime-scene handling, tools, mobile, cloud, IoT, email and social media forensics. Opens in Google Drive.',
+    url: 'https://drive.google.com/file/d/1uaZjK3faQbkueOa4gEPU0-dv7eoMqJ9g/view?usp=drive_link',
   }
 );
