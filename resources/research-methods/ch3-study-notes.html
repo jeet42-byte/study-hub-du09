@@ -5,116 +5,344 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Chapter 3 Study Notes</title>
 <style>
-  :root { --bg:#fff; --text:#1a1f2e; --muted:#5d6579; --accent:#2f6fde; --line:#dfe3ec; --soft:#f0f2f7; color-scheme: light; }
-  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --bg:#10131a; --text:#e7eaf2; --muted:#9aa3b8; --accent:#6c9cff; --line:#2c3243; --soft:#202533; color-scheme: dark; } }
-  :root[data-theme="dark"] { --bg:#10131a; --text:#e7eaf2; --muted:#9aa3b8; --accent:#6c9cff; --line:#2c3243; --soft:#202533; color-scheme: dark; }
-  body { margin:0; background:var(--bg); color:var(--text); font:15px/1.55 system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif; }
-  .wrap { max-width:820px; margin:0 auto; padding:28px 16px 48px; }
-  h1 { font-size:1.6rem; margin:0 0 4px; }
-  h2 { font-size:1.12rem; color:var(--accent); border-bottom:1px solid var(--line); padding-bottom:4px; margin:26px 0 10px; }
-  .sub { color:var(--muted); margin:0 0 8px; }
-  table { width:100%; border-collapse:collapse; font-size:0.92rem; margin:6px 0 10px; }
-  th, td { text-align:left; padding:6px 8px; border:1px solid var(--line); vertical-align:top; }
+  :root { --bg:#fff; --text:#1a1f2e; --muted:#5d6579; --accent:#2f6fde; --line:#dfe3ec; --soft:#f0f2f7; --plain:#eaf3ea; --plain-line:#1a8a4a; --trap:#fbe7e5; --trap-line:#c9352b; --exam:#fff3db; color-scheme: light; }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --bg:#10131a; --text:#e7eaf2; --muted:#9aa3b8; --accent:#6c9cff; --line:#2c3243; --soft:#202533; --plain:#16261b; --plain-line:#4cc47e; --trap:#3a1c1a; --trap-line:#ff7a70; --exam:#3a2c10; color-scheme: dark; } }
+  :root[data-theme="dark"] { --bg:#10131a; --text:#e7eaf2; --muted:#9aa3b8; --accent:#6c9cff; --line:#2c3243; --soft:#202533; --plain:#16261b; --plain-line:#4cc47e; --trap:#3a1c1a; --trap-line:#ff7a70; --exam:#3a2c10; color-scheme: dark; }
+  body { margin:0; background:var(--bg); color:var(--text); font:16px/1.65 Georgia, 'Times New Roman', serif; }
+  .wrap { max-width:840px; margin:0 auto; padding:32px 16px 64px; }
+  h1 { font-size:1.85rem; margin:0 0 6px; line-height:1.2; }
+  h2 { font-size:1.35rem; color:var(--accent); border-bottom:2px solid var(--accent); padding-bottom:4px; margin:44px 0 12px; line-height:1.25; }
+  h3 { font-size:1.1rem; margin:24px 0 8px; }
+  p { margin:0 0 12px; }
+  .sub { color:var(--muted); font-family:system-ui, sans-serif; font-size:0.92rem; }
+  .plain { background:var(--plain); border-left:4px solid var(--plain-line); border-radius:6px; padding:10px 14px; margin:12px 0; }
+  .plain::before { content:"In plain words — "; font-weight:700; font-family:system-ui, sans-serif; font-size:0.85rem; }
+  .eg { background:var(--soft); border-radius:6px; padding:10px 14px; margin:12px 0; }
+  .eg::before { content:"Example — "; font-weight:700; font-family:system-ui, sans-serif; font-size:0.85rem; }
+  .trap { background:var(--trap); border-left:4px solid var(--trap-line); border-radius:6px; padding:10px 14px; margin:12px 0; font-family:system-ui, sans-serif; font-size:0.93rem; }
+  .trap::before { content:"Exam trap — "; font-weight:700; }
+  .exam { background:var(--exam); border-radius:6px; padding:10px 14px; margin:12px 0; font-family:system-ui, sans-serif; font-size:0.92rem; }
+  .exam::before { content:"For the quiz — "; font-weight:700; }
+  table { width:100%; border-collapse:collapse; font-size:0.93rem; margin:8px 0 14px; font-family:system-ui, sans-serif; }
+  th, td { text-align:left; padding:7px 9px; border:1px solid var(--line); vertical-align:top; }
   th { background:var(--soft); }
-  .box { background:var(--soft); border-radius:8px; padding:10px 12px; margin:8px 0; }
-  ul { padding-left:1.2em; margin:6px 0; }
-  li { margin:2px 0; }
-  @media print { body { background:#fff; color:#000; font-size:12px; } h2 { break-after:avoid; } table, .box { break-inside:avoid; } }
+  ul, ol { padding-left:1.3em; margin:6px 0 12px; }
+  li { margin:3px 0; }
+  .toc { font-family:system-ui, sans-serif; font-size:0.92rem; columns:2; column-gap:28px; background:var(--soft); padding:14px 18px; border-radius:8px; }
+  .toc a { color:var(--text); }
+  .toc ol { margin:0; }
+  .flow { font-family:system-ui, sans-serif; font-weight:600; font-size:0.92rem; display:flex; flex-wrap:wrap; gap:6px; align-items:center; margin:10px 0 14px; }
+  .flow span { background:var(--soft); border-radius:8px; padding:5px 10px; }
+  .flow i { font-style:normal; color:var(--muted); }
+  @media (max-width:600px) { .toc { columns:1; } table { font-size:0.85rem; display:block; overflow-x:auto; } }
+  @media print { body { background:#fff; color:#000; font-size:12px; } h2 { break-after:avoid; } table, .plain, .eg, .trap, .exam { break-inside:avoid; } .toc { columns:2; } }
 </style>
 </head>
 <body>
 <div class="wrap">
 <h1>Chapter 3 — Qualitative Research Approaches</h1>
-<p class="sub">Revision notes · Lecture slides (Class 4 &amp; 5) + Bachman &amp; Schutt pp. 235–247 · FGDs excluded for the quiz · Print with Ctrl/Cmd + P to save as PDF.</p>
+<p class="sub">Research Methodology (MCCJ 521) · Quiz on Saturday 31 October 2026 · Covers lecture slides (Class 4 &amp; 5) and Bachman &amp; Schutt pp. 235–247 · <b>FGDs are not in the quiz</b> · Explained simply, with examples · Print with Ctrl/Cmd + P to save as PDF.</p>
 
-<h2>1. Ethnography</h2>
-<p><b>Definition:</b> studying cultures and communities by <b>immersing</b> oneself in participants' natural environment to understand their behaviours, beliefs and practices. Uses in-depth observation, interviews and analysis to give a rich, detailed picture <b>from the perspective of those studied</b>.</p>
-<div class="box"><b>Critical case — <i>Street Corner Society: The Social Structure of an Italian Slum</i> (William Foote Whyte, 1943)</b>
-<ul>
-  <li><b>Overt participant observation</b> — identity not hidden</li>
-  <li><b>Key informant strategy</b> — local leader <b>"Doc"</b> for access and rapport</li>
-  <li><b>Long-term immersion</b> — roughly <b>four years</b>; lived with an Italian family; learned Italian (book p. 245)</li>
-  <li><b>Criticisms:</b> (1) direct engagement in illegal activities — vote fraud, racketeering; (2) Doc's influence — rivalry with <b>Chick</b>, his local opponent; (3) anonymity issues</li>
-</ul></div>
+<div class="toc">
+<ol>
+  <li><a href="#start">How to use these notes</a></li>
+  <li><a href="#qual">What is qualitative research?</a></li>
+  <li><a href="#features">8 features of qualitative methods</a></li>
+  <li><a href="#process">The qualitative research process</a></li>
+  <li><a href="#origins">Where it came from: field research</a></li>
+  <li><a href="#ethno">Ethnography</a></li>
+  <li><a href="#scs">Street Corner Society</a></li>
+  <li><a href="#overt">Overt vs covert</a></li>
+  <li><a href="#po">Participant observation &amp; the roles</a></li>
+  <li><a href="#covert">Covert research: problems &amp; ethics</a></li>
+  <li><a href="#field">Entering the field &amp; keeping trust</a></li>
+  <li><a href="#pheno">Phenomenology</a></li>
+  <li><a href="#interviews">Interviews</a></li>
+  <li><a href="#case">Case study &amp; "Life in a Gang"</a></li>
+  <li><a href="#sampling">Sampling</a></li>
+  <li><a href="#traps">Commonly confused terms</a></li>
+  <li><a href="#who">Who did what</a></li>
+  <li><a href="#last">Last-minute revision sheet</a></li>
+</ol>
+</div>
 
-<h2>2. Overt vs covert ethnography</h2>
+<h2 id="start">1. How to use these notes</h2>
+<p>The quiz has <b>multiple-choice</b> and <b>short essay</b> questions. MCQs test exact definitions and "who studied what"; short essays ask you to define, explain and give an example.</p>
+<div class="exam">For every topic, be able to (1) give the definition in one sentence, (2) list its key points, and (3) name one study as an example. The coloured boxes help: <b>green</b> explains the idea simply, <b>grey</b> gives an example, <b>red</b> warns about common MCQ traps.</div>
+<p>The topics most likely to appear (from the slides) are: ethnography and Street Corner Society, overt vs covert research, interview types, phenomenology and case studies. The book pages add participant observation, covert participation, and sampling.</p>
+
+<h2 id="qual">2. What is qualitative research?</h2>
+<p><b>Qualitative methods</b> are methods such as participant observation, intensive interviewing and focus groups that are designed to capture social life <i>as participants experience it</i>, rather than in categories the researcher decides in advance (Bachman &amp; Schutt, p. 237).</p>
+<div class="plain">Quantitative research <b>counts</b> ("How many people were robbed?"). Qualitative research <b>understands</b> ("What is it like to be robbed, and what does it mean to the victim?"). One gives numbers; the other gives stories, meanings and context.</div>
 <table>
-  <tr><th></th><th>Overt (overt participation)</th><th>Covert (covert / complete participation)</th></tr>
-  <tr><td>Meaning</td><td>Researcher openly declares role and intentions</td><td>Researcher does not reveal identity as a researcher</td></tr>
-  <tr><td>Pros</td><td>More ethical; easier communication; participants can withhold info; researcher can refuse unethical acts (p. 243)</td><td>More access because of hidden identity; reduces reactive effect</td></tr>
-  <tr><td>Cons</td><td>May impact participant behaviour (reactive effect)</td><td>Less ethical; stressful for researcher; risk of "going native"</td></tr>
-  <tr><td>Examples</td><td>Whyte (1943); Venkatesh</td><td>Humphreys (1970) "watch queen"; Alfred (1976) Satanists; Goffman (1961) hospital assistant</td></tr>
+  <tr><th></th><th>Quantitative (surveys, experiments)</th><th>Qualitative (observation, interviews)</th></tr>
+  <tr><td>Data</td><td>Numbers</td><td>Words, observations, stories</td></tr>
+  <tr><td>Questions</td><td>Fixed in advance (closed questions)</td><td>Open, flexible, can change during the study</td></tr>
+  <tr><td>Reasoning</td><td>Deductive — test a hypothesis</td><td>Inductive — discover patterns from the data</td></tr>
+  <tr><td>Sample</td><td>Large, often random</td><td>Small, chosen on purpose</td></tr>
+  <tr><td>Researcher</td><td>Tries to stay neutral and distant</td><td>Gets close; their own role is part of the study</td></tr>
+  <tr><td>Strength</td><td>Generalizable, measurable</td><td>Depth, meaning, context</td></tr>
+</table>
+<p>The three main qualitative designs in the book are <b>participant observation</b>, <b>intensive interviewing</b> and <b>focus groups</b> (focus groups are not in this quiz).</p>
+<div class="eg">A survey can tell us <i>how many</i> women in Dhaka feel unsafe on buses. Qualitative interviews can tell us <i>why</i> — what happens, how they cope, why they rarely report it.</div>
+
+<h2 id="features">3. The 8 features of qualitative methods</h2>
+<p>Bachman &amp; Schutt list features that make qualitative research different from experiments and surveys (pp. 237–238):</p>
+<table>
+  <tr><th>#</th><th>Feature</th><th>In plain words</th></tr>
+  <tr><td>1</td><td>Collection mainly of qualitative (not quantitative) data</td><td>Words and observations of real life, not numbers in boxes</td></tr>
+  <tr><td>2</td><td>Exploratory questions + <b>inductive reasoning</b></td><td>Start with an open question, collect lots of observations, then build general ideas — not the other way round</td></tr>
+  <tr><td>3</td><td>Focus on previously unstudied processes and unexpected things</td><td>Good for new issues and hard-to-reach groups (gangs, drug users)</td></tr>
+  <tr><td>4</td><td>Orientation to <b>social context</b></td><td>Looks at how things connect in a setting — a neighbourhood, a gang, a police station (e.g. Venkatesh on Blackstone)</td></tr>
+  <tr><td>5</td><td>Focus on <b>human subjectivity</b></td><td>What events mean to people and how they make sense of their own lives</td></tr>
+  <tr><td>6</td><td>Focus on events leading up to an outcome</td><td>Tells the story of how something happened, step by step, instead of "variable X causes Y"</td></tr>
+  <tr><td>7</td><td><b>Reflexive research design</b></td><td>The plan changes as the study goes on; collecting, analysing and re-thinking happen together (Maxwell, 1996)</td></tr>
+  <tr><td>8</td><td>Sensitivity to the <b>subjective role of the researcher</b></td><td>The researcher admits they are not a neutral machine; their position affects what they see</td></tr>
+</table>
+<div class="trap">"Testing a pre-written hypothesis in a controlled design" is <b>not</b> a feature of qualitative research — that describes experiments. Qualitative research is <b>inductive</b>, not deductive.</div>
+
+<h2 id="process">4. The qualitative research process (Exhibit 9.1)</h2>
+<p>Miller and Crabtree (1999) drew the qualitative process as a loop rather than a straight line:</p>
+<div class="flow"><span>Reflect on yourself &amp; the setting</span><i>→</i><span>Sample / collect</span><i>→</i><span>Describe</span><i>→</i><span>Organize</span><i>→</i><span>Connect</span><i>→</i><span>Corroborate</span><i>→</i><span>Write the account</span></div>
+<div class="plain">Unlike a survey, where you collect everything first and analyse later, qualitative researchers <b>gather and analyse at the same time</b>. Each day's notes shape what they look for the next day. That is why the design is called <b>reflexive</b>.</div>
+<div class="trap">In Exhibit 9.1, the two processes that run <b>together</b> are the <b>gathering</b> process and the <b>analysis</b> process.</div>
+
+<h2 id="origins">5. Where it came from: field research</h2>
+<p><b>Field research</b> = research in which natural social processes are studied as they happen and left relatively undisturbed (p. 238).</p>
+<ul>
+  <li><b>Anthropologists</b> started it: <b>Franz Boas</b> visited Native American villages in the American Northwest; <b>Bronislaw Malinowski</b> lived among New Guinea natives. They showed the value of knowing a community closely, instead of relying on second-hand reports.</li>
+  <li><b>Sociologists</b> at the <b>University of Chicago</b> (many were former social workers and reformers) used these methods in the city, treating it as a "social science laboratory".</li>
+  <li>By the 1930s–1950s, researchers stressed direct participation in community life.</li>
+</ul>
+<div class="plain">Field research means going to where things happen — the street, the slum, the police station — instead of bringing people into a lab or sending them a questionnaire.</div>
+
+<h2 id="ethno">6. Ethnography</h2>
+<p><b>Ethnography</b> is a qualitative research method used to study cultures and communities by <b>immersing oneself in the participants' natural environment</b> to understand their behaviours, beliefs and practices. It uses in-depth observation, interviews and analysis to give a rich, detailed picture of a social setting <b>from the perspective of those being studied</b> (lecture slides).</p>
+<div class="plain">Ethnography is "living with people to understand them from the inside". Instead of asking a gang member to fill in a form, the ethnographer spends months — even years — around the gang, watching, talking and slowly understanding how they see the world.</div>
+<p><b>Three key words to remember:</b> <b>immersion</b> (living in the setting), <b>natural environment</b> (no lab), <b>participants' perspective</b> (their view, not the researcher's).</p>
+<div class="eg">A criminology student who spends six months with rickshaw pullers in a Dhaka slum, joining their daily routine to understand how police extortion affects them, is doing ethnography.</div>
+
+<h2 id="scs">7. Street Corner Society — the "critical case"</h2>
+<p><b>Street Corner Society: The Social Structure of an Italian Slum</b> by <b>William Foote Whyte</b> (published <b>1943</b>) studied young men in a poor Italian neighbourhood in Boston that Whyte called "Cornerville".</p>
+<table>
+  <tr><th>Method</th><th>What Whyte did</th><th>Why it mattered</th></tr>
+  <tr><td><b>Overt participant observation</b></td><td>His identity as a researcher was not hidden</td><td>More ethical; people knew what he was doing</td></tr>
+  <tr><td><b>Key informant strategy</b></td><td>Relied on a local leader, <b>"Doc"</b>, for access and rapport</td><td>Doc opened doors Whyte could never open alone</td></tr>
+  <tr><td><b>Long-term immersion</b></td><td>About <b>four years</b>; lived with an Italian family and <b>learned Italian</b></td><td>Became accepted as part of the community</td></tr>
+</table>
+<h3>Criticisms (the "flipside")</h3>
+<table>
+  <tr><th>Criticism</th><th>Explanation</th></tr>
+  <tr><td>Direct involvement in illegal activities</td><td>Whyte took part in <b>vote fraud</b> (and racketeering) to gain insight — an ethical problem</td></tr>
+  <tr><td>Doc's influence on the work</td><td>Relying on one informant can bias the story — Doc had a <b>rivalry with "Chick"</b>, his local opponent, so Whyte may have seen things through Doc's eyes</td></tr>
+  <tr><td>Anonymity issues</td><td>People in the community could be identified from the book</td></tr>
+</table>
+<div class="plain">Whyte got amazing inside information because he lived there for years and had a powerful friend (Doc). But the same closeness caused problems: he broke the law, he may have taken Doc's side, and his subjects could be recognized.</div>
+<div class="trap"><b>Four years</b> = Whyte. <b>Eighteen months</b> = Venkatesh (logging gang activities) and Susan Miller (with the police). <b>Doc</b> = Whyte's key informant; <b>Chick</b> = Doc's rival, not an informant.</div>
+
+<h2 id="overt">8. Overt vs covert ethnography</h2>
+<table>
+  <tr><th></th><th>Overt ethnography (overt participation)</th><th>Covert ethnography (covert participation)</th></tr>
+  <tr><td>Meaning</td><td>Researcher <b>openly declares</b> their role and intentions</td><td>Researcher <b>does not reveal</b> they are a researcher</td></tr>
+  <tr><td>Advantages</td><td>More ethical; easier communication (can ask questions, take notes openly)</td><td>More access, because people act naturally and closed groups let you in</td></tr>
+  <tr><td>Disadvantages</td><td>May change participants' behaviour (the <b>reactive effect</b>)</td><td>Seen as less ethical; very stressful for the researcher</td></tr>
+  <tr><td>Example</td><td>Whyte in Cornerville</td><td>Humphreys as "watch queen"; Alfred in a Satanist group</td></tr>
+</table>
+<div class="plain">Overt = "Hello, I'm a researcher." Covert = pretending to be just another member. Overt is honest but people may behave differently in front of you. Covert gets the real behaviour but involves deceiving people.</div>
+<div class="eg">Studying an online extremist group by joining it as an ordinary member, without telling anyone you are a researcher, would be covert. Interviewing police officers after introducing yourself as a student researcher is overt.</div>
+
+<h2 id="po">9. Participant observation and the observational continuum</h2>
+<p><b>Participant observation</b> = field research in which the researcher develops a <b>sustained and intensive relationship</b> with people <b>while they go about their normal activities</b> (p. 237). It is the main qualitative method — "fieldwork" in anthropology.</p>
+<p>The researcher can take different roles along a <b>continuum</b> (Exhibit 9.2):</p>
+<div class="flow"><span>Complete observer</span><i>↔</i><span>Participant and observer</span><i>↔</i><span>Covert participant</span></div>
+<table>
+  <tr><th>Role</th><th>Participates?</th><th>Identity known?</th><th>Example</th></tr>
+  <tr><td><b>Complete observer</b></td><td>No</td><td>Yes — publicly a researcher</td><td><b>Susan Miller (1999)</b> shadowing neighbourhood and patrol police officers to study community policing</td></tr>
+  <tr><td><b>Participant and observer</b></td><td>Yes</td><td>Yes (at least to some members)</td><td><b>Whyte (1943)</b>; <b>Venkatesh</b> hanging out with the Black Kings gang</td></tr>
+  <tr><td><b>Covert participant</b> (complete participant)</td><td>Yes, fully</td><td>No — hidden</td><td><b>Humphreys (1970)</b>, <b>Alfred (1976)</b>, <b>Goffman (1961)</b></td></tr>
+</table>
+<h3>The reactive effect</h3>
+<p><b>Reactive effect</b> = changes in individual or group behaviour caused by being observed or studied (p. 242).</p>
+<div class="plain">People act differently when they know they are being watched — like students behaving perfectly when the principal visits the class. A complete observer faces this problem most.</div>
+<p>How to reduce it: <b>spend a long time</b> in the setting so people get used to you. Susan Miller spent <b>18 months</b> with the police, became a "familiar face", and officers joked with her in the coffee shop. The effect is stronger in small groups or when the observer looks very different from the people being studied.</p>
+<h3>Choosing a role</h3>
+<p>The choice depends on the setting, the researcher's background and personality, the political situation and ethics — and it often changes during a project.</p>
+<h3>Venkatesh's lesson</h3>
+<p>Sudhir Venkatesh began with a <b>survey</b>, but gang members told him he was "not going to learn shit by asking these questions" and that he should "hang out with them". He switched to <b>participant observation</b> — playing racquetball, eating dinner with families — and discovered gang members were also schoolchildren, fathers and churchgoers.</p>
+<h3>Ethical advantages of being open (disclosure)</h3>
+<ul>
+  <li>Participants can choose what to keep hidden.</li>
+  <li>The researcher can refuse to join unethical or dangerous activities without blowing their cover.</li>
+</ul>
+<div class="trap">"<b>Complete observation</b>" (watching openly, not participating) and "<b>complete participation</b>" (= covert participation) are opposite ends of the continuum. Don't mix them up!</div>
+
+<h2 id="covert">10. Covert participation: problems and ethics</h2>
+<p><b>Covert (complete) participation</b> = the researcher does not reveal their identity and acts like an ordinary member, adopting the role of a "complete participant" (p. 244).</p>
+<table>
+  <tr><th>Researcher</th><th>Covert role</th></tr>
+  <tr><td>Laud Humphreys (1970)</td><td>Acted as a "<b>watch queen</b>" (lookout) to study men's sexual behaviour in public restrooms</td></tr>
+  <tr><td>Randall Alfred (1976)</td><td>Joined a group of <b>Satanists</b>; the leader later said he had always found Alfred "strange"</td></tr>
+  <tr><td>Erving Goffman (1961)</td><td>Worked as a <b>state hospital assistant</b> to study treatment of psychiatric patients</td></tr>
+</table>
+<h3>Four problems of covert participants</h3>
+<ol>
+  <li><b>Cannot take notes openly</b> or use recording devices — must write from memory later.</li>
+  <li><b>Cannot ask questions that arouse suspicion</b> — so they may not understand what things mean.</li>
+  <li><b>The role is hard to play</b> — they don't know how real members act in every situation; acting "wrong" can cause reactive effects anyway (Alfred).</li>
+  <li><b>Must keep up the act all the time</b> — huge psychological stress, especially if asked to take sides or commit crimes.</li>
+</ol>
+<p><b>Going native</b> = becoming so absorbed in the role that the researcher adopts the group's views and goals, abandons the research and stops thinking critically.</p>
+<div class="plain">Covert research is like being an undercover agent: you can't write notes in public, you can't ask too many questions, one wrong move exposes you, and if you stay too long you might start to become one of them.</div>
+<h3>The ethics debate</h3>
+<table>
+  <tr><th>Position</th><th>Argument</th></tr>
+  <tr><td><b>Against</b> — Erikson (1967)</td><td>Covert research is unethical by its very nature and should only be allowed in public settings; researchers can't predict harmful consequences, and discovery damages trust in social science</td></tr>
+  <tr><td><b>For (sometimes)</b> — Punch (1994)</td><td>A total ban would "<b>kill many a project stone dead</b>"; some deception lets us get data we couldn't get otherwise</td></tr>
+  <tr><td>Evidence — Pruitt (2008)</td><td>Escorts replied to a self-identified sociologist only <b>15%</b> of the time, but to a "potential client" <b>60%</b> of the time — some groups can't be studied openly</td></tr>
+  <tr><td>Rule — ASA guidelines (followed by the American Society of Criminology)</td><td>Deception only if: not harmful; justified by the study's value; no equally good honest method; no more than minimal risk; and approved by an <b>institutional review board (IRB)</b></td></tr>
 </table>
 
-<h2>3. Phenomenology</h2>
+<h2 id="field">11. Entering the field and keeping trust</h2>
+<h3>Entering the field</h3>
 <ul>
-  <li>Explores how individuals <b>experience and make sense of</b> phenomena — <b>subjective meanings</b> of <b>lived experience</b></li>
-  <li><b>Not</b> objective explanations or cause-and-effect relationships</li>
-  <li>Captures <b>"what it is like"</b> to experience something; richness and depth of individual perspectives</li>
-  <li><b>Methods:</b> interviews · observations · personal narratives</li>
+  <li>Do background work first: know your research questions and your own attitude towards the people.</li>
+  <li>Learn their dress, routines and even language — <b>Whyte learned Italian</b>, which showed respect.</li>
+  <li>Build trust with at least one <b>informant</b>. Susan Miller got into the police through an open-minded <b>police chief</b> and <b>two officer friends</b> who vouched for her and arranged interviews.</li>
 </ul>
+<h3>Keeping relationships</h3>
+<ul>
+  <li><b>Confidentiality is the cornerstone.</b> Decker &amp; Van Winkle refused to tell gang members what others had said and did not let members sit in on interviews — so they were seen as "solid".</li>
+  <li><b>Jody Miller (2000)</b> started with easy, harmless survey questions (age, home, school) before moving to sensitive topics, and protected confidentiality.</li>
+</ul>
+<h3>Advice from Whyte and Wolcott</h3>
+<ol>
+  <li>Give a plausible, honest explanation of yourself and your study.</li>
+  <li>Keep the support of key people in the group.</li>
+  <li>Don't be too aggressive in questioning (e.g. about illegal activities); you are not the police.</li>
+  <li>Don't fake being like them — a friendly interest is enough.</li>
+  <li>Avoid giving or receiving money or gifts, but don't break normal give-and-take (a lift to the shop is fine).</li>
+  <li>Be ready for tension if several groups are involved — it's hard not to take sides.</li>
+</ol>
+<div class="plain">Getting in is about respect and a good "door-opener". Staying in is about keeping secrets, not judging, and not pretending.</div>
 
-<h2>4. Interview types</h2>
+<h2 id="pheno">12. Phenomenology</h2>
+<p><b>Phenomenology</b> is a qualitative approach that explores <b>how individuals experience and make sense of phenomena</b>. It focuses on the <b>subjective meanings</b> people attach to their <b>lived experiences</b>, rather than objective explanations or cause-and-effect. Researchers try to capture "<b>what it is like</b>" to experience something (lecture slides).</p>
+<div class="plain">Phenomenology asks "what does this feel like from the inside?" Not "how many prisoners are there?" or "what causes crime?", but "what is it like to be in prison?" or "what is it like to live in fear after a robbery?"</div>
+<p><b>Methods of phenomenology:</b> <b>interviews</b> · <b>observations</b> · <b>personal narratives</b> (life stories, diaries, written accounts).</p>
 <table>
-  <tr><th>Type</th><th>Key features</th></tr>
-  <tr><td><b>Structured</b></td><td>Fixed set of predetermined questions, specific order, limited flexibility</td></tr>
-  <tr><td><b>Semi-structured</b></td><td>Open-ended core questions; can explore unexpected topics with follow-up probes while staying focused</td></tr>
-  <tr><td><b>Unstructured</b></td><td>No fixed questions or order; broad opening statement; respondent guides the organic flow</td></tr>
+  <tr><th>Phenomenology asks…</th><th>It does NOT ask…</th></tr>
+  <tr><td>What is it like to be a victim of acid violence?</td><td>How many acid attacks happened last year?</td></tr>
+  <tr><td>How do released prisoners make sense of returning home?</td><td>Does prison length cause reoffending?</td></tr>
+  <tr><td>How do women experience harassment on public transport?</td><td>What percentage of women are harassed?</td></tr>
 </table>
-<p><b>Intensive interviewing</b> (book, p. 237): open-ended, relatively unstructured questioning seeking in-depth information on the interviewee's feelings, experiences and/or perceptions. <i>Class exercise:</i> write 10–12 semi-structured questions for your research report.</p>
+<div class="trap">If an MCQ option says "cause-and-effect" or "objective measurement", it is <b>not</b> phenomenology.</div>
 
-<h2>5. Case study</h2>
-<p>In-depth qualitative approach examining a <b>specific real-world phenomenon within its context</b>; a single case or small number of cases; <b>multiple sources of evidence</b>.</p>
-<p><b>Limitations (4):</b> limited generalizability · potential for researcher bias · time-consuming and resource-intensive · difficulty in replication.</p>
-
-<h2>6. Fundamentals of qualitative methods (pp. 236–238)</h2>
-<p>Three designs: <b>participant observation, intensive interviewing, focus groups</b>. Distinctive features:</p>
-<ul>
-  <li>Collection primarily of qualitative data</li>
-  <li>Exploratory research questions + <b>inductive</b> reasoning</li>
-  <li>Focus on previously unstudied processes and unanticipated phenomena</li>
-  <li>Orientation to <b>social context</b> (Venkatesh's Blackstone)</li>
-  <li>Focus on <b>human subjectivity</b> — meanings people give to their lives</li>
-  <li>Focus on events leading up to a particular event/outcome</li>
-  <li><b>Reflexive research design</b> — design develops as research progresses (Maxwell, 1996)</li>
-  <li>Sensitivity to the subjective role of the researcher — Exhibit 9.1 (Miller &amp; Crabtree, 1999): gathering and analysis proceed together</li>
-</ul>
-<p><b>Field research</b> (p. 238): natural social processes studied as they happen, left relatively undisturbed. Origins: anthropologists <b>Franz Boas</b> (Native American villages) and <b>Bronislaw Malinowski</b> (New Guinea); Chicago School treated the city as a social science laboratory.</p>
-
-<h2>7. Case study: Life in a Gang (Decker &amp; Van Winkle, 1996)</h2>
-<ul>
-  <li><b>Gang</b> = "age-graded peer group that exhibits some permanence, engages in criminal activity, and has some symbolic representation of membership"</li>
-  <li>Membership by <b>self-identification</b> — "Are you claiming…?"</li>
-  <li>Field ethnographer's direct observation + intensive interviews with open-ended questions and probes; inductive analysis using gang members' own categories</li>
-  <li><b>Thick description</b> (Geertz, 1973): rich description of what it is like from the participants' standpoint</li>
-</ul>
-
-<h2>8. Participant observation &amp; roles (pp. 240–244)</h2>
-<p><b>Participant observation:</b> sustained, intensive relationship with people while they go about their normal activities. <b>Observational continuum</b> (Exhibit 9.2):</p>
+<h2 id="interviews">13. Interviews</h2>
 <table>
-  <tr><th>Role</th><th>Meaning</th><th>Example</th></tr>
-  <tr><td>Complete observer</td><td>Does not participate; publicly defined as researcher</td><td>Susan Miller (1999) — community policing, shadowing officers</td></tr>
-  <tr><td>Participant and observer</td><td>Discloses role but participates</td><td>Whyte (1943); Venkatesh (2000) — "hang out with them"</td></tr>
-  <tr><td>Covert participant</td><td>Hides role; acts like a member (complete participation)</td><td>Humphreys (1970); Alfred (1976); Goffman (1961)</td></tr>
+  <tr><th>Type</th><th>Questions</th><th>Flexibility</th><th>Like…</th></tr>
+  <tr><td><b>Structured</b></td><td>Fixed, predetermined questions in a set order</td><td>Very limited</td><td>A job application form read aloud</td></tr>
+  <tr><td><b>Semi-structured</b></td><td>Open-ended core questions + follow-up <b>probes</b>; can explore unexpected topics while staying focused</td><td>Medium</td><td>A planned conversation with a guide</td></tr>
+  <tr><td><b>Unstructured</b></td><td>No fixed questions or order; starts with a broad opening; the respondent guides the conversation</td><td>Very high</td><td>"Tell me your story…"</td></tr>
 </table>
-<p><b>Reactive effect:</b> changes in behaviour due to being observed. Miller reduced it by becoming a familiar face over 18 months.</p>
-<p><b>Covert participants' problems:</b> cannot openly take notes · cannot ask suspicious questions · role hard to play (Alfred seen as "strange") · must keep up the act → psychological strain · risk of <b>going native</b> (adopting participants' goals and abandoning research goals).</p>
-<p><b>Ethics:</b> Erikson (1967) — covert research is unethical, only for public settings · Punch (1994) — total ban would "kill many a project stone dead" · Pruitt (2008) — escorts replied 15% to a sociologist vs 60% to a "client" · ASA: deception only if not harmful, justified, no feasible alternative, minimal risk, IRB approval.</p>
+<p><b>Intensive interviewing</b> (book, p. 237) = open-ended, relatively unstructured questioning in which the interviewer seeks in-depth information on the interviewee's <b>feelings, experiences and/or perceptions</b>.</p>
+<p>A <b>probe</b> is a follow-up question to get more detail: "Can you give me an example?", "What happened next?", "What do you mean by…?"</p>
+<div class="eg"><b>Same topic, three ways</b> — police harassment of street vendors in Dhaka.<br>
+<b>Structured:</b> "Have you been asked for a bribe by police in the past month? Yes / No."<br>
+<b>Semi-structured:</b> "Can you describe your experiences with the police while selling?" → probe: "How did you respond?"<br>
+<b>Unstructured:</b> "Tell me about your life as a vendor."</div>
+<div class="plain">Decker &amp; Van Winkle's gang study shows the spirit of qualitative interviews: they wanted every gang member to "tell their story in their own words", using open-ended questions with probes rather than tick-box answers.</div>
+<h3>Class exercise: writing 10–12 semi-structured questions</h3>
+<ol>
+  <li>Start with easy, rapport-building questions.</li>
+  <li>Group core questions by theme (experience, meaning, coping, help-seeking, solutions).</li>
+  <li>Use open "how/what/describe" questions — no yes/no, no leading questions.</li>
+  <li>Write one or two probes under each core question.</li>
+  <li>End with "Is there anything else you'd like to tell me?"</li>
+</ol>
+<p>A full worked example is in the website's Assignments section (Research Methodology → interview guide).</p>
 
-<h2>9. Entering the field &amp; relationships (pp. 245–247)</h2>
+<h2 id="case">14. Case study, and "Life in a Gang"</h2>
+<p><b>Case study research</b> is an in-depth qualitative approach that examines a <b>specific real-world phenomenon within its context</b>. It analyses a <b>single case or a small number of cases</b>, often using <b>multiple sources of evidence</b> (lecture slides).</p>
+<div class="plain">A case study zooms in on one thing — one gang, one police station, one village, one event — and looks at it from every angle (interviews, observation, documents) to understand it completely.</div>
+<h3>Limitations (four)</h3>
+<table>
+  <tr><th>Limitation</th><th>Why</th></tr>
+  <tr><td>Limited generalizability</td><td>One or a few cases may not represent others</td></tr>
+  <tr><td>Potential for researcher bias</td><td>The researcher's closeness shapes what is noticed and reported</td></tr>
+  <tr><td>Time-consuming and resource-intensive</td><td>Long fieldwork with many sources of evidence</td></tr>
+  <tr><td>Difficulty in replication</td><td>The case and the researcher's relationship to it are unique</td></tr>
+</table>
+<div class="trap">"Inability to give in-depth understanding" is <b>not</b> a limitation — depth is the case study's main <b>strength</b>.</div>
+<h3>The book's case study: Life in a Gang (Decker &amp; Van Winkle, 1996)</h3>
 <ul>
-  <li>Background work; learn participants' dress, activities, language (Whyte learned Italian)</li>
-  <li>Develop trust with at least one <b>informant</b> — Miller via the police chief and two officer friends</li>
-  <li>Confidentiality = cornerstone of trust (Decker &amp; Van Winkle refused to share others' answers → seen as "solid"); Jody Miller (2000) started with innocuous questions</li>
-  <li>Advice (Whyte; Wolcott): honest explanation · keep key individuals' support · don't question too aggressively · don't fake social similarity · avoid money/gifts but respect reciprocity · expect tension between groups</li>
+  <li><b>Gang definition:</b> "an age-graded peer group that exhibits some permanence, engages in criminal activity, and has some symbolic representation of membership".</li>
+  <li><b>Who counted as a member:</b> <b>self-identification</b> — the screening question "Are you claiming…?", checked with other members where possible.</li>
+  <li><b>Methods:</b> a field ethnographer observed "on the streets" + intensive interviews with open-ended questions and probes.</li>
+  <li><b>Inductive:</b> categories came from how the gang members themselves described their world, not from theory.</li>
 </ul>
+<p><b>Thick description</b> (Geertz, 1973) = a rich description that gives a sense of what it is like to be in a setting, from the participants' point of view. This is the goal of much qualitative research.</p>
+<div class="plain">A "thin" description says "he winked". A "thick" description explains what the wink meant — a joke, a signal, a warning — to the people who were there.</div>
 
-<h2>10. Sampling people and events (p. 247)</h2>
-<ul>
-  <li>One setting = intensive portrait but weak generalization; several settings strengthen conclusions (King, Keohane &amp; Verba, 1994)</li>
-  <li><b>Purposive</b> sampling, often with a <b>snowball</b> element — Decker &amp; Van Winkle: 500+ contacts → final sample of 99</li>
-  <li><b>Theoretical sampling</b> (Glaser &amp; Strauss, 1967): settings/individuals drawn sequentially as earlier observations show they are influential — used to include female, older and non-Black gang members</li>
-</ul>
+<h2 id="sampling">15. Sampling people and events</h2>
+<table>
+  <tr><th>Type</th><th>Meaning</th><th>Example</th></tr>
+  <tr><td><b>Purposive sampling</b></td><td>Choosing people on purpose because they can inform the research question — the usual qualitative method</td><td>Interviewing only women who use public buses daily</td></tr>
+  <tr><td><b>Snowball sampling</b></td><td>Each participant recommends others — useful for hidden groups</td><td>Decker &amp; Van Winkle: made <b>500+ contacts</b> to reach a final sample of <b>99</b> gang members</td></tr>
+  <tr><td><b>Theoretical sampling</b> (Glaser &amp; Strauss, 1967)</td><td>Choosing new settings or people <b>step by step</b>, as earlier findings show who is important</td><td>Decker &amp; Van Winkle chased female, older and non-Black gang members to cover all types</td></tr>
+</table>
+<div class="plain">Snowball sampling is like asking "Who else should I talk to?" at the end of every interview. Theoretical sampling is deciding who to talk to next based on what you have just learned.</div>
+<p><b>One setting or many?</b> Studying one setting gives a very detailed picture but makes it hard to generalize; studying more than one setting strengthens conclusions (King, Keohane &amp; Verba, 1994).</p>
+
+<h2 id="traps">16. Commonly confused terms (MCQ traps)</h2>
+<table>
+  <tr><th>Don't confuse…</th><th>…with</th><th>Difference</th></tr>
+  <tr><td>Complete observation</td><td>Complete participation</td><td>Observation = watching openly, not joining. Participation = covert, fully acting as a member.</td></tr>
+  <tr><td>Overt</td><td>Covert</td><td>Overt = open about being a researcher. Covert = hidden.</td></tr>
+  <tr><td>Semi-structured</td><td>Unstructured</td><td>Semi has a guide of core questions; unstructured has no fixed questions.</td></tr>
+  <tr><td>Phenomenology</td><td>Ethnography</td><td>Phenomenology = how individuals experience something. Ethnography = how a community/culture lives, through immersion.</td></tr>
+  <tr><td>Snowball sampling</td><td>Theoretical sampling</td><td>Snowball = participants refer others. Theoretical = researcher picks next people based on emerging findings.</td></tr>
+  <tr><td>Reactive effect</td><td>Going native</td><td>Reactive = participants change because they are watched. Going native = the researcher changes and loses objectivity.</td></tr>
+  <tr><td>Doc</td><td>Chick</td><td>Doc = Whyte's key informant. Chick = Doc's rival.</td></tr>
+  <tr><td>Whyte (4 years)</td><td>Venkatesh / Miller (18 months)</td><td>Different studies, different time periods.</td></tr>
+</table>
+
+<h2 id="who">17. Who did what</h2>
+<table>
+  <tr><th>Scholar</th><th>Remember them for…</th></tr>
+  <tr><td>William Foote Whyte (1943)</td><td><i>Street Corner Society</i>; overt participant observation; Doc; 4 years; learned Italian</td></tr>
+  <tr><td>Sudhir Venkatesh (1997, 2000)</td><td>Blackstone; Black Kings gang; survey → "hang out with them"; 18 months</td></tr>
+  <tr><td>Susan Miller (1999)</td><td>Community policing; complete observer; 18 months; reactive effect reduced</td></tr>
+  <tr><td>Decker &amp; Van Winkle (1996)</td><td><i>Life in the Gang</i>; gang definition; "Are you claiming…?"; snowball 500+ → 99; confidentiality</td></tr>
+  <tr><td>Jody Miller (2000)</td><td><i>One of the Guys</i>; female gang members; started with innocuous questions</td></tr>
+  <tr><td>Laud Humphreys (1970)</td><td>Covert "watch queen"</td></tr>
+  <tr><td>Randall Alfred (1976)</td><td>Covert in a Satanist group</td></tr>
+  <tr><td>Erving Goffman (1961)</td><td>Covert as a state hospital assistant</td></tr>
+  <tr><td>Erikson (1967)</td><td>Covert research is unethical</td></tr>
+  <tr><td>Punch (1994)</td><td>A ban would "kill many a project stone dead"</td></tr>
+  <tr><td>Pruitt (2008)</td><td>Escorts: 15% replied to sociologist, 60% to "client"</td></tr>
+  <tr><td>Geertz (1973)</td><td>Thick description</td></tr>
+  <tr><td>Glaser &amp; Strauss (1967)</td><td>Theoretical sampling</td></tr>
+  <tr><td>Miller &amp; Crabtree (1999)</td><td>Qualitative research process diagram (Exhibit 9.1)</td></tr>
+  <tr><td>Maxwell (1996)</td><td>Reflexive research design</td></tr>
+  <tr><td>Boas &amp; Malinowski</td><td>Anthropology founders of field research</td></tr>
+</table>
+
+<h2 id="last">18. Last-minute revision sheet</h2>
+<ol>
+  <li><b>Ethnography</b> = immersion in participants' natural environment to understand behaviours, beliefs, practices from their perspective.</li>
+  <li><b>Street Corner Society</b> = Whyte, 1943; overt; Doc (key informant); ~4 years. Criticisms: illegal acts (vote fraud), Doc's influence/rivalry with Chick, anonymity.</li>
+  <li><b>Overt</b> = more ethical, easier communication, but reactive effect. <b>Covert</b> = more access, but less ethical and stressful.</li>
+  <li><b>Phenomenology</b> = lived experience, subjective meaning, "what it is like"; methods = interviews, observations, personal narratives.</li>
+  <li><b>Interviews</b>: structured (fixed) · semi-structured (core questions + probes) · unstructured (broad opening, respondent leads).</li>
+  <li><b>Case study</b> = in-depth study of a real-world phenomenon in context, few cases, multiple evidence. Limitations: generalizability, researcher bias, time/resources, replication.</li>
+  <li><b>Continuum</b>: complete observer (Miller) · participant-observer (Whyte, Venkatesh) · covert participant (Humphreys, Alfred, Goffman).</li>
+  <li><b>Reactive effect</b> = behaviour changes because of being observed. <b>Going native</b> = researcher absorbed into the group.</li>
+  <li><b>Covert problems</b>: no open notes · no suspicious questions · hard role · keep up the act.</li>
+  <li><b>Sampling</b>: purposive + snowball (Decker: 500+ → 99) + theoretical (Glaser &amp; Strauss).</li>
+  <li><b>Thick description</b> (Geertz) and <b>reflexive design</b> (Maxwell).</li>
+  <li>FGDs are <b>not</b> in this quiz.</li>
+</ol>
+<p class="sub">Prepared for revision from the Class 4 &amp; 5 slides and Bachman &amp; Schutt, pp. 235–247. Examples marked "Example" are illustrations for understanding, not from the book. Practise with the 50 MCQs and 10 short essays on the website.</p>
 </div>
 </body>
 </html>

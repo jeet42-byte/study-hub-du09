@@ -5,8 +5,8 @@ HUB.add(
   {
     course: 'research-methods',
     type: 'Notes',
-    title: 'Chapter 3 study notes — Qualitative Research Approaches',
-    desc: 'One-page revision sheet covering every quiz topic: ethnography, Street Corner Society, overt vs covert, phenomenology, interviews, case studies, and Bachman & Schutt pp. 235–247. Printable to PDF.',
+    title: 'Chapter 3 study notes in plain language — Qualitative Research Approaches',
+    desc: 'Every quiz topic explained in plain language with examples, comparison tables, MCQ trap warnings, a who-did-what list and a last-minute revision sheet. Printable to PDF.',
     file: 'resources/research-methods/ch3-study-notes.html',
   },
   {

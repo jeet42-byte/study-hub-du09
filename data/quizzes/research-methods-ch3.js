@@ -15,6 +15,7 @@ HUB.add('quizzes', {
   scope:
     'Lecture slides (Class 4 & 5) + Bachman & Schutt, pp. 235–247. FGDs excluded.',
   format: 'Multiple choice + short essay',
+  notes: 'resources/research-methods/ch3-study-notes.html',
 
   topics: [
     { id: 'ethno', name: 'Ethnography (definition)', S: 1, D: 1, E: 1, F: 1,
