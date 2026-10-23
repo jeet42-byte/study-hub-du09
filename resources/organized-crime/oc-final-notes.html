@@ -1,0 +1,405 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Organized Crime Notes</title>
+<style>
+  :root { --bg:#fff; --text:#1a1f2e; --muted:#5d6579; --accent:#b0452c; --line:#e3e1dc; --soft:#f6f3ee; --plain:#eaf3ea; --plain-line:#1a8a4a; --warn:#fff3db; color-scheme: light; }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --bg:#121417; --text:#e8e6e1; --muted:#a19d95; --accent:#ff8a6b; --line:#2e2c29; --soft:#1d1c1a; --plain:#16261b; --plain-line:#4cc47e; --warn:#3a2c10; color-scheme: dark; } }
+  :root[data-theme="dark"] { --bg:#121417; --text:#e8e6e1; --muted:#a19d95; --accent:#ff8a6b; --line:#2e2c29; --soft:#1d1c1a; --plain:#16261b; --plain-line:#4cc47e; --warn:#3a2c10; color-scheme: dark; }
+  body { margin:0; background:var(--bg); color:var(--text); font:16px/1.65 Georgia, 'Times New Roman', serif; }
+  .wrap { max-width:840px; margin:0 auto; padding:32px 16px 64px; }
+  h1 { font-size:1.9rem; margin:0 0 6px; line-height:1.2; }
+  h2 { font-size:1.4rem; color:var(--accent); border-bottom:2px solid var(--accent); padding-bottom:4px; margin:44px 0 12px; line-height:1.25; }
+  h3 { font-size:1.12rem; margin:26px 0 8px; }
+  p { margin:0 0 12px; }
+  .sub { color:var(--muted); font-family:system-ui, sans-serif; font-size:0.92rem; }
+  .plain { background:var(--plain); border-left:4px solid var(--plain-line); border-radius:6px; padding:10px 14px; margin:12px 0; }
+  .plain::before { content:"In plain words — "; font-weight:700; font-family:system-ui, sans-serif; font-size:0.85rem; }
+  .exam { background:var(--soft); border-radius:6px; padding:10px 14px; margin:12px 0; font-family:system-ui, sans-serif; font-size:0.9rem; }
+  .exam b { color:var(--accent); }
+  .warn { background:var(--warn); border-radius:6px; padding:10px 14px; margin:12px 0; font-family:system-ui, sans-serif; font-size:0.9rem; }
+  table { width:100%; border-collapse:collapse; font-size:0.93rem; margin:8px 0 14px; font-family:system-ui, sans-serif; }
+  th, td { text-align:left; padding:7px 9px; border:1px solid var(--line); vertical-align:top; }
+  th { background:var(--soft); }
+  ul, ol { padding-left:1.3em; margin:6px 0 12px; }
+  li { margin:3px 0; }
+  .toc { font-family:system-ui, sans-serif; font-size:0.92rem; columns:2; column-gap:28px; background:var(--soft); padding:14px 18px; border-radius:8px; }
+  .toc a { color:var(--text); }
+  .toc ol { margin:0; }
+  @media (max-width:600px) { .toc { columns:1; } table { font-size:0.85rem; display:block; overflow-x:auto; } }
+  @media print { body { background:#fff; color:#000; font-size:12px; } h2 { break-after:avoid; } table, .plain, .exam { break-inside:avoid; } .toc { columns:2; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>Organized Crime and Corruption — End-term Notes</h1>
+<p class="sub">MCCJ 527 · Based on the four lecture decks: OC-4 Human Trafficking, OC-5 Drug Trafficking, Smuggling (Arms &amp; Gold), OC-7 Counterfeiting · Written for easy understanding · Print with Ctrl/Cmd + P to save as PDF.</p>
+
+<div class="toc">
+<ol>
+  <li><a href="#start">How to use these notes</a></li>
+  <li><a href="#toolkit">The theory toolkit (use everywhere)</a></li>
+  <li><a href="#ht">Human trafficking</a></li>
+  <li><a href="#vs">Trafficking vs smuggling</a></li>
+  <li><a href="#drugs">Drug trafficking</a></li>
+  <li><a href="#smuggling">Smuggling — the basics</a></li>
+  <li><a href="#gold">Gold smuggling</a></li>
+  <li><a href="#arms">Arms smuggling</a></li>
+  <li><a href="#cf">Counterfeiting</a></li>
+  <li><a href="#corruption">Corruption — the thread through it all</a></li>
+  <li><a href="#bd">Bangladesh at a glance</a></li>
+  <li><a href="#numbers">Numbers to remember</a></li>
+  <li><a href="#names">Who said what</a></li>
+</ol>
+</div>
+
+<h2 id="start">1. How to use these notes</h2>
+<p>The exam is <b>50 marks: answer 5 of 7–8 questions, 10 marks each</b>, and every question has 2–3 parts. A typical question looks like: <i>(a) define X [3], (b) explain its types/stages/causes [4], (c) discuss with reference to Bangladesh [3]</i>.</p>
+<div class="exam"><b>Recipe for every part:</b> 1) give the definition from the slides with its source → 2) explain the list (stages, means, drivers…) as numbered points → 3) add one example, ideally from Bangladesh → 4) close with one line of judgment (e.g. "weak enforcement and corruption undermine the law").</div>
+<p>Each section below ends with an <b>Exam link</b> box naming the ranked question it prepares you for in the website's Exam questions tab. Priority #1–10 is Tier 1 (must read); #11–15 Tier 2; #16–20 Tier 3.</p>
+
+<h2 id="toolkit">2. The theory toolkit</h2>
+<p>The smuggling deck gives five theories. They are the only theory content in these four lectures, so use them in <i>any</i> answer that asks "why" — trafficking, drugs, gold, arms or counterfeiting.</p>
+<table>
+  <tr><th>Theory</th><th>Who</th><th>The idea</th><th>In plain words</th></tr>
+  <tr><td><b>Rational Choice</b></td><td>Cornish &amp; Clarke (1986)</td><td>Offenders compare profit, risk and punishment; they smuggle when benefits exceed costs.</td><td>"Is it worth it?" — a business calculation.</td></tr>
+  <tr><td><b>Routine Activity</b></td><td>Cohen &amp; Felson (1979)</td><td>Crime needs a motivated offender + a suitable target + no capable guardian.</td><td>A thief, something worth stealing, and nobody watching. Weak borders = nobody watching.</td></tr>
+  <tr><td><b>Push–Pull</b></td><td>Everett S. Lee (1966)</td><td>Push: poverty, unemployment, inequality. Pull: profit, demand, opportunity.</td><td>Problems at home push people; money elsewhere pulls them.</td></tr>
+  <tr><td><b>Network</b></td><td>Mark Granovetter (1973)</td><td>Crime runs through networks of suppliers, transporters, brokers and buyers, held together by trust and information.</td><td>It's who you know. Arrest one courier and the network replaces him.</td></tr>
+  <tr><td><b>State–Crime Nexus</b></td><td>Bayart, Ellis &amp; Hibou (1999)</td><td>State officials may take part in, protect or profit from crime; corruption and weak governance create illicit markets.</td><td>When the guards are paid by the criminals.</td></tr>
+</table>
+<div class="exam"><b>Exam link:</b> #7 Smuggling: concept and theories; also part (c) of many questions.</div>
+
+<h2 id="ht">3. Human trafficking (OC-4)</h2>
+<h3>What it is</h3>
+<p><b>UNODC definition:</b> "The recruitment, transportation, transfer, harbouring or receipt of people through force, fraud or deception, with the aim of exploiting them for profit."</p>
+<div class="plain">Someone is moved or held so that another person can make money from them, and the victim did not freely agree to what really happens. It often starts with an offer that sounds too good to refuse — a job abroad, a marriage.</div>
+<p><b>The 7 means</b> (how traffickers control people): threats or force · coercion · fraud · deception · abuse of a position of vulnerability · giving payments or benefits · abduction.</p>
+<p><b>Common forms:</b> commercial sexual exploitation · forced labour · forced scamming (cyber-scam compounds) · forced marriage, including child marriage. Victims work in entertainment, sex and hospitality, domestic work, factories, construction and farms — unpaid or underpaid, in fear and inhumane conditions.</p>
+
+<h3>History and scale</h3>
+<ul>
+  <li>Not new: buying and selling people is centuries old. First serious international effort: the <b>1949 UN Convention</b>; landmark: the <b>Palermo Protocol (2000)</b>.</li>
+  <li>Today shaped by globalization, migration, conflict and digital technology (online recruitment).</li>
+  <li><b>Global Slavery Index (Walk Free, 2023):</b> ~50 million in modern slavery; 27.6 million forced labour; 6.3 million forced commercial sexual exploitation; <b>71%</b> of survivors are women and girls. Highest numbers in Asia–Pacific (Cambodia, Vietnam, Thailand, Myanmar).</li>
+  <li>Supply chains: clothing, electronics, seafood, cocoa and cotton have documented forced labour.</li>
+</ul>
+
+<h3>The process — 3 stages</h3>
+<ol>
+  <li><b>Recruitment</b> — false job promises (hotels, cleaning, entertainment). Some agree to sex work but are lied to about the conditions (Vocks &amp; Nijboer, 1999).</li>
+  <li><b>Transportation</b> — often <i>legal</i> travel with real documents on student, tourist or business visas, so border officers can't tell.</li>
+  <li><b>Exploitation</b> — in brothels, workplaces, scam compounds. In the Netherlands some clubs were owned by traffickers, some cooperated, some looked away.</li>
+</ol>
+<div class="plain">Lure → move → use. The scary part is that stage 2 often looks completely normal on paper.</div>
+
+<h3>Spotting victims</h3>
+<table>
+  <tr><th>Signs in the person</th><th>Signs in the situation</th></tr>
+  <tr><td>Confused about place/date · can't speak freely, someone speaks for them · coached answers · signs of abuse, hunger, exhaustion · no ID, phone or money · lives where they work · fearful of a particular person · minor in commercial sex with an older "boyfriend"/"manager" · branding tattoos</td><td>Many people in a cramped space, little freedom · someone else holds their passport/ID · not allowed to speak for themselves to doctors or officials · story doesn't match documents · doesn't know employer's address or job terms</td></tr>
+</table>
+
+<h3>Why victims don't just leave</h3>
+<p>Emotional ties · fear of law enforcement · lack of better options · shame or stigma. Traffickers add debt, manipulation and confiscated documents. So <b>"free will becomes blurred"</b>: many victims believe they chose this life even while they are controlled.</p>
+
+<h3>Who the smugglers are and how networks work</h3>
+<ul>
+  <li><b>Myth:</b> "cruel offenders vs helpless victims", shaped by the Dover lorry deaths (2000) and the Golden Venture shipwreck (1993). <b>Reality:</b> often consent; smugglers may be family or friends; migration is supported by family networks — <b>chain migration</b> — driven by push and pull factors.</li>
+  <li>Smugglers often share the migrants' background, have ties to both countries, and some were smuggled themselves (<b>Kleemans &amp; van de Bunt, 2003</b>).</li>
+  <li>Networks are small and flexible, with people at origin, transit and destination; forged documents make air travel possible; without them, the journey is longer with more transfers, handled by chains of loosely connected groups (<b>Zhang, 2007; Neske &amp; Doomernik, 2006</b>).</li>
+  <li>Is it controlled by organized crime? <b>Soudijn (2006)</b>, 88 Dutch court cases: ~25% of smugglers were non-Chinese; groups took contracts from many sources and formed stable alliances, not tight hierarchies.</li>
+  <li>Corruption: high-corruption countries see more trafficking (<b>Bales, 2005; Studnicka, 2010</b>); in Brazil <b>71%</b> of cases involved corrupt officials.</li>
+</ul>
+
+<h3>Bangladesh</h3>
+<p>Bangladesh is a <b>source, transit and destination</b> country, with cross-border and internal trafficking. Drivers: unsafe/irregular migration · poverty and unemployment · natural disasters and displacement · organized criminal networks.</p>
+<table>
+  <tr><th>Destination</th><th>Route used</th></tr>
+  <tr><td>USA</td><td>Bangladesh → Brazil → Mexico → US border</td></tr>
+  <tr><td>Canada</td><td>Via a third country such as Nepal</td></tr>
+  <tr><td>Italy (most complex)</td><td>To the Middle East via Nepal/India/Sri Lanka → Egypt, Tunisia or Libya → Italy</td></tr>
+  <tr><td>Australia</td><td>By sea: Bangladesh → Malaysia → Indonesia</td></tr>
+  <tr><td>Russia</td><td>Via Saudi Arabia</td></tr>
+  <tr><td>Sea routes (CID)</td><td>BD → Malaysia → Indonesia → Australia; BD → Myanmar → Thailand → Malaysia</td></tr>
+</table>
+<p>Seven active air destinations: Italy, Serbia/Macedonia, Russia, USA, Canada, Australia, Cambodia/Laos. Method: get a tourist/education/job visa, then go via a third country to avoid surveillance. Most frequent destinations overall include India, Malaysia, Thailand, Greece, Italy, Cyprus and the Gulf.</p>
+<p><b>Cambodia scam compounds:</b> 2,408 Bangladeshis went Jan–Apr; 15,000+ with BMET clearance in 2025; e-visa costs only $30–36; Bangladesh has <b>no embassy in Cambodia</b> (handled from Bangkok). Shwe Kokko in Myanmar is another trafficking hub.</p>
+<p><b>Law:</b> Prevention and Suppression of Human Trafficking Act <b>2012</b> (+ Rules 2017, National Anti-HT Authority Rules 2017, Manob Pachar Tohobil Act 2017), with UNTOC and its trafficking and migrant-smuggling protocols. Organized trafficking: <b>death, life, or ≥7 years + ≥Tk 5 lakh</b>. Charges within <b>90</b>, trial within <b>180</b> working days.</p>
+<div class="plain">The law is strong on paper, weak in practice: investigations are slow and cases are "settled" for money, so traffickers walk free and do it again.</div>
+<p><b>What should be done:</b> child protection and early identification · cybercrime monitoring and digital-safety education · school/community awareness · victim-centred rehabilitation and access to justice · coordination of police, social services and NGOs · media and folk theatre · political commitment and zero tolerance for corruption.</p>
+
+<h3>Policy responses and their limits</h3>
+<ul>
+  <li><b>Border control</b> misses short-distance and initially voluntary trafficking, and pushes migrants onto deadly routes — 300+ deaths/year on the US–Mexico border (<b>Guerette, 2007</b>).</li>
+  <li><b>Harm reduction:</b> warning campaigns · training and life-saving equipment for agents · search and rescue · <b>lateral repatriation</b> (returning migrants to safer border areas). Saved lives; overall death rate didn't fall much.</li>
+  <li><b>Transit countries</b> (<b>Perrin, 2010</b>): check documents, spot high-risk people, protect, prosecute — hard because victims carry legal papers.</li>
+</ul>
+<table>
+  <tr><th>Model</th><th>Rule</th><th>Result</th></tr>
+  <tr><td>Swedish (1999)</td><td>Prostitution = male violence against women; <b>buyers</b> criminalized</td><td>Street prostitution fell; indoor and online grew</td></tr>
+  <tr><td>Dutch (2000)</td><td>Brothel ban lifted; licensed voluntary adult prostitution</td><td>Fewer undocumented workers, but pimps and trafficking behind legal façades (Daalder, 2007)</td></tr>
+  <tr><td>Finnish (mixed)</td><td>Buying is an offence only if the person is trafficked/exploited</td><td>How can a client know? Most don't report even when suspicious (Farley et al., 2009)</td></tr>
+</table>
+<p><b>Why we don't know what works:</b> police don't prioritize it (&lt;10% of US agencies found any case, 2000–06 — <b>Farrell et al., 2010</b>) · countries apply the UN definition differently on consent, borders and exploitation — "the never-ending story of a definition" (<b>Di Nicola, 2007</b>) · projects aren't evaluated (10 of 23 US-funded projects measured performance, none scientifically — <b>GAO, 2007</b>) · data projects (Siamsect, IOM-Austria's 17 guidelines, ICMPD) are partial · debate is emotional and ideological (<b>Weitzer, 2010</b>).</p>
+<div class="exam"><b>Exam links:</b> #1 Trafficking &amp; smuggling · #8 HT in Bangladesh · #9 Responses · #16 Process &amp; victims · #19 Smugglers &amp; networks</div>
+
+<h2 id="vs">4. Trafficking vs smuggling — the most likely comparison</h2>
+<table>
+  <tr><th></th><th>Human trafficking</th><th>Smuggling</th></tr>
+  <tr><td>What it is</td><td>Exploiting people for gain</td><td>Illegal movement of people/goods across borders</td></tr>
+  <tr><td>Consent</td><td>Force, fraud, coercion, deception</td><td>Generally consensual</td></tr>
+  <tr><td>Border</td><td>Within <i>or</i> across borders</td><td>Usually across a border</td></tr>
+  <tr><td>After arrival</td><td>Exploitation may continue</td><td>Relationship usually ends</td></tr>
+  <tr><td>Example</td><td>Forced labour, sexual exploitation</td><td>Paying for an illegal border crossing</td></tr>
+</table>
+<div class="plain">A smuggler sells you a journey; a trafficker sells <i>you</i>. And the first can turn into the second: a migrant who agreed to be smuggled can end up in debt bondage or threatened into work they never agreed to (Andrees, 2008; Herman, 2006).</div>
+
+<h2 id="drugs">5. Drug trafficking (OC-5)</h2>
+<p><b>Definition (UN):</b> a global illicit trade involving the <b>cultivation, manufacture, distribution and sale</b> of substances subject to drug prohibition laws. Key activities: cultivation &amp; production · transportation &amp; smuggling · distribution &amp; sale.</p>
+<h3>Why smugglers do it (4 drivers)</h3>
+<ol>
+  <li><b>Huge profit</b> — banning a product makes prices soar: cocaine ~$2,000/kg in South America, up to $200,000/kg in Australia.</li>
+  <li><b>Dodging high taxes</b> — untaxed cigarettes into Europe: $8 million+ per container, lower jail risk.</li>
+  <li><b>High demand &amp; addiction</b> — Myanmar yaba feeds a ~$60 billion East Asian market.</li>
+  <li><b>Weak borders &amp; corruption</b> — river borders in Southeast Asia, big bribes.</li>
+</ol>
+<div class="plain">Prohibition turns a cheap plant into a fortune once it crosses a border. Addicts keep buying whatever the price, and a bribe opens the gate.</div>
+
+<h3>History in one breath</h3>
+<ul>
+  <li><b>Opium</b> = old medicine (pain, diarrhoea, asthma, fever, insomnia). Freely available in the US until 1914; Chinese immigrants popularized smoking it; opium dens linked to crime.</li>
+  <li><b>Morphine</b> (early 1800s) — much stronger; <b>hypodermic syringe 1856</b>; US Civil War → addicted veterans ("<b>army disease</b>").</li>
+  <li><b>Heroin</b> (~1900) — sold as a <i>safer, non-addictive</i> morphine substitute. It wasn't.</li>
+  <li><b>Opium Wars:</b> Britain paid for Chinese tea with Indian opium; China banned it; smuggling and corruption beat the ban; 1839 China destroyed British opium → <b>First Opium War 1840–42</b> → China lost, paid compensation, <b>Hong Kong</b> became British; <b>Second Opium War 1856–60</b>.</li>
+  <li>US: anti-Chinese sentiment → 1880s opium-import restrictions → <b>1909</b> International Opium Commission → <b>1912</b> International Opium Convention → <b>1914 Harrison Act</b> (federal regulation of opiates and cocaine).</li>
+</ul>
+<div class="plain">Drugs started as medicine, became addiction, then became big business — and even empires (Britain) profited. Early control laws were partly aimed at a minority (Chinese immigrants).</div>
+
+<h3>Developing vs developed world</h3>
+<table>
+  <tr><th>Developing world</th><th>Developed world</th></tr>
+  <tr><td>Production &amp; transit (opium: Afghanistan, Myanmar; cocaine: Colombia, Peru, Bolivia; cannabis: Morocco; meth: Myanmar, Nigeria) · corruption and cartel violence · <b>punitive</b> (prison) · drug use seen as a moral failing</td><td>High demand and profits · <b>medicalized</b> approach (rehab, harm reduction, opioid substitution) · prescription opioids, synthetic stimulants, cocaine</td></tr>
+</table>
+<p>Pattern: <b>produced in the developing world, consumed in the developed world</b>, moved by ships, airports, border tunnels and the dark web.</p>
+
+<h3>Drug syndicates — what they want</h3>
+<table>
+  <tr><th>Economic</th><th>Political / social</th></tr>
+  <tr><td><b>Profit maximization</b> · <b>Wealth integration</b> (laundering through businesses, property, offshore accounts) · <b>Market expansion</b> (new users, synthetic drugs)</td><td><b>Systemic corruption</b> (police, customs, politicians, judges) · <b>Territorial control</b> ("narco-states") · <b>Community co-optation</b> (paying for local services to buy loyalty)</td></tr>
+</table>
+<p><b>Major syndicates:</b> Mexico — Sinaloa, CJNG (fentanyl); Colombia — Medellín, Cali (cocaine); Tren de Aragua (Venezuela); MS-13 (Los Angeles → Central America); Golden Triangle — ethnic militias like the <b>United Wa State Army</b>; Triads and Yakuza; Europe — Albanian mafia, 'Ndrangheta, Russian syndicates (ports, routes, political ties).</p>
+
+<h3>Afghanistan and the Golden Crescent</h3>
+<ul>
+  <li>Largest opium producer for decades; role grew after the 1970s when <b>Iran, Pakistan and Turkey banned opium</b>. Insurgents funded wars with drug money since the Cold War.</li>
+  <li>Routes: <b>Balkan</b> (Afghanistan → Pakistan → Iran → Turkey → Eastern → Western Europe) · <b>Northern</b> (Central Asia → Russia, Baltics) · <b>Southern</b> (to Pakistan) · air routes · China–India. Much stays in the region (Central Asia ~320,000 users).</li>
+  <li><b>Taliban ban:</b> cultivation down ~<b>95%</b> (232,000 ha in 2022 → 10,200 ha); output 6,200 t → ~296 t; farming moved to Badakhshan; <b>meth boom</b> (wild ephedra). UN warning: as heroin stocks run out, traffickers switch to <b>fentanyl and nitazenes</b>.</li>
+</ul>
+
+<h3>Myanmar and the Golden Triangle</h3>
+<ul>
+  <li>Golden Triangle = <b>Myanmar, Laos, Thailand</b>. Once opium/heroin; now <b>methamphetamine (yaba, "ice")</b>.</li>
+  <li>History: opium under British rule; after WWII the Chinese <b>Kuomintang</b> ran it to fund war against communists.</li>
+  <li>Poverty (⅓ below poverty line) and ethnic conflict (Shan, Wa, Kachin) → little state control. Run by <b>UWSA, Shan State Army, Kachin Independence Army</b> + ethnic Chinese networks.</li>
+  <li>Now the <b>top opium producer</b> (53,000+ ha) after the Taliban ban; "super labs" in Shan State; Rakhine State is a transit hub towards Bangladesh.</li>
+</ul>
+<div class="warn">The slide dates Myanmar's military coup to February 2022, but it happened in <b>February 2021</b>. If you mention it, "since the 2021 coup" is correct.</div>
+
+<h3>Bangladesh and the three "Golden" zones</h3>
+<table>
+  <tr><th>Zone</th><th>Where</th><th>Role</th></tr>
+  <tr><td>Golden Triangle</td><td>Myanmar–Laos–Thailand</td><td>Meth/yaba, opium</td></tr>
+  <tr><td>Golden Crescent</td><td>Afghanistan–Pakistan–Iran</td><td>Opium/heroin; Iran = corridor to Europe</td></tr>
+  <tr><td>Golden Wedge</td><td>North Bangladesh–Himachal Pradesh–Uttar Pradesh, incl. Nepal &amp; parts of Bhutan</td><td>Newest route, between the other two</td></tr>
+  <tr><td>"Golden Village"</td><td>26 villages of Kushtia</td><td>Cannabis growing</td></tr>
+</table>
+<div class="plain">Bangladesh doesn't make most of these drugs; it sits in the middle of the world's two biggest drug factories, so drugs flow through it — and many stay.</div>
+<ul>
+  <li><b>Yaba</b> = methamphetamine + caffeine; main corridor <b>Cox's Bazar–Teknaf</b>: boats across the <b>Naf River</b>, human "mules", exploited Rohingya networks; onward to Dhaka, Chattogram, Sylhet and India.</li>
+  <li><b>Indian corridor</b> (Satkhira, Jashore, Cumilla, Kurigram): <b>Phensedyl</b> (codeine cough syrup), heroin, cannabis. <b>Dhaka airport</b>: cocaine from Africa/South America to India.</li>
+  <li><b>DNC: 8.2 million users (~5%)</b>, most in Dhaka division; cannabis ~6.1 million; <b>105 border points in 18 districts</b>.</li>
+  <li>New methods: social media, encrypted apps, digital payments; women and children under 15 as couriers; dense hotspots like <b>Geneva Camp</b>; NPS (LSD, MDMA).</li>
+  <li><b>UNCTAD:</b> Bangladesh loses ~<b>USD 481 million/year</b>; 5th globally for drug-linked money laundering.</li>
+</ul>
+<div class="exam"><b>Exam links:</b> #2 Drugs &amp; Bangladesh · #10 Concept, drivers, scenario · #11 Syndicates · #14 History · #15 Afghanistan &amp; Myanmar</div>
+
+<h2 id="smuggling">6. Smuggling — the basics</h2>
+<p><b>Definition:</b> the illegal movement of goods, substances, information or people across a border or into restricted places in violation of law. "The purposeful movement of people or goods across a border in violation of the relevant legal framework" (<b>Gallien &amp; Weigand, 2021</b>); done "to bypass laws, regulations, or taxes" (<b>Campbell, 2022</b>).</p>
+<p><b>Origin:</b> German "smuggeln" / Dutch "smokkelen" = to sneak goods. Became a recognized problem after <b>King Edward I's customs system (1275)</b>; medieval smugglers moved highly taxed <b>wool and hides</b>.</p>
+<p><b>Six forms:</b> human · arms · drugs · gold · wildlife · cultural heritage.</p>
+<div class="plain">Wherever a government taxes or bans something, someone will try to sneak it past the gate.</div>
+
+<h2 id="gold">7. Gold smuggling</h2>
+<p><b>What:</b> illegal cross-border movement of gold to avoid duties, taxes and rules — through airports, land borders, seaports and informal routes, using concealment, false papers and undeclared transport, helped by networks, intermediaries and corrupt officials.</p>
+<p><b>Why (6 motives):</b> valuable, compact, portable · price and tax differences between countries · high import duties · weak borders · demand for undeclared gold · money laundering.</p>
+<p><b>How (5 ways):</b> airport passengers · land borders · sea routes · hidden in luggage/vehicles/cargo · informal networks of brokers, couriers and traders.</p>
+<div class="plain">Gold is like portable cash that every country prices differently. Carry it from where it's cheap and lightly taxed to where it's dear, skip the duty, and keep the difference.</div>
+<h3>World picture</h3>
+<p>Pattern: <b>producing/conflict areas → transit hubs → refiners/traders → consumer markets</b>. African gold (Sudan, South Sudan, DR Congo, Zimbabwe, Ghana) → Uganda, Rwanda, Kenya, Egypt → <b>Dubai</b>. Amazon gold (Venezuela, Brazil, Guyana, Peru's Madre de Dios) → North America and Europe. Armed groups use gold to fund conflict (Sudan, DRC, Colombia); illegal mining brings deforestation and mercury pollution. <b>India</b> is a huge consumer market; <b>Thailand</b> a transit/trading hub.</p>
+<h3>Bangladesh</h3>
+<ul>
+  <li>Destination and transit, <b>not a producer</b>. Source: <b>Dubai</b> and Gulf hubs (Saudi Arabia, Qatar, Oman, Kuwait). Route: <b>Middle East → Bangladesh → India</b>.</li>
+  <li>Entry: <b>Hazrat Shahjalal International Airport (HSIA)</b>. Exit to India: Jashore–Narail highway, <b>Benapole</b>.</li>
+  <li>Challenges: border surveillance, corruption, informal markets, kingpins hard to identify.</li>
+  <li><b>BG-148 case (2 July 2026):</b> 160 gold bars (18.720 kg) in the cargo hold of a Biman flight from Dubai; DGFI intelligence; AVSEC, Customs and airline security; case at Bimanbandar PS.</li>
+  <li><b>Kerala case (2020, India):</b> ~30 kg from Dubai in <b>diplomatic baggage</b> — legitimate institutions misused.</li>
+</ul>
+<p><b>Detection and prevention:</b> risk-based customs screening · passenger and baggage profiling · X-ray and advanced scanning · intelligence-led investigation · financial tracing · anti-corruption · stronger border surveillance · international intelligence sharing.</p>
+<div class="exam"><b>Exam link:</b> #4 Gold smuggling</div>
+
+<h2 id="arms">8. Arms smuggling</h2>
+<p><b>What:</b> also called <b>gunrunning</b> — the illicit cross-border transfer, acquisition or diversion of firearms, ammunition and explosives. Worth <b>USD 1.7–3.5 billion/year</b>, mostly <b>SALW</b> (small arms and light weapons: mass-produced, portable, easy to hide).</p>
+<div class="plain">Drugs and trafficking are about money. Guns are about <b>power</b> — taking territory and fighting the state. That's why the lecture calls the arms trade "unique".</div>
+<table>
+  <tr><th>Small arms (personal use)</th><th>Light weapons (collective use)</th></tr>
+  <tr><td>Pistols, revolvers, rifles, carbines, submachine guns, assault rifles, light machine guns</td><td>Heavy machine guns, grenade launchers, portable anti-aircraft/anti-tank guns, recoilless rifles, mortars under 100 mm</td></tr>
+</table>
+<p class="sub">Source: 1999 UN Report on Small Arms. Ammunition and explosives belong to both.</p>
+<p><b>Authorized transfer:</b> with state approval under national and international law. <b>Unauthorized (illicit):</b> no legal authorization — unmarked weapons, diversion to illegal users, embargo violations. Grey areas: state-approved transfers that still break international law.</p>
+<h3>Drivers (7)</h3>
+<p>High profit · conflict and instability · weak borders · corruption · demand from gangs, cartels, armed groups · weak law enforcement · diversion from legal markets.</p>
+<h3>How guns are obtained</h3>
+<p>Diversion from government stockpiles · <b>straw purchasing</b> (a legal buyer buys for someone else) · illicit manufacture and reactivation · online and dark-web markets · theft · forged end-user certificates.</p>
+<h3>How guns are moved</h3>
+<p>Container ships · small boats (dhows) · post and courier (in parts) · hidden in cars or fuel tanks · airline luggage · professional concealment (crates, mixed with timber) · <b>ant trafficking</b> — many people each carrying a few guns across a border on foot.</p>
+<h3>7 stages</h3>
+<p>1 Sourcing/acquisition → 2 collection &amp; preparation → 3 concealment → 4 transportation → 5 transit/intermediaries → 6 border crossing → 7 distribution/delivery.</p>
+<p><b>Patterns:</b> departures from North America, Europe, Western Asia; destinations Central &amp; South America, parts of Western Asia. Land borders ≈ <b>two-thirds</b> of cases; sea shipments fewer but ~<b>5×</b> bigger. Most seized: <b>pistols</b> globally (over 50% in the Americas); <b>shotguns</b> in Africa &amp; Asia; rifles in Oceania.</p>
+<h3>Threats</h3>
+<p><b>War</b> — prolongs conflict (Sahel gold-mining areas) · <b>organized crime</b> — homicide, kidnapping, extortion; Mexican cartels · <b>terrorism</b> — weapons trafficked through illicit networks were used in the <b>2015 Paris attacks</b>.</p>
+<h3>Law</h3>
+<table>
+  <tr><th>Instrument</th><th>What it does</th></tr>
+  <tr><td>UN Firearms Protocol (2001)</td><td>Criminalize illicit firearms trafficking; marking and identification; tracing and information exchange</td></tr>
+  <tr><td>Arms Trade Treaty (2013)</td><td>Regulates conventional arms trade; bans transfers with substantial risk of serious human-rights violations</td></tr>
+  <tr><td>Arms Act (1878), Bangladesh</td><td>Bans unauthorized import, export, transport, possession, dealing; illegal import/export → life or ≥7 years RI</td></tr>
+  <tr><td>Smuggling of Arms Act (1934)</td><td>Government can declare notified areas, remove identified smugglers; arrest without warrant for violations</td></tr>
+</table>
+<p><b>Bangladesh:</b> arms via networks linked to Myanmar and India; hotspots <b>Chattogram, Cox's Bazar</b>, the south-east; long land and sea borders; risks of gang violence, terrorism and political violence.</p>
+<p><b>Combating:</b> criminalize under the Firearms Protocol · stronger investigation and prosecution · strict licensing · marking, record-keeping, tracing · destroy seized guns · international cooperation.</p>
+<div class="exam"><b>Exam links:</b> #5 Concept, drivers, threats · #13 Classification &amp; law · #17 Methods &amp; stages</div>
+
+<h2 id="cf">9. Counterfeiting (OC-7)</h2>
+<h3>Counterfeit currency</h3>
+<p><b>Definition:</b> fake or imitation money produced <b>without legal government authorization</b>, intended to <b>deceive</b> and pass as legal tender — financial fraud and economic crime. Ancient: plated Lydian coins called <b>fourrées</b>.</p>
+<p><b>Key characteristics:</b> illegal production · intent to deceive · missing or poor security features (threads, watermarks, micro-printing, colour-shifting ink).</p>
+<p><b>Harms:</b> you lose the full value of a fake note · funds organized crime, drugs, laundering, terrorism · damages trust in cash · reduces the value of real money · more money supply → <b>inflation</b> · losses for traders.</p>
+<div class="plain">Every fake note is a small theft from everyone who holds real money — and when there are enough of them, people stop trusting cash.</div>
+<p><b>FICN (Fake Indian Currency Notes):</b> enter India via Bangladesh, especially West Bengal; <b>Malda</b> is a key transit area. Cases: <b>2021 Chattogram</b> (printed in Lahore → Sri Lanka → Chattogram → India) · <b>2023 Dhaka</b> (fake rupees used to buy narcotics) · <b>2025 Jhenaidah</b> (₹5.04 lakh bought for Tk 60,000). India–Bangladesh <b>MoU</b> for cooperation.</p>
+<p><b>Prevention:</b> <b>polymer notes</b> (Australia: $10 polymer note 1988, first full series 1996; NZ followed) · security features (3D ribbons, special printing, complex designs, portraits) upgraded regularly · <b>reserve note series</b> (Switzerland).</p>
+<p><b>Penalties (examples):</b> US up to 20 yrs · UK up to 10 · China and Japan 3 yrs–life · France up to 30 yrs + €450,000 · Zambia life.</p>
+
+<h3>Other types</h3>
+<table>
+  <tr><th>Type</th><th>Key points</th></tr>
+  <tr><td>Consumer goods</td><td><b>Counterfeit</b> = uses the registered trademark · <b>dupe/knockoff</b> = copies design, no trademark · <b>pirated</b> = copies of copyrighted music, films, software</td></tr>
+  <tr><td>Electronics</td><td><b>Blacktopping/sanding</b> (erase and re-mark chips) · e-waste repurposing · relabeling/grade spoofing · defective remanufacturing</td></tr>
+  <tr><td>Health &amp; safety</td><td>Fake medicines, vaccines, devices, sanitizers — wrong or toxic ingredients → treatment failure, resistance, death</td></tr>
+  <tr><td>Documents</td><td>Reproducing passports, IDs, cheques, deeds, wills, diplomas from scratch</td></tr>
+  <tr><td>Coins</td><td>Casting · striking (CNC-made dies) · plating &amp; coating · clipping &amp; shaving · bi-metallic forgery</td></tr>
+  <tr><td>Trademark</td><td><b>Counterfeiting</b> = identical/indistinguishable fake mark (intentional) vs <b>infringement</b> = similar mark causing confusion</td></tr>
+</table>
+<p><b>Spot a fake:</b> suspiciously low price · poor packaging and spelling · no serial/batch numbers or warranty · untrusted sellers. <b>Protect yourself:</b> buy from authorized sources, inspect packaging, report side effects.</p>
+
+<h3>Bangladesh</h3>
+<ul>
+  <li><b>39–40%</b> of goods in the domestic market may be counterfeit or adulterated.</li>
+  <li>Categories: personal care/cosmetics <b>32%</b> · electrical <b>13%</b> · clothing <b>12%</b> · food <b>10%</b> · pharmaceuticals <b>9%</b>.</li>
+  <li>Fake <b>BSTI seals</b>; hidden factories in Dhaka and Chattogram; grey-market Chinese parts relabelled as brands.</li>
+  <li>Losses: <b>Tk 3,170 crore</b> tax, <b>Tk 13,680 crore</b> business losses; counterfeit medicines <b>$309 million/year</b>.</li>
+  <li>Health: adulterated milk, oil, honey, baby food (80–90% of households consume); WHO — 600 million ill, 442,000 deaths/year from contaminated food.</li>
+  <li>Safety: <b>38%</b> of fires from electrical short circuits.</li>
+  <li>Enforcement: DNCRP and BSTI mobile courts and raids — <b>reactive, not systemic</b>. New tool: <b>TraceChainBD</b> (blockchain + IoT QR codes).</li>
+</ul>
+<h3>Bangladesh law</h3>
+<table>
+  <tr><th>Provision</th><th>Offence</th><th>Maximum</th></tr>
+  <tr><td>Penal Code s.465</td><td>General forgery</td><td>2 years, fine, or both</td></tr>
+  <tr><td>s.466</td><td>Court records / public registers</td><td>7 years + fine</td></tr>
+  <tr><td>s.467</td><td>Valuable securities, wills</td><td>Life or 10 years + fine</td></tr>
+  <tr><td>s.475</td><td>Authentication marks on valuable securities</td><td>Life or 7 years + fine</td></tr>
+  <tr><td>s.476</td><td>Counterfeit authentication devices/seals</td><td>7 years + fine</td></tr>
+  <tr><td>s.483</td><td>Trade or property mark</td><td>2 years, fine, or both</td></tr>
+  <tr><td>s.484</td><td>Marks used by public servants</td><td>3 years + fine</td></tr>
+  <tr><td>Coins</td><td>General / official Bangladesh coins / tools / import-export</td><td>7 yrs / 10 yrs or life / 3–10 yrs / 10 yrs</td></tr>
+  <tr><td>Trademarks Act 2009</td><td>Trademark rights; civil and criminal remedies</td><td>—</td></tr>
+  <tr><td>CRPA 2009 s.51</td><td>Selling fake/expired products or medicines</td><td>1 year, Tk 50,000, or both</td></tr>
+</table>
+<div class="exam"><b>Exam links:</b> #3 Counterfeit currency · #6 Types · #12 Bangladesh · #20 Prevention &amp; penalties</div>
+
+<h2 id="corruption">10. Corruption — the thread through it all</h2>
+<p>The course is called <i>Organized Crime <b>and Corruption</b></i>, and every lecture shows corruption at work. A synthesis question is a real possibility.</p>
+<table>
+  <tr><th>Crime</th><th>Corruption in the slides</th></tr>
+  <tr><td>Human trafficking</td><td>Corruption–trafficking link (Bales, 2005; Studnicka, 2010); Brazil 71% of cases; Bangladesh cases "settled" for money; clubs looking the other way</td></tr>
+  <tr><td>Drugs</td><td>"Systemic corruption" is a syndicate objective; narco-states; China's opium ban undermined by corruption; bribes at weak borders</td></tr>
+  <tr><td>Gold</td><td>"Facilitated by… corrupt officials"; BG-148 bars in an aircraft cargo hold suggest insiders; Kerala diplomatic baggage; kingpins unidentified</td></tr>
+  <tr><td>Arms</td><td>Corruption is a listed driver; diversion from state stockpiles; forged end-user certificates</td></tr>
+  <tr><td>Counterfeiting</td><td>Forged BSTI seals sold openly; reactive enforcement</td></tr>
+</table>
+<div class="plain">Organized crime needs the state to look away. Corruption is how it buys that. In routine-activity terms, corruption turns the guard into a partner.</div>
+<div class="exam"><b>Exam link:</b> #18 Corruption and organized crime (move it up if your teacher stresses corruption).</div>
+
+<h2 id="bd">11. Bangladesh at a glance</h2>
+<table>
+  <tr><th>Crime</th><th>Bangladesh's role</th><th>Key places / facts</th></tr>
+  <tr><td>Human trafficking</td><td>Source, transit, destination</td><td>Routes to Italy, US, Malaysia, Cambodia; PSHTA 2012; 90/180-day rule</td></tr>
+  <tr><td>Drugs</td><td>Transit &amp; destination (cannabis grown in Kushtia)</td><td>Teknaf/Naf River; 105 border points; 8.2m users; $481m lost</td></tr>
+  <tr><td>Gold</td><td>Destination &amp; transit</td><td>Dubai → HSIA → Benapole → India; BG-148</td></tr>
+  <tr><td>Arms</td><td>Destination</td><td>Myanmar/India networks; Chattogram, Cox's Bazar</td></tr>
+  <tr><td>Counterfeiting</td><td>Producer (goods) &amp; transit (FICN)</td><td>40% of market; BSTI fakes; Malda route</td></tr>
+</table>
+
+<h2 id="numbers">12. Numbers to remember</h2>
+<table>
+  <tr><th>Number</th><th>Meaning</th></tr>
+  <tr><td>50 million · 71%</td><td>People in modern slavery · share of survivors who are women and girls (also: Brazil cases with corrupt officials)</td></tr>
+  <tr><td>90 / 180</td><td>Working days to frame charges / finish trial (BD trafficking law)</td></tr>
+  <tr><td>Tk 5 lakh · 7 years</td><td>Minimum fine and imprisonment for organized trafficking (BD)</td></tr>
+  <tr><td>300+</td><td>Migrant deaths per year on the US–Mexico border</td></tr>
+  <tr><td>$2,000 → $200,000</td><td>Cocaine per kg: South America → Australia</td></tr>
+  <tr><td>95% · 232,000 → 10,200 ha</td><td>Fall in Afghan poppy cultivation after the Taliban ban</td></tr>
+  <tr><td>53,000+ ha</td><td>Myanmar opium cultivation (now world's top)</td></tr>
+  <tr><td>8.2 million (~5%)</td><td>Drug users in Bangladesh (DNC)</td></tr>
+  <tr><td>105 · 18</td><td>Drug entry points · districts</td></tr>
+  <tr><td>$481 million · 5th</td><td>Bangladesh's yearly loss to drug trafficking · rank for drug-linked laundering</td></tr>
+  <tr><td>1275</td><td>Edward I's customs system — smuggling becomes a recognized problem</td></tr>
+  <tr><td>160 bars · 18.72 kg</td><td>Gold seized in the BG-148 case (2 July 2026)</td></tr>
+  <tr><td>$1.7–3.5 billion</td><td>Yearly value of the illicit arms trade</td></tr>
+  <tr><td>⅔ · 5×</td><td>Arms cases via land · size of sea shipments</td></tr>
+  <tr><td>1988 · 1996</td><td>Australia's polymer note · first full polymer series</td></tr>
+  <tr><td>39–40% · 32%</td><td>Counterfeit share of BD market · cosmetics share of fakes</td></tr>
+  <tr><td>$309 million · 38%</td><td>Counterfeit-medicine losses · fires from short circuits</td></tr>
+</table>
+
+<h2 id="names">13. Who said what</h2>
+<table>
+  <tr><th>Scholar</th><th>Point</th></tr>
+  <tr><td>Andrees (2008); Herman (2006)</td><td>Smuggling can turn into trafficking</td></tr>
+  <tr><td>Vocks &amp; Nijboer (1999)</td><td>Victims recruited with false job offers</td></tr>
+  <tr><td>Kleemans &amp; van de Bunt (2003)</td><td>Smugglers have ties to both countries; some were migrants</td></tr>
+  <tr><td>Soudijn (2006)</td><td>88 Dutch cases; ~25% non-Chinese; loose alliances</td></tr>
+  <tr><td>Zhang (2007); Neske &amp; Doomernik (2006)</td><td>Chains of loosely connected groups</td></tr>
+  <tr><td>Bales (2005); Studnicka (2010)</td><td>Corruption–trafficking link</td></tr>
+  <tr><td>Guerette (2007)</td><td>Border deaths; harm reduction</td></tr>
+  <tr><td>Perrin (2010)</td><td>Role of transit countries</td></tr>
+  <tr><td>Daalder (2007)</td><td>Dutch model; "Appearances Are Deceptive"</td></tr>
+  <tr><td>Farley et al. (2009)</td><td>Clients rarely report suspected trafficking</td></tr>
+  <tr><td>Farrell et al. (2010)</td><td>&lt;10% of US police agencies found any case</td></tr>
+  <tr><td>Di Nicola (2007)</td><td>"The never-ending story of a definition"</td></tr>
+  <tr><td>GAO (2007)</td><td>Anti-trafficking projects not evaluated</td></tr>
+  <tr><td>Weitzer (2010); Dottridge (2007)</td><td>Ideological debate; policies may harm</td></tr>
+  <tr><td>Gallien &amp; Weigand (2021); Campbell (2022)</td><td>Definitions of smuggling</td></tr>
+  <tr><td>Gras (1918); Williams (1959)</td><td>1275 customs system; wool and hides</td></tr>
+  <tr><td>Cornish &amp; Clarke (1986)</td><td>Rational choice</td></tr>
+  <tr><td>Cohen &amp; Felson (1979)</td><td>Routine activity</td></tr>
+  <tr><td>Everett S. Lee (1966)</td><td>Push–pull</td></tr>
+  <tr><td>Mark Granovetter (1973)</td><td>Network theory</td></tr>
+  <tr><td>Bayart, Ellis &amp; Hibou (1999)</td><td>State–crime nexus</td></tr>
+</table>
+<p class="sub">Prepared from the course's lecture decks for revision. Check any figure against your slides before quoting it in the exam.</p>
+</div>
+</body>
+</html>

@@ -20,6 +20,8 @@ Everything lives in `data/`. Each file calls `HUB.add(kind, …)`, so adding a c
 - **New quiz** → copy `data/quizzes/research-methods-ch3.js`, change `id`/`course`/questions, and add a `<script>` line for it in `index.html`.
   - MCQ fields: `t` topic id, `q` question, `o` options, `a` index of the correct option (0 = A), `h` hint, `e` explanation, `r` reference.
   - Topic factors `S`, `D`, `E`, `F` (0–1) drive the probability score: `45·S + 25·D + 15·E + 15·F`.
+  - Exam-pattern questions: give each essay `rank`, `covers` (topic ids) and `parts` (each `{ marks, q, points, model }`), and set `examPattern` on the quiz. The quiz then gets an **Exam plan** tab that ranks questions into tiers and estimates the chance of being able to answer the required number (see `data/quizzes/organized-crime-final-exam.js`).
+  - Topics can carry a `group` (e.g. the lecture) to group filters and tables.
 - **Files to download** → put them in `resources/<course-id>/` and list them in `data/resources.js`.
 - **Assignment guides** → `data/assignments.js` (every section is optional).
 - **Dates, notices, class routine** → `data/schedule.js`. Use `date: null` while a date is TBA.

@@ -58,7 +58,7 @@
           <a class="card tile" href="#/exams/${q.id}">
             <div class="row"><span class="chip">${U.esc(c ? c.title : q.course)}</span></div>
             <h3 style="margin-top:8px">${U.esc(q.title)}</h3>
-            <p class="muted" style="margin:0">${q.mcq.length} MCQs · ${q.essays.length} short essays</p>
+            <p class="muted" style="margin:0">${q.mcq.length} MCQs · ${q.essays.length} ${q.essays[0] && q.essays[0].parts ? 'exam questions' : 'short essays'}</p>
             <div class="progress"><div style="width:${(done / q.mcq.length) * 100}%"></div></div>
             <small>${done ? `${done}/${q.mcq.length} answered · ${right} correct` : 'Not started'}</small>
           </a>`;

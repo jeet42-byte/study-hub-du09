@@ -40,6 +40,30 @@
           .map((c) => `<div class="card" style="background:var(--surface-2);box-shadow:none"><b>${U.esc(c.name)}</b>${list(c.items.map(U.esc))}</div>`)
           .join('')}</div>`);
     }
+    if (a.movies) {
+      parts.push(`<h3 style="margin-top:16px">Your group's movie — concept map</h3>
+        <p class="muted">Open your group to see the film's details, the plot points worth analysing, and the course concepts each scene illustrates.</p>
+        ${a.movies
+          .map(
+            (m) => `
+          <details class="card" style="background:var(--surface-2);box-shadow:none">
+            <summary><div class="row"><span class="chip p-h">Group ${m.group}</span><b>${U.esc(m.title)} (${m.year})</b><small class="muted">Rolls ${U.esc(m.rolls)}</small></div></summary>
+            <p style="margin-top:10px"><b>Director:</b> ${U.esc(m.director)} · <b>Genre:</b> ${U.esc(m.genre)}<br><b>Main cast:</b> ${U.esc(m.cast)}<br><b>Central theme:</b> ${U.esc(m.theme)}</p>
+            <b>Plot points to use</b>${list(m.plot.map(U.esc))}
+            <b>Concepts → where they show in the film</b>
+            <div class="table-wrap"><table>
+              <tr><th>Concept</th><th>Scene / link</th></tr>
+              ${m.concepts.map((c) => `<tr><td><b>${U.esc(c.c)}</b></td><td>${U.esc(c.how)}</td></tr>`).join('')}
+            </table></div>
+            <div class="grid" style="margin-top:10px">
+              <div><b>Conceptually accurate</b>${list(m.accurate.map(U.esc))}</div>
+              <div><b>Exaggerated / weak</b>${list(m.exaggerated.map(U.esc))}</div>
+            </div>
+            <small class="muted">Cite the film: ${m.ref}</small>
+          </details>`
+          )
+          .join('')}`);
+    }
     if (a.tips) parts.push(`<h3 style="margin-top:16px">Tips</h3>${list(a.tips.map(U.esc))}`);
     if (a.references) {
       parts.push(`<h3>References (APA 7)</h3>

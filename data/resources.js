@@ -24,3 +24,21 @@ HUB.add(
     file: '',
   }
 );
+
+HUB.add(
+  'resources',
+  {
+    course: 'organized-crime',
+    type: 'Notes',
+    title: 'End-term notes in plain language — Organized Crime',
+    desc: 'Everything in the four lecture decks explained simply, with "in plain words" boxes, the five smuggling theories, key numbers, a scholar list and a Bangladesh summary. Printable to PDF.',
+    file: 'resources/organized-crime/oc-final-notes.html',
+  },
+  {
+    course: 'organized-crime',
+    type: 'Slides',
+    title: 'Lecture decks: OC-4, OC-5, Smuggling (Arms & Gold), OC-7',
+    desc: 'Instructor slides — share through the class drive and add a link here with permission.',
+    file: '',
+  }
+);
