@@ -57,13 +57,13 @@ HUB.add(
     type: 'Slides',
     title: 'Cyber Crime and Security — slides till mid-term',
     desc: 'Mid-term deck: cybercrime typology, attacks, phishing, CIA, cyber defence, crime-as-a-service. Opens in Google Drive.',
-    url: 'https://drive.google.com/file/d/1U6g876_j6yjUNK4eNXVBKvFJ5SFWtp3K/view?usp=drive_link',
+    url: 'https://drive.google.com/file/d/10u2rqVk8PddsuJ0emCsB--fOrPKO0WUE/view?usp=sharing',
   },
   {
     course: 'cyber-crime',
     type: 'Slides',
     title: 'Digital Forensics & Cyber Crime Investigation (final-term deck)',
     desc: 'Final-term deck: digital evidence, crime-scene handling, tools, mobile, cloud, IoT, email and social media forensics. Opens in Google Drive.',
-    url: 'https://drive.google.com/file/d/1uaZjK3faQbkueOa4gEPU0-dv7eoMqJ9g/view?usp=drive_link',
+    url: 'https://drive.google.com/file/d/18ANsyaPrwE0vum7iiGNgBBvW47G-gED_/view?usp=sharing',
   }
 );
