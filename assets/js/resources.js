@@ -1,6 +1,6 @@
 // Resources: downloadable slides, book chapters and notes, grouped by course.
 HUB.views.resources = function (root) {
-  const icons = { Slides: '🖥️', Book: '📖', Notes: '🗒️', Link: '🔗' };
+  const icons = { Slides: '🖥️', Book: '📖', Notes: '🗒️', Link: '🔗', 'Assignment brief': '📝' };
 
   const item = (r) => {
     let action;

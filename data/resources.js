@@ -12,9 +12,9 @@ HUB.add(
   {
     course: 'research-methods',
     type: 'Slides',
-    title: 'Chapter 3 lecture slides (Class 4 & 5)',
-    desc: 'Ethnography, Phenomenology, Case studies. Add the PDF to resources/research-methods/ to enable download.',
-    file: '',
+    title: 'Chapter 3 lecture slides (Class 4 & 5) — Qualitative Research Approaches',
+    desc: 'Ethnography, Phenomenology, Case studies. 10 pages, PDF.',
+    file: 'resources/research-methods/slides/ch3-qualitative-approaches-class4-5.pdf',
   },
   {
     course: 'research-methods',
@@ -37,10 +37,38 @@ HUB.add(
   {
     course: 'organized-crime',
     type: 'Slides',
-    title: 'Lecture decks: OC-4, OC-5, Smuggling (Arms & Gold), OC-7',
-    desc: 'Instructor slides — share through the class drive and add a link here with permission.',
-    file: '',
-  }
+    title: 'OC-4 — Human Trafficking: myths, facts and future actions',
+    desc: 'Lecture deck, 49 pages, PDF.',
+    file: 'resources/organized-crime/slides/oc4-human-trafficking.pdf',
+  },
+  {
+    course: 'organized-crime',
+    type: 'Slides',
+    title: 'OC-5 — Drug Trafficking by Organized Crime Syndicates',
+    desc: 'Lecture deck, 52 pages, PDF.',
+    file: 'resources/organized-crime/slides/oc5-drug-trafficking.pdf',
+  },
+  {
+    course: 'organized-crime',
+    type: 'Slides',
+    title: 'Smuggling — Arms & Gold',
+    desc: 'Lecture deck: concepts, types and theories of smuggling, arms and gold smuggling. 51 pages, PDF (about 10 MB).',
+    file: 'resources/organized-crime/slides/smuggling-arms-gold.pdf',
+  },
+  {
+    course: 'organized-crime',
+    type: 'Slides',
+    title: 'OC-7 — Counterfeiting',
+    desc: 'Lecture deck by Md. Rezaul Karim Shohag. 42 pages, PDF.',
+    file: 'resources/organized-crime/slides/oc7-counterfeiting.pdf',
+  },
+  {
+    course: 'organized-crime',
+    type: 'Assignment brief',
+    title: 'MCCJ 527 group assignment brief — movie review',
+    desc: 'The original assignment instructions (20 marks). See the Assignments page for the guide.',
+    file: 'resources/organized-crime/assignment/mccj-527-group-assignment.pdf',
+  },
 );
 
 HUB.add(
@@ -63,7 +91,14 @@ HUB.add(
     course: 'cyber-crime',
     type: 'Slides',
     title: 'Digital Forensics & Cyber Crime Investigation (final-term deck)',
-    desc: 'Final-term deck: digital evidence, crime-scene handling, tools, mobile, cloud, IoT, email and social media forensics. Opens in Google Drive.',
-    url: 'https://drive.google.com/file/d/18ANsyaPrwE0vum7iiGNgBBvW47G-gED_/view?usp=sharing',
+    desc: 'Final-term deck: digital evidence, crime-scene handling, tools, mobile, cloud, IoT, email and social media forensics. 90 pages, PDF.',
+    file: 'resources/cyber-crime/slides/digital-forensics-cyber-crime-investigation.pdf',
+  },
+  {
+    course: 'cyber-crime',
+    type: 'Assignment brief',
+    title: 'MCCJ 525 assignment guidelines — security features of online platforms',
+    desc: 'The original assignment instructions. See the Assignments page for the guide.',
+    file: 'resources/cyber-crime/assignment/mccj-525-assignment-guidelines.pdf',
   }
 );
