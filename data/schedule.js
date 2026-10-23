@@ -7,9 +7,8 @@ HUB.add(
     id: 'rm-quiz-ch3',
     course: 'research-methods',
     type: 'Quiz',
-    title: 'Quiz — Chapter 3: Qualitative Research Approaches',
-    date: null,
-    tentative: 'Expected around mid-September; room to be confirmed',
+    title: 'Research Methodology quiz — Chapter 3: Qualitative Research Approaches',
+    date: '2026-10-31',
     note: 'MCQ + short essay. Slides (Class 4 & 5) + Bachman & Schutt pp. 235–247. FGDs excluded.',
     link: '#/exams/rm-ch3',
   },
@@ -128,3 +127,32 @@ HUB.add('notices', {
 
 // Weekly routine, e.g. { course: 'research-methods', day: 'Sunday', start: '10:00', end: '11:30', room: '' }
 HUB.add('classes');
+
+// Coursework deadlines (shared in class, October 2026).
+HUB.add(
+  'events',
+  {
+    id: 'cyber-assignment',
+    course: 'cyber-crime',
+    type: 'Assignment',
+    title: 'Cyber Crime and Security — assignment',
+    date: '2026-10-25',
+  },
+  {
+    id: 'forensic-deadline',
+    course: 'forensic-science',
+    type: 'Deadline',
+    title: 'Forensic Science (MCCJ 526)',
+    date: '2026-11-07',
+    note: 'Check with the course teacher whether this is a quiz, assignment or presentation.',
+  },
+  {
+    id: 'rm-assignment',
+    course: 'research-methods',
+    type: 'Assignment',
+    title: 'Research Methodology — assignment submission (10–14 Nov)',
+    date: '2026-11-14',
+    note: 'Submission window opens 10 November; the countdown runs to the last day, 14 November.',
+    link: '#/assignments/research-methods',
+  }
+);
