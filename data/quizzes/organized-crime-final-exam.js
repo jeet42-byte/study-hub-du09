@@ -6,7 +6,13 @@
 (function () {
   const quiz = HUB.quizzes.find((q) => q.id === 'oc-final');
 
-  quiz.examPattern = { total: 50, answer: 5, of: [7, 8], each: 10 };
+  quiz.examPattern = {
+    total: 50,
+    answer: 5,
+    of: [7, 8],
+    each: 10,
+    scope: 'This plan assumes the end-term covers the four lectures uploaded here (human trafficking, drug trafficking, smuggling of arms & gold, counterfeiting).',
+  };
 
   quiz.essays = [
     {

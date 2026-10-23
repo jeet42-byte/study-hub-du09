@@ -528,6 +528,7 @@
               <h3 style="margin:10px 0 10px">${U.esc(e.q)} <span class="muted" style="font-weight:400">(${e.marks} marks)</span></h3>
 
               <div class="paper">
+                ${e.scenario ? `<div class="scenario"><span class="stat-label">Scenario</span><p>${U.esc(e.scenario)}</p></div>` : ''}
                 ${e.parts
                   .map(
                     (p, j) => `<div class="paper-row"><b>(${LABELS[j]})</b><span>${U.esc(p.q)}</span><span class="muted">${p.marks}</span></div>`
@@ -619,7 +620,7 @@
     body.innerHTML = `
       <div class="card">
         <h2>Exam pattern</h2>
-        <p style="margin:0"><b>${pat.total || 50} marks</b> — answer <b>${k}</b> of <b>${of.join('–')}</b> questions, <b>${pat.each || 10} marks each</b>, every question made of 2–3 parts. This plan assumes the end-term covers the four lectures uploaded here (human trafficking, drug trafficking, smuggling of arms &amp; gold, counterfeiting).</p>
+        <p style="margin:0"><b>${pat.total || 50} marks</b> — answer <b>${k}</b> of <b>${of.join('–')}</b> questions, <b>${pat.each || 10} marks each</b>, every question made of 2–3 parts. ${U.esc(pat.scope || '')}</p>
       </div>
 
       <div class="card">
@@ -682,7 +683,7 @@
           <li><b>Order them greedily</b>: each next question adds the most not-yet-covered weight, with at least two top-10 questions per lecture.</li>
           <li><b>Estimate the odds</b>: an exam question counts as answerable if at least 2 of its 3 parts fall on topics you covered; the chance of answering ${k} of ${of.join(' or ')} is then binomial.</li>
         </ol>
-        <p class="note">This is a model, not a promise. It is cautious in one way (real exam parts usually come from the same lecture, which raises your odds) and optimistic in another (it assumes the paper covers only these four lectures). If earlier lectures are examinable too, add their material.</p>
+        <p class="note">This is a model, not a promise. It is cautious in one way (real exam parts usually come from the same lecture, which raises your odds) and optimistic in another (it assumes the paper covers only the material listed above). If other lectures are examinable too, add their material.</p>
       </div>
 
       <div class="card">
