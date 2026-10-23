@@ -55,8 +55,15 @@ HUB.add(
   {
     course: 'cyber-crime',
     type: 'Slides',
-    title: 'Lecture decks: mid-term slides and Digital Forensics & Cyber Crime Investigation',
-    desc: 'Instructor slides — share through the class drive and add a link here with permission.',
-    file: '',
+    title: 'Cyber Crime and Security — lecture slides (Drive file 1)',
+    desc: 'Course slides on Google Drive (mid-term deck or the Digital Forensics & Cyber Crime Investigation deck). Opens in Google Drive.',
+    url: 'https://drive.google.com/file/d/1vBbIIX1uN4hF8pqDyqVwd_LgJ_31sSFU/view?usp=drive_link',
+  },
+  {
+    course: 'cyber-crime',
+    type: 'Slides',
+    title: 'Cyber Crime and Security — lecture slides (Drive file 2)',
+    desc: 'Course slides on Google Drive (mid-term deck or the Digital Forensics & Cyber Crime Investigation deck). Opens in Google Drive.',
+    url: 'https://drive.google.com/file/d/1BXqGpmaZytcwZFv9FQ5sZDhXU3SCTYqf/view?usp=drive_link',
   }
 );
