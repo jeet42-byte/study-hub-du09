@@ -7,6 +7,7 @@
     grades: 'grades',
     assignments: 'assignments',
     forecast: 'forecast',
+    checker: 'checker',
   };
 
   function render() {
