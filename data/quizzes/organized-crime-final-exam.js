@@ -14,6 +14,14 @@
     scope: 'This plan assumes the end-term covers the four lectures uploaded here (human trafficking, drug trafficking, smuggling of arms & gold, counterfeiting).',
   };
 
+  quiz.answerTips = [
+    '<b>Match marks to length</b>: a 3-mark part ≈ one solid paragraph; a 4–5-mark part ≈ two paragraphs or a short list with explanation.',
+    '<b>Define first</b>: open each part with the slide definition and its source (UNODC, Cornish &amp; Clarke…).',
+    '<b>Use the lists</b>: stages, means, drivers and methods come as lists on the slides — number them.',
+    '<b>Add one Bangladesh fact or case</b> per question (BG-148, 8.2 million users, the 90/180-day rule, 40% counterfeit market).',
+    '<b>End with a one-line evaluation</b> (for example, corruption undermines enforcement).',
+  ];
+
   quiz.essays = [
     {
       rank: 1, t: 'ht-vs', covers: ['ht-def', 'ht-vs'], marks: 10,

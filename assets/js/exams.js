@@ -606,6 +606,46 @@
     applySelfTest();
   }
 
+  // Plan text that individual quizzes may override (quiz.planMethod / quiz.answerTips hold trusted HTML).
+  const DEFAULT_METHOD = [
+    '<b>Score every syllabus topic</b> (0–100) from lecture emphasis, definitions, examples and format fit — see the Probability analysis tab.',
+    '<b>Weight topics by score²</b>, so core topics count much more than side topics (a 100-score topic weighs 2.8× a 60-score one).',
+    '<b>Build exam-shaped questions</b> — 10 marks, 2–3 parts — each preparing one or more topics.',
+    '<b>Order them greedily</b>: each next question adds the most not-yet-covered weight, with at least two top-10 questions per lecture.',
+  ];
+  const DEFAULT_TIPS = [
+    '<b>Match marks to length</b>: a 3-mark part ≈ one solid paragraph; a 4–5-mark part ≈ two paragraphs or a short list with explanation.',
+    '<b>Define first</b>: open each part with the slide definition and its source.',
+    '<b>Use the lists</b>: stages, types, causes and methods come as lists on the slides — number them.',
+    '<b>Add one Bangladesh example</b> per question.',
+    '<b>End with a one-line evaluation</b> or conclusion.',
+  ];
+
+  // Optional "predicted final syllabus" — chapters with reading, likelihood and evidence.
+  const LIKELIHOOD = { 'Very likely': 'p-vh', Likely: 'p-h', Possible: 'p-m', 'Only if taught': 'p-l' };
+  function syllabusCard(quiz) {
+    const sy = quiz.syllabus;
+    if (!sy) return '';
+    return `
+      <div class="card">
+        <h2>Predicted final syllabus</h2>
+        ${sy.intro ? `<p>${U.esc(sy.intro)}</p>` : ''}
+        <div class="table-wrap"><table>
+          <tr><th>Chapter</th><th>Topics</th><th>Predicted reading</th><th>Likelihood</th></tr>
+          ${sy.rows
+            .map(
+              (r) => `<tr>
+                <td><b>${U.esc(r.ch)}</b><br><small class="muted">${U.esc(r.when || '')}</small></td>
+                <td>${U.esc(r.topics)}</td>
+                <td><small>${U.esc(r.reading)}</small></td>
+                <td><span class="chip ${LIKELIHOOD[r.likelihood] || 'p-m'}">${U.esc(r.likelihood)}</span>${r.why ? `<br><small class="muted">${U.esc(r.why)}</small>` : ''}</td></tr>`
+            )
+            .join('')}
+        </table></div>
+        ${sy.evidence ? `<h3 style="margin-top:16px">How the prediction was made</h3><ol>${sy.evidence.map((e) => `<li>${U.esc(e)}</li>`).join('')}</ol>` : ''}
+      </div>`;
+  }
+
   function renderPlan(body, quiz) {
     const topics = topicMap(quiz);
     const pat = quiz.examPattern || {};
@@ -623,6 +663,7 @@
         <h2>Exam pattern</h2>
         <p style="margin:0"><b>${pat.total || 50} marks</b> — answer <b>${k}</b> of <b>${of.join('–')}</b> questions, <b>${pat.each || 10} marks each</b>, every question made of 2–3 parts. ${U.esc(pat.scope || '')}</p>
       </div>
+      ${syllabusCard(quiz)}
 
       <div class="card">
         <h2>How much should I read?</h2>
@@ -663,7 +704,7 @@
 
       <div class="card">
         <h2>Lecture balance</h2>
-        <p class="muted">Setters usually spread 7–8 questions across lectures (about two each), so every tier keeps all lectures represented.</p>
+        <p class="muted">Setters usually spread 7–8 questions across lectures, so every tier keeps all lectures represented.</p>
         <div class="table-wrap"><table>
           <tr><th>Lecture</th>${TIERS.map((t) => `<th>${t.label}</th>`).join('')}</tr>
           ${groups
@@ -677,11 +718,7 @@
 
       <div class="card">
         <h2>How this was worked out</h2>
-        <ol>
-          <li><b>Score every syllabus topic</b> (0–100) from lecture emphasis, definitions, examples and format fit — see the Probability analysis tab.</li>
-          <li><b>Weight topics by score²</b>, so core topics count much more than side topics (a 100-score topic weighs 2.8× a 60-score one).</li>
-          <li><b>Build exam-shaped questions</b> — 10 marks, 2–3 parts — each preparing one or more topics.</li>
-          <li><b>Order them greedily</b>: each next question adds the most not-yet-covered weight, with at least two top-10 questions per lecture.</li>
+        <ol>${(quiz.planMethod || DEFAULT_METHOD).map((li) => `<li>${li}</li>`).join('')}
           <li><b>Estimate the odds</b>: an exam question counts as answerable if at least 2 of its 3 parts fall on topics you covered; the chance of answering ${k} of ${of.join(' or ')} is then binomial.</li>
         </ol>
         <p class="note">This is a model, not a promise. It is cautious in one way (real exam parts usually come from the same lecture, which raises your odds) and optimistic in another (it assumes the paper covers only the material listed above). If other lectures are examinable too, add their material.</p>
@@ -689,12 +726,7 @@
 
       <div class="card">
         <h2>Writing a 10-mark answer</h2>
-        <ul>
-          <li><b>Match marks to length</b>: a 3-mark part ≈ one solid paragraph; a 4–5-mark part ≈ two paragraphs or a short list with explanation.</li>
-          <li><b>Define first</b>: open each part with the slide definition and its source (UNODC, Cornish &amp; Clarke…).</li>
-          <li><b>Use the lists</b>: stages, means, drivers and methods come as lists on the slides — number them.</li>
-          <li><b>Add one Bangladesh fact or case</b> per question (BG-148, 8.2 million users, the 90/180-day rule, 40% counterfeit market).</li>
-          <li><b>End with a one-line evaluation</b> (for example, corruption undermines enforcement).</li>
+        <ul>${(quiz.answerTips || DEFAULT_TIPS).map((li) => `<li>${li}</li>`).join('')}
         </ul>
       </div>`;
   }

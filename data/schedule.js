@@ -21,8 +21,8 @@ HUB.add(
     date: '2026-12-04T15:00',
     time: '3:00–6:00 pm',
     room: 'Room 704, 6th floor, FSS, DU',
-    note: 'Final is marked out of 50 — use the Grade planner to see what you need.',
-    link: '#/grades',
+    note: 'Final is marked out of 50 — answer 5 of 7–8 questions. See the predicted syllabus and ranked question bank.',
+    link: '#/exams/rm-final',
   }
 );
 

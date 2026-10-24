@@ -1,0 +1,341 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Research Methodology Notes</title>
+<style>
+  :root { --bg:#fff; --text:#1a1f2e; --muted:#5d6579; --accent:#2f5fb3; --line:#e1e4ea; --soft:#f3f5f9; --plain:#eaf3ea; --plain-line:#1a8a4a; --warn:#fff3db; color-scheme: light; }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --bg:#121417; --text:#e8e6e1; --muted:#a19d95; --accent:#7fa6ff; --line:#2c3038; --soft:#1b1e24; --plain:#16261b; --plain-line:#4cc47e; --warn:#3a2c10; color-scheme: dark; } }
+  :root[data-theme="dark"] { --bg:#121417; --text:#e8e6e1; --muted:#a19d95; --accent:#7fa6ff; --line:#2c3038; --soft:#1b1e24; --plain:#16261b; --plain-line:#4cc47e; --warn:#3a2c10; color-scheme: dark; }
+  body { margin:0; background:var(--bg); color:var(--text); font:16px/1.65 Georgia, 'Times New Roman', serif; }
+  .wrap { max-width:840px; margin:0 auto; padding:32px 16px 64px; }
+  h1 { font-size:1.9rem; margin:0 0 6px; line-height:1.2; }
+  h2 { font-size:1.4rem; color:var(--accent); border-bottom:2px solid var(--accent); padding-bottom:4px; margin:44px 0 12px; line-height:1.25; }
+  h3 { font-size:1.12rem; margin:26px 0 8px; }
+  p { margin:0 0 12px; }
+  .sub { color:var(--muted); font-family:system-ui, sans-serif; font-size:0.92rem; }
+  .plain { background:var(--plain); border-left:4px solid var(--plain-line); border-radius:6px; padding:10px 14px; margin:12px 0; }
+  .plain::before { content:"In plain words — "; font-weight:700; font-family:system-ui, sans-serif; font-size:0.85rem; }
+  .exam { background:var(--soft); border-radius:6px; padding:10px 14px; margin:12px 0; font-family:system-ui, sans-serif; font-size:0.9rem; }
+  .exam b { color:var(--accent); }
+  .warn { background:var(--warn); border-radius:6px; padding:10px 14px; margin:12px 0; font-family:system-ui, sans-serif; font-size:0.9rem; }
+  .calc { font-family:ui-monospace, Menlo, Consolas, monospace; font-size:0.9rem; background:var(--soft); border-radius:6px; padding:10px 14px; margin:10px 0; white-space:pre-wrap; overflow-x:auto; }
+  table { width:100%; border-collapse:collapse; font-size:0.93rem; margin:8px 0 14px; font-family:system-ui, sans-serif; }
+  th, td { text-align:left; padding:7px 9px; border:1px solid var(--line); vertical-align:top; }
+  th { background:var(--soft); }
+  ul, ol { padding-left:1.3em; margin:6px 0 12px; }
+  li { margin:3px 0; }
+  .toc { font-family:system-ui, sans-serif; font-size:0.92rem; columns:2; column-gap:28px; background:var(--soft); padding:14px 18px; border-radius:8px; }
+  .toc a { color:var(--text); }
+  .toc ol { margin:0; }
+  @media (max-width:600px) { .toc { columns:1; } table { font-size:0.85rem; display:block; overflow-x:auto; } }
+  @media print { body { background:#fff; color:#000; font-size:12px; } h2 { break-after:avoid; } table, .plain, .exam, .calc { break-inside:avoid; } .toc { columns:2; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>Research Methodology — End-term Notes</h1>
+<p class="sub">MCCJ 521 · Built from the course slides (Chapters 1–7), the class exercises, Maxfield &amp; Babbie (2014, 7th ed.), Bachman &amp; Schutt (5th ed.), Bryman &amp; Burgess (1994) and Chaiken &amp; Chaiken (1982) · Written for easy understanding · Print with Ctrl/Cmd + P</p>
+
+<div class="toc">
+<ol>
+  <li><a href="#start">How to use these notes</a></li>
+  <li><a href="#syllabus">The predicted final syllabus</a></li>
+  <li><a href="#ch1">Ch 1 — Research, terms &amp; theories</a></li>
+  <li><a href="#ch2">Ch 2 — Qualitative research, grounded theory &amp; coding</a></li>
+  <li><a href="#ch3">Ch 3 — Ethnography, phenomenology, case study</a></li>
+  <li><a href="#ch4">Ch 4 — Statistics &amp; sampling</a></li>
+  <li><a href="#ch5">Ch 5 — Surveys, self-reports &amp; questionnaires</a></li>
+  <li><a href="#ch6">Ch 6 — Analysing quantitative data</a></li>
+  <li><a href="#ch7">Ch 7 — Content analysis</a></li>
+  <li><a href="#ethics">Ethics (if taught)</a></li>
+  <li><a href="#report">Writing research reports (if taught)</a></li>
+  <li><a href="#sheet">One-page comparison sheet</a></li>
+  <li><a href="#names">Who said what</a></li>
+  <li><a href="#traps">Exam traps</a></li>
+</ol>
+</div>
+
+<h2 id="start">1. How to use these notes</h2>
+<p>The final is <b>50 marks: answer 5 of 7–8 questions, 10 marks each</b>. Every question has 3 parts worth 3–4 marks. A typical question looks like: <i>(a) define X [3], (b) explain or compare its types [4], (c) apply it to an example or calculate [3]</i>.</p>
+<div class="exam"><b>Recipe for every part:</b> 1) the slide definition, in her words → 2) the list or table (types, steps, pros and cons) → 3) one example from criminology, ideally from Bangladesh → 4) one line of evaluation. For calculations: sort → formula → answer with units → comment on outliers.</div>
+<p>Her finals cover the <b>whole course, one chapter at a time</b> (see section 2). With 7–8 questions over 7–9 chapters, expect <b>about one question per chapter</b>. You cannot skip a chapter completely — but you can choose which 5 to answer.</p>
+
+<h2 id="syllabus">2. The predicted final syllabus</h2>
+<p>She hasn't announced the final syllabus yet. This prediction combines four clues: (1) her Juvenile Justice final listed <i>every</i> chapter of that course with book pages, (2) her RM mid-term page ranges stopped exactly where teaching stopped, (3) the slides match textbook chapters heading by heading, and (4) the class exercises show what she wants applied.</p>
+<table>
+  <tr><th>Chapter</th><th>Likely reading</th><th>Chance</th></tr>
+  <tr><td>1. Research concepts &amp; terminology</td><td>Slides + Maxfield pp. 1–14, 29–42 + Bachman pp. 16–17 (as in the mid-term)</td><td>Likely</td></tr>
+  <tr><td>2. Understanding qualitative research</td><td>Slides + coding exercise + Maxfield pp. 45–48 + grounded-theory supporting chapter</td><td>Very likely</td></tr>
+  <tr><td>3. Qualitative approaches</td><td>Slides + Bachman pp. 235–247 (as in the quiz)</td><td>Likely</td></tr>
+  <tr><td>4. Quantitative approaches &amp; sampling</td><td>Slides + comparison sheets + Maxfield pp. 200–228</td><td>Very likely</td></tr>
+  <tr><td>5. Data collection instruments (Section 1)</td><td>Slides + Maxfield pp. 234–248 + Chaiken &amp; Chaiken (1982)</td><td>Very likely</td></tr>
+  <tr><td>5. Section 2: interviews, KII, FGD</td><td>Slides when shared; Maxfield Ch 10</td><td>Possible</td></tr>
+  <tr><td>6. Quantitative data analysis (Section 1)</td><td>Slides + Maxfield pp. 399–411</td><td>Very likely (a calculation)</td></tr>
+  <tr><td>7. Content analysis</td><td>Slides + Maxfield pp. 348–351 / Bachman pp. 293–298</td><td>Very likely</td></tr>
+  <tr><td>Ethics; writing reports</td><td>Maxfield Ch 3; Bachman Ch 14</td><td>Only if taught</td></tr>
+</table>
+
+<h2 id="ch1">3. Chapter 1 — Research, terms and theories</h2>
+<h3>What research is</h3>
+<p><b>Research</b> is a systematic process of gathering, analysing and interpreting information to establish facts and reach new conclusions. It is a structured way of investigating a problem, phenomenon or theory to expand knowledge.</p>
+<div class="plain">Research is "finding out properly" — following clear steps so that someone else could check your work and reach the same answer.</div>
+<p><b>Why research matters in the social sciences:</b> it gives evidence to understand social problems, influence policy and find solutions; it advances knowledge; it helps us understand social reality empirically; it lets decisions rest on evidence; and it supports societal development by explaining human behaviour.</p>
+<table>
+  <tr><th>Basic research</th><th>Applied research</th></tr>
+  <tr><td>Gains fundamental knowledge (why do people desist from crime?)</td><td>Solves a specific problem (does this CCTV project reduce snatching?)</td></tr>
+  <tr><th>Qualitative</th><th>Quantitative</th></tr>
+  <tr><td>In-depth understanding, in words</td><td>Numerical data, measurement and statistics</td></tr>
+</table>
+<p><b>"Live objectively":</b> researchers observe, they don't judge; they stay open to all ideas; they detach from their own views so they can empathise. Maxfield &amp; Babbie list the everyday errors this protects against: <i>inaccurate observation, overgeneralisation, selective observation, illogical reasoning, ideology and politics.</i> The four <b>purposes</b> of research are exploration, description, explanation and application.</p>
+
+<h3>The six terms</h3>
+<table>
+  <tr><th>Term</th><th>Meaning</th><th>Example</th></tr>
+  <tr><td><b>Concept</b></td><td>An abstract idea or general notion representing a phenomenon</td><td>Justice, poverty, fear of crime</td></tr>
+  <tr><td><b>Variable</b></td><td>A measurable representation of a concept that can vary</td><td>Monthly income (for poverty)</td></tr>
+  <tr><td><b>Fact</b></td><td>A statement objectively verifiable by observation or evidence</td><td>Water boils at 100°C at sea level</td></tr>
+  <tr><td><b>Theory</b></td><td>A well-substantiated explanation based on evidence that has stood up to repeated testing</td><td>Social learning theory</td></tr>
+  <tr><td><b>Proposition</b></td><td>A statement of judgement about the relationship between concepts</td><td>Parental involvement improves school performance</td></tr>
+  <tr><td><b>Hypothesis</b></td><td>A specific, testable prediction about the relationship between variables</td><td>Higher stress → lower academic performance</td></tr>
+</table>
+<p><b>Variables:</b> the <i>independent</i> variable is the presumed cause (education); the <i>dependent</i> variable is the outcome (income); a <i>control</i> variable is held constant (age). <b>Hypotheses:</b> H₀ (null) says there is no relationship; H₁ (alternative) says there is one.</p>
+<div class="plain">Concept = the idea. Variable = the idea made measurable. Hypothesis = your bet about how two variables are linked. Theory = a bet that has already won many times.</div>
+
+<h3>Ten characteristics of a good social-science theory</h3>
+<ol>
+  <li><b>Empirical foundation</b> — based on observation and evidence.</li>
+  <li><b>Systematic and organised</b> — a logical framework of concepts.</li>
+  <li><b>Explanatory and predictive power</b> — explains why, and sometimes predicts.</li>
+  <li><b>Testable</b> — produces hypotheses that can be confirmed or refuted.</li>
+  <li><b>Abstract and generalisable</b> — applies across contexts (though not always universally).</li>
+  <li><b>Provisional and evolving</b> — revised or replaced as evidence changes.</li>
+  <li><b>Value-informed</b> — may reflect perspectives (Marxist, feminist, postcolonial).</li>
+  <li><b>Contextually sensitive</b> — historical, cultural, political and economic context.</li>
+  <li><b>Multidimensional</b> — many variables and intersections (race, class, gender).</li>
+  <li><b>Practically relevant</b> — informs policy and social change.</li>
+</ol>
+<div class="exam"><b>Memory hook:</b> "<b>E</b>very <b>S</b>ystem <b>E</b>xplains, <b>T</b>ests, <b>A</b>bstracts, <b>P</b>rovisionally — <b>V</b>alues, <b>C</b>ontext, <b>M</b>ultiple dimensions, <b>P</b>ractice."</div>
+
+<h2 id="ch2">4. Chapter 2 — Qualitative research, grounded theory and coding</h2>
+<h3>Why qualitative research matters</h3>
+<p>It gives an in-depth understanding of behaviour, perspectives and experiences; it generates knowledge beyond numerical frameworks; and it gives insight into social phenomena. The major methods are <b>grounded theory, ethnography, phenomenology, case study and narrative research</b>.</p>
+<h3>Grounded theory (Glaser &amp; Strauss, 1960s; <i>The Discovery of Grounded Theory</i>, 1967)</h3>
+<p>Develops theory <b>from</b> the data, so the theory is "grounded" in observation. They saw the need because qualitative research needed: independence from existing theories, more rigour, an inductive approach, rejection of the "hypothesis-first" model, and a focus on <i>generating</i> theory, not just testing it.</p>
+<p><b>Process:</b> a complex, iterative cycle. Start with open "generative questions" → identify core concepts as data come in → develop tentative links between concepts and data. The supporting chapter adds <b>constant comparison</b>, <b>theoretical sampling</b> (the emerging theory decides whom to study next) and <b>memos</b>; Bryman &amp; Burgess add <b>saturation</b> (stop when new data add nothing).</p>
+<div class="plain">Ordinary research: guess first, then check. Grounded theory: look first, and let the explanation grow out of what you see.</div>
+<h3>The three analytical strategies</h3>
+<table>
+  <tr><th>Strategy</th><th>What it is</th></tr>
+  <tr><td><b>Coding</b></td><td>Categorising the data and describing what the categories mean. <i>Open coding</i> first (minute detail, initial categories); then <i>selective coding</i> around one core concept. Strauss &amp; Corbin put <i>axial coding</i> in between (linking categories).</td></tr>
+  <tr><td><b>Memoing</b></td><td>Recording the researcher's thoughts as they evolve — extensive margin notes; open at first, focused on the core concept later.</td></tr>
+  <tr><td><b>Integrative diagrams and sessions</b></td><td>Any graphic that helps build the theory; group sessions where team members share ideas.</td></tr>
+</table>
+<h3>The coding-paradigm class exercise</h3>
+<p>Question: <i>How did juvenile gang members get recruited into gangs? (process-focused)</i></p>
+<ol>
+  <li>Compile category-specific quotations from the in-depth interviews (colour-code them).</li>
+  <li>Place all the quotations of one category (colour) together in the analysis sheet.</li>
+  <li>Use researcher insight to identify primary themes and sub-themes.</li>
+</ol>
+<table>
+  <tr><th>Primary theme</th><th>Sub-themes</th></tr>
+  <tr><td>Push factors</td><td>Family neglect, school drop-out, poverty</td></tr>
+  <tr><td>Pull factors</td><td>Money, protection, status, belonging</td></tr>
+  <tr><td>Entry pathway</td><td>Older brother or friend; small errands first</td></tr>
+  <tr><td>Binding</td><td>Debt, threats, gang identity</td></tr>
+</table>
+<p>The slide's hospitality table shows the same format: <b>Theme → Advantages → Supporting quotation</b>. Always back each theme with a quotation.</p>
+
+<h2 id="ch3">5. Chapter 3 — Ethnography, phenomenology, case study</h2>
+<p>These were quizzed; the <a href="ch3-study-notes.html">Chapter 3 notes</a> have the full detail. The essentials for the final:</p>
+<table>
+  <tr><th>Approach</th><th>Definition</th><th>Remember</th></tr>
+  <tr><td><b>Ethnography</b></td><td>Studying cultures and communities by immersing oneself in participants' natural environment</td><td><i>Street Corner Society</i> (Whyte, 1943): overt, key informant "Doc", ~4 years. Criticisms: vote fraud and racketeering, Doc's influence (rivalry with Chick), anonymity.</td></tr>
+  <tr><td><b>Overt vs covert</b></td><td>Identity declared vs hidden</td><td>Overt: ethical, easier, but people may change behaviour. Covert: more access, less ethical, stressful.</td></tr>
+  <tr><td><b>Phenomenology</b></td><td>How people experience and make sense of phenomena — subjective meanings of lived experience</td><td>"What it is like"; methods: interviews, observations, personal narratives</td></tr>
+  <tr><td><b>Interviews</b></td><td>Structured / semi-structured / unstructured</td><td>Fixed order → core questions + probes → broad opening, respondent-led</td></tr>
+  <tr><td><b>Case study</b></td><td>In-depth study of a real-world phenomenon in its context; one or a few cases; multiple sources</td><td>Limits: generalisability, bias, time and resources, replication</td></tr>
+  <tr><td><b>FGD</b></td><td>A small group discusses under the researcher's guidance, without the researcher influencing responses</td><td>Benefits: depth, time and cost, synergy. Problems: shy people silenced, dominant voices.</td></tr>
+</table>
+
+<h2 id="ch4">6. Chapter 4 — Statistics and sampling</h2>
+<p><b>Statistics</b> in social research is the scientific method for collecting, organising, analysing, interpreting and presenting data to draw conclusions about a population from a sample. <b>Population</b> = everyone you are interested in; <b>sample</b> = the smaller group that represents them; <b>sampling</b> = how you choose the sample.</p>
+<div class="plain">You can't interview all 3,000 inmates, so you pick 300 in a fair way and use them to speak for the rest.</div>
+<table>
+  <tr><th></th><th>Probability (random)</th><th>Non-probability</th></tr>
+  <tr><td>Selection</td><td>Randomisation; everyone has a known, non-zero chance</td><td>Deliberate choice — convenience, geography, cost</td></tr>
+  <tr><td>Generalise?</td><td>Yes, statistically</td><td>No</td></tr>
+  <tr><td>Methods</td><td>Simple random, systematic, stratified, cluster</td><td>Convenience, purposive, snowball, quota</td></tr>
+</table>
+<h3>Probability methods</h3>
+<table>
+  <tr><th>Method</th><th>How</th><th>Pro</th><th>Con</th></tr>
+  <tr><td><b>Simple random</b></td><td>Everyone equal chance; numbers drawn at random</td><td>Easy, cheap, low bias</td><td>No control; unlucky samples possible</td></tr>
+  <tr><td><b>Systematic</b></td><td>Random start, then every k-th (k = N ÷ n)</td><td>Efficient, uniform</td><td>Bias if the list has a pattern matching k</td></tr>
+  <tr><td><b>Stratified</b></td><td>Random selection within predefined groups (e.g. gender)</td><td>Represents all subgroups; accurate</td><td>Needs knowledge of strata; complex</td></tr>
+  <tr><td><b>Cluster</b></td><td>Randomly select groups (regions, sessions); take all, or sample again inside (two-stage)</td><td>Cheap for dispersed populations</td><td>Higher sampling error</td></tr>
+</table>
+<div class="calc">Systematic example: N = 600 inmates, n = 60 → k = 600 ÷ 60 = 10
+Random start between 1 and 10 → say 7
+Sample: 7, 17, 27, 37 … 597  (60 inmates)
+Risk: if every 10th name on the list is a ward leader → biased. Shuffle the list first.</div>
+<div class="calc">Stratified (proportional) example: 2,000 students, sample 200 (10%)
+Criminology 600 → 60 · Sociology 500 → 50 · Anthropology 400 → 40 · Others 500 → 50</div>
+<h3>Non-probability methods (her comparison sheet)</h3>
+<table>
+  <tr><th></th><th>Purposive</th><th>Snowball</th><th>Quota</th><th>Convenience</th></tr>
+  <tr><td>Core idea</td><td>Researcher's judgement of who fits</td><td>Referrals from existing subjects</td><td>Fill preset subgroup proportions</td><td>Whoever is easy to reach</td></tr>
+  <tr><td>Best for</td><td>Experts, unique traits</td><td>Hidden or sensitive groups (drug users, homeless)</td><td>Surveys needing demographic balance without a list</td><td>Pilots, tight budgets</td></tr>
+  <tr><td>Limitation</td><td>Researcher bias</td><td>Biased by the first contacts' network</td><td>Non-random within quotas</td><td>Weakest generalisability</td></tr>
+</table>
+<div class="warn"><b>Trap:</b> quota sampling looks like stratified sampling — both use groups — but quota is <b>non-random</b> inside each group. Stratified = probability; quota = non-probability.</div>
+
+<h2 id="ch5">7. Chapter 5 — Surveys, self-reports and questionnaires</h2>
+<p><b>Survey research</b> applies a standard instrument in a systematic way to take measures from a large number of units. It is useful for qualitative and quantitative, descriptive, explanatory, exploratory and applied research — best where people are the units (respondents or informants). Examples: the <b>NCVS</b> and the <b>UCR</b>.</p>
+<h3>Surveys in criminology</h3>
+<table>
+  <tr><th>Type</th><th>What it measures</th><th>Example</th></tr>
+  <tr><td>Self-reports</td><td>Crimes respondents themselves committed — frequency and prevalence</td><td>Chaiken &amp; Chaiken (1982)</td></tr>
+  <tr><td>Perceptions and attitudes</td><td>Opinions — fear of crime, trust in police</td><td>Dhaka residents' trust in police</td></tr>
+  <tr><td>Targeted victim surveys</td><td>A selected group of victims</td><td>Garment workers and harassment</td></tr>
+  <tr><td>General-purpose crime surveys</td><td>National crime statistics</td><td>British Crime Survey: fear of crime (1984), police contacts (1988, 1996, 2000), drug use (1994), security (1996), fraud and technology (2002–03)</td></tr>
+</table>
+<div class="plain">Police records only count crimes someone reported. A survey asks people directly, so it finds the hidden "dark figure" too.</div>
+<h3>Varieties of Criminal Behavior (Chaiken &amp; Chaiken, 1982)</h3>
+<ul>
+  <li>Rand Corporation; nearly <b>2,200 male prison and jail inmates</b> in <b>California, Michigan and Texas</b>; a self-report questionnaire plus official records.</li>
+  <li>Offenders sorted into <b>10 types</b> by their combination of crimes; the most serious were the <b>"violent predators"</b>, who commit robbery, assault and drug dealing at high rates.</li>
+  <li>Violent predators were young (under 23 on average), violent before age 16, and heavy hard-drug users from their juvenile years, with unstable jobs.</li>
+  <li><b>Official records could not tell them apart</b> from lesser offenders — self-reports could.</li>
+  <li>Validity checks: paired questions (over 83% consistent); comparison with records (59% had under 20% error); analysis repeated without the 42% of doubtful cases (same results).</li>
+</ul>
+<h3>Questionnaires</h3>
+<p>A "collection of questions". Good items are <b>clear, short, not negative, not biased or leading</b>, and ask <b>one thing at a time</b> (no double-barrelled items).</p>
+<table>
+  <tr><th>Bad</th><th>Why</th><th>Better</th></tr>
+  <tr><td>"Are the police honest and efficient?"</td><td>Double-barrelled</td><td>Ask about honesty and efficiency separately</td></tr>
+  <tr><td>"Police should not search without a warrant."</td><td>Negative</td><td>"Police should need a warrant to search."</td></tr>
+  <tr><td>"Don't you agree corrupt officers should be punished?"</td><td>Leading</td><td>"Should officers convicted of bribery be prosecuted?"</td></tr>
+</table>
+<p><b>Format:</b> uncluttered with reading space; <b>contingency questions</b> (asked only if a filter answer applies — "If YES, did you report it?"); <b>matrix questions</b> (several items with the same answer scale in a grid); order from general to specific, avoiding biased sequences.</p>
+<p><b>Self-administered:</b> mail surveys are still widely used — convenient, easy to distribute. Use a <b>cover letter</b> from an institution respondents respect or a neutral, impressive affiliation. Emphasise the <b>response rate</b> (rule of thumb: 50% adequate, 60% good, 70% very good). Computer-based surveys are cheaper and more accessible.</p>
+<h3>Section 2 preview: interviews, KII and FGDs</h3>
+<p>A <b>key informant interview</b> is an in-depth interview with someone who has special knowledge, position or access (like Whyte's Doc). It gives insight and access, but the informant's bias can shape the picture. For interview types and FGDs, see Chapter 3 above.</p>
+
+<h2 id="ch6">8. Chapter 6 — Analysing quantitative data</h2>
+<table>
+  <tr><th>Descriptive statistics</th><th>Inferential statistics</th></tr>
+  <tr><td>Describe the data set only — central tendency, standard deviation, tables, histograms, pie charts</td><td>Infer from a sample to the population — hypothesis tests, confidence intervals</td></tr>
+  <tr><th>Univariate</th><th>Bivariate (and multivariate)</th></tr>
+  <tr><td>One variable (average salary, median age)</td><td>Relationship between two variables, or subgroup comparison (gang × violence); multivariate adds controls</td></tr>
+</table>
+<h3>Mean, median, mode</h3>
+<table>
+  <tr><th>Measure</th><th>How</th><th>Outliers?</th><th>Use with</th></tr>
+  <tr><td><b>Mean</b></td><td>Sum ÷ count</td><td>Strongly affected</td><td>Numbers only (not categorical)</td></tr>
+  <tr><td><b>Median</b></td><td>Middle value of ordered data (average the two middle ones if n is even)</td><td>Barely affected</td><td>Ordinal and numbers</td></tr>
+  <tr><td><b>Mode</b></td><td>Most frequent value</td><td>Not affected</td><td>Any, including categorical</td></tr>
+</table>
+<div class="calc">Snatching complaints over 11 days: 4, 6, 3, 5, 4, 7, 4, 5, 6, 3, 31
+Sorted: 3 3 4 4 4 5 5 6 6 7 31
+Mean   = 78 ÷ 11 = 7.09   (without 31: 47 ÷ 10 = 4.70)
+Median = 6th value = 5    (without 31: (4+5) ÷ 2 = 4.5)
+Mode   = 4                (unchanged)
+→ The outlier drags the mean up by about 51%; report the median.</div>
+<h3>Frequency distribution tables</h3>
+<p>A table showing how often each value occurs: a value column, a frequency column, an optional tally column (and percentages).</p>
+<div class="calc">Prior arrests of 20 inmates: 0,1,2,1,0,3,1,2,4,1,0,2,1,3,1,0,2,5,1,2
+Value  Tally      f   %
+0      IIII       4   20
+1      IIII/ II   7   35
+2      IIII/      5   25
+3      II         2   10
+4      I          1    5
+5      I          1    5
+Mode = 1 · Median = 1 (10th and 11th values) · Mean = 32 ÷ 20 = 1.6</div>
+<h3>Dispersion (Section 2 — the response-time exercise)</h3>
+<div class="calc">Response times: 7, 12, 5, 9, 14, 5, 8, 11, 5, 10, 13, 45  (n = 12)
+Sorted: 5 5 5 7 8 9 | 10 11 12 13 14 45
+Mean 12 · Median 9.5 · Mode 5 · Range 40
+Q1 = 6 · Q3 = 12.5 · IQR = 6.5 · upper fence = 12.5 + 1.5 × 6.5 = 22.25 → 45 is an outlier
+SD = 10.85 with 45; 3.29 without it → report the median and IQR</div>
+<div class="plain">The mean is like a see-saw — one very heavy person (an outlier) tips it. The median is the person standing in the middle of a queue — it doesn't matter how tall the last person is.</div>
+
+<h2 id="ch7">9. Chapter 7 — Content analysis</h2>
+<p><b>Content analysis</b> is a research method that uses a set of procedures to make <b>valid inferences from text</b>.</p>
+<table>
+  <tr><th>Advantages</th><th>Disadvantages</th></tr>
+  <tr><td>Works directly with transcripts of human communication<br>Both qualitative and quantitative<br>Covers different time periods<br>Relatively less data bias</td><td>Time-consuming and labour-intensive<br>Subjectivity and researcher bias<br>Loss of context and nuance<br>Focus on surface (manifest) content<br>Hard to establish causality</td></tr>
+</table>
+<p><b>Manifest vs latent:</b> manifest = the visible words; latent = the deeper meaning. <i>Ring a ring o' roses</i>: manifest = a children's game; popular latent reading = the plague (rash, posies, sneezing, death). Folklorists doubt it, because the rhyme appeared in print centuries later — a lesson about the risk of over-reading latent meaning.</p>
+<table>
+  <tr><th>Reliability (Krippendorff, 1980)</th><th>Validity</th></tr>
+  <tr><td><b>Stability</b> — same coder, same result over time<br><b>Reproducibility</b> — intercoder reliability<br><b>Accuracy</b> — matches a standard or norm</td><td><b>Face</b> — the researcher gives meaning (subjective)<br><b>Predictive</b> — compared with an external criterion<br><b>Semantic</b> — language experts agree the meanings are consistent</td></tr>
+</table>
+<p><b>Eight steps:</b> 1 define recording units → 2 define categories → 3 test coding on a sample → 4 assess accuracy/reliability → 5 revise the coding rules → 6 go back to step 3 → 7 code all the text → 8 assess achieved reliability.</p>
+
+<h2 id="ethics">10. Ethics (Class 12 — if taught before the final)</h2>
+<ul>
+  <li><b>No harm</b> to participants — physical, psychological, legal, social.</li>
+  <li><b>Voluntary participation and informed consent</b> — especially delicate with prisoners.</li>
+  <li><b>Anonymity</b> (even the researcher can't identify the respondent) vs <b>confidentiality</b> (the researcher knows but promises not to tell).</li>
+  <li><b>Avoid deception</b> unless essential; debrief afterwards.</li>
+  <li><b>Honest analysis and reporting</b>; ethics review by an Institutional Review Board.</li>
+  <li>Famous cases: <b>Stanford Prison Experiment</b> (Zimbardo, 1971 — stopped after 6 days); <b>Tearoom Trade</b> (Humphreys, 1970 — covert observation, traced number plates).</li>
+</ul>
+
+<h2 id="report">11. Writing research reports (Classes 13–14 — if taught)</h2>
+<p>Structure: title and abstract → introduction → literature review → methodology → findings → discussion → conclusion and recommendations → references (APA) and appendices. Avoid <b>plagiarism</b>: quote with quotation marks and a page number, paraphrase properly and cite, keep a record of sources. Good tables and charts have a numbered title, labelled columns and axes, the sample size (n) and a source.</p>
+
+<h2 id="sheet">12. One-page comparison sheet</h2>
+<table>
+  <tr><th>Compare</th><th>Key difference</th></tr>
+  <tr><td>Concept vs variable</td><td>Abstract idea vs its measurable form</td></tr>
+  <tr><td>Proposition vs hypothesis</td><td>Judgement about concepts vs testable prediction about variables</td></tr>
+  <tr><td>Theory vs hypothesis</td><td>Tested explanation vs untested prediction</td></tr>
+  <tr><td>Inductive vs deductive</td><td>Data → theory (grounded theory) vs theory → data</td></tr>
+  <tr><td>Open vs selective coding</td><td>Detailed initial categories vs coding around one core concept</td></tr>
+  <tr><td>Overt vs covert</td><td>Identity declared vs hidden</td></tr>
+  <tr><td>Probability vs non-probability</td><td>Random, known chance vs deliberate choice</td></tr>
+  <tr><td>Simple random vs systematic</td><td>Fully random vs random start then every k-th</td></tr>
+  <tr><td>Stratified vs cluster</td><td>Sample from every group vs sample whole groups</td></tr>
+  <tr><td>Stratified vs quota</td><td>Random within groups vs non-random within groups</td></tr>
+  <tr><td>Descriptive vs inferential</td><td>Describe the data vs generalise to the population</td></tr>
+  <tr><td>Univariate vs bivariate</td><td>One variable vs a relationship between two</td></tr>
+  <tr><td>Mean vs median</td><td>Pulled by outliers vs resistant to them</td></tr>
+  <tr><td>Manifest vs latent</td><td>Surface words vs deeper meaning</td></tr>
+  <tr><td>Anonymity vs confidentiality</td><td>Nobody can identify the respondent vs the researcher can but won't tell</td></tr>
+</table>
+
+<h2 id="names">13. Who said what</h2>
+<table>
+  <tr><th>Name</th><th>Remember for</th></tr>
+  <tr><td>Glaser &amp; Strauss (1967)</td><td><i>The Discovery of Grounded Theory</i></td></tr>
+  <tr><td>Strauss &amp; Corbin (1990)</td><td>Open, axial and selective coding</td></tr>
+  <tr><td>Charmaz (1983)</td><td>Coding = "categorizing and sorting data"</td></tr>
+  <tr><td>Bryman &amp; Burgess (1994)</td><td><i>Analyzing Qualitative Data</i> — analytic induction, grounded theory, coding, memos</td></tr>
+  <tr><td>William Foote Whyte (1943)</td><td><i>Street Corner Society</i>; "Doc"</td></tr>
+  <tr><td>Jan &amp; Marcia Chaiken (1982)</td><td><i>Varieties of Criminal Behavior</i>; "violent predators"</td></tr>
+  <tr><td>Krippendorff (1980)</td><td>Stability, reproducibility, accuracy</td></tr>
+  <tr><td>Maxfield &amp; Babbie (2014)</td><td>Course book: sampling (Ch 8), surveys (Ch 9), content analysis (Ch 12), interpreting data (Ch 14)</td></tr>
+  <tr><td>Bachman &amp; Schutt (5th ed.)</td><td>Course book: qualitative methods (Ch 9), content analysis (Ch 10)</td></tr>
+  <tr><td>Cohen &amp; Felson (1979)</td><td>Routine activity theory — a handy theory example</td></tr>
+</table>
+
+<h2 id="traps">14. Exam traps</h2>
+<ul>
+  <li><b>Mean for categorical data</b> — never. Use the mode for categories and the median for ranks.</li>
+  <li><b>Even n</b> — the median is the average of the two middle values (9 + 10) ÷ 2 = 9.5.</li>
+  <li><b>Sort first</b> — the median and quartiles need ordered data.</li>
+  <li><b>Systematic</b> — only the <i>start</i> is random; k = N ÷ n.</li>
+  <li><b>Snowball</b> is for hidden populations; <b>purposive</b> is for chosen experts.</li>
+  <li><b>Grounded theory</b> rejects the hypothesis-first approach — don't write "GT tests hypotheses".</li>
+  <li><b>Stability</b> is one coder over time; <b>reproducibility</b> is several coders.</li>
+  <li><b>Double-barrelled, negative and leading</b> are the three classic bad-question errors — name them.</li>
+</ul>
+<p class="sub">Prepared from the course slides, class exercises and the set books for revision. This is a prediction of the final syllabus, not the official one — update your reading when your teacher announces it.</p>
+</div>
+</body>
+</html>
