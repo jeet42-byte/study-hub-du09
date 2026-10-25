@@ -421,3 +421,5 @@ mark.sim.dim[class*='c'] { background: none; box-shadow: none; }
   .check-grid { grid-template-columns: 1fr; }
   .check-doc { max-height: none; }
 }
+
+.ref-list li { overflow-wrap: anywhere; }

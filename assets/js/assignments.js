@@ -1,8 +1,60 @@
 // Assignments: per-course guides plus an APA 7 citation helper.
 (function () {
+  // Copy buttons look references up here (filled while rendering).
+  const refStore = new Map();
+  const list = (items) => `<ul>${items.map((x) => `<li>${x}</li>`).join('')}</ul>`;
+  const defsHtml = (defs) =>
+    defs.map((d) => `<div class="def"><b>${U.esc(d.term)}</b> — ${U.esc(d.def)}${d.cite ? ` <small class="muted">(${U.esc(d.cite)})</small>` : ''}</div>`).join('');
+  const theoriesHtml = (ths) =>
+    ths.map((t) => `<div class="def"><b>${U.esc(t.name)}</b> — ${U.esc(t.gist)}${t.cite ? ` <small class="muted">(${U.esc(t.cite)})</small>` : ''}</div>`).join('');
+  const tableHtml = (t) => `<h3>${U.esc(t.title)}</h3>
+    ${t.intro ? `<p class="muted">${U.esc(t.intro)}</p>` : ''}
+    <div class="table-wrap"><table>
+      <tr>${t.head.map((h) => `<th>${U.esc(h)}</th>`).join('')}</tr>
+      ${t.rows.map((r) => `<tr>${r.map((c, i) => `<td>${i ? U.esc(c) : `<b>${U.esc(c)}</b>`}</td>`).join('')}</tr>`).join('')}
+    </table></div>`;
+  function refsHtml(refs) {
+    return `<ol class="ref-list" style="list-style:none;padding:0">
+      ${refs
+        .map((r) => {
+          const key = 'r' + refStore.size;
+          refStore.set(key, r);
+          return `<li>${r.apa}
+            <button class="btn small copy" data-copy="${key}">Copy</button><br>
+            <small class="muted">In-text: ${U.esc(r.intext)}${r.note ? ' · ' + U.esc(r.note) : ''}</small></li>`;
+        })
+        .join('')}
+    </ol>`;
+  }
+
+  // Topic chosen by roll number, from a repeating rotation (e.g. A, B, C, A, B, C…).
+  const topicForRoll = (al, roll) => al.cycle[(roll - al.first) % al.cycle.length];
+
+  function topicHtml(a, t) {
+    const al = a.allocation;
+    const rolls = al ? Array.from({ length: al.last - al.first + 1 }, (_, i) => i + al.first).filter((r) => topicForRoll(al, r) === t.key) : [];
+    return `
+      <details class="card topic" data-topic="${U.esc(t.key)}" style="background:var(--surface-2);box-shadow:none">
+        <summary><div class="row"><span class="chip p-h">Topic ${U.esc(t.key)}</span><b>${U.esc(t.title)}</b>${rolls.length ? `<small class="muted">Rolls ${rolls.join(', ')}</small>` : ''}</div></summary>
+        <div class="def" style="margin-top:10px"><b>Question:</b> ${U.esc(t.question)}</div>
+        ${t.overview ? `<p>${U.esc(t.overview)}</p>` : ''}
+        <h3>Word plan (${U.esc(t.words || '3,000 words')})</h3>
+        <div class="table-wrap"><table>
+          <tr><th>Section</th><th>Words</th><th>What to write</th></tr>
+          ${t.plan
+            .map((s) => `<tr><td><b>${U.esc(s.h)}</b></td><td>${U.esc(s.words)}</td><td>${U.esc(s.tip)}${s.points ? list(s.points.map(U.esc)) : ''}</td></tr>`)
+            .join('')}
+        </table></div>
+        ${t.definitions ? `<h3>Key definitions</h3>${defsHtml(t.definitions)}` : ''}
+        ${t.theories ? `<h3>Theories &amp; frameworks to use</h3>${theoriesHtml(t.theories)}` : ''}
+        ${(t.tables || []).map(tableHtml).join('')}
+        ${t.opinion ? `<h3>Critical discussion — angles for your own opinion</h3>${list(t.opinion.map(U.esc))}` : ''}
+        ${t.references ? `<h3>References for this topic (APA 7)</h3>${refsHtml(t.references)}` : ''}
+      </details>`;
+  }
+
   function guide(a, open) {
     const course = HUB.course(a.course);
-    const list = (items) => `<ul>${items.map((x) => `<li>${x}</li>`).join('')}</ul>`;
     const parts = [];
 
     if (a.pending) parts.push(`<p class="note">${U.esc(a.pending)}</p>`);
@@ -45,27 +97,12 @@
         <p class="muted">Paste any numbers (commas or spaces) to check your working — mode, median, mean, range, quartiles and outliers.</p>
         <div data-calc="${U.esc(a.id)}"></div>`);
     }
-    if (a.tables) {
-      a.tables.forEach((t) =>
-        parts.push(`<h3>${U.esc(t.title)}</h3>
-          ${t.intro ? `<p class="muted">${U.esc(t.intro)}</p>` : ''}
-          <div class="table-wrap"><table>
-            <tr>${t.head.map((h) => `<th>${U.esc(h)}</th>`).join('')}</tr>
-            ${t.rows.map((r) => `<tr>${r.map((c, i) => `<td>${i ? U.esc(c) : `<b>${U.esc(c)}</b>`}</td>`).join('')}</tr>`).join('')}
-          </table></div>`)
-      );
-    }
+    if (a.tables) a.tables.forEach((t) => parts.push(tableHtml(t)));
     if (a.checklist) {
       parts.push(`<h3>${U.esc(a.checklist.title)}</h3>${list(a.checklist.items.map(U.esc))}`);
     }
-    if (a.definitions) {
-      parts.push(`<h3>Key definitions</h3>
-        ${a.definitions.map((d) => `<div class="def"><b>${U.esc(d.term)}</b> — ${U.esc(d.def)}${d.cite ? ` <small class="muted">(${U.esc(d.cite)})</small>` : ''}</div>`).join('')}`);
-    }
-    if (a.theories) {
-      parts.push(`<h3>Relevant theories &amp; approaches</h3>
-        ${a.theories.map((t) => `<div class="def"><b>${U.esc(t.name)}</b> — ${U.esc(t.gist)} <small class="muted">(${U.esc(t.cite)})</small></div>`).join('')}`);
-    }
+    if (a.definitions) parts.push(`<h3>Key definitions</h3>${defsHtml(a.definitions)}`);
+    if (a.theories) parts.push(`<h3>Relevant theories &amp; approaches</h3>${theoriesHtml(a.theories)}`);
     if (a.classification) {
       parts.push(`<h3>Classification</h3>
         <div class="grid">${a.classification
@@ -96,19 +133,17 @@
           )
           .join('')}`);
     }
-    if (a.tips) parts.push(`<h3 style="margin-top:16px">Tips</h3>${list(a.tips.map(U.esc))}`);
-    if (a.references) {
-      parts.push(`<h3>References (APA 7)</h3>
-        <ol class="ref-list" style="list-style:none;padding:0">
-          ${a.references
-            .map(
-              (r, i) => `<li>${r.apa}
-                <button class="btn small copy" data-copy="${a.id}:${i}">Copy</button><br>
-                <small class="muted">In-text: ${U.esc(r.intext)}${r.note ? ' · ' + U.esc(r.note) : ''}</small></li>`
-            )
-            .join('')}
-        </ol>`);
+    if (a.allocation) {
+      parts.push(`<h3>Find your topic</h3>
+        <div class="row">
+          <label for="roll-${U.esc(a.id)}">Your roll number</label>
+          <input id="roll-${U.esc(a.id)}" type="number" min="${a.allocation.first}" max="${a.allocation.last}" inputmode="numeric" data-roll="${U.esc(a.id)}" style="width:110px">
+          <span class="muted" data-roll-out="${U.esc(a.id)}">${U.esc(a.allocation.rule)}</span>
+        </div>`);
     }
+    if (a.topics) parts.push(`<h3 style="margin-top:16px">Topic guides</h3>${a.topics.map((t) => topicHtml(a, t)).join('')}`);
+    if (a.tips) parts.push(`<h3 style="margin-top:16px">Tips</h3>${list(a.tips.map(U.esc))}`);
+    if (a.references) parts.push(`<h3>References (APA 7)</h3>${refsHtml(a.references)}`);
 
     return `
       <details class="card" ${open ? 'open' : ''}>
@@ -304,11 +339,29 @@
     root.querySelectorAll('[data-copy]').forEach((b) =>
       b.addEventListener('click', (e) => {
         e.preventDefault();
-        const [id, i] = b.dataset.copy.split(':');
-        const r = HUB.assignments.find((a) => a.id === id).references[+i];
-        U.copy(U.stripTags(r.apa), b);
+        U.copy(U.stripTags(refStore.get(b.dataset.copy).apa), b);
       })
     );
+    root.querySelectorAll('[data-roll]').forEach((input) => {
+      const a = HUB.assignments.find((x) => x.id === input.dataset.roll);
+      const al = a.allocation;
+      const out = root.querySelector(`[data-roll-out="${a.id}"]`);
+      const show = (scroll) => {
+        const roll = parseInt(input.value, 10);
+        const ok = roll >= al.first && roll <= al.last;
+        const key = ok ? topicForRoll(al, roll) : null;
+        const t = key && a.topics.find((x) => x.key === key);
+        out.innerHTML = t ? `<b>Topic ${U.esc(key)}</b> — ${U.esc(t.title)}` : U.esc(al.rule);
+        root.querySelectorAll(`.topic`).forEach((d) => (d.open = d.dataset.topic === key));
+        if (t) {
+          U.set('roll', roll);
+          if (scroll) root.querySelector(`.topic[data-topic="${key}"]`).scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      };
+      input.value = U.get('roll', '') || '';
+      if (input.value) show(false);
+      input.addEventListener('change', () => show(true));
+    });
     root.querySelectorAll('[data-calc]').forEach((el) => {
       const a = HUB.assignments.find((x) => x.id === el.dataset.calc);
       calculator(el, a.calculator);

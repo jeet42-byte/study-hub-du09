@@ -128,6 +128,13 @@ HUB.add('notices', {
   body: 'Part I movie review (10) relating the film to organized crime and corruption concepts — definitions, classification, models and theories; Part II presentation (10). Soft copy due 29 October 2026, 11:59 pm, by email to aungkita.criminology@du.ac.bd, file named Group-N (PDF). Hard copy on presentation day. Max 20% plagiarism and 20% AI-generated text.',
 });
 
+HUB.add('notices', {
+  course: 'forensic-science',
+  date: '2026-10-25',
+  title: 'Forensic Science written assignment (20 marks)',
+  body: 'Individual 3,000-word assignment on the topic allotted to your roll (A: crime scene management; B: forensic science and forensic labs in Bangladesh; C: drugs, drug abuse and combating it). Times New Roman 12, 1.5 spacing, APA 7. Hard copy only, due 7 November 2026. Course teacher: Ms. Shampa Yeasmin.',
+});
+
 // Weekly routine, e.g. { course: 'research-methods', day: 'Sunday', start: '10:00', end: '11:30', room: '' }
 HUB.add('classes');
 
@@ -146,10 +153,11 @@ HUB.add(
   {
     id: 'forensic-deadline',
     course: 'forensic-science',
-    type: 'Deadline',
-    title: 'Forensic Science (MCCJ 526)',
+    type: 'Assignment',
+    title: 'Forensic Science assignment — hard copy (Topic A/B/C by roll)',
     date: '2026-11-07',
-    note: 'Check with the course teacher whether this is a quiz, assignment or presentation.',
+    note: 'Individual, 20 marks, 3,000 words, APA 7. Hard copy only — no email or messaging-app copies.',
+    link: '#/assignments/forensic-science',
   },
   {
     id: 'rm-assignment',
