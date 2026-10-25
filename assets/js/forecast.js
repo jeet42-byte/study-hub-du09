@@ -4,6 +4,126 @@ HUB.views.forecast = function (root) {
   const DAYS = ['Saturday', 'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'];
   const courseName = (id) => (HUB.course(id) || {}).title || '';
 
+  // ── Calendar: one grid per month, from this month to the month of the last dated event.
+  const ymd = (d) => `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
+  const TYPE_SHORT = { 'Final exam': 'Final', Assignment: 'Assignment', Presentation: 'Presentation', Quiz: 'Quiz', Viva: 'Viva' };
+  const colorOf = (e) => (e.personal ? 'var(--accent)' : (HUB.course(e.course) || {}).color || 'var(--accent)');
+  const labelOf = (e, kind) => {
+    const c = HUB.course(e.course);
+    if (e.personal) return e.title;
+    return `${c ? c.short || c.code : ''} ${kind === 'window' ? 'window' : TYPE_SHORT[e.type] || e.type || ''}`.trim();
+  };
+  let selectedDay = null;
+
+  function byDay(dated) {
+    const map = new Map();
+    const add = (key, item) => (map.has(key) ? map.get(key) : map.set(key, []).get(key)).push(item);
+    dated.forEach((x) => {
+      add(ymd(x.d), { ...x, kind: 'due' });
+      const start = x.e.windowStart && U.parseDate(x.e.windowStart);
+      if (start) for (const d = new Date(start); ymd(d) < ymd(x.d); d.setDate(d.getDate() + 1)) add(ymd(d), { ...x, kind: 'window' });
+    });
+    return map;
+  }
+
+  function calendarHtml(dated, days) {
+    if (!dated.length) return '';
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+    const last = dated[dated.length - 1].d;
+    const months = [];
+    for (let m = new Date(today.getFullYear(), today.getMonth(), 1); m <= last; m.setMonth(m.getMonth() + 1)) months.push(new Date(m));
+    const head = DAYS.map((d) => `<span class="cal-head" aria-hidden="true">${d.slice(0, 3)}</span>`).join('');
+    const grids = months
+      .map((m) => {
+        const offset = (m.getDay() + 1) % 7; // Saturday-first weeks
+        const count = new Date(m.getFullYear(), m.getMonth() + 1, 0).getDate();
+        const cells = [];
+        for (let i = 0; i < offset; i++) cells.push('<span class="cal-empty"></span>');
+        for (let n = 1; n <= count; n++) {
+          const d = new Date(m.getFullYear(), m.getMonth(), n);
+          const key = ymd(d);
+          const items = days.get(key) || [];
+          const isToday = key === ymd(today);
+          const aria = `${U.fmtDay(d)}${items.length ? ': ' + items.map((x) => (x.kind === 'window' ? 'submission window — ' : '') + x.e.title).join('; ') : ''}`;
+          cells.push(`<button type="button" class="cal-day${d < today ? ' past' : ''}${isToday ? ' today' : ''}${items.length ? ' has' : ''}${key === selectedDay ? ' sel' : ''}" data-day="${key}" aria-label="${U.esc(aria)}">
+            <span class="cal-num">${n}</span>
+            ${items.map((x) => `<span class="cal-ev ${x.kind}" style="--c:${colorOf(x.e)}"><span class="cal-label">${U.esc(labelOf(x.e, x.kind))}</span></span>`).join('')}
+          </button>`);
+        }
+        return `<div class="cal-month">
+          <h3>${m.toLocaleDateString(undefined, { month: 'long', year: 'numeric' })}</h3>
+          <div class="cal-grid">${head}${cells.join('')}</div>
+        </div>`;
+      })
+      .join('');
+    const used = [...new Set(dated.map((x) => x.e.course).filter(Boolean))].map((id) => HUB.course(id)).filter(Boolean);
+    return `
+      <h2 class="section-title">Calendar</h2>
+      <div class="card">
+        <div class="row" style="margin-bottom:10px">
+          ${used.map((c) => `<span class="cal-key" style="--c:${c.color}">${U.esc(c.short || c.code)} — ${U.esc(c.title)}</span>`).join('')}
+          <span class="cal-key window" style="--c:var(--muted)">Submission window</span>
+          <span class="spacer"></span>
+          <button class="btn small" id="cal-ics" title="Download all dates as a calendar file for Google Calendar, Outlook or your phone">Add to my calendar (.ics)</button>
+        </div>
+        <div class="cal-months">${grids}</div>
+        <div id="cal-detail" aria-live="polite"></div>
+      </div>`;
+  }
+
+  function dayDetail(key, days) {
+    const items = (days.get(key) || []).slice().sort((a, b) => (a.kind === 'window') - (b.kind === 'window'));
+    const d = U.parseDate(key);
+    if (!items.length) return `<p class="muted" style="margin:12px 0 0"><b>${U.fmtDay(d)}</b> — nothing scheduled.</p>`;
+    return `<h3 style="margin-top:14px">${U.fmtDay(d)} <small class="muted">· ${U.relDays(U.daysUntil(d))}</small></h3>
+      ${items
+        .map(({ e, d: due, kind }) => {
+          const time = due.getHours() || due.getMinutes() ? due.toLocaleTimeString(undefined, { hour: 'numeric', minute: '2-digit' }) : '';
+          return `<div class="cal-item" style="--c:${colorOf(e)}">
+            <div class="row"><span class="chip">${U.esc(kind === 'window' ? 'Submission window open' : e.type || 'Event')}</span>${e.personal ? '<span class="chip">Personal</span>' : `<small class="muted">${U.esc(courseName(e.course))}</small>`}</div>
+            <b>${e.link ? `<a href="${U.esc(e.link)}">${U.esc(e.title)}</a>` : U.esc(e.title)}</b>
+            ${kind === 'window' ? `<br><small>Last day: ${U.fmtDay(due)}</small>` : ''}
+            ${kind !== 'window' && (time || e.time || e.room) ? `<br><small>${U.esc(e.time || time)}${e.room ? ' · ' + U.esc(e.room) : ''}</small>` : ''}
+            ${e.note ? `<br><small class="muted">${U.esc(e.note)}</small>` : ''}
+          </div>`;
+        })
+        .join('')}`;
+  }
+
+  // Calendar file (RFC 5545). Times are written as floating local time, so they show as entered.
+  function downloadIcs(dated) {
+    const pad = (n) => String(n).padStart(2, '0');
+    const esc = (t) => String(t || '').replace(/[\\,;]/g, (c) => '\\' + c).replace(/\n/g, '\\n');
+    const stamp = new Date().toISOString().replace(/[-:]/g, '').replace(/\.\d+/, '');
+    const lines = ['BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//Study Hub//Forecast//EN', 'CALSCALE:GREGORIAN'];
+    dated.forEach(({ e, d }) => {
+      // Exams get their real time slot; deadlines become all-day entries with the cut-off in the title.
+      const timed = (d.getHours() || d.getMinutes()) && e.type === 'Final exam';
+      const cutoff = !timed && (d.getHours() || d.getMinutes()) ? ` (due ${d.toLocaleTimeString(undefined, { hour: 'numeric', minute: '2-digit' })})` : '';
+      const day = `${d.getFullYear()}${pad(d.getMonth() + 1)}${pad(d.getDate())}`;
+      const next = new Date(d.getFullYear(), d.getMonth(), d.getDate() + 1);
+      lines.push(
+        'BEGIN:VEVENT',
+        `UID:${esc(e.id)}@study-hub-du09`,
+        `DTSTAMP:${stamp}`,
+        timed ? `DTSTART:${day}T${pad(d.getHours())}${pad(d.getMinutes())}00` : `DTSTART;VALUE=DATE:${day}`,
+        timed ? 'DURATION:PT3H' : `DTEND;VALUE=DATE:${next.getFullYear()}${pad(next.getMonth() + 1)}${pad(next.getDate())}`,
+        `SUMMARY:${esc(e.title + cutoff)}`,
+        ...(e.room ? [`LOCATION:${esc(e.room)}`] : []),
+        ...(e.note ? [`DESCRIPTION:${esc(e.note)}`] : []),
+        'END:VEVENT'
+      );
+    });
+    lines.push('END:VCALENDAR');
+    const url = URL.createObjectURL(new Blob([lines.join('\r\n')], { type: 'text/calendar' }));
+    const a = Object.assign(document.createElement('a'), { href: url, download: 'study-hub-dates.ics' });
+    document.body.append(a);
+    a.click();
+    a.remove();
+    setTimeout(() => URL.revokeObjectURL(url), 1000);
+  }
+
   function draw() {
     const events = U.allEvents().map((e) => ({ e, d: U.eventDate(e) }));
     const dated = events.filter((x) => x.d).sort((a, b) => a.d - b.d);
@@ -12,6 +132,11 @@ HUB.views.forecast = function (root) {
     const routine = U.routine();
     const nextExam = routine.find((x) => U.daysUntil(x.d) >= 0);
     const tba = events.filter((x) => !x.d);
+    const days = byDay(dated);
+    if (!selectedDay) {
+      const next = dated.find((x) => U.daysUntil(x.d) >= 0);
+      selectedDay = next ? ymd(next.d) : null;
+    }
     const classes = [...HUB.classes, ...U.get('personalClasses', []).map((c) => ({ ...c, personal: true }))].sort(
       (a, b) => DAYS.indexOf(a.day) - DAYS.indexOf(b.day) || a.start.localeCompare(b.start)
     );
@@ -68,6 +193,9 @@ HUB.views.forecast = function (root) {
           : ''
       }
 
+      ${calendarHtml(dated, days)}
+
+      <h2 class="section-title">Countdowns</h2>
       <div class="grid">
         ${upcoming.map(countdown).join('')}
         ${tba
@@ -168,6 +296,20 @@ HUB.views.forecast = function (root) {
           <button class="btn primary small">Add</button>
         </form>
       </div>`;
+
+    const detail = root.querySelector('#cal-detail');
+    if (detail) {
+      const pick = (key) => {
+        selectedDay = key;
+        root.querySelectorAll('.cal-day.sel').forEach((b) => b.classList.remove('sel'));
+        const btn = root.querySelector(`.cal-day[data-day="${key}"]`);
+        if (btn) btn.classList.add('sel');
+        detail.innerHTML = dayDetail(key, days);
+      };
+      if (selectedDay) pick(selectedDay);
+      root.querySelectorAll('.cal-day').forEach((b) => b.addEventListener('click', () => pick(b.dataset.day)));
+      root.querySelector('#cal-ics').addEventListener('click', () => downloadIcs(dated));
+    }
 
     root.querySelectorAll('[data-set]').forEach((inp) =>
       inp.addEventListener('change', () => {

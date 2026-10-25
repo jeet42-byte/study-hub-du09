@@ -165,6 +165,7 @@ HUB.add(
     type: 'Assignment',
     title: 'Research Methodology — assignment submission (10–14 Nov)',
     date: '2026-11-14',
+    windowStart: '2026-11-10',
     note: 'Submission window opens 10 November; the countdown runs to the last day, 14 November.',
     link: '#/assignments/research-methods',
   }
