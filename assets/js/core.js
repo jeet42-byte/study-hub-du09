@@ -6,6 +6,7 @@ window.HUB = {
   resources: [],
   assignments: [],
   events: [],
+  roster: [],
   notices: [],
   classes: [],
   grading: null,

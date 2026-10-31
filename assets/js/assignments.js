@@ -140,6 +140,26 @@
           <input id="roll-${U.esc(a.id)}" type="number" min="${a.allocation.first}" max="${a.allocation.last}" inputmode="numeric" data-roll="${U.esc(a.id)}" style="width:110px">
           <span class="muted" data-roll-out="${U.esc(a.id)}">${U.esc(a.allocation.rule)}</span>
         </div>`);
+      if (HUB.roster.length) {
+        const name = (t) => (a.topics.find((x) => x.key === t) || {}).title || '';
+        parts.push(`<details class="card" style="background:var(--surface-2);box-shadow:none;margin-top:12px">
+          <summary><b>Nominal roll</b> <small class="muted">(${HUB.roster.length} students, with allotted topic)</small></summary>
+          <div class="row" style="margin:10px 0">
+            <input type="search" data-roster-q="${U.esc(a.id)}" placeholder="Search name or roll" aria-label="Search the nominal roll" style="flex:1;min-width:180px">
+          </div>
+          <div class="table-wrap"><table>
+            <tr><th>Roll</th><th>Name</th><th>Topic</th></tr>
+            ${HUB.roster
+              .map((s) => {
+                const t = topicForRoll(a.allocation, s.roll);
+                return `<tr class="roster-row" data-pick="${s.roll}" tabindex="0" title="Open Topic ${t}">
+                  <td><b>${s.roll}</b></td><td>${U.esc(s.name)}</td><td><span class="chip p-h">${t}</span> <small class="muted">${U.esc(name(t))}</small></td></tr>`;
+              })
+              .join('')}
+          </table></div>
+          <small class="muted">Click a name to open that topic's guide.</small>
+        </details>`);
+      }
     }
     if (a.topics) parts.push(`<h3 style="margin-top:16px">Topic guides</h3>${a.topics.map((t) => topicHtml(a, t)).join('')}`);
     if (a.tips) parts.push(`<h3 style="margin-top:16px">Tips</h3>${list(a.tips.map(U.esc))}`);
@@ -361,6 +381,22 @@
       input.value = U.get('roll', '') || '';
       if (input.value) show(false);
       input.addEventListener('change', () => show(true));
+      root.querySelectorAll('.roster-row').forEach((tr) => {
+        const pick = () => {
+          input.value = tr.dataset.pick;
+          show(true);
+        };
+        tr.addEventListener('click', pick);
+        tr.addEventListener('keydown', (e) => e.key === 'Enter' && pick());
+      });
+      const q = root.querySelector(`[data-roster-q="${a.id}"]`);
+      if (q)
+        q.addEventListener('input', () => {
+          const term = q.value.trim().toLowerCase();
+          root.querySelectorAll('.roster-row').forEach((tr) => {
+            tr.hidden = !!term && !tr.textContent.toLowerCase().includes(term);
+          });
+        });
     });
     root.querySelectorAll('[data-calc]').forEach((el) => {
       const a = HUB.assignments.find((x) => x.id === el.dataset.calc);

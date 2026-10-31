@@ -457,3 +457,6 @@ mark.sim.dim[class*='c'] { background: none; box-shadow: none; }
   .cal-ev { height: 6px; padding: 0; border-left: 0; background: var(--c); border-radius: 3px; }
   .cal-ev.window { background: repeating-linear-gradient(90deg, var(--c) 0 3px, transparent 3px 5px); }
 }
+
+.roster-row { cursor: pointer; }
+.roster-row:hover td { background: var(--surface-2); }
