@@ -8,6 +8,7 @@
     assignments: 'assignments',
     forecast: 'forecast',
     checker: 'checker',
+    class: 'classroll',
   };
 
   function render() {

@@ -460,3 +460,4 @@ mark.sim.dim[class*='c'] { background: none; box-shadow: none; }
 
 .roster-row { cursor: pointer; }
 .roster-row:hover td { background: var(--surface-2); }
+.cr-me td { background: var(--accent-soft); }
