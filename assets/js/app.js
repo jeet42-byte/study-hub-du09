@@ -108,7 +108,9 @@
         <a class="card tile" href="#/resources"><div class="icon">📚</div><h3>Resources</h3><p class="muted">Slides, book chapters and study notes to download.</p></a>
         <a class="card tile" href="#/grades"><div class="icon">🎯</div><h3>Grade &amp; CGPA</h3><p class="muted">What you need out of 50 in the final, and your CGPA.</p></a>
         <a class="card tile" href="#/assignments"><div class="icon">🗂️</div><h3>Assignments</h3><p class="muted">Instructions, structure, theories, definitions and APA references.</p></a>
-        <a class="card tile" href="#/forecast"><div class="icon">📅</div><h3>Forecast</h3><p class="muted">Countdowns, important dates, notices and class routine.</p></a>
+        <a class="card tile" href="#/forecast"><div class="icon">📅</div><h3>Forecast</h3><p class="muted">Calendar, countdowns, important dates, notices and class routine.</p></a>
+        <a class="card tile" href="#/checker"><div class="icon">🔎</div><h3>Checker</h3><p class="muted">Similarity and AI-style check for your assignment drafts.</p></a>
+        <a class="card tile" href="#/class"><div class="icon">👥</div><h3>Class roll</h3><p class="muted">Nominal roll with names, movie groups and Forensic Science topics.</p></a>
       </div>
 
       ${
