@@ -174,6 +174,13 @@ HUB.add(
   {
     course: 'cyber-crime',
     type: 'Slides',
+    title: 'Merged revision deck — all three final decks in one (PDF, read on any device)',
+    desc: 'Study copy of the 3-in-1 deck: the three final-term decks (140 slides) combined into 67 slides with repeated topics merged. Opens in the browser on phone or computer. Each slide names its source deck.',
+    file: 'resources/cyber-crime/slides/cyber-final-merged-revision-deck.pdf',
+  },
+  {
+    course: 'cyber-crime',
+    type: 'Slides',
     title: 'Merged revision deck — all three final decks in one (PowerPoint)',
     desc: 'The three final-term decks (140 slides) combined into 67 slides with repeated topics merged, in eight sections, ending with the repetition map, a scenario answer framework and lines worth quoting. Each slide names its source deck.',
     file: 'resources/cyber-crime/slides/cyber-final-merged-revision-deck.pptx',
