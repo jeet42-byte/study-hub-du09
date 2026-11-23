@@ -81,7 +81,7 @@ HUB.add(
     time: '3:00–6:00 pm',
     room: 'Room 704, 6th floor, FSS, DU',
 
-    note: 'Scenario-based. Start with Tier 1 of the Cyber Crime question bank (digital forensics).',
+    note: 'Scenario-based: 8 questions, answer 5, 10 marks each (usually 3 parts). Read the 10 Tier 1 questions of the Cyber Crime bank — they cover all three final decks.',
     link: '#/exams/cyber-final',
   },
   {

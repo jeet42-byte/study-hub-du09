@@ -41,7 +41,7 @@
 <body>
 <div class="wrap">
 <h1>Cyber Crime and Security — End-term Notes</h1>
-<p class="sub">MCCJ 525 · Final exam Saturday 5 December 2026, 3:00–6:00 pm, Room 704, FSS · Based on the final-term deck <i>Digital Forensics &amp; Cyber Crime Investigation</i> (Md Zannatul Hasan) with a short mid-term recap · Written so anyone can follow · Print with Ctrl/Cmd + P to save as PDF.</p>
+<p class="sub">MCCJ 525 · Final exam Saturday 5 December 2026, 3:00–6:00 pm, Room 704, FSS · Based on the three final-term decks — <i>Digital Forensics &amp; Cyber Crime Investigation</i> (Md Zannatul Hasan), <i>AI in Criminal Investigation</i> and <i>Cybersecurity &amp; Data Protection in Government</i> — with a short mid-term recap · Exam: 8 scenario questions, answer 5, 10 marks each, usually 3 parts · Written so anyone can follow · Print with Ctrl/Cmd + P to save as PDF.</p>
 
 <div class="toc">
 <ol>
@@ -58,6 +58,9 @@
   <li><a href="#iot">IoT forensics</a></li>
   <li><a href="#email">Email &amp; social media forensics</a></li>
   <li><a href="#future">Challenges, new technology &amp; best practice</a></li>
+  <li><a href="#ai">AI in criminal investigation</a></li>
+  <li><a href="#gov">Government cybersecurity &amp; data protection</a></li>
+  <li><a href="#repeat">Topics repeated across all three decks</a></li>
   <li><a href="#tools">Tool cheat sheet</a></li>
   <li><a href="#traps">Commonly confused terms</a></li>
   <li><a href="#mid">Mid-term recap (optional)</a></li>
@@ -295,7 +298,87 @@
 <p><b>Future trends:</b> more automation · standard IoT protocols · zero trust · cross-border collaboration · privacy-preserving forensics (homomorphic encryption).</p>
 <p><b>Best practices for organizations:</b> proactive monitoring (enable logging and auditing) · regular backups · training · agreements with cloud providers · documentation.</p>
 
-<h2 id="tools">14. Tool cheat sheet</h2>
+<h2 id="ai">14. AI in criminal investigation</h2>
+<p><b>Artificial intelligence</b> is a set of technologies that let computers see, understand and translate language, analyse data and make recommendations. In forensic science it aims to <b>reduce the subjective bias</b> of traditional methods (e.g. sex and age estimation in forensic anthropology, third-molar stages in forensic odontology).</p>
+<h3>Why AI became necessary</h3>
+<div class="flow"><span>1980s file recovery</span><i>→</i><span>1990s formal discipline, chain of custody, EnCase/FTK</span><i>→</i><span>2000s internet, network, email; NIST, Budapest Convention</span><i>→</i><span>Mobile &amp; cloud</span><i>→</i><span>Data volume crisis</span></div>
+<p>Modern cases hold <b>terabytes to petabytes</b>. Manual review is impossible, so investigators move from "finding everything" to <b>"finding what matters"</b> through filtering and triage.</p>
+<table>
+  <tr><th>Technology</th><th>Meaning</th></tr>
+  <tr><td>Machine learning (ML)</td><td>Learns from data to recognise patterns and predict, without explicit programming</td></tr>
+  <tr><td>Deep learning (DL)</td><td>Subset of ML using multi-layered neural networks that mimic the brain</td></tr>
+  <tr><td>Natural language processing (NLP)</td><td>Automated analysis, interpretation and generation of human language</td></tr>
+</table>
+<h3>What AI does in digital investigations</h3>
+<p>Evidence analysis · threat and anomaly detection · malware analysis (behaviour, not signatures) · cybercrime attribution (links IPs, domains, accounts, devices) · social-media analysis with NLP · fraud detection · facial and image analysis · incident reconstruction (timelines) · triage and prioritisation.</p>
+<p><b>Benefits:</b> speed · scale · pattern recognition · automation · early detection · investigation support.</p>
+<div class="flow"><span>Cyber incident</span><i>→</i><span>Evidence collection</span><i>→</i><span>Data processing</span><i>→</i><span>AI analysis</span><i>→</i><span>Pattern identification</span><i>→</i><span>Human investigation</span><i>→</i><span>Verification</span><i>→</i><span>Legal assessment</span></div>
+<div class="exam">Learn this line word for word: <b>"AI finds patterns and assists analysis; investigators establish facts and make accountable decisions."</b> Investigators validate evidence, understand context, follow legal procedure, document methods and present defensible findings.</div>
+<h3>AI at the crime scene (eight applications)</h3>
+<table>
+  <tr><th>Application</th><th>What it does</th></tr>
+  <tr><td>Image and video analysis</td><td>Reviews hours of CCTV quickly</td></tr>
+  <tr><td>Image quality enhancement</td><td>Improves dark or blurry CCTV and phone video (e.g. CLAHE)</td></tr>
+  <tr><td>Object detection and tracking</td><td>Detection finds an object in each frame; tracking follows it across frames</td></tr>
+  <tr><td>3D reconstruction</td><td>3D visuals that help the court understand evidence</td></tr>
+  <tr><td>Virtual reality</td><td>Investigators and judges "walk" the scene from any angle</td></tr>
+  <tr><td>Simulation software</td><td>2D/3D diagrams, crash dynamics, vehicle movements</td></tr>
+  <tr><td>Real-time analysis</td><td>Faster, more precise, less contamination of traces</td></tr>
+  <tr><td>Pattern and trace analysis</td><td>Less subjective and more accurate than manual review</td></tr>
+</table>
+<p>Drones with AI use <b>photogrammetry</b> to map complex or unreachable scenes; UAVs use UV, visible and near-infrared light to image objects.</p>
+<h3>Limits and risks</h3>
+<table>
+  <tr><th>Risk</th><th>Meaning</th></tr>
+  <tr><td>False positives / negatives</td><td>AI can flag the wrong thing or miss real evidence</td></tr>
+  <tr><td>Bias</td><td>Skewed training data gives unfair or unreliable results</td></tr>
+  <tr><td>Black box</td><td>Decisions are hard to explain — Explainable AI (XAI) is needed</td></tr>
+  <tr><td>Privacy</td><td>Processing personal data needs legal authority and safeguards</td></tr>
+  <tr><td>Evidence integrity</td><td>AI must not break authenticity or chain of custody</td></tr>
+  <tr><td>Adversarial attacks, deepfakes</td><td>Criminals poison data or fake audio/video; authentication becomes vital</td></tr>
+  <tr><td>Admissibility, over-reliance</td><td>Courts still deciding; an AI result is not proof without corroboration</td></tr>
+</table>
+<p><b>Future:</b> proactive/predictive forensics · digital twins of the crime · hyper-automation of first collection · tighter integration of forensic tools, security monitoring and AI.</p>
+
+<h2 id="gov">15. Government cybersecurity and data protection</h2>
+<p><b>e-Government</b> is the use of digital technology and the internet to deliver government services, improve administration and engage citizens and businesses efficiently and transparently.</p>
+<h3>Why it is a public-sector priority</h3>
+<table>
+  <tr><th>Reason</th><th>Key point</th></tr>
+  <tr><td>National security</td><td>Protects classified and defence data; prevents espionage and cyber warfare</td></tr>
+  <tr><td>Citizen data</td><td>Health, financial, legal and identity records people cannot opt out of; prevents identity theft, fraud, unauthorised access</td></tr>
+  <tr><td>Service continuity</td><td>Health, tax, transport, utilities and emergency services must stay available</td></tr>
+  <tr><td>Public trust</td><td>Confidence is the foundation of e-service adoption</td></tr>
+  <tr><td>Compliance</td><td>Data protection laws; GDPR, ISO/IEC 27001, NIST</td></tr>
+  <tr><td>Economic stability</td><td>Avoids financial losses, market instability, trade disruption</td></tr>
+</table>
+<p><b>Impacts of an attack:</b> national security threats · disrupted public services · financial and economic damage · loss of citizen trust · legal and regulatory consequences · long-term reputational damage.</p>
+<p><b>Common threats:</b> phishing and social engineering (usual entry point) · ransomware (e.g. a city's tax system locked) · nation-state espionage (APTs) · insider threats · DDoS (common around elections) · malware and zero-day exploits · supply-chain attacks.</p>
+<h3>The NIST Cybersecurity Framework cycle</h3>
+<div class="flow"><span>Identify</span><i>→</i><span>Protect</span><i>→</i><span>Detect</span><i>→</i><span>Respond</span><i>→</i><span>Recover</span><i>→</i><span>(lessons back to Identify)</span></div>
+<p>Identify assets and suppliers · protect with access control, encryption and secure design · detect anomalies by continuous monitoring · respond with tested plans and clear communication · recover services and feed lessons back. It is <b>a continuous cycle, not a one-time project</b>.</p>
+<h3>Safeguarding citizen data by design</h3>
+<p><b>Data minimisation</b> (only what is needed, only as long as needed) · <b>strong access control</b> (role-based, least privilege) · <b>encryption everywhere</b> (at rest and in transit) · <b>privacy by design</b> (built in at design stage).</p>
+<p><b>Governance:</b> clear data ownership and accountability · independent audits · documented breach-notification procedures · staff training · vendor data-sharing agreements.</p>
+<div class="plain">"Trust is the real measure of success." Citizens judge e-government by whether it feels safe, fair and accountable: <b>transparency, accountability, reliability, responsiveness</b>.</div>
+<p><b>Employees</b> (often the weakest link): raise awareness · handle data properly · follow protocols (strong passwords, MFA) · report incidents · keep training.</p>
+<p><b>Prevention:</b> regular audits and vulnerability assessments · training · MFA · incident-response planning · collaboration with cybersecurity agencies · encrypt data and update software · retire legacy systems · AI threat detection, next-generation firewalls, Zero Trust.</p>
+<p><b>Future:</b> AI · blockchain (immutable records) · cloud security · searchable encryption · continuous authentication.</p>
+<div class="eg">In July 2023 a Bangladesh government website exposed the names, phone numbers, email addresses and NID numbers of around 50 million citizens. It is a ready example for data minimisation, access control, breach notification and public trust.</div>
+
+<h2 id="repeat">16. Topics repeated across all three decks</h2>
+<p>Of 51 topics across the three decks, <b>12 appear in all three</b> and <b>30 (about 59%) in at least two</b>; about three-quarters of all slides touch a repeated topic. These can be asked from any deck, so build every answer around them:</p>
+<table>
+  <tr><th>Repeated topic</th><th>Forensics deck</th><th>AI deck</th><th>Government deck</th></tr>
+  <tr><td>Privacy and legal authority</td><td>GDPR, HIPAA, CCPA; no access without authorisation</td><td>Personal data needs legal authority</td><td>Compliance with data protection laws</td></tr>
+  <tr><td>Documentation and accountability</td><td>Document every step; the report</td><td>Investigators document methods</td><td>Data owners; report openly</td></tr>
+  <tr><td>Cloud</td><td>Cloud forensics, MLATs</td><td>Cloud brings jurisdiction problems</td><td>Cloud security</td></tr>
+  <tr><td>Network monitoring / anomalies</td><td>Network forensics, Wireshark</td><td>Anomaly detection</td><td>Detect stage of NIST</td></tr>
+  <tr><td>Malware, fraud, incident response</td><td>Memory forensics; incident response</td><td>Malware and fraud detection; incident reconstruction</td><td>Ransomware, zero-days; incident-response plans</td></tr>
+  <tr><td>The human factor</td><td>First responder, training</td><td>Human oversight</td><td>Employees as weakest link</td></tr>
+</table>
+
+<h2 id="tools">17. Tool cheat sheet</h2>
 <table>
   <tr><th>Tool</th><th>Used for</th></tr>
   <tr><td>FTK Imager, dd, Guymager, EnCase</td><td>Disk imaging (FTK Imager also captures RAM)</td></tr>
@@ -310,7 +393,7 @@
   <tr><td>AWS CloudTrail, Azure Monitor/Sentinel, Google Cloud Logging, Splunk</td><td>Cloud logs</td></tr>
 </table>
 
-<h2 id="traps">15. Commonly confused terms</h2>
+<h2 id="traps">18. Commonly confused terms</h2>
 <table>
   <tr><th>Don't confuse…</th><th>…with</th><th>Difference</th></tr>
   <tr><td>Write blocker</td><td>Faraday bag</td><td>Write blocker stops writing to a drive; Faraday bag blocks radio signals to a phone</td></tr>
@@ -323,7 +406,7 @@
   <tr><td>SaaS</td><td>IaaS</td><td>SaaS = provider holds almost everything (Gmail); IaaS = customer controls VMs</td></tr>
 </table>
 
-<h2 id="mid">16. Mid-term recap (optional — not expected in the final)</h2>
+<h2 id="mid">19. Mid-term recap (optional — not expected in the final)</h2>
 <table>
   <tr><th>Topic</th><th>Key points</th></tr>
   <tr><td>Phishing</td><td>Fake messages/sites to steal data; variants: spear, whaling, smishing (SMS), vishing (voice), quishing (QR), angler (fake support), pharming (DNS). Defences: phishing simulation, email filtering, MFA, proxy, honeypot, awareness</td></tr>
@@ -335,7 +418,7 @@
   <tr><td>Hacker types</td><td>White hat, grey hat, black hat, script kiddie, hacktivist</td></tr>
 </table>
 
-<h2 id="last">17. Last-minute revision sheet</h2>
+<h2 id="last">20. Last-minute revision sheet</h2>
 <ol>
   <li><b>Digital forensics</b> = investigating digital devices to identify, recover and document evidence. Process: identification → collection → preservation → analysis → documentation → presentation.</li>
   <li><b>Digital evidence</b> = binary information that may be relied on in court; <b>fragile, volatile, hidden, duplicable</b>.</li>
@@ -349,8 +432,10 @@
   <li><b>IoT</b>: scale, real-time, limited resources; challenges — diversity, storage, protocols, resources, custody.</li>
   <li><b>Email/social</b>: headers + SMTP/IMAP logs; WhatsApp SQLite on the device; E2EE and ephemeral content are the challenges.</li>
   <li><b>Report</b>: tools + versions, steps, hashes, screenshots, timeline, custody log — must survive cross-examination.</li>
+  <li><b>AI</b>: data volume crisis → ML, DL, NLP; fraud detection, attribution, triage, timelines; CCTV enhancement (CLAHE), tracking, 3D/VR; risks — bias, black box (XAI), deepfakes, admissibility; "AI finds patterns, investigators establish facts".</li>
+  <li><b>Government</b>: priority (security, citizen data, continuity, trust, compliance, economy) · threats (phishing, ransomware, APT, insider, DDoS, zero-day, supply chain) · NIST: identify → protect → detect → respond → recover · data by design (minimisation, access control, encryption, privacy by design) · trust (transparency, accountability, reliability, responsiveness).</li>
 </ol>
-<p class="sub">Prepared from the course's final-term deck and the mid-term syllabus for revision. Scenario examples are illustrations. Practise with the ranked scenario questions on the website.</p>
+<p class="sub">Prepared from the course's three final-term decks and the mid-term syllabus for revision. Scenario examples are illustrations. Practise with the ranked scenario questions on the website.</p>
 </div>
 </body>
 </html>

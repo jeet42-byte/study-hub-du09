@@ -1,20 +1,36 @@
 // Cyber Crime and Security (MCCJ 525) — end-term scenario question bank.
-// Generated from the final-term digital forensics deck (ranks 1–20, greedy coverage) and the
-// mid-term syllabus (ranks 21+, optional — mid-term topics are not expected in the final).
+// Covers the three final-term decks: Digital Forensics & Cyber Crime Investigation (90 slides),
+// AI in Criminal Investigation (29) and Cybersecurity & Data Protection in Government (21).
+// Ranks 1–10 are the must-read set, chosen for coverage across all three decks; mid-term topics
+// stay at the end as optional revision.
 HUB.add('quizzes', {
  "id": "cyber-final",
  "course": "cyber-crime",
  "title": "End-term — Cyber Crime and Security",
- "scope": "Final: Digital forensics & cybercrime investigation deck. Carry-over from mid-term: phishing, insider threat, ransomware & integrated security, SQL injection, audit, CIA, attacks, typology. Scenario-based: each question gives one scenario with 2–3 parts.",
+ "scope": "Final: three decks — Digital forensics & cybercrime investigation, AI in criminal investigation, and Cybersecurity & data protection in government. Scenario-based: 8 questions, answer 5, each 10 marks, usually in 3 parts.",
  "format": "Scenario-based questions with answers",
  "notes": "resources/cyber-crime/cyber-final-notes.html",
  "factors": {
-  "S": "1 = a full section of the final-term (digital forensics) deck; 0.75 = a short final-deck section or a mid-term topic the teacher stressed; 0.5 = other mid-term content.",
+  "S": "1 = a full section of a final-term deck (digital forensics, AI in investigation, or government data protection), or a topic repeated across decks; 0.75 = a short final-deck section; 0.25 = mid-term content.",
   "D": "1 = formal definition or list on the slides; 0.5 = described only.",
   "E": "1 = converts naturally into a real-world incident scenario (the exam format); 0.5 = needs a stretch.",
   "F": "How cleanly it splits into 2–3 scenario parts (define → apply → recommend)."
  },
- "probabilityNote": "The final is scenario-based, so the E factor measures how naturally a topic becomes an incident scenario. The final-term deck (digital forensics) carries the highest lecture weight; mid-term topics are weighted lower because they only \"may\" carry over — but the ones your teacher stressed (phishing, insider threat, ransomware and integrated security, SQL injection, audit) still rank high.",
+ "probabilityNote": "The final draws on three decks. Digital forensics is the largest (90 slides), but the AI (29) and government data-protection (21) decks are separate final references, so a setter spreading 8 questions will very likely take at least one from each. Topics that repeat across all three decks — chain of custody and documentation, privacy law, cloud, incident response, the human factor — score highest because they can be asked from any deck. Mid-term topics stay at the end as optional revision.",
+ "planMethod": [
+  "<b>Read all three final decks</b> (140 slides) and list 51 distinct topics. 30 of them (about 59%) appear in at least two decks and 12 appear in all three — chain of custody and documentation, privacy law, cloud, network monitoring, malware, fraud, incident response, the human factor and others.",
+  "<b>Score every topic</b> (0–100) from lecture emphasis, definitions, scenario fit and how cleanly it splits into 3 parts — see the Probability analysis tab. Topics repeated across decks score highest because they can be asked from any deck.",
+  "<b>Weight topics by score²</b>, so core topics count much more than side topics.",
+  "<b>Build exam-shaped questions</b> — 10 marks, 3 parts — each preparing one or more topics, with a Bangladesh scenario.",
+  "<b>Pick the top 10 for spread, not just score</b>: 7 from digital forensics (the biggest deck), 2 from government data protection and 1 from AI in investigation that covers the whole AI deck, then a second AI question at rank 11. A setter writing 8 questions is very likely to take at least one from each deck."
+ ],
+ "answerTips": [
+  "<b>Three parts, three blocks</b>: label (a), (b), (c); a 3-mark part ≈ one solid paragraph or a short table, a 4-mark part ≈ a numbered list with explanation.",
+  "<b>Define first</b>: open each part with the slide definition (e.g. \"chain of custody is…\", \"the NIST cycle is…\").",
+  "<b>Apply to the scenario</b>: name the device, the tool and the officer's action — the examiner marks application, not recitation.",
+  "<b>Reuse the cross-deck backbone</b>: legal authority → isolate and document → image + hash → analyse the copy → report; add \"AI finds patterns, investigators establish facts\" and the NIST cycle where they fit.",
+  "<b>End with a one-line conclusion</b> that ties back to admissibility or public trust."
+ ],
  "topics": [
   {
    "id": "f-basics",
@@ -187,6 +203,96 @@ HUB.add('quizzes', {
    "why": "Challenge lists appear in three sections (general, mobile, cloud/IoT)."
   },
   {
+   "id": "a-digital",
+   "group": "Final: AI in criminal investigation",
+   "name": "AI in digital investigation: applications, process, human role",
+   "S": 1,
+   "D": 1,
+   "E": 1,
+   "F": 1,
+   "why": "Core of the AI deck: nine applications (evidence analysis, anomaly and fraud detection, attribution, triage…), the AI-assisted process and the principle \"AI finds patterns; investigators establish facts\"."
+  },
+  {
+   "id": "a-risks",
+   "group": "Final: AI in criminal investigation",
+   "name": "AI limits & risks: bias, black box, deepfakes, admissibility",
+   "S": 1,
+   "D": 1,
+   "E": 1,
+   "F": 1,
+   "why": "Three slides (limitations, challenges and risks, ethical and admissibility hurdles) — a natural \"what could go wrong?\" part in any AI question."
+  },
+  {
+   "id": "a-evolution",
+   "group": "Final: AI in criminal investigation",
+   "name": "Evolution of forensics, data volume crisis, ML/DL/NLP",
+   "S": 0.75,
+   "D": 1,
+   "E": 0.5,
+   "F": 0.8,
+   "why": "History from 1980s file recovery to today's petabyte cases explains why AI became necessary; ML, DL and NLP are defined on the slides."
+  },
+  {
+   "id": "a-scene",
+   "group": "Final: AI in criminal investigation",
+   "name": "AI at the crime scene: CCTV, drones, 3D/VR, simulation",
+   "S": 0.75,
+   "D": 1,
+   "E": 1,
+   "F": 0.8,
+   "why": "Eight crime-scene applications with figures (CLAHE, object tracking, 3D reconstruction, VR) — strong scenario material."
+  },
+  {
+   "id": "g-importance",
+   "group": "Final: Government cybersecurity & data protection",
+   "name": "Why public-sector cybersecurity matters & impacts of attacks",
+   "S": 1,
+   "D": 1,
+   "E": 1,
+   "F": 1,
+   "why": "Repeated three times in the deck (four cards, six-point list, diagram) plus six impacts — the opening part of any government scenario."
+  },
+  {
+   "id": "g-threats",
+   "group": "Final: Government cybersecurity & data protection",
+   "name": "Threats to government: phishing, ransomware, APT, insider, DDoS, zero-day",
+   "S": 1,
+   "D": 1,
+   "E": 1,
+   "F": 1,
+   "why": "Shown twice (text slide and target diagram, which adds supply-chain attacks); classifying the threat is the first step of a scenario answer."
+  },
+  {
+   "id": "g-nist",
+   "group": "Final: Government cybersecurity & data protection",
+   "name": "NIST cycle, prevention measures & the role of employees",
+   "S": 1,
+   "D": 1,
+   "E": 1,
+   "F": 1,
+   "why": "Identify → Protect → Detect → Respond → Recover, plus four overlapping prevention slides and five employee duties — the \"how should they respond?\" part."
+  },
+  {
+   "id": "g-privacy",
+   "group": "Final: Government cybersecurity & data protection",
+   "name": "Citizen data protection by design, governance & public trust",
+   "S": 1,
+   "D": 1,
+   "E": 1,
+   "F": 1,
+   "why": "Data minimisation, access control, encryption, privacy by design, five governance measures and four trust pillars; overlaps with privacy law in the forensics deck."
+  },
+  {
+   "id": "g-future",
+   "group": "Final: Government cybersecurity & data protection",
+   "name": "Future of e-government security: AI, blockchain, cloud, Zero Trust",
+   "S": 0.5,
+   "D": 0.5,
+   "E": 0.5,
+   "F": 0.6,
+   "why": "Closing list of the deck; mostly useful as a final recommendation line."
+  },
+  {
    "id": "m-phishing",
    "group": "Mid-term (unlikely in the final)",
    "name": "Phishing, its variants & defences",
@@ -318,8 +424,153 @@ HUB.add('quizzes', {
    ]
   },
   {
-   "id": "q-imaging",
+   "id": "q-egov-ransom",
    "rank": 2,
+   "t": "g-importance",
+   "covers": [
+    "g-importance",
+    "g-threats",
+    "g-nist",
+    "g-future"
+   ],
+   "marks": 10,
+   "q": "Ransomware on a government e-service",
+   "scenario": "On the last day for paying holding tax, a city corporation's online tax and trade-licence portal is locked by ransomware and a ransom note demands payment in cryptocurrency. The attack began when an employee opened a fake \"tax circular\" email and entered his password. Logs suggest citizens' NID numbers, addresses and payment records were copied before encryption. Services stay down for three days and people queue at the city office.",
+   "parts": [
+    {
+     "marks": 3,
+     "q": "Why is cybersecurity a priority for public-sector bodies? Explain the impacts of this attack.",
+     "points": [
+      "Essential services run digitally; citizens cannot opt out of sharing data",
+      "Attackers see high value, high leverage; trust is hard to rebuild",
+      "Six importance points: national security, citizen data, service continuity, public trust, compliance, economic stability",
+      "Impacts here: service disruption, financial loss, loss of citizen trust, legal consequences, reputational damage"
+     ],
+     "model": "The deck gives four reasons cybersecurity is a **public-sector priority**: essential services (health, tax, identity) now run digitally; citizen data is uniquely sensitive and people **cannot opt out** of sharing it; attackers see **high value, high leverage** because public services are critical and hard to replace; and **trust, once lost, is hard to rebuild**.\n\n### Impacts of this attack\n| Impact (from the deck) | In the city corporation case |\n|---|---|\n| Disruption of public services | Tax and trade-licence portal down for three days; queues at the office |\n| Financial and economic damage | Lost tax revenue on the deadline day; recovery, investigation and legal costs |\n| Loss of citizen trust | People fear their NID data is misused and return to paper |\n| Legal and regulatory consequences | Failure to protect personal data can bring penalties and lawsuits |\n| Long-term reputational damage | Credibility of the city's digital services harmed |\n| Identity theft and fraud risk | Copied NID numbers and addresses can be sold for fraud |\n\n**Conclusion:** the damage goes far beyond the IT system — the deck stresses that a breach erodes confidence \"well beyond the incident itself\"."
+    },
+    {
+     "marks": 3,
+     "q": "Identify the threats involved in this attack and explain the other common threats government agencies face.",
+     "points": [
+      "Phishing / social engineering was the entry point (credential theft)",
+      "Ransomware encrypted data; data copied first (double extortion)",
+      "Other threats: nation-state espionage (APTs), insider threats, DDoS, malware and zero-day exploits, supply-chain attacks"
+     ],
+     "model": "### Threats in this case\n1. **Phishing and social engineering** — the fake \"tax circular\" tricked an employee into giving his password. The deck notes phishing is \"often used as the initial attack vector for larger breaches\".\n2. **Ransomware** — malicious software that encrypts government data and demands ransom; the deck's own example is \"a city's entire online tax system being locked down\".\n3. **Data theft before encryption** — citizens' records were copied, so even paying would not undo the breach.\n\n### Other common threats to government\n| Threat | Meaning |\n|---|---|\n| Nation-state espionage (APTs) | Long, hidden attacks on classified and strategic data; can stay undetected for months |\n| Insider threats | Current or former staff, contractors or partners — intentional (sabotage) or accidental (mishandling data) |\n| DDoS attacks | Flooding services with traffic; common during elections or political events |\n| Malware and zero-day exploits | Hidden malicious software; flaws exploited before patches exist |\n| Supply-chain attacks | Compromise through a vendor or software supplier |\n\n**Conclusion:** this was a classic chain — phishing opened the door and ransomware did the damage."
+    },
+    {
+     "marks": 4,
+     "q": "Using the NIST Cybersecurity Framework cycle, explain how the city corporation should respond and prevent a repeat.",
+     "points": [
+      "Continuous cycle: Identify → Protect → Detect → Respond → Recover",
+      "Respond: isolate systems, tested incident-response plan, preserve evidence, inform BGD e-GOV CIRT, communicate honestly",
+      "Recover: restore from clean backups, feed lessons back",
+      "Prevention: training, MFA, audits and vulnerability assessments, encryption, patching, legacy modernisation, Zero Trust, collaboration with agencies"
+     ],
+     "model": "The deck says public bodies manage cyber risk best as a **continuous cycle, not a one-time project**, aligned to the **NIST Cybersecurity Framework**.\n\n[flow] NIST CSF cycle\nIdentify → Protect → Detect → Respond → Recover → (lessons back to Identify)\n\n| Stage | What the city corporation should do |\n|---|---|\n| **Identify** | Map critical assets (tax portal, NID-linked databases), data flows and suppliers |\n| **Protect** | Multi-factor authentication so a stolen password is not enough; role-based, least-privilege access; encrypt citizen data at rest and in transit; patch and retire unsupported legacy systems |\n| **Detect** | Continuous network monitoring to spot unusual logins and large data transfers early (AI-driven threat detection) |\n| **Respond** | Follow a tested incident-response plan: isolate infected servers, preserve logs and images as evidence, report to the national incident-response team (BGD e-GOV CIRT), tell citizens quickly and honestly |\n| **Recover** | Restore services from clean, offline backups; check integrity; feed lessons into the next cycle |\n\n### Preventing a repeat\n• **Employee training** — recognising phishing is the deck's first prevention measure; employees are \"often the weakest link\"\n• **Regular security audits and vulnerability assessments**\n• **Collaboration** with national and international cybersecurity agencies and cross-agency information sharing\n• **Future technology** — Zero Trust architecture (continuous verification of every user and device), next-generation firewalls\n\n**Conclusion:** the attack succeeded at Protect (no MFA, weak training) and Detect (data left unnoticed); the NIST cycle closes both gaps and makes recovery planned rather than improvised."
+    }
+   ]
+  },
+  {
+   "id": "q-ai-fraud",
+   "rank": 3,
+   "t": "a-digital",
+   "covers": [
+    "a-digital",
+    "a-risks",
+    "a-evolution"
+   ],
+   "marks": 10,
+   "q": "AI in a large mobile-money fraud investigation",
+   "scenario": "CID is investigating a nationwide mobile-money (bKash/Nagad) fraud ring that cheated thousands of people with fake prize calls. Investigators have seized 30 phones, 200 SIM cards, two laptops and server logs, and received 60,000 transaction records from the providers — about 4 TB of data in total. The team leader proposes using AI tools to analyse it.",
+   "parts": [
+    {
+     "marks": 3,
+     "q": "Why has AI become necessary in digital investigations? Refer to the evolution of digital forensics and the main AI technologies.",
+     "points": [
+      "Evolution: 1980s file recovery → 1990s formal discipline & chain of custody → 2000s internet/network → mobile & cloud → data volume crisis",
+      "Terabytes/petabytes; manual review impossible; shift from \"finding everything\" to \"finding what matters\"",
+      "ML (learns patterns), DL (multi-layer neural networks), NLP (analyses human language)"
+     ],
+     "model": "### How the field got here\n[flow] Evolution of digital forensics\n1980s file recovery → 1990s formal \"computer forensics\" and chain of custody → 2000s internet, network and email evidence → mobile and cloud → today's data volume crisis\n\n### The data volume crisis\nModern cases involve **terabytes and petabytes** of logs, backups and cloud data. The deck notes that **manual review is practically impossible**, causing delays and missed evidence, so investigators move from \"finding everything\" to **\"finding what matters\"** through filtering and triage. Here, 4 TB and 60,000 transactions cannot be read line by line.\n\n### Core AI technologies\n| Technology | Meaning | Use in this case |\n|---|---|---|\n| Machine learning (ML) | Learns from data to recognise patterns and predict, without explicit programming | Spots unusual transaction patterns |\n| Deep learning (DL) | Multi-layered neural networks that mimic the brain | Image, voice and face analysis |\n| Natural language processing (NLP) | Automated analysis of human language | Reads SMS and chat scripts used for the prize calls |\n\n**Conclusion:** scale made automation inevitable; the goal is more **speed, accuracy and efficiency**."
+    },
+    {
+     "marks": 4,
+     "q": "How can AI assist this investigation? Explain using the AI-assisted investigation process.",
+     "points": [
+      "Applications: evidence analysis, anomaly/fraud detection, attribution (link accounts, SIMs, devices), NLP on messages, incident reconstruction/timeline, triage",
+      "Process: incident → evidence collection → data processing → AI analysis → pattern identification → human investigation → verification → legal assessment",
+      "Benefits: speed, scale, pattern recognition, automation, early detection, investigation support"
+     ],
+     "model": "[flow] AI-assisted investigation process (AI deck)\nCyber incident → Evidence collection → Data processing → AI-assisted analysis → Pattern identification → Human investigation → Verification → Legal/evidentiary assessment\n\n### What AI could do here (the deck's own fraud example)\n| AI application | Applied to the fraud ring |\n|---|---|\n| Fraud detection | Flag unusual transactions — many small \"prize fee\" payments into a few wallets |\n| Cybercrime attribution | Link SIMs, phone numbers, wallets, devices and IP addresses to show who works with whom |\n| Social-media / NLP analysis | Find the scripts used in calls and SMS, and recruitment chats |\n| Incident reconstruction | Build a timeline of calls, payments and cash-outs |\n| Triage and prioritisation | Score data by relevance so analysts start with the ringleaders' phones |\n| Visualisation | Map relationships between suspects, accounts, devices and transactions |\n\n**Benefits:** speed, scale (millions of records), pattern recognition, automation of repetitive tasks, early detection and investigation support (generating leads).\n\n**Conclusion:** AI narrows 4 TB down to the evidence that matters; investigators then verify it against the original records."
+    },
+    {
+     "marks": 3,
+     "q": "What limitations and risks of AI must investigators manage, and what is the role of the human investigator?",
+     "points": [
+      "False positives/negatives; bias in training data; black box / explainability (XAI)",
+      "Privacy and legal authority; evidence integrity and chain of custody; admissibility in court",
+      "Adversarial attacks and deepfakes; over-reliance",
+      "AI finds patterns; investigators establish facts and make accountable decisions"
+     ],
+     "model": "| Risk | Why it matters here |\n|---|---|\n| False positives / negatives | An innocent agent's wallet may be flagged; a real cash-out point may be missed |\n| Bias | Skewed training data can produce unfair or discriminatory results |\n| Black box / explainability | Courts may ask why a wallet was flagged; **Explainable AI (XAI)** is needed |\n| Privacy | Processing thousands of people's data needs legal authority and safeguards |\n| Evidence integrity | AI analysis must not alter evidence or break the chain of custody — run it on verified copies |\n| Adversarial attacks and deepfakes | Criminals can manipulate data or fake voices to mislead the AI |\n| Admissibility | The legal system is still deciding how to admit AI-derived evidence |\n\n### Role of the human investigator\nThe deck's key principle: **\"AI finds patterns and assists analysis; investigators establish facts and make accountable decisions.\"** Investigators must validate evidence, understand context, follow legal procedure, document their methods and present defensible findings. An AI result is **not proof without corroboration** — here, flagged wallets must be confirmed against the providers' original records and lawfully obtained evidence.\n\n**Conclusion:** AI is a powerful assistant, not a witness; human oversight keeps the case admissible."
+    }
+   ]
+  },
+  {
+   "id": "q-raid",
+   "rank": 4,
+   "t": "f-scene",
+   "covers": [
+    "f-scene",
+    "f-isolation"
+   ],
+   "marks": 10,
+   "q": "First responder at a digital crime scene",
+   "scenario": "Acting on a tip, police raid a flat in Uttara used by a gang running fake job advertisements and mobile-money (MFS) fraud. Inside, two laptops are switched on with a VPN connected, three smartphones keep receiving calls, and a router and several USB drives are on the table. A junior officer starts scrolling through one of the phones.",
+   "parts": [
+    {
+     "marks": 4,
+     "q": "As the first responder, what immediate steps should you take to secure this digital crime scene?",
+     "points": [
+      "Secure the scene; stop anyone touching devices (stop the junior officer)",
+      "Disconnect from networks: unplug Ethernet, disable Wi-Fi; check VPN/remote sessions",
+      "Phones into Faraday bags/airplane mode to stop remote wipe",
+      "Preserve state: leave on devices on; capture RAM first",
+      "Label and isolate all equipment; log time, people, actions"
+     ],
+     "model": "The lecture calls the first responder \"the gatekeeper of digital truth\": what happens in the first minutes can preserve evidence or destroy it beyond recovery.\n\n### Immediate steps\n1. **Secure the scene** — move suspects away from devices; **stop the junior officer** scrolling the phone, because interacting changes data and can trigger wipe apps\n2. **Disconnect from networks** — unplug Ethernet, disable Wi-Fi on the router; check for active **VPN**, remote-desktop or sync sessions that could let accomplices wipe data remotely\n3. **Isolate the phones** — place them in **Faraday bags** (or airplane mode) to block cellular, Wi-Fi and Bluetooth signals and stop remote wipes and tracking\n4. **Preserve the digital state** — do not switch off running laptops; capture **RAM and active sessions first** (volatile data), using trusted tools such as FTK Imager or Belkasoft RAM Capture\n5. **Do not power on** devices that are off — powering on may alter data or run destructive scripts\n6. **Label and isolate** every device and USB drive with a unique ID; keep them separate\n7. **Record** the time, people present and every action taken\n\n[flow] Order of work at the scene\nSecure people → Cut network links → Faraday bags for phones → Capture RAM → Photograph & label → Seize & bag\n\n**Conclusion:** isolation and preservation come before examination — the scene is for securing evidence, the lab is for analysing it."
+    },
+    {
+     "marks": 3,
+     "q": "What should be documented at the scene?",
+     "points": [
+      "Make, model, serial numbers/IMEI of every device",
+      "Connected ports & peripherals (USB, cables, router)",
+      "System status: on/off, logged in/out, screen contents with timestamps",
+      "Signs of tampering",
+      "Photos/video; time, people present, actions"
+     ],
+     "model": "| What to document | Examples in the Uttara raid |\n|---|---|\n| Device identity | Make, model, serial number of each laptop; **IMEI** and **ICCID** (SIM) of each phone |\n| Connections and peripherals | Which USB drives and cables are plugged in, router connections, ports in use |\n| System status | On/off, logged in or out, VPN connected, what is on screen — photographed with timestamps |\n| Signs of tampering | Damaged ports, missing parts, broken seals, unknown devices |\n| Scene context | Photos/video of the room and device positions; time, people present and every action taken |\n\n**Why:** documentation proves the condition of evidence at seizure and starts the chain of custody; without it, the defence can claim devices were altered."
+    },
+    {
+     "marks": 3,
+     "q": "What common mistakes must be avoided? Use the lecture case study to explain.",
+     "points": [
+      "Failing to document actions",
+      "Powering on suspect devices",
+      "Not isolating devices from networks",
+      "Using unverified tools",
+      "Mishandling chain of custody",
+      "Case study: VPN auto-connected → remote wipe → data lost"
+     ],
+     "model": "### Common mistakes\n| Mistake | Consequence |\n|---|---|\n| Failing to document actions | Evidence challenged in court |\n| Powering on suspect devices | Data altered; destructive scripts triggered |\n| Not isolating devices from networks | Remote wipe or data exfiltration |\n| Using unverified tools | Unreliable or inadmissible results |\n| Mishandling chain of custody | Evidence excluded |\n\n**Lecture case study:** in an insider-theft investigation of a corporate laptop and phone, the responder **failed to isolate the devices**; the **VPN auto-connected**, a **remote wipe was triggered**, and critical data was lost. The lesson: immediate, proper scene handling is essential.\n\n**Application:** in the Uttara flat, the junior officer scrolling a phone and the connected VPN on the laptops are exactly these mistakes — an accomplice could wipe the MFS transaction records remotely."
+    }
+   ]
+  },
+  {
+   "id": "q-imaging",
+   "rank": 5,
    "t": "f-imaging",
    "covers": [
     "f-imaging"
@@ -366,7 +617,7 @@ HUB.add('quizzes', {
   },
   {
    "id": "q-mobile",
-   "rank": 3,
+   "rank": 6,
    "t": "f-mobile",
    "covers": [
     "f-mobile"
@@ -415,8 +666,104 @@ HUB.add('quizzes', {
    ]
   },
   {
+   "id": "q-cloud",
+   "rank": 7,
+   "t": "f-cloud",
+   "covers": [
+    "f-cloud",
+    "f-crossborder"
+   ],
+   "marks": 10,
+   "q": "Cloud forensics",
+   "scenario": "A Dhaka software company discovers that client source code and contracts were copied from its cloud storage (hosted on a foreign cloud provider) by an unknown account at 2 a.m. Its servers run on virtual machines that scale up and down automatically.",
+   "parts": [
+    {
+     "marks": 3,
+     "q": "What is cloud computing? Explain its service and deployment models and why they matter for forensics.",
+     "points": [
+      "Delivery of computing services (servers, storage, databases, networking, software) over the internet",
+      "IaaS, PaaS, SaaS",
+      "Public, private, hybrid, community",
+      "Forensic relevance: data stored remotely, often across jurisdictions"
+     ],
+     "model": "**Cloud computing** is the delivery of computing services — servers, storage, databases, networking and software — over the internet.\n\n| Service model | What the customer controls | Example | Evidence the customer can access |\n|---|---|---|---|\n| **IaaS** (Infrastructure as a Service) | Virtual machines, OS, applications | Virtual servers | Most — VM snapshots, OS logs |\n| **PaaS** (Platform as a Service) | Applications and data | App hosting platforms | Application logs |\n| **SaaS** (Software as a Service) | Only data and settings | Gmail, Google Drive, Office 365 | Least — mostly what the provider exports |\n\n**Deployment models:** public, private, hybrid and community.\n\n**Why it matters:** data is stored remotely, often across jurisdictions, and the further the model moves toward SaaS, the more investigators depend on the provider for evidence."
+    },
+    {
+     "marks": 4,
+     "q": "What challenges will investigators face in this cloud case?",
+     "points": [
+      "Data location — cross-jurisdictional storage",
+      "Multi-tenancy — shared resources",
+      "Lack of control — dependence on CSP",
+      "Data volatility — auto-scaling VMs disappear",
+      "Encryption — no keys, no access",
+      "Legal: jurisdiction, privacy (GDPR), chain of custody"
+     ],
+     "model": "| Challenge | Explanation | In this case |\n|---|---|---|\n| **Data location** | Data stored across countries | The provider's data centres are abroad; Bangladeshi police cannot simply seize them |\n| **Multi-tenancy** | Many customers share the same hardware | Investigators cannot image a physical server without touching other customers' data |\n| **Lack of control** | Dependence on the cloud service provider (CSP) | Logs and records must come from the provider |\n| **Data volatility** | Dynamic data — auto-scaling creates and deletes virtual machines | The VM used at 2 a.m. may already be gone |\n| **Encryption** | Data inaccessible without keys | Encrypted storage needs keys from the company or provider |\n\n**Legal issues:** cross-border access, privacy rights (GDPR, CCPA), compliance, and keeping the chain of custody across systems the investigator does not control.\n\n**Conclusion:** cloud forensics depends on cooperation — with the provider, with foreign authorities and with the victim company."
+    },
+    {
+     "marks": 3,
+     "q": "How should the evidence be acquired lawfully? Outline the cloud forensics process and tools.",
+     "points": [
+      "Legal channels: warrants, subpoenas, MLATs",
+      "Work with provider for access logs (login data, IP history)",
+      "Extract files & metadata with timestamps; document access steps",
+      "Process: identification → preservation → analysis → presentation",
+      "Tools: AWS CloudTrail, Azure Monitor/Sentinel, Google Cloud Logging, Splunk"
+     ],
+     "model": "[flow] Cloud forensics process\nIdentification (locate services & data) → Preservation (snapshots, logs, metadata) → Analysis (correlate VMs, storage, logs) → Presentation (document legally)\n\n### Lawful acquisition\n1. **Legal channels** — warrants, subpoenas or **mutual legal assistance treaties (MLATs)**; Bangladesh's Mutual Assistance in Criminal Matters Act 2012 provides the domestic basis for such requests\n2. **Work with the provider** for access logs — login data, IP history, account activity at 2 a.m.\n3. **Preserve quickly** — take snapshots of running VMs before auto-scaling deletes them; export logs\n4. **Extract files and metadata** with creation, access and modification times, without altering content\n5. **Document** every request, response, extraction method and custody step\n\n| Tool | Use |\n|---|---|\n| **AWS CloudTrail** | Records API calls and user activity |\n| **Azure Monitor / Sentinel** | Monitoring, security analytics |\n| **Google Cloud Logging / Operations** | Log monitoring and analysis |\n| Splunk, EnCase, FTK Imager | Third-party analysis and imaging |\n\n**Best practice for companies:** enable logging and auditing in advance and agree data-access terms with the provider — you cannot investigate logs that were never kept."
+    }
+   ]
+  },
+  {
+   "id": "q-egov-data",
+   "rank": 8,
+   "t": "g-privacy",
+   "covers": [
+    "g-privacy",
+    "g-nist",
+    "g-importance"
+   ],
+   "marks": 10,
+   "q": "Citizen data leak and public trust",
+   "scenario": "A researcher finds that a government service-registration website shows citizens' full names, NID numbers, phone numbers and addresses to anyone who uses a simple search query, because of a misconfigured database. Millions of records are exposed for weeks. After the news spreads, many people refuse to use online government services. (Bangladesh faced a similar case in July 2023, when a government website exposed the personal data of around 50 million citizens.)",
+   "parts": [
+    {
+     "marks": 3,
+     "q": "Explain the principles of safeguarding citizen data by design. Which were broken here?",
+     "points": [
+      "Data minimisation — collect and keep only what is needed, only as long as needed",
+      "Strong access control — role-based, least privilege",
+      "Encryption everywhere — at rest and in transit, including third parties",
+      "Privacy by design — built in at the design stage, not as an afterthought"
+     ],
+     "model": "| Principle (DP deck) | Meaning | Broken in this case? |\n|---|---|---|\n| **Data minimisation** | Collect and retain only what a service genuinely needs, only as long as needed | Yes — full NID numbers and addresses were kept searchable long after registration |\n| **Strong access control** | Role-based access and least privilege limit who can see citizen records | Yes — the public could query the database |\n| **Encryption everywhere** | Protect data at rest and in transit, across every system and third party | Yes — records were readable in plain text |\n| **Privacy by design** | Bake protection into new services at the design stage, not as an afterthought | Yes — a misconfiguration shows security was not part of the design |\n\n**Conclusion:** every one of the four principles failed, which is why a single configuration error exposed millions of people."
+    },
+    {
+     "marks": 4,
+     "q": "What governance measures and employee responsibilities could have prevented the leak or limited the damage?",
+     "points": [
+      "Governance: clear data ownership and accountability, independent audits, documented breach-notification procedures, staff training, vendor/third-party agreements",
+      "Employees: raise awareness, proper data handling, follow security protocols (strong passwords, MFA), report incidents promptly, continuous training",
+      "Regular security audits and vulnerability assessments; incident response planning"
+     ],
+     "model": "### Governance that makes it stick (DP deck)\n| Measure | How it would have helped |\n|---|---|\n| Clear data ownership and accountability per system | A named owner would have been responsible for checking the site's configuration |\n| Independent audits and compliance reviews | An audit or vulnerability assessment would have found the open search |\n| Documented breach-notification procedures | The leak would have been closed and citizens informed quickly, not after weeks |\n| Staff training on handling sensitive records | Staff would know NID data must never be publicly searchable |\n| Vendor and third-party data-sharing agreements | If a contractor built the site, the contract would bind them to security standards |\n\n### Role of employees\n1. **Raising awareness** of threats and best practice\n2. **Proper data handling** — no unauthorised sharing; secure channels\n3. **Following security protocols** — strong passwords, multi-factor authentication\n4. **Reporting incidents** promptly to supervisors or IT\n5. **Continuous training** on the latest threats\n\n**Conclusion:** technology failed, but governance and people are what should have caught it — the deck calls employees \"often the weakest link\"."
+    },
+    {
+     "marks": 3,
+     "q": "How can the government rebuild public trust after this leak?",
+     "points": [
+      "Trust is the real measure of success: safe, fair, accountable",
+      "Transparency, accountability, reliability, responsiveness",
+      "Report openly on performance; make data protection a service standard"
+     ],
+     "model": "The deck says **\"trust is the real measure of success\"**: citizens judge digital government less by technology and more by whether it feels safe, fair and accountable.\n\n| Trust pillar | Action after the leak |\n|---|---|\n| **Transparency** | Explain plainly what data was exposed, why, and how it is now protected |\n| **Accountability** | Name the responsible owners, with real consequences for the lapse |\n| **Reliability** | Keep the fixed services available and consistent so people return |\n| **Responsiveness** | Communicate quickly and honestly; help affected citizens guard against identity fraud |\n\nThe deck's priorities add: **report openly on performance** with regular plain-language updates, and **make data protection a service standard** built into every new service's design.\n\n**Conclusion:** trust returns through honest communication plus visible fixes, not through silence."
+    }
+   ]
+  },
+  {
    "id": "q-email",
-   "rank": 4,
+   "rank": 9,
    "t": "f-email",
    "covers": [
     "f-email"
@@ -463,57 +810,150 @@ HUB.add('quizzes', {
    ]
   },
   {
-   "id": "q-cloud",
-   "rank": 5,
-   "t": "f-cloud",
+   "id": "q-recovery",
+   "rank": 10,
+   "t": "f-analysis",
    "covers": [
-    "f-cloud"
+    "f-analysis",
+    "f-reporting"
    ],
    "marks": 10,
-   "q": "Cloud forensics",
-   "scenario": "A Dhaka software company discovers that client source code and contracts were copied from its cloud storage (hosted on a foreign cloud provider) by an unknown account at 2 a.m. Its servers run on virtual machines that scale up and down automatically.",
+   "q": "Recovering deleted data and building a timeline",
+   "scenario": "In a cheque-forgery investigation at a Khulna bank branch, the suspect deleted scanned signature files and formatted a USB pen drive before arrest. Investigators also seized his office PC.",
    "parts": [
     {
      "marks": 3,
-     "q": "What is cloud computing? Explain its service and deployment models and why they matter for forensics.",
+     "q": "How can file system analysis help recover the deleted signature files?",
      "points": [
-      "Delivery of computing services (servers, storage, databases, networking, software) over the internet",
-      "IaaS, PaaS, SaaS",
-      "Public, private, hybrid, community",
-      "Forensic relevance: data stored remotely, often across jurisdictions"
+      "Reconstruct folder hierarchies",
+      "Recover deleted files (entries marked deleted, data remains until overwritten)",
+      "Examine metadata: last access, ownership, permissions",
+      "Tools: Autopsy, Sleuth Kit, X-Ways; NTFS, FAT, ext"
      ],
-     "model": "**Cloud computing** is the delivery of computing services — servers, storage, databases, networking and software — over the internet.\n\n| Service model | What the customer controls | Example | Evidence the customer can access |\n|---|---|---|---|\n| **IaaS** (Infrastructure as a Service) | Virtual machines, OS, applications | Virtual servers | Most — VM snapshots, OS logs |\n| **PaaS** (Platform as a Service) | Applications and data | App hosting platforms | Application logs |\n| **SaaS** (Software as a Service) | Only data and settings | Gmail, Google Drive, Office 365 | Least — mostly what the provider exports |\n\n**Deployment models:** public, private, hybrid and community.\n\n**Why it matters:** data is stored remotely, often across jurisdictions, and the further the model moves toward SaaS, the more investigators depend on the provider for evidence."
-    },
-    {
-     "marks": 4,
-     "q": "What challenges will investigators face in this cloud case?",
-     "points": [
-      "Data location — cross-jurisdictional storage",
-      "Multi-tenancy — shared resources",
-      "Lack of control — dependence on CSP",
-      "Data volatility — auto-scaling VMs disappear",
-      "Encryption — no keys, no access",
-      "Legal: jurisdiction, privacy (GDPR), chain of custody"
-     ],
-     "model": "| Challenge | Explanation | In this case |\n|---|---|---|\n| **Data location** | Data stored across countries | The provider's data centres are abroad; Bangladeshi police cannot simply seize them |\n| **Multi-tenancy** | Many customers share the same hardware | Investigators cannot image a physical server without touching other customers' data |\n| **Lack of control** | Dependence on the cloud service provider (CSP) | Logs and records must come from the provider |\n| **Data volatility** | Dynamic data — auto-scaling creates and deletes virtual machines | The VM used at 2 a.m. may already be gone |\n| **Encryption** | Data inaccessible without keys | Encrypted storage needs keys from the company or provider |\n\n**Legal issues:** cross-border access, privacy rights (GDPR, CCPA), compliance, and keeping the chain of custody across systems the investigator does not control.\n\n**Conclusion:** cloud forensics depends on cooperation — with the provider, with foreign authorities and with the victim company."
+     "model": "When a file is \"deleted\", the operating system usually only marks its space as free; the data stays until it is overwritten. **File system analysis** examines the structure of the drive to recover it.\n\n| What it does | How it helps here |\n|---|---|\n| Reconstructs folder hierarchies | Shows where the scanned signatures were stored |\n| Recovers deleted files | Retrieves the deleted scans if not yet overwritten |\n| Examines metadata — last access time, ownership, permissions | Shows **who** created or opened the files and **when** |\n| Reveals hiding, deleting or manipulation attempts | Proves intent |\n\n**Tools:** Autopsy, Sleuth Kit, X-Ways Forensics — for NTFS, FAT, ext3/ext4 and other file systems.\n\n**Conclusion:** deletion rarely destroys evidence immediately; metadata can also link the suspect to the files."
     },
     {
      "marks": 3,
-     "q": "How should the evidence be acquired lawfully? Outline the cloud forensics process and tools.",
+     "q": "What is data carving, and why is it suitable for the formatted USB drive?",
      "points": [
-      "Legal channels: warrants, subpoenas, MLATs",
-      "Work with provider for access logs (login data, IP history)",
-      "Extract files & metadata with timestamps; document access steps",
-      "Process: identification → preservation → analysis → presentation",
-      "Tools: AWS CloudTrail, Azure Monitor/Sentinel, Google Cloud Logging, Splunk"
+      "Recover file fragments by signature headers/footers (JPG, PDF)",
+      "No dependence on file allocation tables",
+      "Works on formatted or damaged drives",
+      "Tools: PhotoRec, Scalpel, Foremost; good for images"
      ],
-     "model": "[flow] Cloud forensics process\nIdentification (locate services & data) → Preservation (snapshots, logs, metadata) → Analysis (correlate VMs, storage, logs) → Presentation (document legally)\n\n### Lawful acquisition\n1. **Legal channels** — warrants, subpoenas or **mutual legal assistance treaties (MLATs)**; Bangladesh's Mutual Assistance in Criminal Matters Act 2012 provides the domestic basis for such requests\n2. **Work with the provider** for access logs — login data, IP history, account activity at 2 a.m.\n3. **Preserve quickly** — take snapshots of running VMs before auto-scaling deletes them; export logs\n4. **Extract files and metadata** with creation, access and modification times, without altering content\n5. **Document** every request, response, extraction method and custody step\n\n| Tool | Use |\n|---|---|\n| **AWS CloudTrail** | Records API calls and user activity |\n| **Azure Monitor / Sentinel** | Monitoring, security analytics |\n| **Google Cloud Logging / Operations** | Log monitoring and analysis |\n| Splunk, EnCase, FTK Imager | Third-party analysis and imaging |\n\n**Best practice for companies:** enable logging and auditing in advance and agree data-access terms with the provider — you cannot investigate logs that were never kept."
+     "model": "**Data carving** recovers files by searching raw data for **file signatures** — known headers (and footers) of file types such as JPG or PDF — instead of relying on the file system.\n\n| Feature | Why it fits the formatted USB |\n|---|---|\n| No dependence on file allocation tables | Formatting destroyed the file table, but not necessarily the data |\n| Works on formatted or damaged drives | Exactly this situation |\n| Good for multimedia | Scanned signatures are image files (JPG/PDF) |\n| Tools | **PhotoRec, Scalpel, Foremost** |\n\n**Limitation:** carved files may lose their names and dates, and fragmented files may be incomplete.\n\n**Conclusion:** carving can bring back the scanned signatures even after the drive was formatted."
+    },
+    {
+     "marks": 4,
+     "q": "How should the investigator build a timeline and report the findings?",
+     "points": [
+      "Timeline: correlate files, logs, emails, browser history into a chronology",
+      "Tools: log2timeline/Plaso, X-Ways Trace",
+      "Report: tools & versions, steps, hashes, screenshots, timeline, chain of custody",
+      "Clear, professional, admissible; withstand cross-examination",
+      "Best practice: work on copies, validate tools, cross-check"
+     ],
+     "model": "### Timeline analysis\nA timeline correlates events from different sources — files, logs, emails, browser history, USB connection records — into one chronology that \"tells the story\".\n\n| Time | Event (example) | Source |\n|---|---|---|\n| 14 Mar, 16:05 | Signature scans created | File metadata |\n| 14 Mar, 16:20 | USB drive connected | Windows registry (USB artifacts) |\n| 14 Mar, 16:22 | Scans copied to USB | File system / link files |\n| 18 Mar, 09:40 | Forged cheque presented | Bank transaction log |\n| 20 Mar, 22:10 | Files deleted, USB formatted | File system / event logs |\n\n**Tools:** log2timeline / **Plaso**, X-Ways Trace.\n\n### The report\n• Every tool used, with **version numbers**, and every step\n• **Hashes**, screenshots, the timeline and **chain-of-custody logs**\n• Clear, professional and legally admissible — it must **withstand cross-examination**\n• Best practices: work on copies, validate tools, cross-check results with more than one tool\n\n**Conclusion:** the timeline turns scattered artifacts into proof that the suspect created, moved, used and then tried to destroy the signatures."
+    }
+   ]
+  },
+  {
+   "id": "q-ai-scene",
+   "rank": 11,
+   "t": "a-scene",
+   "covers": [
+    "a-scene",
+    "a-risks"
+   ],
+   "marks": 10,
+   "q": "AI at a highway crime scene",
+   "scenario": "At night on the Dhaka–Mymensingh highway, a microbus robs a trader and hits his motorcycle while escaping. The only video is blurry CCTV from a petrol pump and shaky phone clips from bystanders. The highway must be reopened within hours. Next day, a \"video of the culprit\" goes viral on Facebook, but investigators suspect it is AI-generated.",
+   "parts": [
+    {
+     "marks": 4,
+     "q": "How can AI improve the analysis of the CCTV and phone videos?",
+     "points": [
+      "Image and video analysis: AI reviews hours of footage quickly",
+      "Image quality enhancement (spatial/frequency domain; CLAHE) for low-quality CCTV and phone video",
+      "Object detection (per frame) vs object tracking (across frames) — follow the microbus",
+      "Facial and image analysis subject to law and evidential standards"
+     ],
+     "model": "| AI application (AI deck) | Use in this case |\n|---|---|\n| **Image and video analysis** | AI reviews hours of petrol-pump and bystander footage in a fraction of the time, saving resources |\n| **Image quality enhancement** | Techniques in the spatial and frequency domains — e.g. **CLAHE** (Contrast Limited Adaptive Histogram Equalization) — sharpen dark, low-quality CCTV and phone video to read a number plate or the vehicle's colour |\n| **Object detection** | Identifies the target object (the microbus) in each frame separately |\n| **Object tracking** | Follows the microbus across frames and between cameras to estimate its route and speed |\n| **Facial and image analysis** | Compares faces or vehicles with other images — subject to applicable law and evidentiary standards |\n\n**Conclusion:** AI turns poor footage into usable leads, but enhanced images must be documented and the originals preserved."
+    },
+    {
+     "marks": 3,
+     "q": "How can drones, 3D reconstruction, VR and simulation software help document the scene and present it in court?",
+     "points": [
+      "AI measurements of scene and evidence support reconstruction and hypotheses",
+      "Drones use photogrammetry; UAV lighting (UV, visible, near-infrared)",
+      "3D reconstruction and VR for court; simulation software for crash dynamics",
+      "Real-time analysis reduces contamination and human error"
+     ],
+     "model": "• **Measurements and drones** — AI-equipped drones use **photogrammetry** to map the scene accurately and record distances between evidence (skid marks, debris), even on a busy or hard-to-reach highway; UAV lighting with UV, visible and near-infrared light helps image objects at night\n• **Real-time scene analysis** — collects more information in less time, reduces human error and avoids contaminating traces, so the road can reopen quickly\n• **Simulation and reconstruction software** — 2D/3D diagrams, crash-dynamics prediction, vehicle movement tracking and damage assessment explain how the microbus hit the motorcycle\n• **3D reconstruction** — gives the court clean 3D visualisations to understand the evidence\n• **Virtual reality** — lets investigators and judges \"walk\" the scene from any angle and notice details missed at first\n\n**Conclusion:** the scene can be cleared within hours while a precise digital copy remains for analysis and court."
+    },
+    {
+     "marks": 3,
+     "q": "What risks does AI create in this case, especially the viral video, and how should investigators handle them?",
+     "points": [
+      "Deepfakes: AI-generated video makes authentication increasingly important",
+      "Adversarial manipulation; bias; black box / explainability; admissibility",
+      "Over-reliance: AI result is not proof without corroboration; human verification and documentation"
+     ],
+     "model": "| Risk | Handling |\n|---|---|\n| **Deepfakes** | The deck warns AI-generated audio, images and video make **evidence authentication** increasingly important — trace the viral clip's source, check metadata and compare with the CCTV before using it |\n| **Adversarial manipulation** | Criminals can deliberately manipulate data to deceive AI — keep original files and hashes |\n| **Bias and false matches** | Face or vehicle matching can wrongly identify a person — treat matches as leads |\n| **Black box** | Be able to explain how an enhanced image was produced (Explainable AI); document every step |\n| **Admissibility** | Courts are still deciding how to admit AI-derived evidence; present enhanced images alongside the untouched originals |\n| **Over-reliance** | An AI result is not proof without corroboration |\n\n**Conclusion:** \"AI finds patterns; investigators establish facts\" — the viral video is a lead to verify, not evidence to rely on."
+    }
+   ]
+  },
+  {
+   "id": "q-lab",
+   "rank": 12,
+   "t": "f-basics",
+   "covers": [
+    "f-basics"
+   ],
+   "marks": 10,
+   "q": "Setting up a digital forensics capability",
+   "scenario": "The Police Headquarters plans to expand digital forensic capacity in every range because cybercrime complaints — Facebook hacking, MFS fraud, online harassment — are rising. You are asked to brief senior officers.",
+   "parts": [
+    {
+     "marks": 3,
+     "q": "What is digital forensics and why is it important?",
+     "points": [
+      "Investigating digital devices for evidence; criminal, civil, corporate",
+      "Collect, preserve, analyse; identify, recover, document evidence",
+      "Importance: solve cybercrimes, identify threats/breaches, corporate & legal investigations, ensure integrity in court"
+     ],
+     "model": "**Digital forensics** is the process of investigating digital devices for evidence — collecting, preserving and analysing digital evidence — used in criminal, civil and corporate investigations. Its key goal is to **identify, recover and document** evidence.\n\n### Importance\n| Reason | Example |\n|---|---|\n| Helps law enforcement solve cybercrimes | Tracing a hacked Facebook account or MFS fraud |\n| Identifies cyber threats and security breaches | Finding how a bank's system was compromised |\n| Essential for corporate and legal investigations | Insider data theft, contract disputes |\n| Ensures evidence integrity in court | Hashing and chain of custody make evidence admissible |\n\n**Real-world applications:** fraud, hacking and identity theft; insider-threat detection; incident response; intellectual-property theft; terrorism and organized crime.\n\n**Bangladesh example:** in the 2016 Bangladesh Bank cyber heist, attackers used malware and the bank's SWIFT access to send fraudulent payment orders worth about USD 951 million; USD 81 million reached accounts in the Philippines. Forensic investigation of the bank's systems was essential to understand how it happened."
+    },
+    {
+     "marks": 4,
+     "q": "Explain the stages of the digital forensics process.",
+     "points": [
+      "Identification",
+      "Collection",
+      "Preservation",
+      "Analysis",
+      "Documentation",
+      "Presentation"
+     ],
+     "model": "[flow] Digital forensics process\nIdentification → Collection → Preservation → Analysis → Documentation → Presentation\n\n| Stage | What happens | Example (hacked Facebook account) |\n|---|---|---|\n| **Identification** | Find which devices, accounts and data may hold evidence | Victim's phone, suspect's phone, Facebook account |\n| **Collection** | Seize devices or acquire data lawfully | Seize the suspect's phone; legal request to Meta |\n| **Preservation** | Protect evidence from change — write blockers, hashing, Faraday bags, custody forms | Image the phone; record hashes |\n| **Analysis** | Examine data with forensic tools to find relevant evidence | Find the login session, phishing link, messages |\n| **Documentation** | Record every step, tool and finding | Tool versions, hashes, timeline |\n| **Presentation** | Report and testify in court in a clear, admissible form | Expert report and testimony |\n\n**Conclusion:** each stage protects the next — a mistake in preservation cannot be fixed in analysis."
+    },
+    {
+     "marks": 3,
+     "q": "What challenges will the new labs face?",
+     "points": [
+      "Encryption and data protection",
+      "Cloud and remote storage",
+      "Large volumes of evidence",
+      "Rapidly evolving technology and threats",
+      "Anti-forensics techniques"
+     ],
+     "model": "| Challenge | Explanation | Bangladesh angle |\n|---|---|---|\n| Encryption and data protection | Locked, encrypted phones and apps | Most seized phones are locked smartphones with encrypted apps |\n| Cloud and remote storage | Data on foreign servers | Facebook, Gmail and WhatsApp data held abroad — needs MLAT or provider cooperation |\n| Large volumes of evidence | Terabytes from many devices | Backlogs in labs |\n| Rapidly evolving technology and threats | Tools and skills go out of date | New apps, new scam methods |\n| Anti-forensics | Wiping, encryption, hiding data to defeat investigators | Suspects factory-reset phones before arrest |\n\n**Recommendations:** training, validated and updated tools, agreements with service providers, and standard operating procedures for chain of custody."
     }
    ]
   },
   {
    "id": "q-isolation",
-   "rank": 6,
+   "rank": 13,
    "t": "f-isolation",
    "covers": [
     "f-isolation"
@@ -566,56 +1006,8 @@ HUB.add('quizzes', {
    ]
   },
   {
-   "id": "q-lab",
-   "rank": 7,
-   "t": "f-basics",
-   "covers": [
-    "f-basics"
-   ],
-   "marks": 10,
-   "q": "Setting up a digital forensics capability",
-   "scenario": "The Police Headquarters plans to expand digital forensic capacity in every range because cybercrime complaints — Facebook hacking, MFS fraud, online harassment — are rising. You are asked to brief senior officers.",
-   "parts": [
-    {
-     "marks": 3,
-     "q": "What is digital forensics and why is it important?",
-     "points": [
-      "Investigating digital devices for evidence; criminal, civil, corporate",
-      "Collect, preserve, analyse; identify, recover, document evidence",
-      "Importance: solve cybercrimes, identify threats/breaches, corporate & legal investigations, ensure integrity in court"
-     ],
-     "model": "**Digital forensics** is the process of investigating digital devices for evidence — collecting, preserving and analysing digital evidence — used in criminal, civil and corporate investigations. Its key goal is to **identify, recover and document** evidence.\n\n### Importance\n| Reason | Example |\n|---|---|\n| Helps law enforcement solve cybercrimes | Tracing a hacked Facebook account or MFS fraud |\n| Identifies cyber threats and security breaches | Finding how a bank's system was compromised |\n| Essential for corporate and legal investigations | Insider data theft, contract disputes |\n| Ensures evidence integrity in court | Hashing and chain of custody make evidence admissible |\n\n**Real-world applications:** fraud, hacking and identity theft; insider-threat detection; incident response; intellectual-property theft; terrorism and organized crime.\n\n**Bangladesh example:** in the 2016 Bangladesh Bank cyber heist, attackers used malware and the bank's SWIFT access to send fraudulent payment orders worth about USD 951 million; USD 81 million reached accounts in the Philippines. Forensic investigation of the bank's systems was essential to understand how it happened."
-    },
-    {
-     "marks": 4,
-     "q": "Explain the stages of the digital forensics process.",
-     "points": [
-      "Identification",
-      "Collection",
-      "Preservation",
-      "Analysis",
-      "Documentation",
-      "Presentation"
-     ],
-     "model": "[flow] Digital forensics process\nIdentification → Collection → Preservation → Analysis → Documentation → Presentation\n\n| Stage | What happens | Example (hacked Facebook account) |\n|---|---|---|\n| **Identification** | Find which devices, accounts and data may hold evidence | Victim's phone, suspect's phone, Facebook account |\n| **Collection** | Seize devices or acquire data lawfully | Seize the suspect's phone; legal request to Meta |\n| **Preservation** | Protect evidence from change — write blockers, hashing, Faraday bags, custody forms | Image the phone; record hashes |\n| **Analysis** | Examine data with forensic tools to find relevant evidence | Find the login session, phishing link, messages |\n| **Documentation** | Record every step, tool and finding | Tool versions, hashes, timeline |\n| **Presentation** | Report and testify in court in a clear, admissible form | Expert report and testimony |\n\n**Conclusion:** each stage protects the next — a mistake in preservation cannot be fixed in analysis."
-    },
-    {
-     "marks": 3,
-     "q": "What challenges will the new labs face?",
-     "points": [
-      "Encryption and data protection",
-      "Cloud and remote storage",
-      "Large volumes of evidence",
-      "Rapidly evolving technology and threats",
-      "Anti-forensics techniques"
-     ],
-     "model": "| Challenge | Explanation | Bangladesh angle |\n|---|---|---|\n| Encryption and data protection | Locked, encrypted phones and apps | Most seized phones are locked smartphones with encrypted apps |\n| Cloud and remote storage | Data on foreign servers | Facebook, Gmail and WhatsApp data held abroad — needs MLAT or provider cooperation |\n| Large volumes of evidence | Terabytes from many devices | Backlogs in labs |\n| Rapidly evolving technology and threats | Tools and skills go out of date | New apps, new scam methods |\n| Anti-forensics | Wiping, encryption, hiding data to defeat investigators | Suspects factory-reset phones before arrest |\n\n**Recommendations:** training, validated and updated tools, agreements with service providers, and standard operating procedures for chain of custody."
-    }
-   ]
-  },
-  {
    "id": "q-crossborder",
-   "rank": 8,
+   "rank": 14,
    "t": "f-crossborder",
    "covers": [
     "f-crossborder"
@@ -664,58 +1056,8 @@ HUB.add('quizzes', {
    ]
   },
   {
-   "id": "q-raid",
-   "rank": 9,
-   "t": "f-scene",
-   "covers": [
-    "f-scene"
-   ],
-   "marks": 10,
-   "q": "First responder at a digital crime scene",
-   "scenario": "Acting on a tip, police raid a flat in Uttara used by a gang running fake job advertisements and mobile-money (MFS) fraud. Inside, two laptops are switched on with a VPN connected, three smartphones keep receiving calls, and a router and several USB drives are on the table. A junior officer starts scrolling through one of the phones.",
-   "parts": [
-    {
-     "marks": 4,
-     "q": "As the first responder, what immediate steps should you take to secure this digital crime scene?",
-     "points": [
-      "Secure the scene; stop anyone touching devices (stop the junior officer)",
-      "Disconnect from networks: unplug Ethernet, disable Wi-Fi; check VPN/remote sessions",
-      "Phones into Faraday bags/airplane mode to stop remote wipe",
-      "Preserve state: leave on devices on; capture RAM first",
-      "Label and isolate all equipment; log time, people, actions"
-     ],
-     "model": "The lecture calls the first responder \"the gatekeeper of digital truth\": what happens in the first minutes can preserve evidence or destroy it beyond recovery.\n\n### Immediate steps\n1. **Secure the scene** — move suspects away from devices; **stop the junior officer** scrolling the phone, because interacting changes data and can trigger wipe apps\n2. **Disconnect from networks** — unplug Ethernet, disable Wi-Fi on the router; check for active **VPN**, remote-desktop or sync sessions that could let accomplices wipe data remotely\n3. **Isolate the phones** — place them in **Faraday bags** (or airplane mode) to block cellular, Wi-Fi and Bluetooth signals and stop remote wipes and tracking\n4. **Preserve the digital state** — do not switch off running laptops; capture **RAM and active sessions first** (volatile data), using trusted tools such as FTK Imager or Belkasoft RAM Capture\n5. **Do not power on** devices that are off — powering on may alter data or run destructive scripts\n6. **Label and isolate** every device and USB drive with a unique ID; keep them separate\n7. **Record** the time, people present and every action taken\n\n[flow] Order of work at the scene\nSecure people → Cut network links → Faraday bags for phones → Capture RAM → Photograph & label → Seize & bag\n\n**Conclusion:** isolation and preservation come before examination — the scene is for securing evidence, the lab is for analysing it."
-    },
-    {
-     "marks": 3,
-     "q": "What should be documented at the scene?",
-     "points": [
-      "Make, model, serial numbers/IMEI of every device",
-      "Connected ports & peripherals (USB, cables, router)",
-      "System status: on/off, logged in/out, screen contents with timestamps",
-      "Signs of tampering",
-      "Photos/video; time, people present, actions"
-     ],
-     "model": "| What to document | Examples in the Uttara raid |\n|---|---|\n| Device identity | Make, model, serial number of each laptop; **IMEI** and **ICCID** (SIM) of each phone |\n| Connections and peripherals | Which USB drives and cables are plugged in, router connections, ports in use |\n| System status | On/off, logged in or out, VPN connected, what is on screen — photographed with timestamps |\n| Signs of tampering | Damaged ports, missing parts, broken seals, unknown devices |\n| Scene context | Photos/video of the room and device positions; time, people present and every action taken |\n\n**Why:** documentation proves the condition of evidence at seizure and starts the chain of custody; without it, the defence can claim devices were altered."
-    },
-    {
-     "marks": 3,
-     "q": "What common mistakes must be avoided? Use the lecture case study to explain.",
-     "points": [
-      "Failing to document actions",
-      "Powering on suspect devices",
-      "Not isolating devices from networks",
-      "Using unverified tools",
-      "Mishandling chain of custody",
-      "Case study: VPN auto-connected → remote wipe → data lost"
-     ],
-     "model": "### Common mistakes\n| Mistake | Consequence |\n|---|---|\n| Failing to document actions | Evidence challenged in court |\n| Powering on suspect devices | Data altered; destructive scripts triggered |\n| Not isolating devices from networks | Remote wipe or data exfiltration |\n| Using unverified tools | Unreliable or inadmissible results |\n| Mishandling chain of custody | Evidence excluded |\n\n**Lecture case study:** in an insider-theft investigation of a corporate laptop and phone, the responder **failed to isolate the devices**; the **VPN auto-connected**, a **remote wipe was triggered**, and critical data was lost. The lesson: immediate, proper scene handling is essential.\n\n**Application:** in the Uttara flat, the junior officer scrolling a phone and the connected VPN on the laptops are exactly these mistakes — an accomplice could wipe the MFS transaction records remotely."
-    }
-   ]
-  },
-  {
    "id": "q-antiforensics",
-   "rank": 10,
+   "rank": 15,
    "t": "f-antiforensics",
    "covers": [
     "f-antiforensics",
@@ -763,103 +1105,8 @@ HUB.add('quizzes', {
    ]
   },
   {
-   "id": "q-iot",
-   "rank": 11,
-   "t": "f-iot",
-   "covers": [
-    "f-iot"
-   ],
-   "marks": 10,
-   "q": "IoT and CCTV evidence",
-   "scenario": "A house in Gulshan is burgled. The owners have a smart doorbell camera, a Wi-Fi CCTV system that uploads footage to a cloud app, and a smart lock that records every opening. The lock log shows it was opened with a valid code at 3:12 a.m.",
-   "parts": [
-    {
-     "marks": 3,
-     "q": "What is IoT, and what are its characteristics relevant to forensics?",
-     "points": [
-      "Network of interconnected devices exchanging data",
-      "Examples: smart thermostats, wearables, sensors, cameras, locks",
-      "Characteristics: massive scale, real-time data, limited resources",
-      "Forensic relevance: diverse devices and protocols"
-     ],
-     "model": "**IoT (Internet of Things)** is a network of interconnected devices that exchange data — smart thermostats, wearables, industrial sensors, and here a doorbell camera, CCTV and smart lock.\n\n| Characteristic | Forensic meaning |\n|---|---|\n| Massive scale | Many devices, many data sources |\n| Real-time data | Records events as they happen (door opened at 3:12 a.m.) |\n| Limited resources | Little storage and processing — data is overwritten quickly |\n\n**Relevance:** diverse devices and protocols mean each device may need a different extraction approach."
-    },
-    {
-     "marks": 3,
-     "q": "What challenges arise in IoT forensics in this case?",
-     "points": [
-      "Device diversity",
-      "Limited storage — rapid overwrite",
-      "Proprietary protocols",
-      "Resource constraints",
-      "Chain of custody across devices and cloud"
-     ],
-     "model": "| Challenge | In the Gulshan burglary |\n|---|---|\n| **Device diversity** | Doorbell, CCTV and lock are from different makers with different systems |\n| **Limited storage** | The doorbell may overwrite footage within hours |\n| **Proprietary protocols** | Vendors use their own formats; standard tools may not read them |\n| **Resource constraints** | Devices cannot run forensic tools; data must be pulled from the device, app or cloud |\n| **Chain of custody** | Evidence spread across devices, phone app and cloud must be linked and documented |\n\n**Conclusion:** speed matters — preserve the footage and lock logs before they are overwritten."
-    },
-    {
-     "marks": 4,
-     "q": "Describe how investigators should acquire and analyse the IoT evidence.",
-     "points": [
-      "Identify all connected IoT/surveillance devices",
-      "Preserve configuration, onboard storage, linked cloud accounts",
-      "Extract logs, footage, interaction data",
-      "Document network paths and paired devices",
-      "Process: identification → preservation → analysis (timestamps) → presentation; tools Wireshark, AXIOM, Autopsy, Cellebrite"
-     ],
-     "model": "[flow] IoT forensics process\nIdentification (devices involved) → Preservation (extract from devices, cloud, gateways) → Analysis (reconstruct events with timestamps) → Presentation (timelines & reports)\n\n### Steps\n1. **Identify** all connected devices — doorbell, CCTV, smart lock, router, owners' phones with the apps\n2. **Preserve** device configuration and onboard storage, and the **linked cloud accounts** (request the provider to preserve footage)\n3. **Extract** logs, footage, motion events, command history and lock-access records\n4. **Document network paths and paired devices** — which phone/app paired with the lock; which code was used\n5. **Analyse** with timestamps: footage at 3:10–3:15 a.m. + lock log \"opened with valid code at 3:12\" + router logs of connected devices\n6. **Report** a timeline\n\n| Tool | Use |\n|---|---|\n| Wireshark | Network traffic from IoT devices |\n| Magnet AXIOM / Cellebrite UFED | Data from devices and the phone apps |\n| Autopsy | Open-source analysis |\n\n**Insight:** a valid code at 3:12 a.m. suggests an **insider** (someone who knew the code — staff or a relative) or a leaked code — the investigation should check who had it."
-    }
-   ]
-  },
-  {
-   "id": "q-recovery",
-   "rank": 12,
-   "t": "f-analysis",
-   "covers": [
-    "f-analysis"
-   ],
-   "marks": 10,
-   "q": "Recovering deleted data and building a timeline",
-   "scenario": "In a cheque-forgery investigation at a Khulna bank branch, the suspect deleted scanned signature files and formatted a USB pen drive before arrest. Investigators also seized his office PC.",
-   "parts": [
-    {
-     "marks": 3,
-     "q": "How can file system analysis help recover the deleted signature files?",
-     "points": [
-      "Reconstruct folder hierarchies",
-      "Recover deleted files (entries marked deleted, data remains until overwritten)",
-      "Examine metadata: last access, ownership, permissions",
-      "Tools: Autopsy, Sleuth Kit, X-Ways; NTFS, FAT, ext"
-     ],
-     "model": "When a file is \"deleted\", the operating system usually only marks its space as free; the data stays until it is overwritten. **File system analysis** examines the structure of the drive to recover it.\n\n| What it does | How it helps here |\n|---|---|\n| Reconstructs folder hierarchies | Shows where the scanned signatures were stored |\n| Recovers deleted files | Retrieves the deleted scans if not yet overwritten |\n| Examines metadata — last access time, ownership, permissions | Shows **who** created or opened the files and **when** |\n| Reveals hiding, deleting or manipulation attempts | Proves intent |\n\n**Tools:** Autopsy, Sleuth Kit, X-Ways Forensics — for NTFS, FAT, ext3/ext4 and other file systems.\n\n**Conclusion:** deletion rarely destroys evidence immediately; metadata can also link the suspect to the files."
-    },
-    {
-     "marks": 3,
-     "q": "What is data carving, and why is it suitable for the formatted USB drive?",
-     "points": [
-      "Recover file fragments by signature headers/footers (JPG, PDF)",
-      "No dependence on file allocation tables",
-      "Works on formatted or damaged drives",
-      "Tools: PhotoRec, Scalpel, Foremost; good for images"
-     ],
-     "model": "**Data carving** recovers files by searching raw data for **file signatures** — known headers (and footers) of file types such as JPG or PDF — instead of relying on the file system.\n\n| Feature | Why it fits the formatted USB |\n|---|---|\n| No dependence on file allocation tables | Formatting destroyed the file table, but not necessarily the data |\n| Works on formatted or damaged drives | Exactly this situation |\n| Good for multimedia | Scanned signatures are image files (JPG/PDF) |\n| Tools | **PhotoRec, Scalpel, Foremost** |\n\n**Limitation:** carved files may lose their names and dates, and fragmented files may be incomplete.\n\n**Conclusion:** carving can bring back the scanned signatures even after the drive was formatted."
-    },
-    {
-     "marks": 4,
-     "q": "How should the investigator build a timeline and report the findings?",
-     "points": [
-      "Timeline: correlate files, logs, emails, browser history into a chronology",
-      "Tools: log2timeline/Plaso, X-Ways Trace",
-      "Report: tools & versions, steps, hashes, screenshots, timeline, chain of custody",
-      "Clear, professional, admissible; withstand cross-examination",
-      "Best practice: work on copies, validate tools, cross-check"
-     ],
-     "model": "### Timeline analysis\nA timeline correlates events from different sources — files, logs, emails, browser history, USB connection records — into one chronology that \"tells the story\".\n\n| Time | Event (example) | Source |\n|---|---|---|\n| 14 Mar, 16:05 | Signature scans created | File metadata |\n| 14 Mar, 16:20 | USB drive connected | Windows registry (USB artifacts) |\n| 14 Mar, 16:22 | Scans copied to USB | File system / link files |\n| 18 Mar, 09:40 | Forged cheque presented | Bank transaction log |\n| 20 Mar, 22:10 | Files deleted, USB formatted | File system / event logs |\n\n**Tools:** log2timeline / **Plaso**, X-Ways Trace.\n\n### The report\n• Every tool used, with **version numbers**, and every step\n• **Hashes**, screenshots, the timeline and **chain-of-custody logs**\n• Clear, professional and legally admissible — it must **withstand cross-examination**\n• Best practices: work on copies, validate tools, cross-check results with more than one tool\n\n**Conclusion:** the timeline turns scattered artifacts into proof that the suspect created, moved, used and then tried to destroy the signatures."
-    }
-   ]
-  },
-  {
    "id": "q-report",
-   "rank": 13,
+   "rank": 16,
    "t": "f-reporting",
    "covers": [
     "f-reporting"
@@ -907,59 +1154,56 @@ HUB.add('quizzes', {
    ]
   },
   {
-   "id": "q-tools",
-   "rank": 14,
-   "t": "f-tools",
+   "id": "q-iot",
+   "rank": 17,
+   "t": "f-iot",
    "covers": [
-    "f-tools",
-    "f-trends"
+    "f-iot"
    ],
    "marks": 10,
-   "q": "Choosing forensic tools and preparing for the future",
-   "scenario": "A newly set-up district cyber unit has a limited budget and must decide which forensic tools to buy and how to keep its methods reliable in court for the next five years.",
+   "q": "IoT and CCTV evidence",
+   "scenario": "A house in Gulshan is burgled. The owners have a smart doorbell camera, a Wi-Fi CCTV system that uploads footage to a cloud app, and a smart lock that records every opening. The lock log shows it was opened with a valid code at 3:12 a.m.",
    "parts": [
     {
+     "marks": 3,
+     "q": "What is IoT, and what are its characteristics relevant to forensics?",
+     "points": [
+      "Network of interconnected devices exchanging data",
+      "Examples: smart thermostats, wearables, sensors, cameras, locks",
+      "Characteristics: massive scale, real-time data, limited resources",
+      "Forensic relevance: diverse devices and protocols"
+     ],
+     "model": "**IoT (Internet of Things)** is a network of interconnected devices that exchange data — smart thermostats, wearables, industrial sensors, and here a doorbell camera, CCTV and smart lock.\n\n| Characteristic | Forensic meaning |\n|---|---|\n| Massive scale | Many devices, many data sources |\n| Real-time data | Records events as they happen (door opened at 3:12 a.m.) |\n| Limited resources | Little storage and processing — data is overwritten quickly |\n\n**Relevance:** diverse devices and protocols mean each device may need a different extraction approach."
+    },
+    {
+     "marks": 3,
+     "q": "What challenges arise in IoT forensics in this case?",
+     "points": [
+      "Device diversity",
+      "Limited storage — rapid overwrite",
+      "Proprietary protocols",
+      "Resource constraints",
+      "Chain of custody across devices and cloud"
+     ],
+     "model": "| Challenge | In the Gulshan burglary |\n|---|---|\n| **Device diversity** | Doorbell, CCTV and lock are from different makers with different systems |\n| **Limited storage** | The doorbell may overwrite footage within hours |\n| **Proprietary protocols** | Vendors use their own formats; standard tools may not read them |\n| **Resource constraints** | Devices cannot run forensic tools; data must be pulled from the device, app or cloud |\n| **Chain of custody** | Evidence spread across devices, phone app and cloud must be linked and documented |\n\n**Conclusion:** speed matters — preserve the footage and lock logs before they are overwritten."
+    },
+    {
      "marks": 4,
-     "q": "Explain the main categories of forensic tools and how tools should be validated and selected.",
+     "q": "Describe how investigators should acquire and analyse the IoT evidence.",
      "points": [
-      "Disk imaging: FTK Imager, dd",
-      "Memory: Volatility",
-      "Mobile: Cellebrite, Magnet AXIOM",
-      "Network: Wireshark",
-      "File system: Autopsy, Sleuth Kit",
-      "Validation: forensically sound, court-admissible, verify integrity, match to evidence, document version/config"
+      "Identify all connected IoT/surveillance devices",
+      "Preserve configuration, onboard storage, linked cloud accounts",
+      "Extract logs, footage, interaction data",
+      "Document network paths and paired devices",
+      "Process: identification → preservation → analysis (timestamps) → presentation; tools Wireshark, AXIOM, Autopsy, Cellebrite"
      ],
-     "model": "| Category | Tools | Use |\n|---|---|---|\n| Disk imaging | FTK Imager, dd, EnCase, Guymager | Bit-for-bit copies |\n| Memory analysis | Volatility | Analyse RAM dumps |\n| Mobile forensics | Cellebrite, Magnet AXIOM, Oxygen, XRY | Extract and decode phone data |\n| Network forensics | Wireshark | Packet capture and session analysis |\n| File system analysis | Autopsy, Sleuth Kit | File structures and metadata |\n\n### Validation and selection\n1. Use tools that are **forensically sound and court-admissible**\n2. **Verify tool performance and integrity** before use\n3. **Match tools to the evidence type** and case goals\n4. **Document tool version, configuration and results**\n\n**Budget tip:** open-source tools (Autopsy, Sleuth Kit, Volatility, Wireshark, Guymager) cover many needs; commercial mobile tools are the main expense."
-    },
-    {
-     "marks": 3,
-     "q": "What are the limitations of forensic tools, and what best practices reduce them?",
-     "points": [
-      "May miss encrypted data or steganography",
-      "User errors/unsupported file systems → gaps",
-      "May not support newest devices/OS",
-      "Bugs → false results",
-      "Best practices: work on copies, validate, stay updated, cross-check with multiple tools"
-     ],
-     "model": "| Limitation | Best practice |\n|---|---|\n| May fail to detect encrypted data or steganography | Combine tools; seek keys lawfully |\n| User errors or unsupported file systems leave gaps | Training; document procedures |\n| May not support the newest devices or OS versions | Keep tools updated |\n| Bugs can produce false results | **Cross-check results with more than one tool**; validate before critical cases |\n\n**Golden rule:** always work on copies, never originals."
-    },
-    {
-     "marks": 3,
-     "q": "Which emerging technologies and trends will affect digital forensics?",
-     "points": [
-      "AI automates log analysis",
-      "Blockchain for evidence integrity",
-      "Edge computing — faster IoT analysis",
-      "Quantum computing impacts encryption",
-      "Trends: automation, standardization, zero trust, cross-border collaboration, privacy-preserving forensics"
-     ],
-     "model": "| Technology / trend | Effect on forensics |\n|---|---|\n| Artificial intelligence | Automates log analysis and finding patterns in huge data |\n| Blockchain | Tamper-proof records to ensure evidence integrity |\n| Edge computing | Faster analysis of IoT data near the device |\n| Quantum computing | May break today's encryption — and change how evidence is protected |\n| Increased automation | AI-driven tools reduce manual work |\n| Standardization | Universal IoT protocols would ease extraction |\n| Zero trust | Strong internal controls may reduce the need for forensics |\n| Cross-jurisdictional collaboration | Global laws and cooperation for cloud evidence |\n| Privacy-preserving forensics | e.g. homomorphic encryption — analysing data without exposing it |\n\n**Best practices for organizations:** proactive monitoring and logging, regular backups, staff training, agreements with cloud providers, and good documentation."
+     "model": "[flow] IoT forensics process\nIdentification (devices involved) → Preservation (extract from devices, cloud, gateways) → Analysis (reconstruct events with timestamps) → Presentation (timelines & reports)\n\n### Steps\n1. **Identify** all connected devices — doorbell, CCTV, smart lock, router, owners' phones with the apps\n2. **Preserve** device configuration and onboard storage, and the **linked cloud accounts** (request the provider to preserve footage)\n3. **Extract** logs, footage, motion events, command history and lock-access records\n4. **Document network paths and paired devices** — which phone/app paired with the lock; which code was used\n5. **Analyse** with timestamps: footage at 3:10–3:15 a.m. + lock log \"opened with valid code at 3:12\" + router logs of connected devices\n6. **Report** a timeline\n\n| Tool | Use |\n|---|---|\n| Wireshark | Network traffic from IoT devices |\n| Magnet AXIOM / Cellebrite UFED | Data from devices and the phone apps |\n| Autopsy | Open-source analysis |\n\n**Insight:** a valid code at 3:12 a.m. suggests an **insider** (someone who knew the code — staff or a relative) or a leaked code — the investigation should check who had it."
     }
    ]
   },
   {
    "id": "q-artifacts",
-   "rank": 15,
+   "rank": 18,
    "t": "f-artifacts",
    "covers": [
     "f-artifacts"
@@ -1002,153 +1246,6 @@ HUB.add('quizzes', {
       "Impartial reporting"
      ],
      "model": "| Check | Purpose |\n|---|---|\n| User account and login records | Show the actions happened under **his** account during **his** logged-in sessions |\n| Physical presence | Compare with office attendance records, access cards and CCTV |\n| Remote access or malware | Check logs and memory for remote-desktop sessions or malware that could act on his behalf |\n| Timeline correlation | Combine registry, browser, email and file times into one chronology (Plaso/log2timeline) |\n| Cross-check tools | Confirm results with more than one tool |\n| Impartiality | Report evidence that supports his claim too |\n\n**Conclusion:** strong cases connect digital actions to a person — account + presence + absence of other explanations."
-    }
-   ]
-  },
-  {
-   "id": "q-whatsapp",
-   "rank": 16,
-   "t": "f-email",
-   "covers": [
-    "f-email"
-   ],
-   "marks": 10,
-   "q": "WhatsApp and social media evidence",
-   "scenario": "A rumour spread through a WhatsApp group and Facebook posts leads to an attack on a minority community's homes in a northern district. Police arrest the group admin, whose phone shows \"Messages are end-to-end encrypted\". Several posts and messages have already been deleted.",
-   "parts": [
-    {
-     "marks": 3,
-     "q": "What are the main challenges of email and social media forensics in this case?",
-     "points": [
-      "Data volume",
-      "End-to-end encryption (WhatsApp)",
-      "Cloud storage — legal access needed",
-      "Ephemeral content — deleted/disappearing messages"
-     ],
-     "model": "| Challenge (lecture) | In this case |\n|---|---|\n| **Data volume** | Thousands of messages, forwards, images and comments to sort |\n| **End-to-end encryption** | WhatsApp messages cannot be read from WhatsApp's servers — only on the devices |\n| **Cloud storage** | Facebook data sits on Meta's servers abroad; needs legal requests |\n| **Ephemeral content** | Deleted posts and disappearing messages |\n\n**Conclusion:** because of encryption, the **devices** (the admin's phone and members' phones) are the main source; cloud data and screenshots fill the gaps."
-    },
-    {
-     "marks": 4,
-     "q": "How can the WhatsApp and Facebook evidence be acquired?",
-     "points": [
-      "Device-based: extract app data — WhatsApp SQLite databases (msgstore) — with Cellebrite/Oxygen",
-      "Backups (Google Drive) via legal request/credentials",
-      "Cloud-based: Meta legal requests, user data download (Facebook \"Download Your Information\")",
-      "Screenshots of public posts, web capture if lawful",
-      "Hash and document; Faraday bag"
-     ],
-     "model": "| Method | How |\n|---|---|\n| **Device-based** | Seize the admin's phone (Faraday bag) and extract WhatsApp's **SQLite databases** with tools such as **Cellebrite UFED** or **Oxygen Forensics** (which can decrypt app data) — messages, group members, media, timestamps |\n| Backups | Chat backups (e.g. on Google Drive) via legal request or lawful credentials |\n| **Cloud-based** | Legal requests to Meta for Facebook account data, admin details and login IPs; the user's own data download (Facebook \"Download Your Information\") if lawfully obtained |\n| Web capture / screenshots | Capture public posts and comments with URL and time before they vanish |\n| Other members' phones | The same messages exist on every recipient's phone |\n\n**Preservation:** hash all extracted data; document tools and versions; maintain chain of custody.\n\n**Conclusion:** end-to-end encryption protects messages in transit, not on the phone — device extraction is the key."
-    },
-    {
-     "marks": 3,
-     "q": "What are the four types of email and social media forensics? Which apply here?",
-     "points": [
-      "Email forensics: headers, content, attachments, server logs",
-      "Social media forensics: posts, comments, DMs, metadata",
-      "Cloud-based forensics: Gmail, social media backups",
-      "Device-based forensics: app data, cached content on devices"
-     ],
-     "model": "| Type | Focus | Applies here? |\n|---|---|---|\n| **Email forensics** | Headers, content, attachments, server logs | Only if emails were used to coordinate |\n| **Social media forensics** | Posts, comments, direct messages and their metadata | **Yes** — Facebook posts that spread the rumour |\n| **Cloud-based forensics** | Cloud-hosted email or social media backups | **Yes** — WhatsApp backups, Meta account data |\n| **Device-based forensics** | App data and cached content on phones/computers | **Yes** — the admin's phone is the main source |\n\n**Conclusion:** most cases combine types — device-based for encrypted apps, social media and cloud for public posts and account data."
-    }
-   ]
-  },
-  {
-   "id": "q-applications",
-   "rank": 17,
-   "t": "f-basics",
-   "covers": [
-    "f-basics"
-   ],
-   "marks": 10,
-   "q": "Digital forensics in a terrorism investigation",
-   "scenario": "After a bomb blast at a public gathering, counter-terrorism investigators recover a damaged phone at the scene, laptops from a hideout, and find the attackers communicated through encrypted apps and posted propaganda online.",
-   "parts": [
-    {
-     "marks": 3,
-     "q": "Explain the real-world applications of digital forensics, with reference to this case.",
-     "points": [
-      "Cybercrime investigations (fraud, hacking, identity theft)",
-      "Corporate security & insider threat",
-      "Incident response & breaches",
-      "IP theft & data leaks",
-      "Terrorism & organized crime"
-     ],
-     "model": "| Application (lecture) | Example |\n|---|---|\n| Cybercrime investigations | Fraud, hacking, identity theft — e.g. MFS fraud |\n| Corporate security and insider-threat detection | Employees stealing data |\n| Incident response and security breaches | Bank or hospital attacks |\n| Intellectual-property theft and data leaks | Leaked source code or designs |\n| **Terrorism and organized crime investigations** | **This case** — identifying attackers, networks, financing and propaganda |\n\n**In this case:** forensics can identify the attackers and their contacts, reconstruct planning (chats, searches, maps), trace financing and online propaganda, and find other members of the network."
-    },
-    {
-     "marks": 4,
-     "q": "Apply the six-stage digital forensics process to this investigation.",
-     "points": [
-      "Identification: phone, laptops, accounts, CCTV",
-      "Collection: seize; legal requests",
-      "Preservation: Faraday bags, write blockers, hashes, custody",
-      "Analysis: chats, contacts, location, carving damaged phone",
-      "Documentation",
-      "Presentation in court"
-     ],
-     "model": "[flow] Process\nIdentification → Collection → Preservation → Analysis → Documentation → Presentation\n\n| Stage | Application |\n|---|---|\n| **Identification** | Damaged phone at the scene, hideout laptops, encrypted-app accounts, social media propaganda accounts, CCTV |\n| **Collection** | Seize devices with documentation; send preservation and legal requests to platforms |\n| **Preservation** | Faraday bags; write blockers; forensic images; hash values; chain of custody |\n| **Analysis** | Extract chats, contacts and locations; carve data from the damaged phone (chip-off if needed); timeline of planning |\n| **Documentation** | Record every tool, version, step and hash |\n| **Presentation** | Clear expert report and testimony in the trial |\n\n**Conclusion:** in terrorism cases, the process also has intelligence value — finding the rest of the network quickly."
-    },
-    {
-     "marks": 3,
-     "q": "What ethical principles must investigators keep in mind, given the public pressure for quick results?",
-     "points": [
-      "Impartiality — no manipulation to fit narrative",
-      "Proportionality — only necessary data",
-      "Legal authorization & privacy",
-      "Chain of custody & documentation"
-     ],
-     "model": "| Principle | Why it matters under pressure |\n|---|---|\n| **Impartiality** | Public pressure can tempt investigators to fit evidence to a narrative — evidence must not be manipulated |\n| **Proportionality** | Collect only data necessary for the case, not everyone's private data |\n| **Legal authorization and privacy** | Access personal data only with legal authority |\n| **Chain of custody** | Rushed handling creates gaps the defence will exploit |\n\n**Conclusion:** doing it right is faster in the end — evidence gathered ethically survives trial and convicts the right people."
-    }
-   ]
-  },
-  {
-   "id": "q-sources",
-   "rank": 18,
-   "t": "f-evidence",
-   "covers": [
-    "f-evidence"
-   ],
-   "marks": 10,
-   "q": "Types and sources of digital evidence",
-   "scenario": "A young garment worker goes missing in Gazipur. Her family says she left home to meet someone she had been chatting with online. Police have her old phone at home, the suspect's laptop, CCTV from a nearby shop, a smartwatch she wore, and access to her Facebook and Google accounts through her family.",
-   "parts": [
-    {
-     "marks": 3,
-     "q": "What types of digital evidence may help this investigation?",
-     "points": [
-      "Computer files",
-      "Network logs & internet history",
-      "Cloud-stored information",
-      "Emails & messaging logs",
-      "Mobile device data",
-      "Memory dumps & system artifacts"
-     ],
-     "model": "The lecture lists six types of digital evidence:\n\n| Type | What it could show here |\n|---|---|\n| Computer files | Photos, documents on the suspect's laptop |\n| Network logs and internet history | Websites visited, Wi-Fi connections, search history |\n| Cloud-stored information | Google Drive/Photos backups, Google location history |\n| Emails and messaging logs | Messenger/WhatsApp chats arranging the meeting |\n| Mobile device data | Calls, SMS, contacts, location data, app data |\n| Memory dumps and system artifacts | Recently used files and running apps on the laptop |\n\n**Conclusion:** together these can reconstruct who she talked to, where she went and when — a digital timeline of her last day."
-    },
-    {
-     "marks": 3,
-     "q": "Identify the sources of digital evidence in this scenario and what each may contain.",
-     "points": [
-      "Personal computers/laptops",
-      "Mobile devices & wearables (smartwatch)",
-      "IoT & surveillance systems (CCTV)",
-      "External storage (USB, SSD)",
-      "Network devices (routers)",
-      "Cloud environments & email servers"
-     ],
-     "model": "| Source (lecture) | In this case | Possible evidence |\n|---|---|---|\n| Personal computers and laptops | Suspect's laptop | Chats, photos, browser history |\n| Mobile devices and wearables | Her old phone; her **smartwatch** | Messages; heart rate, steps, GPS location and time of last activity |\n| IoT devices and surveillance systems | Shop **CCTV** | Footage of her meeting someone, vehicle numbers |\n| External storage | USB drives or SD cards found with the suspect | Copied photos or videos |\n| Network devices | Home/shop Wi-Fi routers | Which devices connected and when |\n| Cloud environments and email servers | Her **Facebook and Google accounts** | Messages, location history, login IPs |\n\n**Note:** the family's access to her accounts should still be documented and, where possible, backed by legal requests to Meta and Google so the evidence is admissible."
-    },
-    {
-     "marks": 4,
-     "q": "Explain the key characteristics of digital evidence and how each affects how you collect it here.",
-     "points": [
-      "Fragile → avoid altering; write blockers, no browsing",
-      "Volatile → capture smartwatch/phone data and CCTV quickly before overwrite",
-      "Hidden → deleted chats, metadata, location history need forensic tools",
-      "Duplicable → image and hash; work on copies",
-      "Chain of custody throughout"
-     ],
-     "model": "| Characteristic | Meaning | Effect on collection in this case |\n|---|---|---|\n| **Fragile** | Easily altered or destroyed | Don't let family or officers browse the phone or laptop; use write blockers and forensic tools |\n| **Volatile** | Can disappear quickly | CCTV systems often overwrite footage in days; smartwatch memory is small — **collect these first** |\n| **Hidden** | Not visible to normal users | Deleted chats, metadata and location history need forensic extraction |\n| **Duplicable** | Can be copied exactly | Make forensic images, record hashes, and analyse copies only |\n\n[flow] Collection priority\nCCTV & smartwatch (most volatile) → Phones → Cloud account preservation requests → Laptop imaging\n\n**Conclusion:** the characteristics decide the order — collect what will disappear first, and protect everything from alteration."
     }
    ]
   },
@@ -1201,8 +1298,206 @@ HUB.add('quizzes', {
    ]
   },
   {
-   "id": "q-readiness",
+   "id": "q-tools",
    "rank": 20,
+   "t": "f-tools",
+   "covers": [
+    "f-tools",
+    "f-trends"
+   ],
+   "marks": 10,
+   "q": "Choosing forensic tools and preparing for the future",
+   "scenario": "A newly set-up district cyber unit has a limited budget and must decide which forensic tools to buy and how to keep its methods reliable in court for the next five years.",
+   "parts": [
+    {
+     "marks": 4,
+     "q": "Explain the main categories of forensic tools and how tools should be validated and selected.",
+     "points": [
+      "Disk imaging: FTK Imager, dd",
+      "Memory: Volatility",
+      "Mobile: Cellebrite, Magnet AXIOM",
+      "Network: Wireshark",
+      "File system: Autopsy, Sleuth Kit",
+      "Validation: forensically sound, court-admissible, verify integrity, match to evidence, document version/config"
+     ],
+     "model": "| Category | Tools | Use |\n|---|---|---|\n| Disk imaging | FTK Imager, dd, EnCase, Guymager | Bit-for-bit copies |\n| Memory analysis | Volatility | Analyse RAM dumps |\n| Mobile forensics | Cellebrite, Magnet AXIOM, Oxygen, XRY | Extract and decode phone data |\n| Network forensics | Wireshark | Packet capture and session analysis |\n| File system analysis | Autopsy, Sleuth Kit | File structures and metadata |\n\n### Validation and selection\n1. Use tools that are **forensically sound and court-admissible**\n2. **Verify tool performance and integrity** before use\n3. **Match tools to the evidence type** and case goals\n4. **Document tool version, configuration and results**\n\n**Budget tip:** open-source tools (Autopsy, Sleuth Kit, Volatility, Wireshark, Guymager) cover many needs; commercial mobile tools are the main expense."
+    },
+    {
+     "marks": 3,
+     "q": "What are the limitations of forensic tools, and what best practices reduce them?",
+     "points": [
+      "May miss encrypted data or steganography",
+      "User errors/unsupported file systems → gaps",
+      "May not support newest devices/OS",
+      "Bugs → false results",
+      "Best practices: work on copies, validate, stay updated, cross-check with multiple tools"
+     ],
+     "model": "| Limitation | Best practice |\n|---|---|\n| May fail to detect encrypted data or steganography | Combine tools; seek keys lawfully |\n| User errors or unsupported file systems leave gaps | Training; document procedures |\n| May not support the newest devices or OS versions | Keep tools updated |\n| Bugs can produce false results | **Cross-check results with more than one tool**; validate before critical cases |\n\n**Golden rule:** always work on copies, never originals."
+    },
+    {
+     "marks": 3,
+     "q": "Which emerging technologies and trends will affect digital forensics?",
+     "points": [
+      "AI automates log analysis",
+      "Blockchain for evidence integrity",
+      "Edge computing — faster IoT analysis",
+      "Quantum computing impacts encryption",
+      "Trends: automation, standardization, zero trust, cross-border collaboration, privacy-preserving forensics"
+     ],
+     "model": "| Technology / trend | Effect on forensics |\n|---|---|\n| Artificial intelligence | Automates log analysis and finding patterns in huge data |\n| Blockchain | Tamper-proof records to ensure evidence integrity |\n| Edge computing | Faster analysis of IoT data near the device |\n| Quantum computing | May break today's encryption — and change how evidence is protected |\n| Increased automation | AI-driven tools reduce manual work |\n| Standardization | Universal IoT protocols would ease extraction |\n| Zero trust | Strong internal controls may reduce the need for forensics |\n| Cross-jurisdictional collaboration | Global laws and cooperation for cloud evidence |\n| Privacy-preserving forensics | e.g. homomorphic encryption — analysing data without exposing it |\n\n**Best practices for organizations:** proactive monitoring and logging, regular backups, staff training, agreements with cloud providers, and good documentation."
+    }
+   ]
+  },
+  {
+   "id": "q-whatsapp",
+   "rank": 21,
+   "t": "f-email",
+   "covers": [
+    "f-email"
+   ],
+   "marks": 10,
+   "q": "WhatsApp and social media evidence",
+   "scenario": "A rumour spread through a WhatsApp group and Facebook posts leads to an attack on a minority community's homes in a northern district. Police arrest the group admin, whose phone shows \"Messages are end-to-end encrypted\". Several posts and messages have already been deleted.",
+   "parts": [
+    {
+     "marks": 3,
+     "q": "What are the main challenges of email and social media forensics in this case?",
+     "points": [
+      "Data volume",
+      "End-to-end encryption (WhatsApp)",
+      "Cloud storage — legal access needed",
+      "Ephemeral content — deleted/disappearing messages"
+     ],
+     "model": "| Challenge (lecture) | In this case |\n|---|---|\n| **Data volume** | Thousands of messages, forwards, images and comments to sort |\n| **End-to-end encryption** | WhatsApp messages cannot be read from WhatsApp's servers — only on the devices |\n| **Cloud storage** | Facebook data sits on Meta's servers abroad; needs legal requests |\n| **Ephemeral content** | Deleted posts and disappearing messages |\n\n**Conclusion:** because of encryption, the **devices** (the admin's phone and members' phones) are the main source; cloud data and screenshots fill the gaps."
+    },
+    {
+     "marks": 4,
+     "q": "How can the WhatsApp and Facebook evidence be acquired?",
+     "points": [
+      "Device-based: extract app data — WhatsApp SQLite databases (msgstore) — with Cellebrite/Oxygen",
+      "Backups (Google Drive) via legal request/credentials",
+      "Cloud-based: Meta legal requests, user data download (Facebook \"Download Your Information\")",
+      "Screenshots of public posts, web capture if lawful",
+      "Hash and document; Faraday bag"
+     ],
+     "model": "| Method | How |\n|---|---|\n| **Device-based** | Seize the admin's phone (Faraday bag) and extract WhatsApp's **SQLite databases** with tools such as **Cellebrite UFED** or **Oxygen Forensics** (which can decrypt app data) — messages, group members, media, timestamps |\n| Backups | Chat backups (e.g. on Google Drive) via legal request or lawful credentials |\n| **Cloud-based** | Legal requests to Meta for Facebook account data, admin details and login IPs; the user's own data download (Facebook \"Download Your Information\") if lawfully obtained |\n| Web capture / screenshots | Capture public posts and comments with URL and time before they vanish |\n| Other members' phones | The same messages exist on every recipient's phone |\n\n**Preservation:** hash all extracted data; document tools and versions; maintain chain of custody.\n\n**Conclusion:** end-to-end encryption protects messages in transit, not on the phone — device extraction is the key."
+    },
+    {
+     "marks": 3,
+     "q": "What are the four types of email and social media forensics? Which apply here?",
+     "points": [
+      "Email forensics: headers, content, attachments, server logs",
+      "Social media forensics: posts, comments, DMs, metadata",
+      "Cloud-based forensics: Gmail, social media backups",
+      "Device-based forensics: app data, cached content on devices"
+     ],
+     "model": "| Type | Focus | Applies here? |\n|---|---|---|\n| **Email forensics** | Headers, content, attachments, server logs | Only if emails were used to coordinate |\n| **Social media forensics** | Posts, comments, direct messages and their metadata | **Yes** — Facebook posts that spread the rumour |\n| **Cloud-based forensics** | Cloud-hosted email or social media backups | **Yes** — WhatsApp backups, Meta account data |\n| **Device-based forensics** | App data and cached content on phones/computers | **Yes** — the admin's phone is the main source |\n\n**Conclusion:** most cases combine types — device-based for encrypted apps, social media and cloud for public posts and account data."
+    }
+   ]
+  },
+  {
+   "id": "q-sources",
+   "rank": 22,
+   "t": "f-evidence",
+   "covers": [
+    "f-evidence"
+   ],
+   "marks": 10,
+   "q": "Types and sources of digital evidence",
+   "scenario": "A young garment worker goes missing in Gazipur. Her family says she left home to meet someone she had been chatting with online. Police have her old phone at home, the suspect's laptop, CCTV from a nearby shop, a smartwatch she wore, and access to her Facebook and Google accounts through her family.",
+   "parts": [
+    {
+     "marks": 3,
+     "q": "What types of digital evidence may help this investigation?",
+     "points": [
+      "Computer files",
+      "Network logs & internet history",
+      "Cloud-stored information",
+      "Emails & messaging logs",
+      "Mobile device data",
+      "Memory dumps & system artifacts"
+     ],
+     "model": "The lecture lists six types of digital evidence:\n\n| Type | What it could show here |\n|---|---|\n| Computer files | Photos, documents on the suspect's laptop |\n| Network logs and internet history | Websites visited, Wi-Fi connections, search history |\n| Cloud-stored information | Google Drive/Photos backups, Google location history |\n| Emails and messaging logs | Messenger/WhatsApp chats arranging the meeting |\n| Mobile device data | Calls, SMS, contacts, location data, app data |\n| Memory dumps and system artifacts | Recently used files and running apps on the laptop |\n\n**Conclusion:** together these can reconstruct who she talked to, where she went and when — a digital timeline of her last day."
+    },
+    {
+     "marks": 3,
+     "q": "Identify the sources of digital evidence in this scenario and what each may contain.",
+     "points": [
+      "Personal computers/laptops",
+      "Mobile devices & wearables (smartwatch)",
+      "IoT & surveillance systems (CCTV)",
+      "External storage (USB, SSD)",
+      "Network devices (routers)",
+      "Cloud environments & email servers"
+     ],
+     "model": "| Source (lecture) | In this case | Possible evidence |\n|---|---|---|\n| Personal computers and laptops | Suspect's laptop | Chats, photos, browser history |\n| Mobile devices and wearables | Her old phone; her **smartwatch** | Messages; heart rate, steps, GPS location and time of last activity |\n| IoT devices and surveillance systems | Shop **CCTV** | Footage of her meeting someone, vehicle numbers |\n| External storage | USB drives or SD cards found with the suspect | Copied photos or videos |\n| Network devices | Home/shop Wi-Fi routers | Which devices connected and when |\n| Cloud environments and email servers | Her **Facebook and Google accounts** | Messages, location history, login IPs |\n\n**Note:** the family's access to her accounts should still be documented and, where possible, backed by legal requests to Meta and Google so the evidence is admissible."
+    },
+    {
+     "marks": 4,
+     "q": "Explain the key characteristics of digital evidence and how each affects how you collect it here.",
+     "points": [
+      "Fragile → avoid altering; write blockers, no browsing",
+      "Volatile → capture smartwatch/phone data and CCTV quickly before overwrite",
+      "Hidden → deleted chats, metadata, location history need forensic tools",
+      "Duplicable → image and hash; work on copies",
+      "Chain of custody throughout"
+     ],
+     "model": "| Characteristic | Meaning | Effect on collection in this case |\n|---|---|---|\n| **Fragile** | Easily altered or destroyed | Don't let family or officers browse the phone or laptop; use write blockers and forensic tools |\n| **Volatile** | Can disappear quickly | CCTV systems often overwrite footage in days; smartwatch memory is small — **collect these first** |\n| **Hidden** | Not visible to normal users | Deleted chats, metadata and location history need forensic extraction |\n| **Duplicable** | Can be copied exactly | Make forensic images, record hashes, and analyse copies only |\n\n[flow] Collection priority\nCCTV & smartwatch (most volatile) → Phones → Cloud account preservation requests → Laptop imaging\n\n**Conclusion:** the characteristics decide the order — collect what will disappear first, and protect everything from alteration."
+    }
+   ]
+  },
+  {
+   "id": "q-applications",
+   "rank": 23,
+   "t": "f-basics",
+   "covers": [
+    "f-basics"
+   ],
+   "marks": 10,
+   "q": "Digital forensics in a terrorism investigation",
+   "scenario": "After a bomb blast at a public gathering, counter-terrorism investigators recover a damaged phone at the scene, laptops from a hideout, and find the attackers communicated through encrypted apps and posted propaganda online.",
+   "parts": [
+    {
+     "marks": 3,
+     "q": "Explain the real-world applications of digital forensics, with reference to this case.",
+     "points": [
+      "Cybercrime investigations (fraud, hacking, identity theft)",
+      "Corporate security & insider threat",
+      "Incident response & breaches",
+      "IP theft & data leaks",
+      "Terrorism & organized crime"
+     ],
+     "model": "| Application (lecture) | Example |\n|---|---|\n| Cybercrime investigations | Fraud, hacking, identity theft — e.g. MFS fraud |\n| Corporate security and insider-threat detection | Employees stealing data |\n| Incident response and security breaches | Bank or hospital attacks |\n| Intellectual-property theft and data leaks | Leaked source code or designs |\n| **Terrorism and organized crime investigations** | **This case** — identifying attackers, networks, financing and propaganda |\n\n**In this case:** forensics can identify the attackers and their contacts, reconstruct planning (chats, searches, maps), trace financing and online propaganda, and find other members of the network."
+    },
+    {
+     "marks": 4,
+     "q": "Apply the six-stage digital forensics process to this investigation.",
+     "points": [
+      "Identification: phone, laptops, accounts, CCTV",
+      "Collection: seize; legal requests",
+      "Preservation: Faraday bags, write blockers, hashes, custody",
+      "Analysis: chats, contacts, location, carving damaged phone",
+      "Documentation",
+      "Presentation in court"
+     ],
+     "model": "[flow] Process\nIdentification → Collection → Preservation → Analysis → Documentation → Presentation\n\n| Stage | Application |\n|---|---|\n| **Identification** | Damaged phone at the scene, hideout laptops, encrypted-app accounts, social media propaganda accounts, CCTV |\n| **Collection** | Seize devices with documentation; send preservation and legal requests to platforms |\n| **Preservation** | Faraday bags; write blockers; forensic images; hash values; chain of custody |\n| **Analysis** | Extract chats, contacts and locations; carve data from the damaged phone (chip-off if needed); timeline of planning |\n| **Documentation** | Record every tool, version, step and hash |\n| **Presentation** | Clear expert report and testimony in the trial |\n\n**Conclusion:** in terrorism cases, the process also has intelligence value — finding the rest of the network quickly."
+    },
+    {
+     "marks": 3,
+     "q": "What ethical principles must investigators keep in mind, given the public pressure for quick results?",
+     "points": [
+      "Impartiality — no manipulation to fit narrative",
+      "Proportionality — only necessary data",
+      "Legal authorization & privacy",
+      "Chain of custody & documentation"
+     ],
+     "model": "| Principle | Why it matters under pressure |\n|---|---|\n| **Impartiality** | Public pressure can tempt investigators to fit evidence to a narrative — evidence must not be manipulated |\n| **Proportionality** | Collect only data necessary for the case, not everyone's private data |\n| **Legal authorization and privacy** | Access personal data only with legal authority |\n| **Chain of custody** | Rushed handling creates gaps the defence will exploit |\n\n**Conclusion:** doing it right is faster in the end — evidence gathered ethically survives trial and convicts the right people."
+    }
+   ]
+  },
+  {
+   "id": "q-readiness",
+   "rank": 24,
    "t": "f-trends",
    "covers": [
     "f-trends"
@@ -1251,7 +1546,7 @@ HUB.add('quizzes', {
   },
   {
    "id": "q-phishing",
-   "rank": 21,
+   "rank": 25,
    "t": "m-phishing",
    "covers": [
     "m-phishing"
@@ -1299,7 +1594,7 @@ HUB.add('quizzes', {
   },
   {
    "id": "q-attacks",
-   "rank": 22,
+   "rank": 26,
    "t": "m-attacks",
    "covers": [
     "m-attacks"
@@ -1345,7 +1640,7 @@ HUB.add('quizzes', {
   },
   {
    "id": "q-harass",
-   "rank": 23,
+   "rank": 27,
    "t": "m-typology",
    "covers": [
     "m-typology"
@@ -1392,7 +1687,7 @@ HUB.add('quizzes', {
   },
   {
    "id": "q-crypto",
-   "rank": 24,
+   "rank": 28,
    "t": "m-typology",
    "covers": [
     "m-typology"
@@ -1440,7 +1735,7 @@ HUB.add('quizzes', {
   },
   {
    "id": "q-cia",
-   "rank": 25,
+   "rank": 29,
    "t": "m-cia",
    "covers": [
     "m-cia"
@@ -1487,7 +1782,7 @@ HUB.add('quizzes', {
   },
   {
    "id": "q-ransomware",
-   "rank": 26,
+   "rank": 30,
    "t": "m-ransomware",
    "covers": [
     "m-ransomware"
@@ -1537,7 +1832,7 @@ HUB.add('quizzes', {
   },
   {
    "id": "q-insider",
-   "rank": 27,
+   "rank": 31,
    "t": "m-insider",
    "covers": [
     "m-insider"
@@ -1585,7 +1880,7 @@ HUB.add('quizzes', {
   },
   {
    "id": "q-sqli",
-   "rank": 28,
+   "rank": 32,
    "t": "m-sqli",
    "covers": [
     "m-sqli"
@@ -1634,7 +1929,7 @@ HUB.add('quizzes', {
   },
   {
    "id": "q-audit",
-   "rank": 29,
+   "rank": 33,
    "t": "m-audit",
    "covers": [
     "m-audit"
@@ -1683,10 +1978,9 @@ HUB.add('quizzes', {
   "total": 50,
   "answer": 5,
   "of": [
-   7,
    8
   ],
   "each": 10,
-  "scope": "Assumed pattern: like your other finals, 50 marks with 5 scenario questions to answer (7–8 offered), each 10 marks in 2–3 parts — confirm with the teacher (the mid-term was 20 marks with 5 scenario questions). Questions 1–20 come from the final-term digital forensics deck; 21+ are optional mid-term revision, since mid-term topics are not expected in the final."
+  "scope": "Expected pattern: 8 scenario questions, answer any 5, each 10 marks, mostly split into 3 sub-questions. Questions 1–10 are the must-read set: they cover all three final decks (7 digital forensics, 2 government data protection, and 1 AI question that spans the whole AI deck, with a second AI question at rank 11) so that at least 5 of the 8 exam questions should fall on topics you have prepared. Questions 11–24 add depth; 25+ are optional mid-term revision."
  }
 });

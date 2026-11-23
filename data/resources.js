@@ -139,8 +139,8 @@ HUB.add(
   {
     course: 'cyber-crime',
     type: 'Notes',
-    title: 'End-term notes in plain language — Digital forensics & cybercrime',
-    desc: 'The final-term digital forensics deck explained simply: evidence, chain of custody, crime-scene handling, imaging and hashing, analysis, mobile, cloud, IoT, email and social media forensics — with tables, examples and exam traps. Includes a short mid-term recap.',
+    title: 'End-term notes in plain language — Digital forensics, AI and government data protection',
+    desc: 'All three final-term decks explained simply: evidence, chain of custody, crime-scene handling, imaging and hashing, analysis, mobile, cloud, IoT, email and social media forensics; AI in criminal investigation; government cybersecurity, the NIST cycle and citizen data protection; plus the topics repeated across all three decks. Includes a short mid-term recap.',
     file: 'resources/cyber-crime/cyber-final-notes.html',
   },
   {
@@ -156,6 +156,27 @@ HUB.add(
     title: 'Digital Forensics & Cyber Crime Investigation (final-term deck)',
     desc: 'Final-term deck: digital evidence, crime-scene handling, tools, mobile, cloud, IoT, email and social media forensics. 90 pages, PDF.',
     file: 'resources/cyber-crime/slides/digital-forensics-cyber-crime-investigation.pdf',
+  },
+  {
+    course: 'cyber-crime',
+    type: 'Slides',
+    title: 'AI in Criminal Investigation (final-term deck)',
+    desc: 'Final-term deck: evolution of digital forensics, the data volume crisis, ML/DL/NLP, AI applications in digital and crime-scene investigation, limits, risks and the future. 29 pages, PDF.',
+    file: 'resources/cyber-crime/slides/ai-in-criminal-investigation.pdf',
+  },
+  {
+    course: 'cyber-crime',
+    type: 'Slides',
+    title: 'Cybersecurity & Data Protection in Government (final-term deck)',
+    desc: 'Final-term deck: e-government, why public-sector cybersecurity matters, impacts, threats, the NIST cycle, citizen data protection, public trust, employees and prevention. 21 pages, PDF.',
+    file: 'resources/cyber-crime/slides/data-protection-govt-sector.pdf',
+  },
+  {
+    course: 'cyber-crime',
+    type: 'Slides',
+    title: 'Merged revision deck — all three final decks in one (PowerPoint)',
+    desc: 'The three final-term decks (140 slides) combined into 67 slides with repeated topics merged, in eight sections, ending with the repetition map, a scenario answer framework and lines worth quoting. Each slide names its source deck.',
+    file: 'resources/cyber-crime/slides/cyber-final-merged-revision-deck.pptx',
   },
   {
     course: 'cyber-crime',
