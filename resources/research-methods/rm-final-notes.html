@@ -20,6 +20,9 @@
   .exam { background:var(--soft); border-radius:6px; padding:10px 14px; margin:12px 0; font-family:system-ui, sans-serif; font-size:0.9rem; }
   .exam b { color:var(--accent); }
   .warn { background:var(--warn); border-radius:6px; padding:10px 14px; margin:12px 0; font-family:system-ui, sans-serif; font-size:0.9rem; }
+  .flow { font-family:system-ui, sans-serif; font-weight:600; font-size:0.88rem; display:flex; flex-wrap:wrap; gap:6px; align-items:center; margin:10px 0 14px; }
+  .flow span { background:var(--soft); border-radius:8px; padding:5px 10px; }
+  .flow i { font-style:normal; color:var(--muted); }
   .calc { font-family:ui-monospace, Menlo, Consolas, monospace; font-size:0.9rem; background:var(--soft); border-radius:6px; padding:10px 14px; margin:10px 0; white-space:pre-wrap; overflow-x:auto; }
   table { width:100%; border-collapse:collapse; font-size:0.93rem; margin:8px 0 14px; font-family:system-ui, sans-serif; }
   th, td { text-align:left; padding:7px 9px; border:1px solid var(--line); vertical-align:top; }
@@ -36,7 +39,7 @@
 <body>
 <div class="wrap">
 <h1>Research Methodology — End-term Notes</h1>
-<p class="sub">MCCJ 521 · Built from the course slides (Chapters 1–7), the class exercises, Maxfield &amp; Babbie (2014, 7th ed.), Bachman &amp; Schutt (5th ed.), Bryman &amp; Burgess (1994) and Chaiken &amp; Chaiken (1982) · Written for easy understanding · Print with Ctrl/Cmd + P</p>
+<p class="sub">MCCJ 521 · Built from the course slides and handouts (Chapters 1–9, checked against Classroom on 23 Nov 2026), the class exercises, the research-ethics reading, Maxfield &amp; Babbie (2014, 7th ed.), Bachman &amp; Schutt (5th ed.), Bryman &amp; Burgess (1994) and Chaiken &amp; Chaiken (1982) · Written for easy understanding · Print with Ctrl/Cmd + P</p>
 
 <div class="toc">
 <ol>
@@ -49,8 +52,8 @@
   <li><a href="#ch5">Ch 5 — Surveys, self-reports &amp; questionnaires</a></li>
   <li><a href="#ch6">Ch 6 — Analysing quantitative data</a></li>
   <li><a href="#ch7">Ch 7 — Content analysis</a></li>
-  <li><a href="#ethics">Ethics (if taught)</a></li>
-  <li><a href="#report">Writing research reports (if taught)</a></li>
+  <li><a href="#ethics">Ch 8 — Research ethics</a></li>
+  <li><a href="#report">Ch 9 — Drafting reports &amp; literature reviews</a></li>
   <li><a href="#sheet">One-page comparison sheet</a></li>
   <li><a href="#names">Who said what</a></li>
   <li><a href="#traps">Exam traps</a></li>
@@ -60,10 +63,10 @@
 <h2 id="start">1. How to use these notes</h2>
 <p>The final is <b>50 marks: answer 5 of 7–8 questions, 10 marks each</b>. Every question has 3 parts worth 3–4 marks. A typical question looks like: <i>(a) define X [3], (b) explain or compare its types [4], (c) apply it to an example or calculate [3]</i>.</p>
 <div class="exam"><b>Recipe for every part:</b> 1) the slide definition, in her words → 2) the list or table (types, steps, pros and cons) → 3) one example from criminology, ideally from Bangladesh → 4) one line of evaluation. For calculations: sort → formula → answer with units → comment on outliers.</div>
-<p>Her finals cover the <b>whole course, one chapter at a time</b> (see section 2). With 7–8 questions over 7–9 chapters, expect <b>about one question per chapter</b>. You cannot skip a chapter completely — but you can choose which 5 to answer.</p>
+<p>Her finals cover the <b>whole course, one chapter at a time</b> (see section 2). With 7–8 questions over 9 chapters, expect <b>about one question per chapter</b>. You cannot skip a chapter completely — but you can choose which 5 to answer.</p>
 
 <h2 id="syllabus">2. The predicted final syllabus</h2>
-<p>She hasn't announced the final syllabus yet. This prediction combines four clues: (1) her Juvenile Justice final listed <i>every</i> chapter of that course with book pages, (2) her RM mid-term page ranges stopped exactly where teaching stopped, (3) the slides match textbook chapters heading by heading, and (4) the class exercises show what she wants applied.</p>
+<p>She hasn't announced the final syllabus yet (Classroom checked on 23 November 2026). Teaching now runs to <b>Chapter 9</b>. This prediction combines four clues: (1) her Juvenile Justice final listed <i>every</i> chapter of that course with book pages, (2) her RM mid-term page ranges stopped exactly where teaching stopped, (3) the slides match textbook chapters heading by heading, and (4) the class exercises show what she wants applied.</p>
 <table>
   <tr><th>Chapter</th><th>Likely reading</th><th>Chance</th></tr>
   <tr><td>1. Research concepts &amp; terminology</td><td>Slides + Maxfield pp. 1–14, 29–42 + Bachman pp. 16–17 (as in the mid-term)</td><td>Likely</td></tr>
@@ -71,10 +74,12 @@
   <tr><td>3. Qualitative approaches</td><td>Slides + Bachman pp. 235–247 (as in the quiz)</td><td>Likely</td></tr>
   <tr><td>4. Quantitative approaches &amp; sampling</td><td>Slides + comparison sheets + Maxfield pp. 200–228</td><td>Very likely</td></tr>
   <tr><td>5. Data collection instruments (Section 1)</td><td>Slides + Maxfield pp. 234–248 + Chaiken &amp; Chaiken (1982)</td><td>Very likely</td></tr>
-  <tr><td>5. Section 2: interviews, KII, FGD</td><td>Slides when shared; Maxfield Ch 10</td><td>Possible</td></tr>
+  <tr><td>5. Section 2: interviews, KII, FGD</td><td>Never posted in Classroom — probably skipped</td><td>Only if taught</td></tr>
   <tr><td>6. Quantitative data analysis (Section 1)</td><td>Slides + Maxfield pp. 399–411</td><td>Very likely (a calculation)</td></tr>
+  <tr><td>6. Section 2: bivariate analysis</td><td>Slides (14 Nov) + Maxfield pp. 407–411 (Tables 14.4–14.5) / Bachman pp. 394–399</td><td>Very likely (a percentage table)</td></tr>
   <tr><td>7. Content analysis</td><td>Slides + Maxfield pp. 348–351 / Bachman pp. 293–298</td><td>Very likely</td></tr>
-  <tr><td>Ethics; writing reports</td><td>Maxfield Ch 3; Bachman Ch 14</td><td>Only if taught</td></tr>
+  <tr><td>8. Research ethics</td><td>Slides (21 Nov) + Research Ethics reading pp. 59–89 + Maxfield Ch 3 pp. 54–80 / Bachman pp. 48–64</td><td>Very likely</td></tr>
+  <tr><td>9. Drafting research reports</td><td>"Drafting Research Reports" + "Writing Literature Reviews" handouts (21 Nov) + Bachman Ch 14 pp. 410–425</td><td>Very likely</td></tr>
 </table>
 
 <h2 id="ch1">3. Chapter 1 — Research, terms and theories</h2>
@@ -255,7 +260,19 @@ Value  Tally      f   %
 4      I          1    5
 5      I          1    5
 Mode = 1 · Median = 1 (10th and 11th values) · Mean = 32 ÷ 20 = 1.6</div>
-<h3>Dispersion (Section 2 — the response-time exercise)</h3>
+<h3>Section 2 — Bivariate analysis: percentage tables</h3>
+<p><b>Univariate</b> analysis explains the individuals in a group (the units of analysis). <b>Bivariate</b> analysis explains the <b>relationship between two variables</b> through <b>subgroup comparisons within the same sample</b>. The basic way to show it is a <b>percentage table</b>.</p>
+<div class="flow"><span>1. Identify IV and DV</span><i>→</i><span>2. IV in columns, DV in rows</span><i>→</i><span>3. Raw frequencies + totals</span><i>→</i><span>4. Column % (cell ÷ column total × 100)</span><i>→</i><span>5. Interpret across</span></div>
+<div class="calc">Her practice question: 100 men — 80 assault victims, 20 not; 100 women — 92 victims, 8 not
+Victim?        Men     Women
+Yes            80%      92%
+No             20        8
+100% (N) =    (100)    (100)
+→ Percentage down, compare across: women 92% vs men 80% = 12-point gap
+→ Bigger percentage differences mean a stronger association</div>
+<p><b>Book tables on her slides</b> (Maxfield &amp; Babbie pp. 409–410): Table 14.4 — gun ownership, 42% of men vs 25% of women (N = 817 and 1,040); Table 14.5 — newspaper editorials favouring legal marijuana, 11% in communities under 100,000 vs 32% over 100,000 (N = 127 and 438).</p>
+<p><b>Benefits:</b> shows relative frequency of one variable across categories of another · compares groups of different sizes · shows how the DV changes with the IV · quick to read. <b>Caution:</b> association is not proof of cause.</p>
+<h3>Dispersion (from the book, p. 405 — not on her slides)</h3>
 <div class="calc">Response times: 7, 12, 5, 9, 14, 5, 8, 11, 5, 10, 13, 45  (n = 12)
 Sorted: 5 5 5 7 8 9 | 10 11 12 13 14 45
 Mean 12 · Median 9.5 · Mode 5 · Range 40
@@ -276,18 +293,47 @@ SD = 10.85 with 45; 3.29 without it → report the median and IQR</div>
 </table>
 <p><b>Eight steps:</b> 1 define recording units → 2 define categories → 3 test coding on a sample → 4 assess accuracy/reliability → 5 revise the coding rules → 6 go back to step 3 → 7 code all the text → 8 assess achieved reliability.</p>
 
-<h2 id="ethics">10. Ethics (Class 12 — if taught before the final)</h2>
-<ul>
-  <li><b>No harm</b> to participants — physical, psychological, legal, social.</li>
-  <li><b>Voluntary participation and informed consent</b> — especially delicate with prisoners.</li>
-  <li><b>Anonymity</b> (even the researcher can't identify the respondent) vs <b>confidentiality</b> (the researcher knows but promises not to tell).</li>
-  <li><b>Avoid deception</b> unless essential; debrief afterwards.</li>
-  <li><b>Honest analysis and reporting</b>; ethics review by an Institutional Review Board.</li>
-  <li>Famous cases: <b>Stanford Prison Experiment</b> (Zimbardo, 1971 — stopped after 6 days); <b>Tearoom Trade</b> (Humphreys, 1970 — covert observation, traced number plates).</li>
-</ul>
+<h2 id="ethics">10. Chapter 8 — Research ethics</h2>
+<p><b>Ethics</b> comes from the Greek <b>ethos = "character"</b>. The researcher's moral integrity is what makes findings trustworthy and valid.</p>
+<p><b>Questions to ask:</b> what moral principles guide my research? · how do ethics shape the problem I choose? · how do they shape the design and sampling? · what do I owe my subjects (informed consent)? · what dilemmas arise in publishing? · will participants benefit?</p>
+<table>
+  <tr><th>Principle (slides)</th><th>Meaning</th></tr>
+  <tr><td>Respect for persons</td><td>Autonomy; protect those with diminished autonomy; informed consent; right to withdraw any time</td></tr>
+  <tr><td>Beneficence &amp; non-maleficence</td><td>Maximise benefits, minimise physical, psychological and social harm</td></tr>
+  <tr><td>Justice</td><td>Fair selection of participants; benefits and burdens shared equitably</td></tr>
+  <tr><td>Informed consent</td><td>Know purpose, risks and benefits first; special care for vulnerable groups (children, cognitive disabilities)</td></tr>
+  <tr><td>Confidentiality</td><td>Protect identities and data; <b>anonymity</b> is stronger — no identifying information collected at all</td></tr>
+</table>
+<p><b>Accountability of the researcher:</b> integrity (no fabrication, falsification, plagiarism) · conflict of interest disclosed · scientific validity · independent review by an <b>IRB</b> · transparency.</p>
+<p><b>Informed consent — principle vs reality:</b> the right to decide, free of pressure and fully informed, whether to take part (Faden &amp; Beauchamp, 1986) — but subjects often don't fully understand what they agreed to.</p>
+<h3>From the reading ("The Ethics of Social Research", pp. 59–89)</h3>
+<table>
+  <tr><th>Case / rule</th><th>Lesson</th></tr>
+  <tr><td>Tuskegee syphilis study (1932–1972)</td><td>About 400 African American men, no consent, penicillin withheld → birth of informed consent</td></tr>
+  <tr><td>Nuremberg Code (1949)</td><td>After Nazi experiments: participation must be voluntary</td></tr>
+  <tr><td>Declaration of Helsinki (1964)</td><td>Weigh risks against benefits; respect privacy</td></tr>
+  <tr><td>Milgram (1963)</td><td>Obedience study: deception, distress, not allowed to quit; Burger (2009) replicated it with screening and debriefing</td></tr>
+  <tr><td>National Research Act (1974) → Common Rule</td><td>Institutions with federal research funds must have IRBs</td></tr>
+  <tr><td>Informed consent letter</td><td>Purpose and role · risks and benefits · contact person · voluntary, can opt out any time · how data are used and kept confidential · publication plans · signature</td></tr>
+  <tr><td>Deception and covert research</td><td>Cover stories; consent of <i>every</i> group member (Sarah Maddison's lesson)</td></tr>
+  <tr><td>Divided loyalties (Bell &amp; Nutt, 2002)</td><td>Practitioner-researchers may have to break confidentiality when a child is at risk</td></tr>
+</table>
+<p><b>Book extras</b> (Maxfield Ch 3): no harm · voluntary participation · anonymity vs confidentiality · deceiving subjects · analysis and reporting · legal liability · <b>Tearoom Trade</b> (Humphreys) and the <b>Stanford Prison Experiment</b> (Zimbardo) as two controversies.</p>
 
-<h2 id="report">11. Writing research reports (Classes 13–14 — if taught)</h2>
-<p>Structure: title and abstract → introduction → literature review → methodology → findings → discussion → conclusion and recommendations → references (APA) and appendices. Avoid <b>plagiarism</b>: quote with quotation marks and a page number, paraphrase properly and cite, keep a record of sources. Good tables and charts have a numbered title, labelled columns and axes, the sample size (n) and a source.</p>
+<h2 id="report">11. Chapter 9 — Drafting research reports and literature reviews</h2>
+<p>The report is "the last, and for many, the most difficult step" — formal academic style, not journalistic.</p>
+<div class="flow"><span>Title page</span><i>→</i><span>Contents, tables, figures</span><i>→</i><span>Acknowledgements</span><i>→</i><span>Introduction</span><i>→</i><span>Theory &amp; literature review</span><i>→</i><span>Research design</span><i>→</i><span>Analysis &amp; interpretation</span><i>→</i><span>Summary &amp; conclusion</span><i>→</i><span>Recommendations</span><i>→</i><span>Further research</span><i>→</i><span>References</span></div>
+<p><b>Research design</b> must let anyone <b>replicate</b> the study (methods, how many, how chosen, tool, analysis). <b>Reference list</b> = works cited; <b>bibliography</b> also lists relevant uncited sources (larger theses). Styles: <b>MLA</b> (humanities), <b>APA</b> (social sciences — use this), <b>Chicago</b>, <b>Harvard</b> (Smith 2010, p. 1). Format: Times New Roman 12, double spacing, margins left 1.5", others 1".</p>
+<div class="calc">APA: Kothari, C. R. (2004). Research methodology: Methods and techniques. New Age International.</div>
+<h3>Literature review (SJSU handout)</h3>
+<p>A review and discussion of current published material that <b>synthesises and evaluates</b> it around your research question and shows the <b>gaps</b>. It is <b>not</b> an annotated bibliography, an essay, or a list of summaries.</p>
+<table>
+  <tr><th>Organisation</th><th>By</th><th>Use when</th></tr>
+  <tr><td>Chronological</td><td>Date or history of the topic</td><td>Sequence matters</td></tr>
+  <tr><td>Thematic</td><td>Topics or issues, general → specific</td><td>Several themes</td></tr>
+  <tr><td>Methodological</td><td>Researchers' methods</td><td>Methods matter most</td></tr>
+</table>
+<p><b>Summary</b> = recap one source · <b>synthesis</b> = connect sources · <b>evaluation</b> = judge their worth. <b>Parts:</b> introduction (topic, significance, question, scope) → body (themes, gaps, flaws) → conclusion (contributions, gaps, future research). Cite quotes <i>and</i> paraphrases; one style only. Bachman Ch 14 adds report types, data displays, ethics in reporting and plagiarism.</p>
 
 <h2 id="sheet">12. One-page comparison sheet</h2>
 <table>
@@ -307,6 +353,10 @@ SD = 10.85 with 45; 3.29 without it → report the median and IQR</div>
   <tr><td>Mean vs median</td><td>Pulled by outliers vs resistant to them</td></tr>
   <tr><td>Manifest vs latent</td><td>Surface words vs deeper meaning</td></tr>
   <tr><td>Anonymity vs confidentiality</td><td>Nobody can identify the respondent vs the researcher can but won't tell</td></tr>
+  <tr><td>Beneficence vs non-maleficence</td><td>Do good (maximise benefits) vs do no harm</td></tr>
+  <tr><td>Reference list vs bibliography</td><td>Only works cited vs also relevant uncited works</td></tr>
+  <tr><td>Literature review vs annotated bibliography</td><td>Synthesises sources around a question vs summarises them one by one</td></tr>
+  <tr><td>Summary vs synthesis</td><td>Recap one source vs connect several</td></tr>
 </table>
 
 <h2 id="names">13. Who said what</h2>
@@ -321,6 +371,9 @@ SD = 10.85 with 45; 3.29 without it → report the median and IQR</div>
   <tr><td>Krippendorff (1980)</td><td>Stability, reproducibility, accuracy</td></tr>
   <tr><td>Maxfield &amp; Babbie (2014)</td><td>Course book: sampling (Ch 8), surveys (Ch 9), content analysis (Ch 12), interpreting data (Ch 14)</td></tr>
   <tr><td>Bachman &amp; Schutt (5th ed.)</td><td>Course book: qualitative methods (Ch 9), content analysis (Ch 10)</td></tr>
+  <tr><td>Faden &amp; Beauchamp (1986)</td><td>Informed consent = right to decide, free of pressure, fully informed</td></tr>
+  <tr><td>Milgram (1963); Burger (2009)</td><td>Obedience to authority — deception; ethical replication</td></tr>
+  <tr><td>Bell &amp; Nutt (2002)</td><td>Divided loyalties of practitioner-researchers</td></tr>
   <tr><td>Cohen &amp; Felson (1979)</td><td>Routine activity theory — a handy theory example</td></tr>
 </table>
 
@@ -333,9 +386,12 @@ SD = 10.85 with 45; 3.29 without it → report the median and IQR</div>
   <li><b>Snowball</b> is for hidden populations; <b>purposive</b> is for chosen experts.</li>
   <li><b>Grounded theory</b> rejects the hypothesis-first approach — don't write "GT tests hypotheses".</li>
   <li><b>Stability</b> is one coder over time; <b>reproducibility</b> is several coders.</li>
+  <li><b>Percentage tables</b> — put the independent variable in the columns, percentage <i>down</i> each column, then compare <i>across</i>. Show 100% (N) under each column.</li>
+  <li><b>Anonymity ≠ confidentiality</b> — anonymous means no identifying details are collected at all.</li>
+  <li><b>A literature review is not an annotated bibliography</b> — synthesise, don't list.</li>
   <li><b>Double-barrelled, negative and leading</b> are the three classic bad-question errors — name them.</li>
 </ul>
-<p class="sub">Prepared from the course slides, class exercises and the set books for revision. This is a prediction of the final syllabus, not the official one — update your reading when your teacher announces it.</p>
+<p class="sub">Prepared from the course slides and handouts, class exercises and the set books for revision. This is a prediction of the final syllabus, not the official one — update your reading when your teacher announces it.</p>
 </div>
 </body>
 </html>

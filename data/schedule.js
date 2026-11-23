@@ -21,7 +21,7 @@ HUB.add(
     date: '2026-12-04T15:00',
     time: '3:00–6:00 pm',
     room: 'Room 704, 6th floor, FSS, DU',
-    note: 'Final is marked out of 50 — answer 5 of 7–8 questions. See the predicted syllabus and ranked question bank.',
+    note: 'Final is marked out of 50 — answer 5 of 7–8 questions, 10 marks each in 3 parts. Read the 10 questions in the Research Methodology bank: one per chapter (1–9) plus a second for Chapter 6.',
     link: '#/exams/rm-final',
   }
 );
